@@ -7,6 +7,7 @@ from docx.oxml.text.paragraph import CT_P
 from docx.table import _Cell, Table
 from docx.text.paragraph import Paragraph
 import docx
+import sys
 
 
 def iter_block_items(parent):
@@ -29,6 +30,7 @@ def iter_block_items(parent):
         elif isinstance(child, CT_Tbl):
             yield Table(child, parent)
 
+
 class Node:
     def __init__(self, name, parent=None):
         self.name = name
@@ -48,8 +50,9 @@ class Node:
     def blocks(self):
         return self._blocaks
 
+
 if __name__ == '__main__':
-    doc = docx.Document('apiv2.docx')
+    doc = docx.Document(sys.argv[1])
 
     root = Node('root')
     current_node = root
