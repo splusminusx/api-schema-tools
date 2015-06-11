@@ -46,21 +46,44 @@ def get_complex_type_description(node):
     return join_paragraphs(paragraphs)
 
 
-def populate_complex_type(registry, node):
+def get_tables(node):
+    return filter(lambda x: isinstance(x, Table), node.blocks)
+
+
+def _filter_methods_without_args(node):
+    if get_complex_type_name(node) in [
+        'Settings.show',
+        'Settings.showAcceptanceByEmailSettings',
+        'Settings.showFeatureStates',
+        'Settings.showCallSettings',
+        'Settings.showCobrowseSettings',
+        'Settings.showEmployeeRemarkSettings',
+        'Settings.showFileTransferSettings',
+        'Settings.showReportByEmailSettings',
+        'Settings.showTypingIndicatorSettings',
+        'Stats.contacts'
+    ]:
+        return False
+    else:
+        return True
+
+
+def get_complex_type(node):
     deprecated = is_complex_type_deprecated(node)
     name = get_complex_type_name(node)
-
-    field_table = None
-    for b in node.blocks:
-        if isinstance(b, Table):
-            field_table = b
     description = get_complex_type_description(node)
-
     data_type = ComplexDataType(name, description, deprecated)
-    if field_table:
-        populate_fields(data_type, field_table)
 
-    registry.add_type(data_type)
+    tables = get_tables(node)
+    if len(tables) and _filter_methods_without_args(node):
+        populate_fields(data_type, tables[0])
+
+    return data_type
+
+
+def populate_complex_type(registry, node):
+    registry.add_type(
+        get_complex_type(node))
 
     for ch in node.children:
         populate_complex_type(registry, ch)
@@ -119,19 +142,12 @@ def populate_resource(reg, node):
     res = Resource(get_complex_type_name(node),
                    get_complex_type_description(node))
 
-    print res.name
-    print res.description
-
     for ch in node.children:
-        method = ComplexDataType(get_complex_type_name(node),
-                                 get_complex_type_description(node),
-                                 is_complex_type_deprecated(node))
+        method = get_complex_type(ch)
+        res.add_method(method)
 
+    reg.add_type(res)
 
-        #print_block_type_count(ch)
-        #print get_complex_type_name(ch)
-        #print is_complex_type_deprecated(ch)
-        #print parse_method_name(ch.name)
 
 def populate_resources_from_node(root, reg):
     for node in root.children[2].children:

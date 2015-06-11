@@ -18,9 +18,19 @@ if __name__ == '__main__':
     populate_resources_from_node(root, resource_reg)
 
     for type_name in type_reg.types:
-        data_type = type_reg.types[type_name]
-        #print data_type.name, data_type.deprecated
-        if isinstance(data_type, ComplexDataType):
-            for field_name in data_type.fields:
-                field = data_type.get_field(field_name)
-                #print ' ', field.name, field.datatypename, field.required
+        resource = type_reg.types[type_name]
+        print resource.name, resource.deprecated
+        if isinstance(resource, ComplexDataType):
+            for field_name in resource.fields:
+                field = resource.get_field(field_name)
+                print ' ', field.name, field.datatypename, field.required
+
+    for resource_name in resource_reg.types:
+        resource = resource_reg.get_type(resource_name)
+        print resource.name
+        for method_name in resource.methods:
+            method = resource.get_method(method_name)
+            print ' ', method.name, method.deprecated, method.description
+            for field_name in method.fields:
+                field = method.get_field(field_name)
+                print '  ', field.name, field.datatypename, field.required

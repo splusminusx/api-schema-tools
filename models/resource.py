@@ -9,7 +9,7 @@ class Resource(object):
         self._methods[method.name] = method
 
     def get_method(self, name):
-        return self._name[name]
+        return self._methods[name]
 
     def add_permission(self, permission):
         self._permissions[permission.role] = permission
@@ -24,3 +24,7 @@ class Resource(object):
     @property
     def description(self):
         return self._description
+
+    @property
+    def methods(self):
+        return self._methods
