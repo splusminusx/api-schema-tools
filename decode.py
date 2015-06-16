@@ -35,12 +35,12 @@ if __name__ == '__main__':
         f.write(u'\n### Примитивные типы данных\n')
         for primitive_type in primitive_types:
             serializer.serialize(primitive_type)
-            f.write(u'- [' + primitive_type.name + u'](docs/types/' + primitive_type.name + u'.md)\n')
+            f.write(u'- [' + primitive_type.name + u'](/docs/types/' + primitive_type.name + u'.md)\n')
         f.write(u'\n### Комплексные типы данных\n')
         for complex_type in complex_types:
             serializer.serialize(complex_type)
-            f.write(u'- [' + complex_type.name + u'](docs/types/' + complex_type.name + u'.md)\n')
+            f.write(u'- [' + complex_type.name + u'](/docs/types/' + complex_type.name + u'.md)\n')
         f.write(u'\n## Ресурсы\n')
         for resource in resources:
             serializer.serialize(resource)
-            f.write(u'- [' + resource.name + u'](docs/resources/' + resource.name + u'.md)\n')
+            f.write(u'- [' + resource.name + u'](/docs/resources/' + resource.name + u'.md)\n')
