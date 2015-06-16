@@ -67,7 +67,7 @@ class MarkdownSerializer(object):
                 f.write(self.DEPRECATION_WARNING)
             f.write(u'\n## ' + obj.name + u'\n')
             f.write(self.TYPE_DESCRIPTION_HEADING)
-            f.write(obj.description)
+            f.write(self._escape_description(obj.description))
             f.write(self.FIELDS_HEADING)
             f.write(self.FIELDS_TABLE_HEADING)
             for field_name in obj.fields:
@@ -87,14 +87,14 @@ class MarkdownSerializer(object):
                 f.write(self.DEPRECATION_WARNING)
             f.write(u'\n## ' + obj.name + u'\n')
             f.write(self.TYPE_DESCRIPTION_HEADING)
-            f.write(obj.description)
+            f.write(self._escape_description(obj.description))
         f.close()
 
     def _serialize_resource(self, obj):
         with io.open(self._get_full_path(obj), 'w', encoding='utf-8') as f:
             f.write(u'\n# ' + obj.name + u'\n')
             f.write(self.RESOURCE_DESCRIPTION_HEADING)
-            f.write(obj.description)
+            f.write(self._escape_description(obj.description))
             f.write(self.METHODS_HEADING)
             for method_name in obj.methods:
                 method = obj.methods[method_name]
@@ -102,7 +102,7 @@ class MarkdownSerializer(object):
                     f.write(self.DEPRECATION_WARNING)
                 f.write(u'\n## ' + method.name + u'\n')
                 f.write(self.METHOD_DESCRIPTION_HEADING)
-                f.write(method.description)
+                f.write(self._escape_description(method.description))
                 f.write(self.FIELDS_HEADING)
                 f.write(self.FIELDS_TABLE_HEADING)
                 for field_name in method.fields:
@@ -125,7 +125,7 @@ class MarkdownSerializer(object):
                     f.write(
                         u'|' + unicode(perm.role) or u'' +
                         u'|' + unicode(perm.access) or u'' +
-                        u'|' + unicode(perm.description) or u'' +
+                        u'|' + unicode(self._escape_description(perm.description)) or u'' +
                         u'|\n'
                     )
 
