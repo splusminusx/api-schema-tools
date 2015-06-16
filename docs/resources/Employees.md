@@ -21,12 +21,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## search
 
@@ -44,12 +44,12 @@ Array.<[Employee](/docs/types/Employee.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## show
 
@@ -68,12 +68,12 @@ Array.<[Employee](/docs/types/Employee.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## register
 
@@ -120,12 +120,12 @@ Array.<[Employee](/docs/types/Employee.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## update
 
@@ -164,12 +164,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full|Для самого себя разрешено изменении всех полей, за исключением:|
-|manager|managed|Для сотрудников с ролью «Оператор» разрешено изменении всех полей за исключением:|
-|chief|managed|Только для своих сотрудников, за исключением сотрудника с ролью, имеющей признак is_admin = true.|
-|chief_partner|managed|Только для своих сотрудников, за исключением сотрудника с ролью, имеющей признак is_admin = true.|
-|operator|user|Разрешено изменение только самого себя и только следующих полей:|
-|admin_partner|full|Для самого себя разрешено изменении всех полей, за исключением:|
+|*admin*|full|Для самого себя разрешено изменении всех полей, за исключением:|
+|*manager*|managed|Для сотрудников с ролью «Оператор» разрешено изменении всех полей за исключением:|
+|*chief*|managed|Только для своих сотрудников, за исключением сотрудника с ролью, имеющей признак is_admin = true.|
+|*chief_partner*|managed|Только для своих сотрудников, за исключением сотрудника с ролью, имеющей признак is_admin = true.|
+|*operator*|user|Разрешено изменение только самого себя и только следующих полей:|
+|*admin_partner*|full|Для самого себя разрешено изменении всех полей, за исключением:|
 
 ## setNewPassword
 
@@ -242,12 +242,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full|В значении поля department_ids принимаются во внимание только свои отделы.|
-|chief|full|В значении поля department_ids принимаются во внимание только свои отделы.|
-|chief_partner|full|В значении поля department_ids принимаются во внимание только свои отделы.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full|В значении поля department_ids принимаются во внимание только свои отделы.|
+|*chief*|full|В значении поля department_ids принимаются во внимание только свои отделы.|
+|*chief_partner*|full|В значении поля department_ids принимаются во внимание только свои отделы.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## registerConfirm
 
@@ -292,12 +292,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed||
-|chief|managed||
-|chief_partner|managed||
-|operator|user||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed||
+|*chief*|managed||
+|*chief_partner*|managed||
+|*operator*|user||
+|*admin_partner*|full||
 
 ## delete
 
@@ -315,12 +315,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full|За исключением самого себя.|
-|manager|none||
-|chief|managed|За исключением самого себя.|
-|chief_partner|managed|За исключением самого себя.|
-|operator|none||
-|admin_partner|full|За исключением самого себя.|
+|*admin*|full|За исключением самого себя.|
+|*manager*|none||
+|*chief*|managed|За исключением самого себя.|
+|*chief_partner*|managed|За исключением самого себя.|
+|*operator*|none||
+|*admin_partner*|full|За исключением самого себя.|
 
 ## resetPassword
 

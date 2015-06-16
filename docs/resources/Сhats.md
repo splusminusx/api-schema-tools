@@ -22,12 +22,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|user|Только для чатов, в которых сотрудник является участником.|
-|manager|user|Только для чатов, в которых сотрудник является участником.|
-|chief|user|Только для чатов, в которых сотрудник является участником.|
-|chief_partner|user|Только для чатов, в которых сотрудник является участником.|
-|operator|user|Только для чатов, в которых сотрудник является участником.|
-|admin_partner|user|Только для чатов, в которых сотрудник является участником.|
+|*admin*|user|Только для чатов, в которых сотрудник является участником.|
+|*manager*|user|Только для чатов, в которых сотрудник является участником.|
+|*chief*|user|Только для чатов, в которых сотрудник является участником.|
+|*chief_partner*|user|Только для чатов, в которых сотрудник является участником.|
+|*operator*|user|Только для чатов, в которых сотрудник является участником.|
+|*admin_partner*|user|Только для чатов, в которых сотрудник является участником.|
 
 ## list
 
@@ -49,12 +49,12 @@ Array.<[Chat](/docs/types/Chat.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Все чаты, но без messages и events.|
-|chief|managed|Все чаты, но без messages и events.|
-|chief_partner|managed|Все чаты, но без messages и events.|
-|operator|managed|Все чаты, но без messages и events.|
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Все чаты, но без messages и events.|
+|*chief*|managed|Все чаты, но без messages и events.|
+|*chief_partner*|managed|Все чаты, но без messages и events.|
+|*operator*|managed|Все чаты, но без messages и events.|
+|*admin_partner*|full||
 
 ## show
 
@@ -73,9 +73,9 @@ Array.<[Chat](/docs/types/Chat.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Все чаты, но без messages и events.|
-|chief|managed|Все чаты, но без messages и events.|
-|chief_partner|managed|Все чаты, но без messages и events.|
-|operator|managed|Все чаты, но без messages и events.|
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Все чаты, но без messages и events.|
+|*chief*|managed|Все чаты, но без messages и events.|
+|*chief_partner*|managed|Все чаты, но без messages и events.|
+|*operator*|managed|Все чаты, но без messages и events.|
+|*admin_partner*|full||

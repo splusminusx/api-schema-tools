@@ -27,12 +27,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только связи своих отделов со своими сайтами.|
-|chief|managed|Только связи своих отделов со своими сайтами.|
-|chief_partner|managed|Только связи своих отделов со своими сайтами.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только связи своих отделов со своими сайтами.|
+|*chief*|managed|Только связи своих отделов со своими сайтами.|
+|*chief_partner*|managed|Только связи своих отделов со своими сайтами.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## show
 
@@ -51,12 +51,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## list
 
@@ -78,12 +78,12 @@ Array.<[DepartmentSiteBinding](/docs/types/DepartmentSiteBinding.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## update
 
@@ -108,12 +108,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только связи своих отделов со своими сайтами.|
-|chief|managed|Только связи своих отделов со своими сайтами.|
-|chief_partner|managed|Только связи своих отделов со своими сайтами.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только связи своих отделов со своими сайтами.|
+|*chief*|managed|Только связи своих отделов со своими сайтами.|
+|*chief_partner*|managed|Только связи своих отделов со своими сайтами.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## delete
 
@@ -131,9 +131,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только связи своих отделов со своими сайтами.|
-|chief|managed|Только связи своих отделов со своими сайтами.|
-|chief_partner|managed|Только связи своих отделов со своими сайтами.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только связи своих отделов со своими сайтами.|
+|*chief*|managed|Только связи своих отделов со своими сайтами.|
+|*chief_partner*|managed|Только связи своих отделов со своими сайтами.|
+|*operator*|none||
+|*admin_partner*|full||

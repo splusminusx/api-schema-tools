@@ -25,9 +25,9 @@ Array.<[Document](/docs/types/Document.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||

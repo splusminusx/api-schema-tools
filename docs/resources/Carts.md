@@ -22,12 +22,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## show
 
@@ -46,12 +46,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## list
 
@@ -73,12 +73,12 @@ Array.<[Cart](/docs/types/Cart.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## update
 
@@ -97,12 +97,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## add
 
@@ -121,12 +121,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## commit
 
@@ -145,12 +145,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## delete
 
@@ -168,9 +168,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||

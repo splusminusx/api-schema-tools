@@ -20,12 +20,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## showCobrowseSettings
 
@@ -42,12 +42,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## showFileTransferSettings
 
@@ -64,12 +64,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## show
 
@@ -86,12 +86,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## updateCobrowseSettings
 
@@ -109,12 +109,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## updateAcceptanceByEmailSettings
 
@@ -133,12 +133,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## showAcceptanceByEmailSettings
 
@@ -155,12 +155,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## updateEmployeeRemarkSettings
 
@@ -178,12 +178,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## updateFileTransferSettings
 
@@ -201,12 +201,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## showCallSettings
 
@@ -223,12 +223,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## showTypingIndicatorSettings
 
@@ -245,12 +245,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## showReportByEmailSettings
 
@@ -267,12 +267,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## updateTypingIndicatorSettings
 
@@ -290,12 +290,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## updateCallSettings
 
@@ -318,12 +318,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## updateReportByEmailSettings
 
@@ -343,12 +343,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## showEmployeeRemarkSettings
 
@@ -365,9 +365,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||

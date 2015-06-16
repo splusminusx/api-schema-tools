@@ -25,12 +25,12 @@ Array.<[IgnoreListItem](/docs/types/IgnoreListItem.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только записи на своих сайтах.|
-|chief|managed|Только записи на своих сайтах.|
-|chief_partner|managed|Только записи на своих сайтах.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только записи на своих сайтах.|
+|*chief*|managed|Только записи на своих сайтах.|
+|*chief_partner*|managed|Только записи на своих сайтах.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## delete
 
@@ -49,9 +49,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только записи на своих сайтах.|
-|chief|managed|Только записи на своих сайтах.|
-|chief_partner|managed|Только записи на своих сайтах.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только записи на своих сайтах.|
+|*chief*|managed|Только записи на своих сайтах.|
+|*chief_partner*|managed|Только записи на своих сайтах.|
+|*operator*|none||
+|*admin_partner*|full||

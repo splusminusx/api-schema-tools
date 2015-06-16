@@ -22,12 +22,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|None|Все адресованные лиды.|
-|manager|None|Все адресованные лиды.|
-|chief|None|Все адресованные лиды.|
-|chief_partner|None|Все адресованные лиды.|
-|operator|None|Все адресованные лиды.|
-|admin_partner|None|Все адресованные лиды.|
+|*admin*|None|Все адресованные лиды.|
+|*manager*|None|Все адресованные лиды.|
+|*chief*|None|Все адресованные лиды.|
+|*chief_partner*|None|Все адресованные лиды.|
+|*operator*|None|Все адресованные лиды.|
+|*admin_partner*|None|Все адресованные лиды.|
 
 ## show
 
@@ -46,12 +46,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Все лиды, но без text и answer_text.|
-|chief|managed|Все лиды, но без text и answer_text.|
-|chief_partner|managed|Все лиды, но без text и answer_text.|
-|operator|managed|Все лиды, но без text и answer_text.|
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Все лиды, но без text и answer_text.|
+|*chief*|managed|Все лиды, но без text и answer_text.|
+|*chief_partner*|managed|Все лиды, но без text и answer_text.|
+|*operator*|managed|Все лиды, но без text и answer_text.|
+|*admin_partner*|full||
 
 ## lock
 
@@ -69,12 +69,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|None|Только для адресованных лидов.|
-|manager|None|Только для адресованных лидов.|
-|chief|None|Только для адресованных лидов.|
-|chief_partner|None|Только для адресованных лидов.|
-|operator|None|Только для адресованных лидов.|
-|admin_partner|None|Только для адресованных лидов.|
+|*admin*|None|Только для адресованных лидов.|
+|*manager*|None|Только для адресованных лидов.|
+|*chief*|None|Только для адресованных лидов.|
+|*chief_partner*|None|Только для адресованных лидов.|
+|*operator*|None|Только для адресованных лидов.|
+|*admin_partner*|None|Только для адресованных лидов.|
 
 ## listRouted
 
@@ -96,12 +96,12 @@ Array.<[Lead](/docs/types/Lead.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|None|Все адресованные лиды.|
-|manager|None|Все адресованные лиды.|
-|chief|None|Все адресованные лиды.|
-|chief_partner|None|Все адресованные лиды.|
-|operator|None|Все адресованные лиды.|
-|admin_partner|None|Все адресованные лиды.|
+|*admin*|None|Все адресованные лиды.|
+|*manager*|None|Все адресованные лиды.|
+|*chief*|None|Все адресованные лиды.|
+|*chief_partner*|None|Все адресованные лиды.|
+|*operator*|None|Все адресованные лиды.|
+|*admin_partner*|None|Все адресованные лиды.|
 
 ## list
 
@@ -123,12 +123,12 @@ Array.<[Lead](/docs/types/Lead.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Все лиды, но без text и answer_text.|
-|chief|managed|Все лиды, но без text и answer_text.|
-|chief_partner|managed|Все лиды, но без text и answer_text.|
-|operator|managed|Все лиды, но без text и answer_text.|
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Все лиды, но без text и answer_text.|
+|*chief*|managed|Все лиды, но без text и answer_text.|
+|*chief_partner*|managed|Все лиды, но без text и answer_text.|
+|*operator*|managed|Все лиды, но без text и answer_text.|
+|*admin_partner*|full||
 
 ## add
 
@@ -153,12 +153,12 @@ Array.<[Lead](/docs/types/Lead.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## setCompleted
 
@@ -177,12 +177,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|None|Только для адресованных лидов.|
-|manager|None|Только для адресованных лидов.|
-|chief|None|Только для адресованных лидов.|
-|chief_partner|None|Только для адресованных лидов.|
-|operator|None|Только для адресованных лидов.|
-|admin_partner|None|Только для адресованных лидов.|
+|*admin*|None|Только для адресованных лидов.|
+|*manager*|None|Только для адресованных лидов.|
+|*chief*|None|Только для адресованных лидов.|
+|*chief_partner*|None|Только для адресованных лидов.|
+|*operator*|None|Только для адресованных лидов.|
+|*admin_partner*|None|Только для адресованных лидов.|
 
 ## unlock
 
@@ -200,9 +200,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|None|Только для адресованных лидов.|
-|manager|None|Только для адресованных лидов.|
-|chief|None|Только для адресованных лидов.|
-|chief_partner|None|Только для адресованных лидов.|
-|operator|None|Только для адресованных лидов.|
-|admin_partner|None|Только для адресованных лидов.|
+|*admin*|None|Только для адресованных лидов.|
+|*manager*|None|Только для адресованных лидов.|
+|*chief*|None|Только для адресованных лидов.|
+|*chief_partner*|None|Только для адресованных лидов.|
+|*operator*|None|Только для адресованных лидов.|
+|*admin_partner*|None|Только для адресованных лидов.|

@@ -26,12 +26,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## showSiteCallSettings
 
@@ -49,12 +49,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## show
 
@@ -73,12 +73,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## list
 
@@ -100,12 +100,12 @@ Array.<[Site](/docs/types/Site.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## WARNING: DEPRECATED
 
@@ -144,12 +144,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## showSiteChatSettings
 
@@ -167,12 +167,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## WARNING: DEPRECATED
 
@@ -193,12 +193,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## batchUpdate
 
@@ -221,12 +221,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только для своих сайтов.|
-|chief|managed|Только для своих сайтов.|
-|chief_partner|managed|Только для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только для своих сайтов.|
+|*chief*|managed|Только для своих сайтов.|
+|*chief_partner*|managed|Только для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## WARNING: DEPRECATED
 
@@ -247,12 +247,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## showOfflineMailSettings
 
@@ -270,12 +270,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## showSiteWidgetSettings
 
@@ -293,12 +293,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## add
 
@@ -329,12 +329,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## WARNING: DEPRECATED
 
@@ -355,12 +355,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## updateSiteChatSettings
 
@@ -383,12 +383,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## WARNING: DEPRECATED
 
@@ -416,12 +416,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## updateSiteWidgetSettings
 
@@ -452,12 +452,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## showSiteXWidgetSettings
 
@@ -475,12 +475,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## WARNING: DEPRECATED
 
@@ -513,12 +513,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## WARNING: DEPRECATED
 
@@ -540,12 +540,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## update
 
@@ -577,12 +577,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только для своих сайтов.|
-|chief|managed|Только для своих сайтов.|
-|chief_partner|managed|Только для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только для своих сайтов.|
+|*chief*|managed|Только для своих сайтов.|
+|*chief_partner*|managed|Только для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## WARNING: DEPRECATED
 
@@ -621,12 +621,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## WARNING: DEPRECATED
 
@@ -647,12 +647,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## batchUpdateSiteXWidgetSettings
 
@@ -674,12 +674,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только для своих сайтов.|
-|chief|managed|Только для своих сайтов.|
-|chief_partner|managed|Только для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только для своих сайтов.|
+|*chief*|managed|Только для своих сайтов.|
+|*chief_partner*|managed|Только для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## updateSiteXWidgetSettings
 
@@ -701,12 +701,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## unbindAllDepartments
 
@@ -724,12 +724,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только для своих сайтов.|
-|chief|managed|Только для своих сайтов.|
-|chief_partner|managed|Только для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только для своих сайтов.|
+|*chief*|managed|Только для своих сайтов.|
+|*chief_partner*|managed|Только для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## updateSiteCallSettings
 
@@ -754,12 +754,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## WARNING: DEPRECATED
 
@@ -780,12 +780,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Для своих сайтов.|
-|chief|managed|Для своих сайтов.|
-|chief_partner|managed|Для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Для своих сайтов.|
+|*chief*|managed|Для своих сайтов.|
+|*chief_partner*|managed|Для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## delete
 
@@ -803,9 +803,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|managed|Только для своих сайтов.|
-|chief_partner|managed|Только для своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|none||
+|*chief*|managed|Только для своих сайтов.|
+|*chief_partner*|managed|Только для своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||

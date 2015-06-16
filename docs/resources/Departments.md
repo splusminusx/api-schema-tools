@@ -23,12 +23,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
-|chief|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
-|chief_partner|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
+|*chief*|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
+|*chief_partner*|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## show
 
@@ -47,12 +47,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## list
 
@@ -74,12 +74,12 @@ Array.<[Department](/docs/types/Department.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|full||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|full||
+|*admin_partner*|full||
 
 ## update
 
@@ -99,12 +99,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
-|chief|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
-|chief_partner|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
+|*chief*|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
+|*chief_partner*|managed|В поле employee_ids принимаются во внимание только ID своих сотрудников.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## delete
 
@@ -122,9 +122,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только свои отделы.|
-|chief|managed|Только свои отделы.|
-|chief_partner|managed|Только свои отделы.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только свои отделы.|
+|*chief*|managed|Только свои отделы.|
+|*chief_partner*|managed|Только свои отделы.|
+|*operator*|none||
+|*admin_partner*|full||

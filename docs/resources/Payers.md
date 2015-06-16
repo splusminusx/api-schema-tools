@@ -25,12 +25,12 @@ Array.<[Payer](/docs/types/Payer.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## add
 
@@ -50,12 +50,12 @@ Array.<[Payer](/docs/types/Payer.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## transferBalance
 
@@ -73,12 +73,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## update
 
@@ -97,12 +97,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||
 
 ## show
 
@@ -121,9 +121,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||

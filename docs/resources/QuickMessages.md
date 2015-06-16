@@ -23,12 +23,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Быстрые сообщения с is_global = true разрешается создавать только на своих сайтах.|
-|chief|managed|Быстрые сообщения с is_global = true разрешается создавать только на своих сайтах.|
-|chief_partner|managed|Быстрые сообщения с is_global = true разрешается создавать только на своих сайтах.|
-|operator|user|На любых сайтах можно создавать только сообщения с is_global = false.|
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Быстрые сообщения с is_global = true разрешается создавать только на своих сайтах.|
+|*chief*|managed|Быстрые сообщения с is_global = true разрешается создавать только на своих сайтах.|
+|*chief_partner*|managed|Быстрые сообщения с is_global = true разрешается создавать только на своих сайтах.|
+|*operator*|user|На любых сайтах можно создавать только сообщения с is_global = false.|
+|*admin_partner*|full||
 
 ## show
 
@@ -47,12 +47,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full|За исключением чужих быстрых сообщений с is_global = false.|
-|manager|full|За исключением чужих быстрых сообщений с is_global = false.|
-|chief|full|За исключением чужих быстрых сообщений с is_global = false.|
-|chief_partner|full|За исключением чужих быстрых сообщений с is_global = false.|
-|operator|full|За исключением чужих быстрых сообщений с is_global = false.|
-|admin_partner|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*admin*|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*manager*|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*chief*|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*chief_partner*|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*operator*|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*admin_partner*|full|За исключением чужих быстрых сообщений с is_global = false.|
 
 ## list
 
@@ -74,12 +74,12 @@ Array.<[QuickMessage](/docs/types/QuickMessage.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full|За исключением чужих быстрых сообщений с is_global = false.|
-|manager|full|За исключением чужих быстрых сообщений с is_global = false.|
-|chief|full|За исключением чужих быстрых сообщений с is_global = false.|
-|chief_partner|full|За исключением чужих быстрых сообщений с is_global = false.|
-|operator|full|За исключением чужих быстрых сообщений с is_global = false.|
-|admin_partner|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*admin*|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*manager*|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*chief*|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*chief_partner*|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*operator*|full|За исключением чужих быстрых сообщений с is_global = false.|
+|*admin_partner*|full|За исключением чужих быстрых сообщений с is_global = false.|
 
 ## update
 
@@ -99,12 +99,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full|Только быстрые сообщения с is_global = true, а также свои быстрые сообщения с is_global = false.|
-|manager|managed|Быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах.|
-|chief|managed|Быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах.|
-|chief_partner|managed|Быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах.|
-|operator|user|На любых сайтах можно обновлять только сообщения с is_global = false.|
-|admin_partner|full|Только быстрые сообщения с is_global = true, а также свои быстрые сообщения с is_global = false.|
+|*admin*|full|Только быстрые сообщения с is_global = true, а также свои быстрые сообщения с is_global = false.|
+|*manager*|managed|Быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах.|
+|*chief*|managed|Быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах.|
+|*chief_partner*|managed|Быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах.|
+|*operator*|user|На любых сайтах можно обновлять только сообщения с is_global = false.|
+|*admin_partner*|full|Только быстрые сообщения с is_global = true, а также свои быстрые сообщения с is_global = false.|
 
 ## delete
 
@@ -122,9 +122,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full|Только быстрые сообщения с is_global = true, а также свои быстрые сообщения с is_global = false.|
-|manager|managed|Быстрые сообщения с is_global = true разрешается удалять только на своих сайтах.|
-|chief|managed|Быстрые сообщения с is_global = true разрешается удалять только на своих сайтах.|
-|chief_partner|managed|Быстрые сообщения с is_global = true разрешается удалять только на своих сайтах.|
-|operator|user|На любых сайтах можно удалять только сообщения с is_global = false.|
-|admin_partner|full|Только быстрые сообщения с is_global = true, а также свои быстрые сообщения с is_global = false.|
+|*admin*|full|Только быстрые сообщения с is_global = true, а также свои быстрые сообщения с is_global = false.|
+|*manager*|managed|Быстрые сообщения с is_global = true разрешается удалять только на своих сайтах.|
+|*chief*|managed|Быстрые сообщения с is_global = true разрешается удалять только на своих сайтах.|
+|*chief_partner*|managed|Быстрые сообщения с is_global = true разрешается удалять только на своих сайтах.|
+|*operator*|user|На любых сайтах можно удалять только сообщения с is_global = false.|
+|*admin_partner*|full|Только быстрые сообщения с is_global = true, а также свои быстрые сообщения с is_global = false.|

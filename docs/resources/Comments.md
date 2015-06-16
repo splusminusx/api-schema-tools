@@ -22,12 +22,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|user|Добавление комментариев к своим тикетам.|
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|user|Добавление комментариев к своим тикетам.|
+|*admin_partner*|full||
 
 ## list
 
@@ -49,12 +49,12 @@ Array.<[Comment](/docs/types/Comment.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|user|Комментарии своих тикетов.|
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|user|Комментарии своих тикетов.|
+|*admin_partner*|full||
 
 ## show
 
@@ -73,9 +73,9 @@ Array.<[Comment](/docs/types/Comment.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|user|Комментарии своих тикетов.|
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|user|Комментарии своих тикетов.|
+|*admin_partner*|full||

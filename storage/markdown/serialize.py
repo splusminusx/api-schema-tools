@@ -131,8 +131,8 @@ class MarkdownSerializer(object):
                 for perm_name in method.permissions:
                     perm = method.permissions[perm_name]
                     f.write(
-                        u'|' + unicode(perm.role) +
-                        u'|' + unicode(perm.access) +
+                        u'|*' + unicode(perm.role) +
+                        u'*|' + unicode(perm.access) +
                         u'|' + unicode(self._escape_description(perm.description)) +
                         u'|\n'
                     )

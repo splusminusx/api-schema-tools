@@ -25,12 +25,12 @@ Array.<[Period](/docs/types/Period.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## update
 
@@ -49,9 +49,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|none||
-|chief|full||
-|chief_partner|none||
-|operator|none||
-|admin_partner|none||
+|*admin*|full||
+|*manager*|none||
+|*chief*|full||
+|*chief_partner*|none||
+|*operator*|none||
+|*admin_partner*|none||

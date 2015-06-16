@@ -27,12 +27,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Создание кнопок на своих сайтах.|
-|chief|managed|Создание кнопок на своих сайтах.|
-|chief_partner|managed|Создание кнопок на своих сайтах.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Создание кнопок на своих сайтах.|
+|*chief*|managed|Создание кнопок на своих сайтах.|
+|*chief_partner*|managed|Создание кнопок на своих сайтах.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## show
 
@@ -51,12 +51,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Кнопки своих сайтов.|
-|chief|managed|Кнопки своих сайтов.|
-|chief_partner|managed|Кнопки своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Кнопки своих сайтов.|
+|*chief*|managed|Кнопки своих сайтов.|
+|*chief_partner*|managed|Кнопки своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## list
 
@@ -78,12 +78,12 @@ Array.<[CallButton](/docs/types/CallButton.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Кнопки своих сайтов.|
-|chief|managed|Кнопки своих сайтов.|
-|chief_partner|managed|Кнопки своих сайтов.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Кнопки своих сайтов.|
+|*chief*|managed|Кнопки своих сайтов.|
+|*chief_partner*|managed|Кнопки своих сайтов.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## update
 
@@ -108,12 +108,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Обновление кнопок на своих сайтах.|
-|chief|managed|Обновление кнопок на своих сайтах.|
-|chief_partner|managed|Обновление кнопок на своих сайтах.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Обновление кнопок на своих сайтах.|
+|*chief*|managed|Обновление кнопок на своих сайтах.|
+|*chief_partner*|managed|Обновление кнопок на своих сайтах.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## delete
 
@@ -131,9 +131,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Удаление кнопок на своих сайтах.|
-|chief|managed|Удаление кнопок на своих сайтах.|
-|chief_partner|managed|Удаление кнопок на своих сайтах.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Удаление кнопок на своих сайтах.|
+|*chief*|managed|Удаление кнопок на своих сайтах.|
+|*chief_partner*|managed|Удаление кнопок на своих сайтах.|
+|*operator*|none||
+|*admin_partner*|full||

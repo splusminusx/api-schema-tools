@@ -24,12 +24,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только, если site_id указывает на свой сайт.|
-|chief|managed|Только, если site_id указывает на свой сайт.|
-|chief_partner|managed|Только, если site_id указывает на свой сайт.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только, если site_id указывает на свой сайт.|
+|*chief*|managed|Только, если site_id указывает на свой сайт.|
+|*chief_partner*|managed|Только, если site_id указывает на свой сайт.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## show
 
@@ -48,12 +48,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## list
 
@@ -75,12 +75,12 @@ Array.<[InvitationRuleSiteBinding](/docs/types/InvitationRuleSiteBinding.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## update
 
@@ -102,12 +102,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только, если предыдущее и новое значение site_id указывает на свой сайт.|
-|chief|managed|Только, если предыдущее и новое значение site_id указывает на свой сайт.|
-|chief_partner|managed|Только, если предыдущее и новое значение site_id указывает на свой сайт.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только, если предыдущее и новое значение site_id указывает на свой сайт.|
+|*chief*|managed|Только, если предыдущее и новое значение site_id указывает на свой сайт.|
+|*chief_partner*|managed|Только, если предыдущее и новое значение site_id указывает на свой сайт.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## delete
 
@@ -125,9 +125,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только, если site_id указывает на свой сайт.|
-|chief|managed|Только, если site_id указывает на свой сайт.|
-|chief_partner|managed|Только, если site_id указывает на свой сайт.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только, если site_id указывает на свой сайт.|
+|*chief*|managed|Только, если site_id указывает на свой сайт.|
+|*chief_partner*|managed|Только, если site_id указывает на свой сайт.|
+|*operator*|none||
+|*admin_partner*|full||

@@ -25,12 +25,12 @@ Array.<[Contact](/docs/types/Contact.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только на своих сайтах.|
-|chief|managed|Только на своих сайтах.|
-|chief_partner|managed|Только на своих сайтах.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только на своих сайтах.|
+|*chief*|managed|Только на своих сайтах.|
+|*chief_partner*|managed|Только на своих сайтах.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## show
 
@@ -49,9 +49,9 @@ Array.<[Contact](/docs/types/Contact.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только на своих сайтах.|
-|chief|managed|Только на своих сайтах.|
-|chief_partner|managed|Только на своих сайтах.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только на своих сайтах.|
+|*chief*|managed|Только на своих сайтах.|
+|*chief_partner*|managed|Только на своих сайтах.|
+|*operator*|none||
+|*admin_partner*|full||

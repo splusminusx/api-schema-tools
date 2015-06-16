@@ -25,12 +25,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|В параметре site_ids принимаются во внимание только свои сайты.|
-|chief|managed|В параметре site_ids принимаются во внимание только свои сайты.|
-|chief_partner|managed|В параметре site_ids принимаются во внимание только свои сайты.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|В параметре site_ids принимаются во внимание только свои сайты.|
+|*chief*|managed|В параметре site_ids принимаются во внимание только свои сайты.|
+|*chief_partner*|managed|В параметре site_ids принимаются во внимание только свои сайты.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## show
 
@@ -49,12 +49,12 @@
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## list
 
@@ -76,12 +76,12 @@ Array.<[HoldRule](/docs/types/HoldRule.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|full||
-|chief|full||
-|chief_partner|full||
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|full||
+|*chief*|full||
+|*chief_partner*|full||
+|*operator*|none||
+|*admin_partner*|full||
 
 ## update
 
@@ -104,12 +104,12 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только свои сценарии.|
-|chief|managed|Только свои сценарии.|
-|chief_partner|managed|Только свои сценарии.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только свои сценарии.|
+|*chief*|managed|Только свои сценарии.|
+|*chief_partner*|managed|Только свои сценарии.|
+|*operator*|none||
+|*admin_partner*|full||
 
 ## delete
 
@@ -127,9 +127,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|full||
-|manager|managed|Только свои сценарии.|
-|chief|managed|Только свои сценарии.|
-|chief_partner|managed|Только свои сценарии.|
-|operator|none||
-|admin_partner|full||
+|*admin*|full||
+|*manager*|managed|Только свои сценарии.|
+|*chief*|managed|Только свои сценарии.|
+|*chief_partner*|managed|Только свои сценарии.|
+|*operator*|none||
+|*admin_partner*|full||
