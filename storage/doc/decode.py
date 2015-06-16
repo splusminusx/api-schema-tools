@@ -75,7 +75,6 @@ def get_method_description(node):
             if idx == result_header_index:
                 continue
             paragraphs.append(b)
-            result_header_index = None
     return join_paragraphs(paragraphs)
 
 
