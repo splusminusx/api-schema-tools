@@ -7,4 +7,4 @@ FileTransferSettings<br/>Настройки функции «Передача ф
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|is_active|True|[boolean](/docs/types/boolean.md)|Включение/выключение функции «Передача файлов».<br/>|
+|*is_active*|True|[boolean](/docs/types/boolean.md)|Включение/выключение функции «Передача файлов».<br/>|
