@@ -45,7 +45,7 @@
                     "description": "Название категории.\n"
                 }
             ], 
-            "description": "QuickMessageCategories.add\n", 
+            "description": "Добавляет новую категорию быстрых сообщений.\nОбъект типа «QuickMessageCategory».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -105,7 +105,7 @@
                     "description": "ID категории быстрых сообщений.\n"
                 }
             ], 
-            "description": "QuickMessageCategories.delete\n", 
+            "description": "Удаляет указанную категорию быстрых сообщений.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -202,7 +202,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ntitle:a – по умолчанию.\n"
                 }
             ], 
-            "description": "QuickMessageCategories.list\n", 
+            "description": "Возвращает список глобальных категорий быстрых сообщений, а также персональных категорий, созданных текущим пользователем.\nМассив объектов типа «QuickMessageCategory».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -296,7 +296,7 @@
                     "description": "Название категории.\n"
                 }
             ], 
-            "description": "QuickMessageCategories.update\n", 
+            "description": "Обновляет категорию быстрых сообщений.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -363,7 +363,7 @@
                     "description": "ID категории быстрых сообщений.\n"
                 }
             ], 
-            "description": "QuickMessageCategories.show\n", 
+            "description": "Возвращает данные указанной категории быстрых сообщений.\nОбъект типа «QuickMessageCategory».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

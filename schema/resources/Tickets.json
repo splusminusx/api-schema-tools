@@ -25,7 +25,7 @@
                     "description": "Тема обращения в техническую поддержку.\n"
                 }
             ], 
-            "description": "Tickets.add\n", 
+            "description": "Добавляет новый тикет.\nОбъект типа «Ticket».\n\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -125,7 +125,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию;\ntype:a, type:d;\npriority:a, priority:d;\nstatus:a, status:d.\n"
                 }
             ], 
-            "description": "Tickets.list\n", 
+            "description": "Возвращает список тикетов.\nМассив объектов типа «Ticket».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -199,7 +199,7 @@
                     "description": "ID обращения в техническую поддержку.\n"
                 }
             ], 
-            "description": "Tickets.show\n", 
+            "description": "Возвращает данные указанного обращения в техническую поддержку.\nОбъект типа «Ticket».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

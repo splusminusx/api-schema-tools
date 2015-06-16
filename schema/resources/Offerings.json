@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\nid:d - по умолчанию.\n"
                 }
             ], 
-            "description": "Offerings.list\n", 
+            "description": "Возвращает список активных предложений, доступных текущему клиенту.\nМассив объектов типа «Offering».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID предложения.\n"
                 }
             ], 
-            "description": "Offerings.show\n", 
+            "description": "Возвращает данные указанного предложения.\nОбъект типа «Offering».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

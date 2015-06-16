@@ -25,7 +25,7 @@
                     "description": "ID обращения в поддержку.\n"
                 }
             ], 
-            "description": "Comments.add\n", 
+            "description": "Добавляет новый комментарий к обращению в поддержку.\nОбъект типа «Comment».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -125,7 +125,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Comments.list\n", 
+            "description": "Возвращает список комментариев к обращению в поддержку.\nМассив объектов типа «Comment».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -199,7 +199,7 @@
                     "description": "ID комментария к обращению в поддержку.\n"
                 }
             ], 
-            "description": "Comments.show\n", 
+            "description": "Возвращает данные указанного обращения в поддержку.\nОбъект типа «Comment».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

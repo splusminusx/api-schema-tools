@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Products.list\n", 
+            "description": "Возвращает список продуктов клиента, в том числе и ранее подключенных, если они есть в базе.\nМассив объектов типа «Product».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID продукта.\n"
                 }
             ], 
-            "description": "Products.show\n", 
+            "description": "Возвращает данные указанного продукта клиента.\nОбъект типа «Product».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

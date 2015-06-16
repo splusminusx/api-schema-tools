@@ -8,7 +8,7 @@
 ## updateOfflineMailSettings
 
 ### Описание метода
-Sites.updateOfflineMailSettings<br/>
+Изменяет настройки офлайн почты.<br/>Метод ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -36,7 +36,7 @@ None
 ## showSiteCallSettings
 
 ### Описание метода
-Sites.showSiteCallSettings<br/>
+Возвращает настройки звонков указанного сайта.<br/>Объект типа «SiteCallSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -59,7 +59,7 @@ Sites.showSiteCallSettings<br/>
 ## show
 
 ### Описание метода
-Sites.show<br/>
+Возвращает данные указанного сайта.<br/>Объект типа «Site».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -83,7 +83,7 @@ Sites.show<br/>
 ## list
 
 ### Описание метода
-Sites.list<br/>
+Возвращает список сайтов.<br/>Массив объектов типа «Site».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -113,7 +113,7 @@ Array.<[Site](/docs/types/Site.md)>
 ## WARNING: DEPRECATED
 
 ### Описание метода
-Sites.updateChatFormSettings - DEPRECATED<br/>
+ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.<br/>Изменяет настройки окна чата сайта.<br/>Метод ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -154,7 +154,7 @@ None
 ## showSiteChatSettings
 
 ### Описание метода
-Sites.showSiteChatSettings<br/>
+Возвращает настройки чата для указанного сайта.<br/>Объект типа «SiteChatSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -180,7 +180,7 @@ Sites.showSiteChatSettings<br/>
 ## WARNING: DEPRECATED
 
 ### Описание метода
-Sites.showChatWelcomeSettings – DEPRECATED<br/>
+ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.<br/>Возвращает настройки окна приветствия указанного сайта.<br/>Объект типа «ChatWelcomeSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -203,7 +203,7 @@ Sites.showChatWelcomeSettings – DEPRECATED<br/>
 ## batchUpdate
 
 ### Описание метода
-Sites.batchUpdate<br/>
+Выполняет пакетное изменение данных указанных сайтов.<br/>Метод вызывает Sites.update для каждого ID сайта и передает указанные параметры.<br/>Массив объектов c ID, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.<br/>Пример<br/>curl https://api.livetex.ru/v2/sites/batchupdate \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>-d "ids=123,456,789" \<br/>-d "is_callback=false"<br/><br/>{<br/>    "results": [<br/>        {<br/>            "id": "123",<br/>            "code": 200,<br/>            "message": ""<br/>        },<br/>        {<br/>            "id": "456",<br/>            "code": 200,<br/>            "message": ""<br/>        },<br/>        {<br/>            "id": "789",<br/>            "code": 403,<br/>            "message": "Forbidden"<br/>        }<br/>    ]<br/>}<br/><br/><br/>ВНИМАНИЕ!<br/>При изменении конкретного сайта работает уровень доступа метода Sites.update в соответствующих условиях.<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -234,7 +234,7 @@ None
 ## WARNING: DEPRECATED
 
 ### Описание метода
-Sites.showOfflineFormSettings – DEPRECATED<br/>
+ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Возвращает настройки формы офлайн-сообщения указанного сайта.<br/>Объект типа «OfflineFormSettings».<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/showofflineformsettings?id=12345 \<br/>-H "Authorization: Bearer ACCESS_TOKEN"<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -257,7 +257,7 @@ Sites.showOfflineFormSettings – DEPRECATED<br/>
 ## showOfflineMailSettings
 
 ### Описание метода
-Sites.showOfflineMailSettings<br/>
+Возвращает настройки офлайн почты.<br/>Объект типа «OfflineMailSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -280,7 +280,7 @@ Sites.showOfflineMailSettings<br/>
 ## showSiteWidgetSettings
 
 ### Описание метода
-Sites.showSiteWidgetSettings<br/>
+Возвращает настройки виджета для указанного сайта.<br/>Объект типа «SiteWidgetSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -303,7 +303,7 @@ Sites.showSiteWidgetSettings<br/>
 ## add
 
 ### Описание метода
-Sites.add<br/>
+Создает новый сайт.<br/>ВНИМАНИЕ!<br/>Новый сайт автоматически добавляется в поле managed_sites всем сотрудникам с ролью, имеющей is_full_by_default = true.<br/>Объект типа «Site».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -342,7 +342,7 @@ Sites.add<br/>
 ## WARNING: DEPRECATED
 
 ### Описание метода
-Sites.showChatFormSettings - DEPRECATED<br/>
+ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.<br/>Возвращает настройки окна чата указанного сайта.<br/>Объект типа «ChatFormSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -365,7 +365,7 @@ Sites.showChatFormSettings - DEPRECATED<br/>
 ## updateSiteChatSettings
 
 ### Описание метода
-Sites.updateSiteChatSettings<br/>
+Изменяет настройки чата для указанного сайта.<br/>Метод ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -396,7 +396,7 @@ None
 ## WARNING: DEPRECATED
 
 ### Описание метода
-Sites.updateCallLabelSettings - DEPRECATED<br/>
+ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Изменяет звонковые настройки сайта.<br/>Метод ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -426,7 +426,7 @@ None
 ## updateSiteWidgetSettings
 
 ### Описание метода
-Sites.updateSiteWidgetSettings<br/>
+Изменяет настройки виджета для указанного сайта.<br/>Метод ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -462,7 +462,7 @@ None
 ## showSiteXWidgetSettings
 
 ### Описание метода
-Sites.showSiteXWidgetSettings<br/>
+Возвращает настройки продукта «X-widget» для указанного сайта.<br/>Объект типа «SiteXWidgetSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -488,7 +488,7 @@ Sites.showSiteXWidgetSettings<br/>
 ## WARNING: DEPRECATED
 
 ### Описание метода
-Sites.updateOfflineFormSettings - DEPRECATED<br/>
+ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Обновляет настройки офлайн-формы.<br/>Метод ничего не возвращает.<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/updateofflineformsettings \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>–d "id=12345" \<br/>–d "banner_type=none"<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -526,7 +526,7 @@ None
 ## WARNING: DEPRECATED
 
 ### Описание метода
-Sites.updateChatWelcomeSettings - DEPRECATED<br/>
+ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.<br/>Изменяет настройки окна чата сайта.<br/>Метод ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -550,7 +550,7 @@ None
 ## update
 
 ### Описание метода
-Sites.update<br/>
+Изменяет данные указанного сайта.<br/>Метод ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -590,7 +590,7 @@ None
 ## WARNING: DEPRECATED
 
 ### Описание метода
-Sites.updateLeadFormSettings - DEPRECATED<br/>
+ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.<br/>Обновляет настройки формы генератора лидов указанного сайта.<br/>Метод ничего не возвращает.<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/updateleadformsettings \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>–d "id=12345" \<br/>–d "photo_type=none" \<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -634,7 +634,7 @@ None
 ## WARNING: DEPRECATED
 
 ### Описание метода
-Sites.showLeadFormSettings - DEPRECATED<br/>
+ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.<br/>Возвращает настройки формы генератора лидов указанного сайта.<br/>Объект типа «LeadFormSettings».<br/>Пример запроса<br/>curl "https://api.livetex.ru/v2/sites/showleadformsettings?id=12345" \<br/>-H "Authorization: Bearer ACCESS_TOKEN"<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -657,7 +657,7 @@ Sites.showLeadFormSettings - DEPRECATED<br/>
 ## batchUpdateSiteXWidgetSettings
 
 ### Описание метода
-Sites.batchUpdateSiteXWidgetSettings<br/>
+Выполняет пакетное изменение настроек X-widget указанных сайтов.<br/>Метод вызывает Sites.updateSiteXWidgetSettings для каждого ID сайта и передает указанные параметры.<br/>Массив объектов c ID-сайта, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.<br/>Пример<br/>curl https://api.livetex.ru/v2/sites/batchupdatesitexwidgetsettings \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>-d "ids=123,456,789" \<br/>-d "is_active=false"<br/><br/>{<br/>    "results": [<br/>        {<br/>            "id": "123",<br/>            "code": 200,<br/>            "message": ""<br/>        },<br/>        {<br/>            "id": "456",<br/>            "code": 200,<br/>            "message": ""<br/>        },<br/>        {<br/>            "id": "789",<br/>            "code": 403,<br/>            "message": "Forbidden"<br/>        }<br/>    ]<br/>}<br/><br/>ВНИМАНИЕ!<br/>При изменении конкретного сайта работает уровень доступа метода Sites.updateSiteXWidgetSettings в соответствующих условиях.<br/><br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -684,7 +684,7 @@ None
 ## updateSiteXWidgetSettings
 
 ### Описание метода
-Sites.updateSiteXWidgetSettings<br/>
+Изменяет настройки продукта «X-widget» для указанного сайта.<br/>Метод ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -711,7 +711,7 @@ None
 ## unbindAllDepartments
 
 ### Описание метода
-Sites.unbindAllDepartments<br/>
+Отвязывает все отделы от указанного сайта. При этом все сотрудники отделов напрямую связываются с сайтом.<br/>Метод ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -734,7 +734,7 @@ None
 ## updateSiteCallSettings
 
 ### Описание метода
-Sites.updateSiteCallSettings<br/>
+Изменяет звонковые настройки сайта. <br/>Метод ничего не возвращает.<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/updatecallsettings \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>–d "id=12345" \<br/>–d "background_type=none" \<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -767,7 +767,7 @@ None
 ## WARNING: DEPRECATED
 
 ### Описание метода
-Sites.showCallLabelSettings - DEPRECATED<br/>
+ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Возвращает настройки ярлыка звонков указанного сайта.<br/>Объект типа «CallLabelSettings».<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/showcalllabelsettings?id=12345 \<br/>-H "Authorization: Bearer ACCESS_TOKEN"<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -790,7 +790,7 @@ Sites.showCallLabelSettings - DEPRECATED<br/>
 ## delete
 
 ### Описание метода
-Sites.delete<br/>
+Удаляет указанный сайт.<br/>ВНИМАНИЕ!<br/>При удалении сайта удаляются все связи с отделами. При этом также удаляются отделы, оставшиеся без сайтов.<br/>При удалении сайта удаляются все его связи с объектами других сущностей, за исключением чатов, звонков и лидов и связей с сотрудниками в поле managed_sites.<br/>Метод ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |

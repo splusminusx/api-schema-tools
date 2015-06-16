@@ -25,7 +25,7 @@
                     "description": "ID посетителя.\n"
                 }
             ], 
-            "description": "Visitors.show\n", 
+            "description": "Возвращает данные указанного посетителя.\nОбъект типа «Visitor».\n\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

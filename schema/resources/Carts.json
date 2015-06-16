@@ -25,7 +25,7 @@
                     "description": "ID периода.\n"
                 }
             ], 
-            "description": "Carts.addToPeriod\n", 
+            "description": "Создает новую корзину в указанном периоде.\nОбъект типа «Cart».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -95,7 +95,7 @@
                     "description": "ID корзины.\n"
                 }
             ], 
-            "description": "Carts.show\n", 
+            "description": "Возвращает данные указанной корзины.\nОбъект типа «Cart».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -195,7 +195,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Carts.list\n", 
+            "description": "Возвращает список корзин.\nМассив объектов типа «Cart».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -269,7 +269,7 @@
                     "description": "ID корзины.\n"
                 }
             ], 
-            "description": "Carts.update\n", 
+            "description": "Изменяет указанную корзину.\nМетод ничего не возвращает. \n\n\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -336,7 +336,7 @@
                     "description": "Признак текущего периода.\nЕсли true (по умолчанию), то корзина создается для текущего периода. \nЕсли false, то будет создан новый период.\n"
                 }
             ], 
-            "description": "Carts.add\n", 
+            "description": "Создает новую корзину.\nОбъект типа «Cart».\n\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -406,7 +406,7 @@
                     "description": "ID плательщика.\nЕсли не указано, то счет будет выписан на активного плательщика.\n"
                 }
             ], 
-            "description": "Carts.commit\n", 
+            "description": "Операция покупки позиций указанной корзины.\nМетод создает заказ, выставляет счет на оплату на активного плательщика и удаляет корзину. \n Параметры\nОбъект типа «Order».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -466,7 +466,7 @@
                     "description": "ID корзины.\n"
                 }
             ], 
-            "description": "Carts.delete\n", 
+            "description": "Удаляет указанную корзину.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [

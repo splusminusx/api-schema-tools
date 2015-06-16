@@ -15,7 +15,7 @@
                     "description": "ID новости.\n"
                 }
             ], 
-            "description": "ConsoleNews.markRead\n", 
+            "description": "Помечает новость как прочитанную.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -92,7 +92,7 @@
                     "description": "По умолчанию – 0.\n"
                 }
             ], 
-            "description": "ConsoleNews.listLatest\n", 
+            "description": "Возвращает список последних новостей для Пульта оператора в предопределенном порядке.\nМассив объектов типа «ConsoleNews».\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 

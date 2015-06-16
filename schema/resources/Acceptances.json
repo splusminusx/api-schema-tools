@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию, created_at:a.\n"
                 }
             ], 
-            "description": "Acceptances.list\n", 
+            "description": "Возвращает список актов.\nМассив объектов типа «Acceptance».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "Файл акта, подписанного клиентом.\nДопустимые типы файлов: PDF, TIFF, JPEG, PNG, GIF.\nМаксимальный размер файла – 10 MB.\n"
                 }
             ], 
-            "description": "Acceptances.update\n", 
+            "description": "Изменяет указанный акт.\n\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [

@@ -8,7 +8,7 @@
 ## showFeatureStates
 
 ### Описание метода
-Settings.showFeatureStates<br/>
+Возвращает данные о доступности функциональных возможностей на аккаунте.<br/>Метод не имеет параметров.<br/>Объект типа «FeatureStates».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -30,7 +30,7 @@ Settings.showFeatureStates<br/>
 ## showCobrowseSettings
 
 ### Описание метода
-Settings.showCobrowseSettings<br/>
+Возвращает настройки функции «Виртуальный ассистент».<br/>Метод не имеет параметров.<br/>Объект типа «CobrowseSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -52,7 +52,7 @@ Settings.showCobrowseSettings<br/>
 ## showFileTransferSettings
 
 ### Описание метода
-Settings.showFileTransferSettings<br/>
+Возвращает настройки функции «Передача файлов».<br/>Метод не имеет параметров.<br/>Объект типа «FileTransferSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -74,7 +74,7 @@ Settings.showFileTransferSettings<br/>
 ## show
 
 ### Описание метода
-Settings.show<br/>
+Возвращает глобальные настройки.<br/>Метод не имеет параметров.<br/>Объект типа «Settings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -96,7 +96,7 @@ Settings.show<br/>
 ## updateCobrowseSettings
 
 ### Описание метода
-Settings.updateCobrowseSettings<br/>
+Изменяет настройки функции "Виртуальный ассистент".<br/>Методов ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -119,7 +119,7 @@ None
 ## updateAcceptanceByEmailSettings
 
 ### Описание метода
-Settings.updateAcceptanceByEmailSettings<br/>
+Изменяет настройки отправки актов по электронной почте.<br/>Методов ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -143,7 +143,7 @@ None
 ## showAcceptanceByEmailSettings
 
 ### Описание метода
-Settings.showAcceptanceByEmailSettings<br/>
+Возвращает настройки отправки актов по электронной почте.<br/>Метод не имеет параметров.<br/>Объект типа «AcceptanceByEmailSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -165,7 +165,7 @@ Settings.showAcceptanceByEmailSettings<br/>
 ## updateEmployeeRemarkSettings
 
 ### Описание метода
-Settings.updateEmployeeRemarkSettings<br/>
+Изменяет настройки функции оценок сотрудника.<br/>Методов ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -188,7 +188,7 @@ None
 ## updateFileTransferSettings
 
 ### Описание метода
-Settings.updateFileTransferSettings<br/>
+Изменяет настройки функции «Передача файлов».<br/>Методов ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -211,7 +211,7 @@ None
 ## showCallSettings
 
 ### Описание метода
-Settings.showCallSettings<br/>
+Возвращает настройки звонковой функциональности.<br/>Метод не имеет параметров.<br/>Объект типа «CallSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -233,7 +233,7 @@ Settings.showCallSettings<br/>
 ## showTypingIndicatorSettings
 
 ### Описание метода
-Settings.showTypingIndicatorSettings<br/>
+Возвращает настройки функции «Подглядывания».<br/>Метод не имеет параметров.<br/>Объект типа «TypingIndicatorSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -255,7 +255,7 @@ Settings.showTypingIndicatorSettings<br/>
 ## showReportByEmailSettings
 
 ### Описание метода
-Settings.showReportByEmailSettings<br/>
+Возвращает настройки отправки отчетов по email.<br/>Метод не имеет параметров.<br/>Объект типа «ReportByEmailSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -277,7 +277,7 @@ Settings.showReportByEmailSettings<br/>
 ## updateTypingIndicatorSettings
 
 ### Описание метода
-Settings.updateTypingIndicatorSettings<br/>
+Изменяет настройки функции «Подглядывание».<br/>Методов ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -300,7 +300,7 @@ None
 ## updateCallSettings
 
 ### Описание метода
-Settings.updateCallSettings<br/>
+Изменяет настройки звонковой функциональности.<br/>Методов ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -328,7 +328,7 @@ None
 ## updateReportByEmailSettings
 
 ### Описание метода
-Settings.updateReportByEmailSettings<br/>
+Изменяет настройки отправки отчетом по email.<br/>Методов ничего не возвращает.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -353,7 +353,7 @@ None
 ## showEmployeeRemarkSettings
 
 ### Описание метода
-Settings.showEmployeeRemarkSettings<br/>
+Возвращает настройки оценок сотрудника.<br/>Метод не имеет параметров.<br/>Объект типа «EmployeeRemarkSettings».<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |

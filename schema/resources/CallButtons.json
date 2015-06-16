@@ -75,7 +75,7 @@
                     "description": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle  – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\nПринимается во внимание при design_type = predefined.\n"
                 }
             ], 
-            "description": "CallButtons.add\n", 
+            "description": "Создает новую кнопку.\nОбъект типа «CallButton».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -135,7 +135,7 @@
                     "description": "ID кнопки.\n"
                 }
             ], 
-            "description": "CallButtons.delete\n", 
+            "description": "Удаляет указанную кнопку.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -232,7 +232,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\nid:a – по умолчанию;\nupdated_at:d.\n"
                 }
             ], 
-            "description": "CallButtons.list\n", 
+            "description": "Возвращает список звонковых кнопок.\nМассив объектов типа «CallButton».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -366,7 +366,7 @@
                     "description": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\nПринимается во внимание при design_type = predefined.\n"
                 }
             ], 
-            "description": "CallButtons.update\n", 
+            "description": "Изменяет указанную кнопку.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -433,7 +433,7 @@
                     "description": "ID кнопки.\n"
                 }
             ], 
-            "description": "CallButtons.show\n", 
+            "description": "Возвращает данные указанной кнопки.\nОбъект типа «CallButton».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

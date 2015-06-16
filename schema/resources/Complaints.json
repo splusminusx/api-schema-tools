@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Complaints.list\n", 
+            "description": "Возвращает список жалоб посетителей.\nМассив объектов типа «Complaint».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID жалобы.\n"
                 }
             ], 
-            "description": "Complaints.show\n", 
+            "description": "Возвращает данные указанной жалобы.\nОбъект типа «Complaint».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

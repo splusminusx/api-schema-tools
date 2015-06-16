@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию, created_at:a;\n"
                 }
             ], 
-            "description": "Documents.list\n", 
+            "description": "Возвращает список документов.\nМассив объектов типа «Document».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 

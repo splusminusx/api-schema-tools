@@ -25,7 +25,7 @@
                     "description": "Объект с информацией о найденных контактных данных.\nМожет содержать ключи:\nemails – массив найденных адресов электронной почты.\nphones – массив найденных номеров телефонов.\nДолжен содержать хотя бы один из этих ключей с непустым массивом.\n"
                 }
             ], 
-            "description": "Chats.setContactInfoExist\n", 
+            "description": "Устанавливает признак наличия контактной информации в чате.\nПовторный вызов этого метода для одного и того же чата приводит к пополнению массивов найденных контактных данных.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -122,7 +122,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:a;\nupdated_at:a;\nduration:a;\nresult:a.\n"
                 }
             ], 
-            "description": "Сhats.list\n", 
+            "description": "Возвращает список чатов.\nМассив объектов типа «Chat», а также, поле total_conversations.\nПеречень дополнительных полей\n\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -196,7 +196,7 @@
                     "description": "ID чата.\n"
                 }
             ], 
-            "description": "Chats.show\n", 
+            "description": "Возвращает данные указанного чата.\nОбъект типа «Chat».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

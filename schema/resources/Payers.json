@@ -15,7 +15,7 @@
                     "description": "ID плательщика, остатки со счета которого требуется перенести на активного плательщика.\n"
                 }
             ], 
-            "description": "Payers.transferBalance\n", 
+            "description": "Переносит остатки на счете на активного плательщика.\nПРИМЕЧАНИЯ\nДля плательщиков с payer_type, начинающимся с \"ru_\", перенос осуществляется со всех счетов указанного плательщика на текущий счет активного плательщика.\nДля плательщиков с payer_type, начинающимся с \"ua_\", перенос осуществляется со всех счетов указанного плательщика на подарочный счет активного плательщика.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -92,7 +92,7 @@
                     "description": "Тип плательщика.\nВозможные значения:\nru_person – физическое лицо РФ;\nru_legal – юридическое лицо РФ;\nua_person – физическое лицо Украины;\nua_legal – юридическое лицо Украины;\nua_sp – ФОП Украины.\n"
                 }
             ], 
-            "description": "Payers.add\n", 
+            "description": "Создает нового плательщика.\nВНИМАНИЕ!\nНовый плательщик автоматически становится текущим активным плательщиком.\nОбъект типа «Payer».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -192,7 +192,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Payers.list\n", 
+            "description": "Возвращает список плательщиков.\nМассив объектов типа «Payer».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -266,7 +266,7 @@
                     "description": "ID плательщика.\n"
                 }
             ], 
-            "description": "Payers.update\n", 
+            "description": "Обновляет данные указанного плательщика.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -333,7 +333,7 @@
                     "description": "ID плательщика.\n"
                 }
             ], 
-            "description": "Payers.show\n", 
+            "description": "Возвращает данные указанного плательщика.\nОбъект типа «Payer».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

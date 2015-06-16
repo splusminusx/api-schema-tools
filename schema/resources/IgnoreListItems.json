@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:a – по умолчанию.\n"
                 }
             ], 
-            "description": "IgnoreListItems.list\n", 
+            "description": "Возвращает список записей игнор-листа.\nМассив объектов типа «IgnoreListItem».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "IgnoreListItems.delete\n", 
+            "description": "Удаляет запись в игнор-листе.\nМетод ничего не возвращает.\n\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [

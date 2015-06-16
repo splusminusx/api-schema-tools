@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "- Payments.list\n", 
+            "description": "Возвращает список платежей.\nМассив объектов типа «- Payment».\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 

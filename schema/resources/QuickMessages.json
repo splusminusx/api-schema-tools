@@ -35,7 +35,7 @@
                     "description": "ID категории быстрых сообщений.\n"
                 }
             ], 
-            "description": "QuickMessages.add\n", 
+            "description": "Добавляет новое быстрое сообщение.\nОбъект типа «QuickMessage».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -95,7 +95,7 @@
                     "description": "ID быстрого сообщения.\n"
                 }
             ], 
-            "description": "QuickMessages.delete\n", 
+            "description": "Удаляет указанное быстрое сообщение.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -192,7 +192,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ntext:a – по умолчанию.\n"
                 }
             ], 
-            "description": "QuickMessages.list\n", 
+            "description": "Возвращает список быстрых сообщений.\nМассив объектов типа «QuickMessage».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -276,7 +276,7 @@
                     "description": "ID быстрого сообщения.\n"
                 }
             ], 
-            "description": "QuickMessages.update\n", 
+            "description": "Обновляет быстрое сообщение.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -343,7 +343,7 @@
                     "description": "ID быстрого сообщения.\n"
                 }
             ], 
-            "description": "QuickMessages.show\n", 
+            "description": "Возвращает данные указанного быстрого сообщения.\nОбъект типа «QuickMessage».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

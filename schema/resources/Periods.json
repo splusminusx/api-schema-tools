@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Periods.list\n", 
+            "description": "Возвращает список периодов.\nМассив объектов типа «Period».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID периода.\n"
                 }
             ], 
-            "description": "Periods.update\n", 
+            "description": "Обновляет данные указанного периода.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [

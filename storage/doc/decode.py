@@ -62,7 +62,7 @@ def get_method_description(node):
                 result_header_index = idx
     for idx, b in enumerate(node.blocks):
         if isinstance(b, Paragraph):
-            if b.text != node.name:
+            if b.text == node.name:
                 continue
             if b.text.startswith(u'Таблица'):
                 continue

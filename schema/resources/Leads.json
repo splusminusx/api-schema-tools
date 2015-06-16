@@ -25,7 +25,7 @@
                     "description": "ID лида.\n"
                 }
             ], 
-            "description": "Leads.showRouted\n", 
+            "description": "Возвращает данные указанного лида в контексте маршрутизации.\nМетод работает точно также, как и метод Leads.show, но предоставляет доступ только к лидам, адресованным текущему сотруднику.\nОбъект типа «Lead».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -95,7 +95,7 @@
                     "description": "ID лида.\n"
                 }
             ], 
-            "description": "Leads.show\n", 
+            "description": "Возвращает данные указанного лида.\nОбъект типа «Lead».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -155,7 +155,7 @@
                     "description": "ID лида.\n"
                 }
             ], 
-            "description": "Leads.lock\n", 
+            "description": "Блокирует указанный лид.\nБлокировка устанавливается на ограниченный период времени – 30 минут. По прошествии этого времени блокировка автоматически снимается.\nНельзя заблокировать лид, уже заблокированный другим сотрудником. Повторный вызов метода для лида, заблокированного текущим сотрудником, выполняется успешно. При этом период блокировки пролонгируется еще на 30 минут. \nBoolean. True – блокировка выполнена успешно. False – блокировка отклонена.\nПример ответа\n{\n    \"results\": true\n}\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -255,7 +255,7 @@
                     "description": "Сортировка результатов.\nВозможные поля сортировки:\ncreated_at,\nupdated_at,\nduration,\nresult.\n"
                 }
             ], 
-            "description": "Leads.listRouted\n", 
+            "description": "Возвращает список лидов в контексте маршрутизации.\nМетод работает точно также, как и метод Leads.list, но предоставляет доступ только к лидам, адресованным текущему сотруднику.\nМассив объектов типа «Lead».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -359,7 +359,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:a;\nupdated_at:a;\nduration:a;\nresult:a.\n"
                 }
             ], 
-            "description": "Leads.list\n", 
+            "description": "Возвращает список лидов.\nМассив объектов типа «Lead».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -423,7 +423,7 @@
                     "description": "ID лида.\n"
                 }
             ], 
-            "description": "Leads.unlock\n", 
+            "description": "Снимает блокировку с указанного лида.\nСнять блокировку может только тот сотрудник, который ее поставил. Вызов метода для незаблокированного адресованного лида выполняется успешно.\nБлокировки снимаются автоматически через 30 минут.\nBoolean. True – снятие блокировки выполнено успешно. False – операция отклонена.\nПример ответа\n{\n    \"results\": true\n}\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -493,7 +493,7 @@
                     "description": "ID лида.\n"
                 }
             ], 
-            "description": "Leads.setCompleted\n", 
+            "description": "Устанавливает признак обработанности (result = completed) указанного лида.\nЕсли указанный лид уже обработан, то вызов метода НЕ приведет к изменению его свойств. При этом результат выполнения метода будет такой же, как если бы операция выполнилась успешно.\nМетод ничего не возвращает.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -620,7 +620,7 @@
                     "description": "ID отдела.\n"
                 }
             ], 
-            "description": "Leads.add\n", 
+            "description": "Добавляет новый лид.\nЛид, созданный с помощью этого получает type = chat.\nОбъект типа «Lead».\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
