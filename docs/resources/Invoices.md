@@ -27,6 +27,8 @@ Invoices.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию; <br/>paid_at:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Invoice](types/Invoice.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -50,6 +52,8 @@ Invoices.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID счета<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -18,6 +18,7 @@ class MarkdownSerializer(object):
     METHOD_DESCRIPTION_HEADING = u'\n### Описание метода\n'
     METHODS_HEADING = u'\n# Методы\n'
     PERMISSIONS_HEADING = u'\n### Доступы к методу\n'
+    RESULT_HEADING = u'\n### Резудьтат\n'
     FIELDS_HEADING = u'\n### Поля\n'
     FIELDS_TABLE_HEADING = u'\n| Имя поля | Необходимость | Тип данных | Комментарий |\n|---|---|---|---|\n'
     PERMISSIONS_TABLE_HEADING = u'\n| Имя роли | доступ | Комментарий |\n|---|---|---|\n'
@@ -43,7 +44,8 @@ class MarkdownSerializer(object):
         elif isinstance(obj, Resource):
             self._serialize_resource(obj)
 
-    def _get_data_type_link(self, data_type_name):
+    @staticmethod
+    def _get_data_type_link(data_type_name):
         if data_type_name:
             start_idx = data_type_name.find('.<')
             end_idx = data_type_name.find('>')
@@ -54,6 +56,7 @@ class MarkdownSerializer(object):
                     generic_name +
                     u'.<[' + parameter_name + u'](' +
                     os.path.join(u'types', parameter_name + u'.md)>'))
+        return u'None'
 
     def _serialize_complex_data_type(self, obj):
         with io.open(self._get_full_path(obj), 'w', encoding='utf-8') as f:
@@ -108,6 +111,9 @@ class MarkdownSerializer(object):
                         u'|' + self._escape_description(field.description) +
                         u'|\n'
                     )
+
+                f.write(self.RESULT_HEADING)
+                f.write(self._get_data_type_link(method.result_type_name))
 
                 f.write(self.PERMISSIONS_HEADING)
                 f.write(self.PERMISSIONS_TABLE_HEADING)

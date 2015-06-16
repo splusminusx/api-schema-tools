@@ -27,6 +27,8 @@ EmployeeChatMessages.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:a – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[EmployeeChatMessage](types/EmployeeChatMessage.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

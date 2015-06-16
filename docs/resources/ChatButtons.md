@@ -30,6 +30,8 @@ ChatButtons.add
 |size|True|string|Размер кнопки.<br/>Возможные значения:<br/>small – маленький, 146x50 пикселей;<br/>middle – средний,  193x69 пикселей;<br/>large – большой, 223x100 пикселей.<br/>Принимается во внимание при design_type=predefined.<br/>|
 |department_id|False|numeric|ID отдел.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -53,6 +55,8 @@ ChatButtons.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID кнопки.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -79,6 +83,8 @@ ChatButtons.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>id:a – по умолчанию;<br/>updated_at:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[ChatButton](types/ChatButton.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -109,6 +115,8 @@ ChatButtons.update
 |id|True|numeric|ID кнопки.<br/>|
 |department_id|False|numeric|ID отдел.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -131,6 +139,8 @@ ChatButtons.delete
 |---|---|---|---|
 |id|True|numeric|ID кнопки.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -25,6 +25,8 @@ Tickets.add
 |text|True|string|Текст обращения в техническую поддержку.<br/>Максимум 2000 символов.<br/>|
 |subject|False|string|Тема обращения в техническую поддержку.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -51,6 +53,8 @@ Tickets.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию;<br/>type:a, type:d;<br/>priority:a, priority:d;<br/>status:a, status:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Ticket](types/Ticket.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -74,6 +78,8 @@ Tickets.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID обращения в техническую поддержку.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

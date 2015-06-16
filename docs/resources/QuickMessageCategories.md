@@ -26,6 +26,8 @@ QuickMessageCategories.add
 |site_id|False|numeric|ID сайт.<br/>Должен быть указан, если is_global = true.<br/>|
 |title|True|string|Название категории.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -49,6 +51,8 @@ QuickMessageCategories.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID категории быстрых сообщений.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -75,6 +79,8 @@ QuickMessageCategories.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>title:a – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[QuickMessageCategory](types/QuickMessageCategory.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -100,6 +106,8 @@ QuickMessageCategories.update
 |id|True|numeric|ID категории быстрых сообщений.<br/>|
 |title|False|string|Название категории.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -122,6 +130,8 @@ QuickMessageCategories.delete
 |---|---|---|---|
 |id|True|numeric|ID категории быстрых сообщений.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

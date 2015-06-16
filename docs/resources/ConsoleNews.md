@@ -23,6 +23,8 @@ ConsoleNews.markRead
 |---|---|---|---|
 |id|True|numeric|ID новости.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -45,6 +47,8 @@ ConsoleNews.listLatest
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[ConsoleNews](types/ConsoleNews.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

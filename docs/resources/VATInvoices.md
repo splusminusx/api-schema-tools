@@ -27,6 +27,8 @@ VATInvoices.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[VATInvoice](types/VATInvoice.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

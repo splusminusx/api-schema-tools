@@ -70,6 +70,8 @@ curl https://api.livetex.ru/v2/employeeonlineintervals.listbysite \
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>url:a – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Site](types/Site.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -136,6 +138,8 @@ curl https://api.livetex.ru/v2/employeeonlineintervals/listbyemployee \
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>last_name:a – по умолчанию;<br/>first_name:a.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Employee](types/Employee.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -204,6 +208,8 @@ curl https://api.livetex.ru/v2/employeeonlineintervals.listbydepartment \
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>title:a – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Department](types/Department.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

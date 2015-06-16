@@ -27,6 +27,8 @@ InvitationRuleSiteBindings.add
 |site_id|True|numeric|Сайт.<br/>|
 |department_id|False|numeric|ID отдела, на который будет адресовано приглашение.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -50,6 +52,8 @@ InvitationRuleSiteBindings.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID связи сценария вовлечения и сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -76,6 +80,8 @@ InvitationRuleSiteBindings.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:a – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[InvitationRuleSiteBinding](types/InvitationRuleSiteBinding.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -103,6 +109,8 @@ InvitationRuleSiteBindings.update
 |id|True|numeric|ID связи.<br/>|
 |department_id|False|numeric|ID отдела, на который будет адресовано приглашение.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -125,6 +133,8 @@ InvitationRuleSiteBindings.delete
 |---|---|---|---|
 |id|True|numeric|ID связи.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -56,6 +56,8 @@ curl https://api.livetex.ru/v2/employeechats \
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

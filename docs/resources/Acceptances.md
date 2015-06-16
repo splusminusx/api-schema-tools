@@ -27,6 +27,8 @@ Acceptances.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию, created_at:a.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Acceptance](types/Acceptance.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -51,6 +53,8 @@ Acceptances.update
 |id|True|numeric|ID акта.<br/>|
 |file_signed|False|file|Файл акта, подписанного клиентом.<br/>Допустимые типы файлов: PDF, TIFF, JPEG, PNG, GIF.<br/>Максимальный размер файла – 10 MB.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

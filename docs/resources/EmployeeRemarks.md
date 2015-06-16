@@ -24,6 +24,8 @@ EmployeeRemarks.add
 |text|True|string|Текст оценки.<br/>|
 |position|False|numeric|Порядковый номер оценки.<br/>Если не указано, то оценка будет последней.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -47,6 +49,8 @@ EmployeeRemarks.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID оценки.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -74,6 +78,8 @@ EmployeeRemarks.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>position:a – по умолчанию,<br/>text:a, text:d,<br/>created_at:d,<br/>updated_at:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[EmployeeRemark](types/EmployeeRemark.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -98,6 +104,8 @@ EmployeeRemarks.update
 |id|True|numeric|ID оценки.<br/>|
 |position|False|numeric|Порядковый номер оценки.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -120,6 +128,8 @@ EmployeeRemarks.delete
 |---|---|---|---|
 |id|True|numeric|ID оценки.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

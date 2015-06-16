@@ -48,6 +48,8 @@ curl https://api.livetex.ru/v2/employeeevents?employee_ids=12345 \
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[EmployeeEvent](types/EmployeeEvent.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

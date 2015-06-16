@@ -27,6 +27,8 @@ Documents.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию, created_at:a;<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Document](types/Document.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

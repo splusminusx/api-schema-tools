@@ -27,6 +27,8 @@
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию;<br/>updated_at:d;<br/>duration:a, duration:d;<br/>answer_time:a, answer_time:d;<br/>result:a, result:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Call](types/Call.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -50,6 +52,8 @@
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID звонка.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

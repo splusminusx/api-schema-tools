@@ -93,6 +93,8 @@ curl https://api.livetex.ru/v2/utils/batch \
 |---|---|---|---|
 |methods|True|Array.<BatchRequest>|Массив методов и их параметров.<br/>Максимум 10 элементов. Одиннадцатый элемент и далее будут проигнорированы.<br/>|
 
+### Резудьтат
+Array.<[BatchResponse](types/BatchResponse.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

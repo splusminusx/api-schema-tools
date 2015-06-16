@@ -26,6 +26,8 @@
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Payment](types/Payment.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

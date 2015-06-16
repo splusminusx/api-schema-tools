@@ -24,6 +24,8 @@ CartItems.add
 |product_addition|False|ProductAddition|Дополнение продукта.<br/>|
 |cart_id|True|numeric|ID корзины.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -48,6 +50,8 @@ CartItems.update
 |product_addition|True|ProductAddition|Дополнение продукта.<br/>|
 |id|True|numeric|ID позиции корзины.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -70,6 +74,8 @@ CartItems.delete
 |---|---|---|---|
 |id|True|numeric|ID позиции корзины.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

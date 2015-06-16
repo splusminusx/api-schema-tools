@@ -27,6 +27,8 @@ Products.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Product](types/Product.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -50,6 +52,8 @@ Products.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID продукта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

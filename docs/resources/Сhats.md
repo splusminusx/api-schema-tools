@@ -25,6 +25,8 @@ Chats.setContactInfoExist
 |id|True|numeric|ID чата.<br/>|
 |contact_info|True|Object|Объект с информацией о найденных контактных данных.<br/>Может содержать ключи:<br/>emails – массив найденных адресов электронной почты.<br/>phones – массив найденных номеров телефонов.<br/>Должен содержать хотя бы один из этих ключей с непустым массивом.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -53,6 +55,8 @@ Chats.setContactInfoExist
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:a;<br/>updated_at:a;<br/>duration:a;<br/>result:a.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Chat](types/Chat.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -76,6 +80,8 @@ Chats.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID чата.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

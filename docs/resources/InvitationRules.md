@@ -53,6 +53,8 @@ curl "https://api.livetex.ru/v2/invitationrules" \
 |max_count|False|numeric|Максимальное количество показов конкретному посетителю приглашений по данному сценарию в течение календарных суток.<br/>Счетчик показов обнуляется по истечению суток с момента последнего показа.<br/>Отсутствие значения или 0 – ограничения нет.<br/>|
 |page_url|False|string|Показывать приглашение на странице с указанным адресом.<br/>Адрес указывается без приставки «http://» или «https://», например:<br/>www.mycompany.ru/about/contacts<br/>Если page_type=specified, то одно из двух полей page_url или page_title должно быть указано.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -76,6 +78,8 @@ InvitationRules.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID сценария вовлечения.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -102,6 +106,8 @@ InvitationRules.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>title:a – по умолчанию;<br/>created_at:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[InvitationRule](types/InvitationRule.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -155,6 +161,8 @@ curl "https://api.livetex.ru/v2/invitationrules/12345" \
 |id|True|numeric|ID сценария вовлечения.<br/>|
 |page_url|False|string|Показывать приглашение на странице с указанным адресом.<br/>Адрес указывается без приставки «http://» или «https://», например:<br/>www.mycompany.ru/about/contacts<br/>Если page_type=specified, то одно из двух полей page_url или page_title должно быть указано.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -177,6 +185,8 @@ InvitationRules.delete
 |---|---|---|---|
 |id|True|numeric|ID сценария вовлечения.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

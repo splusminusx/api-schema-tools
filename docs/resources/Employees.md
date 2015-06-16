@@ -23,6 +23,8 @@ Employees.me
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -46,6 +48,8 @@ Employees.search
 |---|---|---|---|
 |text|True|string|Подстрока в имени или фамилии сотрудника.<br/>|
 
+### Резудьтат
+Array.<[Employee](types/Employee.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -69,6 +73,8 @@ Employees.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID сотрудника.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -102,6 +108,8 @@ Employees.register
 |marketing_data|False|<RegistrationMarketingData >|Дополнительные поля, связанные с регистрацией, важные для отдела маркетинга.<br/>|
 |email|True|email|Адрес электронной почты.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -145,6 +153,8 @@ Employees.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>last_name:a – по умолчанию, last_name:d;<br/>first_name:a, first_name:d;<br/>is_active:a, is_active:d;<br/>created_at:a, created_at:d;<br/>updated_at:a, updated_at:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Employee](types/Employee.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -192,6 +202,8 @@ Employees.update
 |is_lead_notify|False|boolean|Включение/выключение нотификации на электронную почту о поступлении новых лидов.<br/>|
 |is_phone_forward|False|boolean|Включение/выключение переадресации на телефон.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -216,6 +228,8 @@ Employees.setNewPassword
 |password|True|string|Новый пароль.<br/>|
 |hash|True|string|Одноразовый ключ, отправленный по email, указанному при вызове метода Employees.resetPassword.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -242,6 +256,8 @@ Employees.registerAddPromo
 |id|True|numeric|Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.<br/>|
 |promo_code|True|string|Промо код.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -283,6 +299,8 @@ Employees.add
 |email|True|email|Адрес электронной почты.<br/>|
 |is_phone_forward|False|boolean|Включение/выключение переадресации на телефон.<br/>По умолчанию – false.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -308,6 +326,8 @@ Employees.registerConfirm
 |hash|True|string|Ключ активации, отправленный по email, указанному при вызове метода Employees.register.<br/>|
 |id|True|numeric|Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -366,6 +386,8 @@ curl https://api.livetex.ru/v2/employees/batchupdate \
 |phone_forward_number|False|string|Номер для переадресации на телефон.<br/>Обязательно при is_phone_forward=true.<br/>|
 |is_phone_forward|False|boolean|Включение/выключение переадресации на телефон.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -389,6 +411,8 @@ Employees.delete
 |---|---|---|---|
 |id|True|numeric|ID сотрудника.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -412,6 +436,8 @@ Employees.resetPassword
 |---|---|---|---|
 |email|True|string|Адрес электронной почты сотрудника.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -27,6 +27,8 @@ IgnoreListItems.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:a – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[IgnoreListItem](types/IgnoreListItem.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -51,6 +53,8 @@ IgnoreListItems.delete
 |site_id|True|numeric|ID сайта.<br/>|
 |visitor_id|True|string|ID посетителя.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

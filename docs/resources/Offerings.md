@@ -27,6 +27,8 @@ Offerings.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>id:d - по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Offering](types/Offering.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -50,6 +52,8 @@ Offerings.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID предложения.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -28,6 +28,8 @@ Sites.updateOfflineMailSettings
 |id|True|numeric|ID сайта.<br/>|
 |subject|False|string|Тема письма.<br/>Максимум 60 символов.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -50,6 +52,8 @@ Sites.showSiteCallSettings
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -73,6 +77,8 @@ Sites.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -99,6 +105,8 @@ Sites.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>url:a – по умолчанию;<br/>updated_at:a, updated_at:d;<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[Site](types/Site.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -142,6 +150,8 @@ Sites.updateChatFormSettings - DEPRECATED
 |color_type|False|string|Тип указания цветовой схемы.<br/>Возможные значения:<br/>preset – стандартная схема;<br/>custom – явное указание цветов.<br/>|
 |size|False|string|Размер ярлыка.<br/>Возможные значения:<br/>small – маленький, 24x106 пикселей;<br/>large – большой, 40x178 пикселей (по умолчанию).<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -164,6 +174,8 @@ Sites.showSiteChatSettings
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -189,6 +201,8 @@ Sites.showChatWelcomeSettings – DEPRECATED
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -245,6 +259,8 @@ curl https://api.livetex.ru/v2/sites/batchupdate \
 |is_vote|False|boolean|Включение/выключение функциональности оценки чата посетителем.<br/>|
 |is_mobile|False|boolean|Включение/выключение мобильного вида виджета.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -273,6 +289,8 @@ curl https://api.livetex.ru/v2/sites/showofflineformsettings?id=12345 \
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -295,6 +313,8 @@ Sites.showOfflineMailSettings
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -317,6 +337,8 @@ Sites.showSiteWidgetSettings
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -354,6 +376,8 @@ Sites.add
 |callback_url|False|string|Настройка Callback URL.<br/>|
 |hold_rule_id|False|numeric|ID сценария удержания.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -379,6 +403,8 @@ Sites.showChatFormSettings - DEPRECATED
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -406,6 +432,8 @@ Sites.updateSiteChatSettings
 |id|True|numeric|ID сайта.<br/>|
 |online_welcome|False|string|Текст приветствия в режиме онлайн.<br/>Максимум 180 символов.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -438,6 +466,8 @@ Sites.updateCallLabelSettings - DEPRECATED
 |id|True|numeric|ID сайта.<br/>|
 |department_id|False|numeric|ID отдела.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -473,6 +503,8 @@ Sites.updateSiteWidgetSettings
 |id|True|numeric|ID сайта.<br/>|
 |color_text|False|string|Цвет текста.<br/>Возможные значения:<br/>light – светлый;<br/>dark – темный;<br/>auto – значение выбирается автоматически.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -495,6 +527,8 @@ Sites.showSiteXWidgetSettings
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -537,6 +571,8 @@ curl https://api.livetex.ru/v2/sites/updateofflineformsettings \
 |id|True|numeric|ID сайта.<br/>|
 |welcome_mobile|False|string|Текст приветствия по умолчанию, который отобразится в мобильных браузерах.<br/>Максимум 180 символов.<br/>ВНИМАНИЕ! В данный момент это поле не используется.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -563,6 +599,8 @@ Sites.updateChatWelcomeSettings - DEPRECATED
 |text|False|string|Текст приветствия.<br/>Максимум 180 символов.<br/>|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -599,6 +637,8 @@ Sites.update
 |id|True|numeric|ID редактируемого сайта.<br/>|
 |hold_rule_id|False|numeric|ID сценария удержания.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -647,6 +687,8 @@ curl https://api.livetex.ru/v2/sites/updateleadformsettings \
 |required_fields|False|string|Обязательность полей при lead_type = email_and_phone.<br/>email – e-mail;<br/>phone – телефон;<br/>email_and_phone – email и телефон.<br/>Поле обязательно при lead_type = email_and_phone.<br/>|
 |color_text|False|color|Цвет текста.<br/>Поле обязательно для color_type = custom.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -675,6 +717,8 @@ curl "https://api.livetex.ru/v2/sites/showleadformsettings?id=12345" \
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -731,6 +775,8 @@ curl https://api.livetex.ru/v2/sites/batchupdatesitexwidgetsettings \
 |ids|True|idlist|Список, через запятую, ID сайтов.<br/>|
 |days|False|Array.<numeric>|Массив дней недели, в которые необходимо показывать приглашение к заказу обратного звонка.<br/>Понедельник – 0, вторник - 1 и т.д.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -757,6 +803,8 @@ Sites.updateSiteXWidgetSettings
 |id|True|numeric|ID сайта.<br/>|
 |days|False|Array.<numeric>|Массив дней недели, в которые необходимо показывать приглашение к заказу обратного звонка.<br/>Понедельник – 0, вторник - 1 и т.д.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -779,6 +827,8 @@ Sites.unbindAllDepartments
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -813,6 +863,8 @@ curl https://api.livetex.ru/v2/sites/updatecallsettings \
 |greeting_custom|False|file|Пользовательское приветствие.<br/>Обязательно, если greeting_type = custom.<br/>Поддерживаются форматы MP3, OGG.<br/>Размер загружаемого файла должен быть не более 8МB.<br/>|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -841,6 +893,8 @@ curl https://api.livetex.ru/v2/sites/showcalllabelsettings?id=12345 \
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -866,6 +920,8 @@ Sites.delete
 |---|---|---|---|
 |id|True|numeric|ID сайта.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

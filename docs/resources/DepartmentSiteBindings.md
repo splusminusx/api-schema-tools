@@ -33,6 +33,8 @@ DepartmentSiteBindings.add
 |callback_url|False|string|Настройка Callback URL.<br/>|
 |department_id|True|numeric|ID отдела.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -56,6 +58,8 @@ DepartmentSiteBindings.show
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID связи.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -82,6 +86,8 @@ DepartmentSiteBindings.list
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>updated_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
+### Резудьтат
+Array.<[DepartmentSiteBinding](types/DepartmentSiteBinding.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -114,6 +120,8 @@ DepartmentSiteBindings.update
 |id|True|numeric|ID связи.<br/>|
 |department_id|False|numeric|ID отдела.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -139,6 +147,8 @@ DepartmentSiteBindings.delete
 |---|---|---|---|
 |id|True|numeric|ID связи.<br/>|
 
+### Резудьтат
+None
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
