@@ -12,7 +12,7 @@ class MarkdownSerializer(object):
         self._repo_path = repo_path
         self._doc_path = doc_path
 
-    DEPRECATION_WARNING = u'\n## WARNING: Type is DEPRECATED\n'
+    DEPRECATION_WARNING = u'\n## WARNING: DEPRECATED\n'
     TYPE_DESCRIPTION_HEADING = u'\n### Описание типа\n'
     RESOURCE_DESCRIPTION_HEADING = u'\n## Описание ресурса\n'
     METHOD_DESCRIPTION_HEADING = u'\n### Описание метода\n'
@@ -63,9 +63,11 @@ class MarkdownSerializer(object):
 
     def _serialize_complex_data_type(self, obj):
         with io.open(self._get_full_path(obj), 'w', encoding='utf-8') as f:
+            f.write(u'\n## ' + obj.name)
             if obj.deprecated:
                 f.write(self.DEPRECATION_WARNING)
-            f.write(u'\n## ' + obj.name + u'\n')
+            else:
+                f.write(u'\n')
             f.write(self.TYPE_DESCRIPTION_HEADING)
             f.write(self._escape_description(obj.description))
             f.write(self.FIELDS_HEADING)
@@ -83,9 +85,11 @@ class MarkdownSerializer(object):
 
     def _serialize_primitive_data_type(self, obj):
         with io.open(self._get_full_path(obj), 'w', encoding='utf-8') as f:
+            f.write(u'\n## ' + obj.name)
             if obj.deprecated:
                 f.write(self.DEPRECATION_WARNING)
-            f.write(u'\n## ' + obj.name + u'\n')
+            else:
+                f.write(u'\n')
             f.write(self.TYPE_DESCRIPTION_HEADING)
             f.write(self._escape_description(obj.description))
         f.close()
@@ -100,7 +104,11 @@ class MarkdownSerializer(object):
                 method = obj.methods[method_name]
                 if method.deprecated:
                     f.write(self.DEPRECATION_WARNING)
-                f.write(u'\n## ' + method.name + u'\n')
+                f.write(u'\n## ' + method.name)
+                if method.deprecated:
+                    f.write(self.DEPRECATION_WARNING)
+                else:
+                    f.write(u'\n')
                 f.write(self.METHOD_DESCRIPTION_HEADING)
                 f.write(self._escape_description(method.description))
                 f.write(self.FIELDS_HEADING)

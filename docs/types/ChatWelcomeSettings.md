@@ -1,7 +1,6 @@
 
-## WARNING: Type is DEPRECATED
-
 ## ChatWelcomeSettings
+## WARNING: DEPRECATED
 
 ### Описание типа
 ChatWelcomeSettings - DEPRECATED<br/>ВНИМАНИЕ! Сущность является устаревшей. Все переехало в SiteChatSettings.<br/>Настройки окна приветствия.<br/>Таблица 22. Поля настроек окна приветствия.<br/><br/>

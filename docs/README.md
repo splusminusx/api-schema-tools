@@ -24,14 +24,14 @@
 - [BatchResponse](/docs/types/BatchResponse.md)
 - [Call](/docs/types/Call.md)
 - [CallButton](/docs/types/CallButton.md)
-- [CallLabelSettings](/docs/types/CallLabelSettings.md)
+- [CallLabelSettings](/docs/types/CallLabelSettings.md) - WARNING: DEPRECATED
 - [CallSettings](/docs/types/CallSettings.md)
 - [Cart](/docs/types/Cart.md)
 - [CartItem](/docs/types/CartItem.md)
 - [Chat](/docs/types/Chat.md)
 - [ChatButton](/docs/types/ChatButton.md)
-- [ChatFormSettings](/docs/types/ChatFormSettings.md)
-- [ChatWelcomeSettings](/docs/types/ChatWelcomeSettings.md)
+- [ChatFormSettings](/docs/types/ChatFormSettings.md) - WARNING: DEPRECATED
+- [ChatWelcomeSettings](/docs/types/ChatWelcomeSettings.md) - WARNING: DEPRECATED
 - [City](/docs/types/City.md)
 - [CobrowseSettings](/docs/types/CobrowseSettings.md)
 - [Comment](/docs/types/Comment.md)
@@ -60,12 +60,12 @@
 - [InvitationRuleSiteBinding](/docs/types/InvitationRuleSiteBinding.md)
 - [Invoice](/docs/types/Invoice.md)
 - [Lead](/docs/types/Lead.md)
-- [LeadFormSettings](/docs/types/LeadFormSettings.md)
+- [LeadFormSettings](/docs/types/LeadFormSettings.md) - WARNING: DEPRECATED
 - [Location](/docs/types/Location.md)
 - [MailBox](/docs/types/MailBox.md)
 - [Message](/docs/types/Message.md)
 - [Offering](/docs/types/Offering.md)
-- [OfflineFormSettings](/docs/types/OfflineFormSettings.md)
+- [OfflineFormSettings](/docs/types/OfflineFormSettings.md) - WARNING: DEPRECATED
 - [OfflineMailSettings](/docs/types/OfflineMailSettings.md)
 - [Order](/docs/types/Order.md)
 - [PageView](/docs/types/PageView.md)

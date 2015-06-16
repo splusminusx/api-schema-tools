@@ -1,7 +1,6 @@
 
-## WARNING: Type is DEPRECATED
-
 ## LeadFormSettings
+## WARNING: DEPRECATED
 
 ### Описание типа
 LeadFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Сущность является устаревшей. Все переехало в WidgetSettings, SiteChatSettings с существенными изменениями.<br/>Настройки формы генератора лидов.<br/>Таблица 51. Настройки формы генератора лидов<br/><br/>

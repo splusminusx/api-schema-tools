@@ -1,7 +1,6 @@
 
-## WARNING: Type is DEPRECATED
-
 ## CallLabelSettings
+## WARNING: DEPRECATED
 
 ### Описание типа
 CallLabelSettings - DEPRECATED<br/>ВНИМАНИЕ! Сущность является устаревшей. Ярлыка звонков больше не будет.<br/>Настройки ярлыка звонка.<br/>Таблица 15. Поля настроек ярлыка звонка.<br/><br/>

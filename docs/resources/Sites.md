@@ -83,9 +83,10 @@ Array.<[Site](/docs/types/Site.md)>
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
-## WARNING: Type is DEPRECATED
+## WARNING: DEPRECATED
 
 ## updateChatFormSettings
+## WARNING: DEPRECATED
 
 ### Описание метода
 Sites.updateChatFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.<br/>Изменяет настройки окна чата сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
@@ -137,9 +138,10 @@ Sites.showSiteChatSettings<br/>Возвращает настройки чата 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
-## WARNING: Type is DEPRECATED
+## WARNING: DEPRECATED
 
 ## showChatWelcomeSettings
+## WARNING: DEPRECATED
 
 ### Описание метода
 Sites.showChatWelcomeSettings – DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.<br/>Возвращает настройки окна приветствия указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «ChatWelcomeSettings».<br/>Уровень доступа для ролей<br/><br/>
@@ -178,9 +180,10 @@ None
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
-## WARNING: Type is DEPRECATED
+## WARNING: DEPRECATED
 
 ## showOfflineFormSettings
+## WARNING: DEPRECATED
 
 ### Описание метода
 Sites.showOfflineFormSettings – DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Возвращает настройки формы офлайн-сообщения указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «OfflineFormSettings».<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/showofflineformsettings?id=12345 \<br/>-H "Authorization: Bearer ACCESS_TOKEN"<br/>Уровень доступа для ролей<br/><br/>
@@ -261,9 +264,10 @@ Sites.add<br/>Создает новый сайт.<br/>ВНИМАНИЕ!<br/>Но
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
-## WARNING: Type is DEPRECATED
+## WARNING: DEPRECATED
 
 ## showChatFormSettings
+## WARNING: DEPRECATED
 
 ### Описание метода
 Sites.showChatFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.<br/>Возвращает настройки окна чата указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «ChatFormSettings».<br/>Уровень доступа для ролей<br/><br/>
@@ -302,9 +306,10 @@ None
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
-## WARNING: Type is DEPRECATED
+## WARNING: DEPRECATED
 
 ## updateCallLabelSettings
+## WARNING: DEPRECATED
 
 ### Описание метода
 Sites.updateCallLabelSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Изменяет звонковые настройки сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
@@ -375,9 +380,10 @@ Sites.showSiteXWidgetSettings<br/>Возвращает настройки про
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
-## WARNING: Type is DEPRECATED
+## WARNING: DEPRECATED
 
 ## updateOfflineFormSettings
+## WARNING: DEPRECATED
 
 ### Описание метода
 Sites.updateOfflineFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Обновляет настройки офлайн-формы.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/updateofflineformsettings \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>–d "id=12345" \<br/>–d "banner_type=none"<br/>Уровень доступа для ролей<br/><br/>
@@ -406,9 +412,10 @@ None
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
-## WARNING: Type is DEPRECATED
+## WARNING: DEPRECATED
 
 ## updateChatWelcomeSettings
+## WARNING: DEPRECATED
 
 ### Описание метода
 Sites.updateChatWelcomeSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.<br/>Изменяет настройки окна чата сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
@@ -457,9 +464,10 @@ None
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
-## WARNING: Type is DEPRECATED
+## WARNING: DEPRECATED
 
 ## updateLeadFormSettings
+## WARNING: DEPRECATED
 
 ### Описание метода
 Sites.updateLeadFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.<br/>Обновляет настройки формы генератора лидов указанного сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/updateleadformsettings \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>–d "id=12345" \<br/>–d "photo_type=none" \<br/>Уровень доступа для ролей<br/><br/>
@@ -494,9 +502,10 @@ None
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
-## WARNING: Type is DEPRECATED
+## WARNING: DEPRECATED
 
 ## showLeadFormSettings
+## WARNING: DEPRECATED
 
 ### Описание метода
 Sites.showLeadFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.<br/>Возвращает настройки формы генератора лидов указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «LeadFormSettings».<br/>Пример запроса<br/>curl "https://api.livetex.ru/v2/sites/showleadformsettings?id=12345" \<br/>-H "Authorization: Bearer ACCESS_TOKEN"<br/>Уровень доступа для ролей<br/><br/>
@@ -596,9 +605,10 @@ None
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
-## WARNING: Type is DEPRECATED
+## WARNING: DEPRECATED
 
 ## showCallLabelSettings
+## WARNING: DEPRECATED
 
 ### Описание метода
 Sites.showCallLabelSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Возвращает настройки ярлыка звонков указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «CallLabelSettings».<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/showcalllabelsettings?id=12345 \<br/>-H "Authorization: Bearer ACCESS_TOKEN"<br/>Уровень доступа для ролей<br/><br/>

@@ -1,7 +1,6 @@
 
-## WARNING: Type is DEPRECATED
-
 ## OfflineFormSettings
+## WARNING: DEPRECATED
 
 ### Описание типа
 OfflineFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Сущность является устаревшей после ее объединения с LeadFormSettings.<br/>Настройки офлайн-формы.<br/>Таблица 56. Настройки офлайн-формы<br/><br/>
