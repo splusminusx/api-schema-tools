@@ -2,10 +2,7 @@
 ## RegistrationMarketingData
 
 ### Описание типа
-RegistrationMarketingData
-Абстрактный тип данных. Используется только в методе Employees.register
-Таблица 69. Поля почтового ящика
-
+RegistrationMarketingData<br/>Абстрактный тип данных. Используется только в методе Employees.register<br/>Таблица 69. Поля почтового ящика<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |

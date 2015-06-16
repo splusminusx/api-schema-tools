@@ -2,12 +2,7 @@
 ## QuickMessageCategory
 
 ### Описание типа
-QuickMessageCategory
-Категория быстрых сообщений.
-Таблица 67. Поля быстрого сообщения
-
-Контроллер: QuickMessageCategories.
-
+QuickMessageCategory<br/>Категория быстрых сообщений.<br/>Таблица 67. Поля быстрого сообщения<br/><br/>Контроллер: QuickMessageCategories.<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |

@@ -2,33 +2,13 @@
 # InvitationRules
 
 ## Описание ресурса
-InvitationRules
-
+InvitationRules<br/>
 # Методы
 
 ## add
 
 ### Описание метода
-InvitationRules.add
-Добавляет новый сценарий вовлечения.
-Параметры
-Результат
-Объект типа «InvitationRule».
-Пример вызова
-curl "https://api.livetex.ru/v2/invitationrules" \
--H "Authorization: Bearer ACCESS_TOKEN" \
-	-d "title=Первое посещение из России" \
-	-d "action=chat" \
-	-d "welcome=Могу ли я вам чем-то помочь?" \
-	-d "is_active=true" \
-	-d "is_new_visitor=true" \
-	-d "locations[0][country][id]=123" \
-	-d "locations[0][city][id]=3245" \
-	-d "site_bindings[0][site_id]=6789" \
-	-d "site_bindings[0][department_id]=65432"
-Уровень доступа для ролей
-
-
+InvitationRules.add<br/>Добавляет новый сценарий вовлечения.<br/>Параметры<br/>Результат<br/>Объект типа «InvitationRule».<br/>Пример вызова<br/>curl "https://api.livetex.ru/v2/invitationrules" \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>	-d "title=Первое посещение из России" \<br/>	-d "action=chat" \<br/>	-d "welcome=Могу ли я вам чем-то помочь?" \<br/>	-d "is_active=true" \<br/>	-d "is_new_visitor=true" \<br/>	-d "locations[0][country][id]=123" \<br/>	-d "locations[0][city][id]=3245" \<br/>	-d "site_bindings[0][site_id]=6789" \<br/>	-d "site_bindings[0][department_id]=65432"<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -63,14 +43,7 @@ curl "https://api.livetex.ru/v2/invitationrules" \
 ## show
 
 ### Описание метода
-InvitationRules.show
-Возвращает данные указанного сценария вовлечения.
-Параметры
-Результат
-Объект типа «InvitationRule».
-Уровень доступа для ролей
-
-
+InvitationRules.show<br/>Возвращает данные указанного сценария вовлечения.<br/>Параметры<br/>Результат<br/>Объект типа «InvitationRule».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -88,14 +61,7 @@ InvitationRules.show
 ## list
 
 ### Описание метода
-InvitationRules.list
-Возвращает список сценариев вовлечения.
-Параметры
-Результат
-Массив объектов типа «InvitationRule».
-Уровень доступа для ролей
-
-
+InvitationRules.list<br/>Возвращает список сценариев вовлечения.<br/>Параметры<br/>Результат<br/>Массив объектов типа «InvitationRule».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -116,26 +82,7 @@ Array.<[InvitationRule](/docs/types/InvitationRule.md)>
 ## update
 
 ### Описание метода
-InvitationRules.update
-Изменяет указанный сценарий вовлечения.
-Параметры
-Результат
-Метод ничего не возвращает.
-Пример вызова
-curl "https://api.livetex.ru/v2/invitationrules/12345" \
-	-H "Authorization: Bearer ACCESS_TOKEN" \
-	–X PATCH \
-	-d "title=Первое посещение из России" \
-	-d "locations[0][country][id]=123" \
-	-d "locations[0][city][id]=3245" \
-	-d "site_bindings[0][site_id]=6789" \
-	-d "site_bindings[0][department_id]=65432"
-	-d "site_bindings[1][site_id]=6785"
-
-Уровень доступа для ролей
-
-
-
+InvitationRules.update<br/>Изменяет указанный сценарий вовлечения.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Пример вызова<br/>curl "https://api.livetex.ru/v2/invitationrules/12345" \<br/>	-H "Authorization: Bearer ACCESS_TOKEN" \<br/>	–X PATCH \<br/>	-d "title=Первое посещение из России" \<br/>	-d "locations[0][country][id]=123" \<br/>	-d "locations[0][city][id]=3245" \<br/>	-d "site_bindings[0][site_id]=6789" \<br/>	-d "site_bindings[0][department_id]=65432"<br/>	-d "site_bindings[1][site_id]=6785"<br/><br/>Уровень доступа для ролей<br/><br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -171,14 +118,7 @@ None
 ## delete
 
 ### Описание метода
-InvitationRules.delete
-Удаляет указанный сценария вовлечения.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+InvitationRules.delete<br/>Удаляет указанный сценария вовлечения.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |

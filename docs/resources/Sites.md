@@ -2,21 +2,13 @@
 # Sites
 
 ## Описание ресурса
-Sites
-
+Sites<br/>
 # Методы
 
 ## updateOfflineMailSettings
 
 ### Описание метода
-Sites.updateOfflineMailSettings
-Изменяет настройки офлайн почты.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+Sites.updateOfflineMailSettings<br/>Изменяет настройки офлайн почты.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -38,14 +30,7 @@ None
 ## showSiteCallSettings
 
 ### Описание метода
-Sites.showSiteCallSettings
-Возвращает настройки звонков указанного сайта.
-Параметры
-Результат
-Объект типа «SiteCallSettings».
-Уровень доступа для ролей
-
-
+Sites.showSiteCallSettings<br/>Возвращает настройки звонков указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «SiteCallSettings».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -62,14 +47,7 @@ Sites.showSiteCallSettings
 ## show
 
 ### Описание метода
-Sites.show
-Возвращает данные указанного сайта.
-Параметры
-Результат
-Объект типа «Site».
-Уровень доступа для ролей
-
-
+Sites.show<br/>Возвращает данные указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «Site».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -87,14 +65,7 @@ Sites.show
 ## list
 
 ### Описание метода
-Sites.list
-Возвращает список сайтов.
-Параметры
-Результат
-Массив объектов типа «Site».
-Уровень доступа для ролей
-
-
+Sites.list<br/>Возвращает список сайтов.<br/>Параметры<br/>Результат<br/>Массив объектов типа «Site».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -117,15 +88,7 @@ Array.<[Site](/docs/types/Site.md)>
 ## updateChatFormSettings
 
 ### Описание метода
-Sites.updateChatFormSettings - DEPRECATED
-ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.
-Изменяет настройки окна чата сайта.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+Sites.updateChatFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.<br/>Изменяет настройки окна чата сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -160,14 +123,7 @@ None
 ## showSiteChatSettings
 
 ### Описание метода
-Sites.showSiteChatSettings
-Возвращает настройки чата для указанного сайта.
-Параметры
-Результат
-Объект типа «SiteChatSettings».
-Уровень доступа для ролей
-
-
+Sites.showSiteChatSettings<br/>Возвращает настройки чата для указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «SiteChatSettings».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -186,15 +142,7 @@ Sites.showSiteChatSettings
 ## showChatWelcomeSettings
 
 ### Описание метода
-Sites.showChatWelcomeSettings – DEPRECATED
-ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.
-Возвращает настройки окна приветствия указанного сайта.
-Параметры
-Результат
-Объект типа «ChatWelcomeSettings».
-Уровень доступа для ролей
-
-
+Sites.showChatWelcomeSettings – DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.<br/>Возвращает настройки окна приветствия указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «ChatWelcomeSettings».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -211,43 +159,7 @@ Sites.showChatWelcomeSettings – DEPRECATED
 ## batchUpdate
 
 ### Описание метода
-Sites.batchUpdate
-Выполняет пакетное изменение данных указанных сайтов.
-Метод вызывает Sites.update для каждого ID сайта и передает указанные параметры.
-Параметры
-Результат
-Массив объектов c ID, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.
-Пример
-curl https://api.livetex.ru/v2/sites/batchupdate \
--H "Authorization: Bearer ACCESS_TOKEN" \
--d "ids=123,456,789" \
--d "is_callback=false"
-
-{
-    "results": [
-        {
-            "id": "123",
-            "code": 200,
-            "message": ""
-        },
-        {
-            "id": "456",
-            "code": 200,
-            "message": ""
-        },
-        {
-            "id": "789",
-            "code": 403,
-            "message": "Forbidden"
-        }
-    ]
-}
-
-Уровень доступа для ролей
-
-ВНИМАНИЕ!
-При изменении конкретного сайта работает уровень доступа метода Sites.update в соответствующих условиях.
-
+Sites.batchUpdate<br/>Выполняет пакетное изменение данных указанных сайтов.<br/>Метод вызывает Sites.update для каждого ID сайта и передает указанные параметры.<br/>Параметры<br/>Результат<br/>Массив объектов c ID, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.<br/>Пример<br/>curl https://api.livetex.ru/v2/sites/batchupdate \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>-d "ids=123,456,789" \<br/>-d "is_callback=false"<br/><br/>{<br/>    "results": [<br/>        {<br/>            "id": "123",<br/>            "code": 200,<br/>            "message": ""<br/>        },<br/>        {<br/>            "id": "456",<br/>            "code": 200,<br/>            "message": ""<br/>        },<br/>        {<br/>            "id": "789",<br/>            "code": 403,<br/>            "message": "Forbidden"<br/>        }<br/>    ]<br/>}<br/><br/>Уровень доступа для ролей<br/><br/>ВНИМАНИЕ!<br/>При изменении конкретного сайта работает уровень доступа метода Sites.update в соответствующих условиях.<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -271,18 +183,7 @@ None
 ## showOfflineFormSettings
 
 ### Описание метода
-Sites.showOfflineFormSettings – DEPRECATED
-ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.
-Возвращает настройки формы офлайн-сообщения указанного сайта.
-Параметры
-Результат
-Объект типа «OfflineFormSettings».
-Пример запроса
-curl https://api.livetex.ru/v2/sites/showofflineformsettings?id=12345 \
--H "Authorization: Bearer ACCESS_TOKEN"
-Уровень доступа для ролей
-
-
+Sites.showOfflineFormSettings – DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Возвращает настройки формы офлайн-сообщения указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «OfflineFormSettings».<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/showofflineformsettings?id=12345 \<br/>-H "Authorization: Bearer ACCESS_TOKEN"<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -299,14 +200,7 @@ curl https://api.livetex.ru/v2/sites/showofflineformsettings?id=12345 \
 ## showOfflineMailSettings
 
 ### Описание метода
-Sites.showOfflineMailSettings
-Возвращает настройки офлайн почты.
-Параметры
-Результат
-Объект типа «OfflineMailSettings».
-Уровень доступа для ролей
-
-
+Sites.showOfflineMailSettings<br/>Возвращает настройки офлайн почты.<br/>Параметры<br/>Результат<br/>Объект типа «OfflineMailSettings».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -323,14 +217,7 @@ Sites.showOfflineMailSettings
 ## showSiteWidgetSettings
 
 ### Описание метода
-Sites.showSiteWidgetSettings
-Возвращает настройки виджета для указанного сайта.
-Параметры
-Результат
-Объект типа «SiteWidgetSettings».
-Уровень доступа для ролей
-
-
+Sites.showSiteWidgetSettings<br/>Возвращает настройки виджета для указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «SiteWidgetSettings».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -347,16 +234,7 @@ Sites.showSiteWidgetSettings
 ## add
 
 ### Описание метода
-Sites.add
-Создает новый сайт.
-ВНИМАНИЕ!
-Новый сайт автоматически добавляется в поле managed_sites всем сотрудникам с ролью, имеющей is_full_by_default = true.
-Параметры
-Результат
-Объект типа «Site».
-Уровень доступа для ролей
-
-
+Sites.add<br/>Создает новый сайт.<br/>ВНИМАНИЕ!<br/>Новый сайт автоматически добавляется в поле managed_sites всем сотрудникам с ролью, имеющей is_full_by_default = true.<br/>Параметры<br/>Результат<br/>Объект типа «Site».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -388,15 +266,7 @@ Sites.add
 ## showChatFormSettings
 
 ### Описание метода
-Sites.showChatFormSettings - DEPRECATED
-ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.
-Возвращает настройки окна чата указанного сайта.
-Параметры
-Результат
-Объект типа «ChatFormSettings».
-Уровень доступа для ролей
-
-
+Sites.showChatFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.<br/>Возвращает настройки окна чата указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «ChatFormSettings».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -413,14 +283,7 @@ Sites.showChatFormSettings - DEPRECATED
 ## updateSiteChatSettings
 
 ### Описание метода
-Sites.updateSiteChatSettings
-Изменяет настройки чата для указанного сайта.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+Sites.updateSiteChatSettings<br/>Изменяет настройки чата для указанного сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -444,15 +307,7 @@ None
 ## updateCallLabelSettings
 
 ### Описание метода
-Sites.updateCallLabelSettings - DEPRECATED
-ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.
-Изменяет звонковые настройки сайта.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+Sites.updateCallLabelSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Изменяет звонковые настройки сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -476,14 +331,7 @@ None
 ## updateSiteWidgetSettings
 
 ### Описание метода
-Sites.updateSiteWidgetSettings
-Изменяет настройки виджета для указанного сайта.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+Sites.updateSiteWidgetSettings<br/>Изменяет настройки виджета для указанного сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -513,14 +361,7 @@ None
 ## showSiteXWidgetSettings
 
 ### Описание метода
-Sites.showSiteXWidgetSettings
-Возвращает настройки продукта «X-widget» для указанного сайта.
-Параметры
-Результат
-Объект типа «SiteXWidgetSettings».
-Уровень доступа для ролей
-
-
+Sites.showSiteXWidgetSettings<br/>Возвращает настройки продукта «X-widget» для указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «SiteXWidgetSettings».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -539,20 +380,7 @@ Sites.showSiteXWidgetSettings
 ## updateOfflineFormSettings
 
 ### Описание метода
-Sites.updateOfflineFormSettings - DEPRECATED
-ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.
-Обновляет настройки офлайн-формы.
-Параметры
-Результат
-Метод ничего не возвращает.
-Пример запроса
-curl https://api.livetex.ru/v2/sites/updateofflineformsettings \
--H "Authorization: Bearer ACCESS_TOKEN" \
-–d "id=12345" \
-–d "banner_type=none"
-Уровень доступа для ролей
-
-
+Sites.updateOfflineFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Обновляет настройки офлайн-формы.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/updateofflineformsettings \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>–d "id=12345" \<br/>–d "banner_type=none"<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -583,15 +411,7 @@ None
 ## updateChatWelcomeSettings
 
 ### Описание метода
-Sites.updateChatWelcomeSettings - DEPRECATED
-ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.
-Изменяет настройки окна чата сайта.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+Sites.updateChatWelcomeSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.<br/>Изменяет настройки окна чата сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -609,14 +429,7 @@ None
 ## update
 
 ### Описание метода
-Sites.update
-Изменяет данные указанного сайта.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+Sites.update<br/>Изменяет данные указанного сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -649,20 +462,7 @@ None
 ## updateLeadFormSettings
 
 ### Описание метода
-Sites.updateLeadFormSettings - DEPRECATED
-ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.
-Обновляет настройки формы генератора лидов указанного сайта.
-Параметры
-Результат
-Метод ничего не возвращает.
-Пример запроса
-curl https://api.livetex.ru/v2/sites/updateleadformsettings \
--H "Authorization: Bearer ACCESS_TOKEN" \
-–d "id=12345" \
-–d "photo_type=none" \
-Уровень доступа для ролей
-
-
+Sites.updateLeadFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.<br/>Обновляет настройки формы генератора лидов указанного сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/updateleadformsettings \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>–d "id=12345" \<br/>–d "photo_type=none" \<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -699,18 +499,7 @@ None
 ## showLeadFormSettings
 
 ### Описание метода
-Sites.showLeadFormSettings - DEPRECATED
-ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.
-Возвращает настройки формы генератора лидов указанного сайта.
-Параметры
-Результат
-Объект типа «LeadFormSettings».
-Пример запроса
-curl "https://api.livetex.ru/v2/sites/showleadformsettings?id=12345" \
--H "Authorization: Bearer ACCESS_TOKEN"
-Уровень доступа для ролей
-
-
+Sites.showLeadFormSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.<br/>Возвращает настройки формы генератора лидов указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «LeadFormSettings».<br/>Пример запроса<br/>curl "https://api.livetex.ru/v2/sites/showleadformsettings?id=12345" \<br/>-H "Authorization: Bearer ACCESS_TOKEN"<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -727,44 +516,7 @@ curl "https://api.livetex.ru/v2/sites/showleadformsettings?id=12345" \
 ## batchUpdateSiteXWidgetSettings
 
 ### Описание метода
-Sites.batchUpdateSiteXWidgetSettings
-Выполняет пакетное изменение настроек X-widget указанных сайтов.
-Метод вызывает Sites.updateSiteXWidgetSettings для каждого ID сайта и передает указанные параметры.
-Параметры
-Результат
-Массив объектов c ID-сайта, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.
-Пример
-curl https://api.livetex.ru/v2/sites/batchupdatesitexwidgetsettings \
--H "Authorization: Bearer ACCESS_TOKEN" \
--d "ids=123,456,789" \
--d "is_active=false"
-
-{
-    "results": [
-        {
-            "id": "123",
-            "code": 200,
-            "message": ""
-        },
-        {
-            "id": "456",
-            "code": 200,
-            "message": ""
-        },
-        {
-            "id": "789",
-            "code": 403,
-            "message": "Forbidden"
-        }
-    ]
-}
-Уровень доступа для ролей
-
-ВНИМАНИЕ!
-При изменении конкретного сайта работает уровень доступа метода Sites.updateSiteXWidgetSettings в соответствующих условиях.
-
-
-
+Sites.batchUpdateSiteXWidgetSettings<br/>Выполняет пакетное изменение настроек X-widget указанных сайтов.<br/>Метод вызывает Sites.updateSiteXWidgetSettings для каждого ID сайта и передает указанные параметры.<br/>Параметры<br/>Результат<br/>Массив объектов c ID-сайта, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.<br/>Пример<br/>curl https://api.livetex.ru/v2/sites/batchupdatesitexwidgetsettings \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>-d "ids=123,456,789" \<br/>-d "is_active=false"<br/><br/>{<br/>    "results": [<br/>        {<br/>            "id": "123",<br/>            "code": 200,<br/>            "message": ""<br/>        },<br/>        {<br/>            "id": "456",<br/>            "code": 200,<br/>            "message": ""<br/>        },<br/>        {<br/>            "id": "789",<br/>            "code": 403,<br/>            "message": "Forbidden"<br/>        }<br/>    ]<br/>}<br/>Уровень доступа для ролей<br/><br/>ВНИМАНИЕ!<br/>При изменении конкретного сайта работает уровень доступа метода Sites.updateSiteXWidgetSettings в соответствующих условиях.<br/><br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -785,14 +537,7 @@ None
 ## updateSiteXWidgetSettings
 
 ### Описание метода
-Sites.updateSiteXWidgetSettings
-Изменяет настройки продукта «X-widget» для указанного сайта.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+Sites.updateSiteXWidgetSettings<br/>Изменяет настройки продукта «X-widget» для указанного сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -813,14 +558,7 @@ None
 ## unbindAllDepartments
 
 ### Описание метода
-Sites.unbindAllDepartments
-Отвязывает все отделы от указанного сайта. При этом все сотрудники отделов напрямую связываются с сайтом.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+Sites.unbindAllDepartments<br/>Отвязывает все отделы от указанного сайта. При этом все сотрудники отделов напрямую связываются с сайтом.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -837,19 +575,7 @@ None
 ## updateSiteCallSettings
 
 ### Описание метода
-Sites.updateSiteCallSettings
-Изменяет звонковые настройки сайта. 
-Параметры
-Результат
-Метод ничего не возвращает.
-Пример запроса
-curl https://api.livetex.ru/v2/sites/updatecallsettings \
--H "Authorization: Bearer ACCESS_TOKEN" \
-–d "id=12345" \
-–d "background_type=none" \
-Уровень доступа для ролей
-
-
+Sites.updateSiteCallSettings<br/>Изменяет звонковые настройки сайта. <br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/updatecallsettings \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>–d "id=12345" \<br/>–d "background_type=none" \<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -875,18 +601,7 @@ None
 ## showCallLabelSettings
 
 ### Описание метода
-Sites.showCallLabelSettings - DEPRECATED
-ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.
-Возвращает настройки ярлыка звонков указанного сайта.
-Параметры
-Результат
-Объект типа «CallLabelSettings».
-Пример запроса
-curl https://api.livetex.ru/v2/sites/showcalllabelsettings?id=12345 \
--H "Authorization: Bearer ACCESS_TOKEN"
-Уровень доступа для ролей
-
-
+Sites.showCallLabelSettings - DEPRECATED<br/>ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.<br/>Возвращает настройки ярлыка звонков указанного сайта.<br/>Параметры<br/>Результат<br/>Объект типа «CallLabelSettings».<br/>Пример запроса<br/>curl https://api.livetex.ru/v2/sites/showcalllabelsettings?id=12345 \<br/>-H "Authorization: Bearer ACCESS_TOKEN"<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -903,17 +618,7 @@ curl https://api.livetex.ru/v2/sites/showcalllabelsettings?id=12345 \
 ## delete
 
 ### Описание метода
-Sites.delete
-Удаляет указанный сайт.
-ВНИМАНИЕ!
-При удалении сайта удаляются все связи с отделами. При этом также удаляются отделы, оставшиеся без сайтов.
-При удалении сайта удаляются все его связи с объектами других сущностей, за исключением чатов, звонков и лидов и связей с сотрудниками в поле managed_sites.
-Параметры
-Результат
-Метод ничего не возвращает.
-Уровень доступа для ролей
-
-
+Sites.delete<br/>Удаляет указанный сайт.<br/>ВНИМАНИЕ!<br/>При удалении сайта удаляются все связи с отделами. При этом также удаляются отделы, оставшиеся без сайтов.<br/>При удалении сайта удаляются все его связи с объектами других сущностей, за исключением чатов, звонков и лидов и связей с сотрудниками в поле managed_sites.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |

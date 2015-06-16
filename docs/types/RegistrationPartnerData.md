@@ -2,11 +2,7 @@
 ## RegistrationPartnerData
 
 ### Описание типа
-RegistrationPartnerData
-Абстрактный тип данных. Используется только в методе Employees.register
-Таблица 70. Поля почтового ящика
-
-
+RegistrationPartnerData<br/>Абстрактный тип данных. Используется только в методе Employees.register<br/>Таблица 70. Поля почтового ящика<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |

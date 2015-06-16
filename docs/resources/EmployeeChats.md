@@ -2,51 +2,13 @@
 # EmployeeChats
 
 ## Описание ресурса
-EmployeeChats
-
+EmployeeChats<br/>
 # Методы
 
 ## list
 
 ### Описание метода
-EmployeeChats.list
-Возвращает список межоператорских чатов.
-Межоператорским чатом считается набор сообщений между двумя операторами в пределах указанного периода времени.
-Параметры
-Результат
-Массив объектов со следующими полями:
-
-Пример
-curl https://api.livetex.ru/v2/employeechats \
--H "Authorization: Bearer ACCESS_TOKEN"
-
-{
-    "total": 1,
-    "results": [
-        {
-            "last_message_at": "2012-12-07T09:14:57+04:00",
-            "last_message_text": "Спасибо за консультацию. Пока!",
-            "employees":[
-                {
-                    "id": "123456",
-                    "first_name": "Иван",
-                    "last_name": "Давыдов"
-                },
-                {
-                    "id": "123457",
-                    "first_name": "Елена",
-                    "last_name": "Изосимова"
-                }
-            ],
-            message_count: 10
-        }
-    ]
-}
-
-Уровень доступа для ролей
-
-
-
+EmployeeChats.list<br/>Возвращает список межоператорских чатов.<br/>Межоператорским чатом считается набор сообщений между двумя операторами в пределах указанного периода времени.<br/>Параметры<br/>Результат<br/>Массив объектов со следующими полями:<br/><br/>Пример<br/>curl https://api.livetex.ru/v2/employeechats \<br/>-H "Authorization: Bearer ACCESS_TOKEN"<br/><br/>{<br/>    "total": 1,<br/>    "results": [<br/>        {<br/>            "last_message_at": "2012-12-07T09:14:57+04:00",<br/>            "last_message_text": "Спасибо за консультацию. Пока!",<br/>            "employees":[<br/>                {<br/>                    "id": "123456",<br/>                    "first_name": "Иван",<br/>                    "last_name": "Давыдов"<br/>                },<br/>                {<br/>                    "id": "123457",<br/>                    "first_name": "Елена",<br/>                    "last_name": "Изосимова"<br/>                }<br/>            ],<br/>            message_count: 10<br/>        }<br/>    ]<br/>}<br/><br/>Уровень доступа для ролей<br/><br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |

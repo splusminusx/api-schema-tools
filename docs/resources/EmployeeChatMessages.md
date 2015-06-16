@@ -2,21 +2,13 @@
 # EmployeeChatMessages
 
 ## Описание ресурса
-EmployeeChatMessages
-
+EmployeeChatMessages<br/>
 # Методы
 
 ## list
 
 ### Описание метода
-EmployeeChatMessages.list
-Возвращает список сообщений межоператорского чата.
-Параметры
-Результат
-Массив объектов типа «EmployeeChatMessage».
-Уровень доступа для ролей
-
-
+EmployeeChatMessages.list<br/>Возвращает список сообщений межоператорского чата.<br/>Параметры<br/>Результат<br/>Массив объектов типа «EmployeeChatMessage».<br/>Уровень доступа для ролей<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
