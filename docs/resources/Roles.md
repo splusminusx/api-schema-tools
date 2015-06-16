@@ -21,11 +21,11 @@ Roles.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>code.<br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>title:a, title:b.<br/>Если не указано, то записи сортируются в порядке убывания привилегий роли.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>code.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|limit|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
+|sort|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>title:a, title:b.<br/>Если не указано, то записи сортируются в порядке убывания привилегий роли.<br/>|
+|offset|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Role](/docs/types/Role.md)>

@@ -21,15 +21,15 @@ MailBoxes.add
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|username|False|string|Логин для подключения к почтовому серверу.<br/>|
-|is_ssl|False|boolean|Признак использования защищенного соединения.<br/>По умолчанию - false.<br/>|
-|smtp_port|False|numeric|Порт для подключения к почтовому серверу.<br/>По умолчанию - 25.<br/>Целое число в диапазоне от 1 до 65535.<br/>|
-|smtp_server|True|string|Адрес почтового сервера.<br/>|
-|password|False|string|Пароль для подключения к почтовому серверу.<br/>|
-|email|True|email|Адрес электронной почты.<br/>|
+|username|False|[string](/docs/types/string.md)|Логин для подключения к почтовому серверу.<br/>|
+|is_ssl|False|[boolean](/docs/types/boolean.md)|Признак использования защищенного соединения.<br/>По умолчанию - false.<br/>|
+|smtp_port|False|[numeric](/docs/types/numeric.md)|Порт для подключения к почтовому серверу.<br/>По умолчанию - 25.<br/>Целое число в диапазоне от 1 до 65535.<br/>|
+|smtp_server|True|[string](/docs/types/string.md)|Адрес почтового сервера.<br/>|
+|password|False|[string](/docs/types/string.md)|Пароль для подключения к почтовому серверу.<br/>|
+|email|True|[email](/docs/types/email.md)|Адрес электронной почты.<br/>|
 
 ### Резудьтат
-MailBox
+[MailBox](/docs/types/MailBox.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -50,11 +50,11 @@ MailBoxes.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|numeric|ID почтового ящика.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID почтового ящика.<br/>|
 
 ### Резудьтат
-MailBox
+[MailBox](/docs/types/MailBox.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -75,11 +75,11 @@ MailBoxes.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID почтовых ящиков.<br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID почтовых ящиков.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|limit|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
+|sort|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
+|offset|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[MailBox](/docs/types/MailBox.md)>
@@ -103,13 +103,13 @@ MailBoxes.update
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|username|False|string|Логин для подключения к почтовому серверу.<br/>|
-|is_ssl|False|boolean|Признак использования защищенного соединения.<br/>|
-|smtp_port|False|numeric|Порт для подключения к почтовому серверу.<br/>Целое число в диапазоне от 1 до 65535.<br/>|
-|smtp_server|False|string|Адрес почтового сервера.<br/>|
-|id|True|numeric|ID почтового ящика.<br/>|
-|password|False|string|Пароль для подключения к почтовому серверу.<br/>|
-|email|False|email|Адрес электронной почты.<br/>|
+|username|False|[string](/docs/types/string.md)|Логин для подключения к почтовому серверу.<br/>|
+|is_ssl|False|[boolean](/docs/types/boolean.md)|Признак использования защищенного соединения.<br/>|
+|smtp_port|False|[numeric](/docs/types/numeric.md)|Порт для подключения к почтовому серверу.<br/>Целое число в диапазоне от 1 до 65535.<br/>|
+|smtp_server|False|[string](/docs/types/string.md)|Адрес почтового сервера.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID почтового ящика.<br/>|
+|password|False|[string](/docs/types/string.md)|Пароль для подключения к почтовому серверу.<br/>|
+|email|False|[email](/docs/types/email.md)|Адрес электронной почты.<br/>|
 
 ### Резудьтат
 None
@@ -133,7 +133,7 @@ MailBoxes.delete
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|numeric|ID почтового ящика.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID почтового ящика.<br/>|
 
 ### Резудьтат
 None

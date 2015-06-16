@@ -11,5 +11,5 @@ AcceptanceByEmailSettings
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|is_active|True|boolean|Включение/выключение отправки актов на электронную почту.<br/>|
-|emails|False|string|Список через запятую адресов электронной почты.<br/><br/>|
+|is_active|True|[boolean](/docs/types/boolean.md)|Включение/выключение отправки актов на электронную почту.<br/>|
+|emails|False|[string](/docs/types/string.md)|Список через запятую адресов электронной почты.<br/><br/>|

@@ -24,12 +24,12 @@ Departments.add
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|site_ids|True|idlist|Список, через запятую, ID сайтов, с которыми требуется связать отдел. <br/>На основе этого поля автоматически создаются связи отдела с указанными сайтами (DepartmentSiteBinding). При этом в качестве псевдонима используется название отдела.<br/>|
-|title|True|string|Название отдела.<br/>|
-|employee_ids|True|idlist|Список, через запятую, ID сотрудников, входящих в отдел.<br/>|
+|site_ids|True|[idlist](/docs/types/idlist.md)|Список, через запятую, ID сайтов, с которыми требуется связать отдел. <br/>На основе этого поля автоматически создаются связи отдела с указанными сайтами (DepartmentSiteBinding). При этом в качестве псевдонима используется название отдела.<br/>|
+|title|True|[string](/docs/types/string.md)|Название отдела.<br/>|
+|employee_ids|True|[idlist](/docs/types/idlist.md)|Список, через запятую, ID сотрудников, входящих в отдел.<br/>|
 
 ### Резудьтат
-Department
+[Department](/docs/types/Department.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -50,11 +50,11 @@ Departments.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|numeric|ID отдела.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID отдела.<br/>|
 
 ### Резудьтат
-Department
+[Department](/docs/types/Department.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -75,11 +75,11 @@ Departments.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID отделов;<br/>employee_ids – idlist, список ID сотрудников;<br/>site_ids – idlist, список ID сайтов;<br/>title;<br/>is_managed – boolean, признак своего отдела.<br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>title:a – по умолчанию;<br/>created_at:a;<br/>updated_at:a.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID отделов;<br/>employee_ids – idlist, список ID сотрудников;<br/>site_ids – idlist, список ID сайтов;<br/>title;<br/>is_managed – boolean, признак своего отдела.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|limit|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
+|sort|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>title:a – по умолчанию;<br/>created_at:a;<br/>updated_at:a.<br/>|
+|offset|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Department](/docs/types/Department.md)>
@@ -105,9 +105,9 @@ Departments.update
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|title|False|string|Название отдела.<br/>|
-|id|True|numeric|ID отдела.<br/>|
-|employee_ids|False|idlist|Список, через запятую, ID сотрудников, входящих в отдел.<br/>Если указать пустое значение, то все сотрудники будут отвязаны от отдела и отдел будет удален.<br/>|
+|title|False|[string](/docs/types/string.md)|Название отдела.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID отдела.<br/>|
+|employee_ids|False|[idlist](/docs/types/idlist.md)|Список, через запятую, ID сотрудников, входящих в отдел.<br/>Если указать пустое значение, то все сотрудники будут отвязаны от отдела и отдел будет удален.<br/>|
 
 ### Резудьтат
 None
@@ -135,7 +135,7 @@ Departments.delete
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|numeric|ID отдела.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID отдела.<br/>|
 
 ### Резудьтат
 None

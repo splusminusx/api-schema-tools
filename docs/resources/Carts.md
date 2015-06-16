@@ -21,11 +21,11 @@ Carts.addToPeriod
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|activation_type|False|string|Тип активации.<br/>Возможные значения:<br/>now – активация сразу после покупки (по умолчанию);<br/>after_current – активация после завершения текущего периода;<br/>after_payment – активация после оплаты.<br/>|
-|period_id|True|numeric|ID периода.<br/>|
+|activation_type|False|[string](/docs/types/string.md)|Тип активации.<br/>Возможные значения:<br/>now – активация сразу после покупки (по умолчанию);<br/>after_current – активация после завершения текущего периода;<br/>after_payment – активация после оплаты.<br/>|
+|period_id|True|[numeric](/docs/types/numeric.md)|ID периода.<br/>|
 
 ### Резудьтат
-Cart
+[Cart](/docs/types/Cart.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -46,11 +46,11 @@ Carts.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|numeric|ID корзины.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID корзины.<br/>|
 
 ### Резудьтат
-Cart
+[Cart](/docs/types/Cart.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -71,11 +71,11 @@ Carts.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID корзин.<br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID корзин.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|limit|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
+|sort|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
+|offset|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Cart](/docs/types/Cart.md)>
@@ -101,8 +101,8 @@ Carts.update
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|activation_type|False|string|Тип активации.<br/>Возможные значения:<br/>now – активация сразу после покупки;<br/>after_current – активация после завершения текущего периода;<br/>after_payment – активация после оплаты.<br/>|
-|id|True|numeric|ID корзины.<br/>|
+|activation_type|False|[string](/docs/types/string.md)|Тип активации.<br/>Возможные значения:<br/>now – активация сразу после покупки;<br/>after_current – активация после завершения текущего периода;<br/>after_payment – активация после оплаты.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID корзины.<br/>|
 
 ### Резудьтат
 None
@@ -127,11 +127,11 @@ Carts.add
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|activation_type|False|string|Тип активации.<br/>Возможные значения:<br/>now – активация сразу после покупки (по умолчанию);<br/>after_current – активация после завершения текущего периода;<br/>after_payment – активация после оплаты.<br/>|
-|is_current_period|False|boolean|Признак текущего периода.<br/>Если true (по умолчанию), то корзина создается для текущего периода. <br/>Если false, то будет создан новый период.<br/>|
+|activation_type|False|[string](/docs/types/string.md)|Тип активации.<br/>Возможные значения:<br/>now – активация сразу после покупки (по умолчанию);<br/>after_current – активация после завершения текущего периода;<br/>after_payment – активация после оплаты.<br/>|
+|is_current_period|False|[boolean](/docs/types/boolean.md)|Признак текущего периода.<br/>Если true (по умолчанию), то корзина создается для текущего периода. <br/>Если false, то будет создан новый период.<br/>|
 
 ### Резудьтат
-Cart
+[Cart](/docs/types/Cart.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -153,11 +153,11 @@ Carts.commit
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|numeric|ID корзины.<br/>|
-|payer_id|False|numeric|ID плательщика.<br/>Если не указано, то счет будет выписан на активного плательщика.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID корзины.<br/>|
+|payer_id|False|[numeric](/docs/types/numeric.md)|ID плательщика.<br/>Если не указано, то счет будет выписан на активного плательщика.<br/>|
 
 ### Резудьтат
-Order
+[Order](/docs/types/Order.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -178,7 +178,7 @@ Carts.delete
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|numeric|ID корзины.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID корзины.<br/>|
 
 ### Резудьтат
 None

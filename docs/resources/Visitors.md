@@ -22,11 +22,11 @@ Visitors.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|string|ID посетителя.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|id|True|[string](/docs/types/string.md)|ID посетителя.<br/>|
 
 ### Резудьтат
-Visitor
+[Visitor](/docs/types/Visitor.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

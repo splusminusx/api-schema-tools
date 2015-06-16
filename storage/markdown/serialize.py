@@ -57,7 +57,8 @@ class MarkdownSerializer(object):
                     u'.<[' + parameter_name + u'](' +
                     os.path.join(u'/docs/types', parameter_name + u'.md)>'))
             else:
-                return data_type_name
+                return u'[' + data_type_name + u'](' + \
+                       os.path.join(u'/docs/types', data_type_name + u'.md)')
         return u'None'
 
     def _serialize_complex_data_type(self, obj):

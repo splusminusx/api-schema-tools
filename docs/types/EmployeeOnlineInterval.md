@@ -11,5 +11,5 @@ EmployeeOnlineInterval
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|start|True|datetime|Начало интервала.<br/>|
-|end|True|datetime|Конец интервала.<br/>|
+|start|True|[datetime](/docs/types/datetime.md)|Начало интервала.<br/>|
+|end|True|[datetime](/docs/types/datetime.md)|Конец интервала.<br/>|

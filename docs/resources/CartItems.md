@@ -21,11 +21,11 @@ CartItems.add
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|product_addition|False|ProductAddition|Дополнение продукта.<br/>|
-|cart_id|True|numeric|ID корзины.<br/>|
+|product_addition|False|[ProductAddition](/docs/types/ProductAddition.md)|Дополнение продукта.<br/>|
+|cart_id|True|[numeric](/docs/types/numeric.md)|ID корзины.<br/>|
 
 ### Резудьтат
-CartItem
+[CartItem](/docs/types/CartItem.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -47,8 +47,8 @@ CartItems.update
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|product_addition|True|ProductAddition|Дополнение продукта.<br/>|
-|id|True|numeric|ID позиции корзины.<br/>|
+|product_addition|True|[ProductAddition](/docs/types/ProductAddition.md)|Дополнение продукта.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID позиции корзины.<br/>|
 
 ### Резудьтат
 None
@@ -72,7 +72,7 @@ CartItems.delete
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|numeric|ID позиции корзины.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID позиции корзины.<br/>|
 
 ### Резудьтат
 None

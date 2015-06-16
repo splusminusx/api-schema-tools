@@ -21,11 +21,11 @@ Payers.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID плательщиков;<br/>is_active – boolean, если указано, то возвращаются записи с указанным значением.<br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID плательщиков;<br/>is_active – boolean, если указано, то возвращаются записи с указанным значением.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|limit|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
+|sort|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
+|offset|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Payer](/docs/types/Payer.md)>
@@ -51,12 +51,12 @@ Payers.add
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|requisites|True|Requisites|Реквизиты плательщика.<br/>|
-|currency|False|currency|Валюта плательщика.<br/>|
-|payer_type|True|string|Тип плательщика.<br/>Возможные значения:<br/>ru_person – физическое лицо РФ;<br/>ru_legal – юридическое лицо РФ;<br/>ua_person – физическое лицо Украины;<br/>ua_legal – юридическое лицо Украины;<br/>ua_sp – ФОП Украины.<br/>|
+|requisites|True|[Requisites](/docs/types/Requisites.md)|Реквизиты плательщика.<br/>|
+|currency|False|[currency](/docs/types/currency.md)|Валюта плательщика.<br/>|
+|payer_type|True|[string](/docs/types/string.md)|Тип плательщика.<br/>Возможные значения:<br/>ru_person – физическое лицо РФ;<br/>ru_legal – юридическое лицо РФ;<br/>ua_person – физическое лицо Украины;<br/>ua_legal – юридическое лицо Украины;<br/>ua_sp – ФОП Украины.<br/>|
 
 ### Резудьтат
-Payer
+[Payer](/docs/types/Payer.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -80,7 +80,7 @@ Payers.transferBalance
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|numeric|ID плательщика, остатки со счета которого требуется перенести на активного плательщика.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID плательщика, остатки со счета которого требуется перенести на активного плательщика.<br/>|
 
 ### Резудьтат
 None
@@ -104,8 +104,8 @@ Payers.update
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|is_recurring|False|boolean|Включение/выключение рекуррентных платежей.<br/>|
-|id|True|numeric|ID плательщика.<br/>|
+|is_recurring|False|[boolean](/docs/types/boolean.md)|Включение/выключение рекуррентных платежей.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID плательщика.<br/>|
 
 ### Резудьтат
 None
@@ -129,11 +129,11 @@ Payers.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|numeric|ID плательщика.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID плательщика.<br/>|
 
 ### Резудьтат
-Payer
+[Payer](/docs/types/Payer.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

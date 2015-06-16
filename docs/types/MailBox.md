@@ -12,10 +12,10 @@ MailBox
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|username|False|string|Логин для подключения к почтовому серверу.<br/>|
-|is_ssl|True|boolean|Признак использования защищенного соединения.<br/>|
-|smtp_port|True|numeric|Порт для подключения к почтовому серверу.<br/>По умолчанию - 25.<br/>Целое число в диапазоне от 1 до 65535.<br/>|
-|smtp_server|True|string|Адрес почтового сервера.<br/>|
-|id|True|numeric|ID почтового ящика.<br/>|
-|password|False|string|Пароль для подключения к почтовому серверу.<br/>|
-|email|True|email|Адрес электронной почты.<br/>|
+|username|False|[string](/docs/types/string.md)|Логин для подключения к почтовому серверу.<br/>|
+|is_ssl|True|[boolean](/docs/types/boolean.md)|Признак использования защищенного соединения.<br/>|
+|smtp_port|True|[numeric](/docs/types/numeric.md)|Порт для подключения к почтовому серверу.<br/>По умолчанию - 25.<br/>Целое число в диапазоне от 1 до 65535.<br/>|
+|smtp_server|True|[string](/docs/types/string.md)|Адрес почтового сервера.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID почтового ящика.<br/>|
+|password|False|[string](/docs/types/string.md)|Пароль для подключения к почтовому серверу.<br/>|
+|email|True|[email](/docs/types/email.md)|Адрес электронной почты.<br/>|

@@ -21,11 +21,11 @@ Conversations.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|numeric|ID обращения.<br/>|
+|fields|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|id|True|[numeric](/docs/types/numeric.md)|ID обращения.<br/>|
 
 ### Резудьтат
-Conversation
+[Conversation](/docs/types/Conversation.md)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
