@@ -22,7 +22,13 @@ Comments.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|user|Добавление комментариев к своим тикетам.|
+|admin_partner|full||
+
 ## list
 
 ### Описание метода
@@ -43,7 +49,13 @@ Array.<[Comment](/docs/types/Comment.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|user|Комментарии своих тикетов.|
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -61,4 +73,9 @@ Comments.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|user|Комментарии своих тикетов.|
+|admin_partner|full||

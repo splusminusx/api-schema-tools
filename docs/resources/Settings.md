@@ -20,7 +20,13 @@ Settings.showFeatureStates<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## showCobrowseSettings
 
 ### Описание метода
@@ -36,7 +42,13 @@ Settings.showCobrowseSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## showFileTransferSettings
 
 ### Описание метода
@@ -52,7 +64,13 @@ Settings.showFileTransferSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -68,7 +86,13 @@ Settings.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## updateCobrowseSettings
 
 ### Описание метода
@@ -85,7 +109,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## updateAcceptanceByEmailSettings
 
 ### Описание метода
@@ -103,7 +133,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## showAcceptanceByEmailSettings
 
 ### Описание метода
@@ -119,7 +155,13 @@ Settings.showAcceptanceByEmailSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## updateEmployeeRemarkSettings
 
 ### Описание метода
@@ -136,7 +178,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## updateFileTransferSettings
 
 ### Описание метода
@@ -153,7 +201,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## showCallSettings
 
 ### Описание метода
@@ -169,7 +223,13 @@ Settings.showCallSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## showTypingIndicatorSettings
 
 ### Описание метода
@@ -185,7 +245,13 @@ Settings.showTypingIndicatorSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## showReportByEmailSettings
 
 ### Описание метода
@@ -201,7 +267,13 @@ Settings.showReportByEmailSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## updateTypingIndicatorSettings
 
 ### Описание метода
@@ -218,7 +290,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## updateCallSettings
 
 ### Описание метода
@@ -240,7 +318,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## updateReportByEmailSettings
 
 ### Описание метода
@@ -259,7 +343,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## showEmployeeRemarkSettings
 
 ### Описание метода
@@ -275,4 +365,9 @@ Settings.showEmployeeRemarkSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||

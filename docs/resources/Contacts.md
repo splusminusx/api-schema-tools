@@ -25,7 +25,13 @@ Array.<[Contact](/docs/types/Contact.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только на своих сайтах.|
+|chief|managed|Только на своих сайтах.|
+|chief_partner|managed|Только на своих сайтах.|
+|operator|none||
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -43,4 +49,9 @@ Contacts.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только на своих сайтах.|
+|chief|managed|Только на своих сайтах.|
+|chief_partner|managed|Только на своих сайтах.|
+|operator|none||
+|admin_partner|full||

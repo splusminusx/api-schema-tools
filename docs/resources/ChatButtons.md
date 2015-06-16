@@ -28,7 +28,13 @@ ChatButtons.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Создание кнопок на своих сайтах.|
+|chief|managed|Создание кнопок на своих сайтах.|
+|chief_partner|managed|Создание кнопок на своих сайтах.|
+|operator|none||
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -46,7 +52,13 @@ ChatButtons.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Кнопки своих сайтов.|
+|chief|managed|Кнопки своих сайтов.|
+|chief_partner|managed|Кнопки своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## list
 
 ### Описание метода
@@ -67,7 +79,13 @@ Array.<[ChatButton](/docs/types/ChatButton.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Кнопки своих сайтов.|
+|chief|managed|Кнопки своих сайтов.|
+|chief_partner|managed|Кнопки своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## update
 
 ### Описание метода
@@ -92,7 +110,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Обновление кнопок на своих сайтах.|
+|chief|managed|Обновление кнопок на своих сайтах.|
+|chief_partner|managed|Обновление кнопок на своих сайтах.|
+|operator|none||
+|admin_partner|full||
+
 ## delete
 
 ### Описание метода
@@ -109,4 +133,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Кнопки своих сайтов.|
+|chief|managed|Кнопки своих сайтов.|
+|chief_partner|managed|Кнопки своих сайтов.|
+|operator|none||
+|admin_partner|full||

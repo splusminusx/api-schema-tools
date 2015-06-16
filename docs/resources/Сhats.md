@@ -22,7 +22,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|user|Только для чатов, в которых сотрудник является участником.|
+|manager|user|Только для чатов, в которых сотрудник является участником.|
+|chief|user|Только для чатов, в которых сотрудник является участником.|
+|chief_partner|user|Только для чатов, в которых сотрудник является участником.|
+|operator|user|Только для чатов, в которых сотрудник является участником.|
+|admin_partner|user|Только для чатов, в которых сотрудник является участником.|
+
 ## list
 
 ### Описание метода
@@ -43,7 +49,13 @@ Array.<[Chat](/docs/types/Chat.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Все чаты, но без messages и events.|
+|chief|managed|Все чаты, но без messages и events.|
+|chief_partner|managed|Все чаты, но без messages и events.|
+|operator|managed|Все чаты, но без messages и events.|
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -61,4 +73,9 @@ Chats.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Все чаты, но без messages и events.|
+|chief|managed|Все чаты, но без messages и events.|
+|chief_partner|managed|Все чаты, но без messages и events.|
+|operator|managed|Все чаты, но без messages и events.|
+|admin_partner|full||

@@ -25,4 +25,9 @@ Array.<[EmployeeEvent](/docs/types/EmployeeEvent.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|События своих сотрудников.|
+|chief|managed|События своих сотрудников.|
+|chief_partner|managed|События своих сотрудников.|
+|operator|user|Свои данные.|
+|admin_partner|full||

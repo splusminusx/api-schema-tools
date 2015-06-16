@@ -25,7 +25,13 @@ Array.<[Call](/docs/types/Call.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Все звонки, но без поля recording.|
+|chief|managed|Все звонки, но без поля recording.|
+|chief_partner|managed|Все звонки, но без поля recording.|
+|operator|managed|Все звонки, но без поля recording.|
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -43,4 +49,9 @@ Array.<[Call](/docs/types/Call.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Все звонки, но без поля recording.|
+|chief|managed|Все звонки, но без поля recording.|
+|chief_partner|managed|Все звонки, но без поля recording.|
+|operator|managed|Все звонки, но без поля recording.|
+|admin_partner|full||

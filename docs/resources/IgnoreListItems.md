@@ -25,7 +25,13 @@ Array.<[IgnoreListItem](/docs/types/IgnoreListItem.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только записи на своих сайтах.|
+|chief|managed|Только записи на своих сайтах.|
+|chief_partner|managed|Только записи на своих сайтах.|
+|operator|none||
+|admin_partner|full||
+
 ## delete
 
 ### Описание метода
@@ -43,4 +49,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только записи на своих сайтах.|
+|chief|managed|Только записи на своих сайтах.|
+|chief_partner|managed|Только записи на своих сайтах.|
+|operator|none||
+|admin_partner|full||

@@ -25,4 +25,9 @@ Array.<[Payment](/docs/types/Payment.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||

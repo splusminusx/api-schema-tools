@@ -39,7 +39,13 @@ InvitationRules.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full|В параметре site_bindings принимаются во внимание только site_id своих сайтов. Все остальные игнорируются.|
+|chief|full|В параметре site_bindings принимаются во внимание только site_id своих сайтов. Все остальные игнорируются.|
+|chief_partner|full|В параметре site_bindings принимаются во внимание только site_id своих сайтов. Все остальные игнорируются.|
+|operator|none||
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -57,7 +63,13 @@ InvitationRules.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## list
 
 ### Описание метода
@@ -78,7 +90,13 @@ Array.<[InvitationRule](/docs/types/InvitationRule.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## update
 
 ### Описание метода
@@ -114,7 +132,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только свои сценарии.|
+|chief|managed|Только свои сценарии.|
+|chief_partner|managed|Только свои сценарии.|
+|operator|none||
+|admin_partner|full||
+
 ## delete
 
 ### Описание метода
@@ -131,4 +155,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только свои сценарии.|
+|chief|managed|Только свои сценарии.|
+|chief_partner|managed|Только свои сценарии.|
+|operator|none||
+|admin_partner|full||

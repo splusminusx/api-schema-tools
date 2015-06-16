@@ -21,7 +21,13 @@ Employees.me<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## search
 
 ### Описание метода
@@ -38,7 +44,13 @@ Array.<[Employee](/docs/types/Employee.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -56,7 +68,13 @@ Employees.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## register
 
 ### Описание метода
@@ -102,7 +120,13 @@ Array.<[Employee](/docs/types/Employee.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## update
 
 ### Описание метода
@@ -140,7 +164,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full|Для самого себя разрешено изменении всех полей, за исключением:|
+|manager|managed|Для сотрудников с ролью «Оператор» разрешено изменении всех полей за исключением:|
+|chief|managed|Только для своих сотрудников, за исключением сотрудника с ролью, имеющей признак is_admin = true.|
+|chief_partner|managed|Только для своих сотрудников, за исключением сотрудника с ролью, имеющей признак is_admin = true.|
+|operator|user|Разрешено изменение только самого себя и только следующих полей:|
+|admin_partner|full|Для самого себя разрешено изменении всех полей, за исключением:|
+
 ## setNewPassword
 
 ### Описание метода
@@ -212,7 +242,13 @@ Employees.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full|В значении поля department_ids принимаются во внимание только свои отделы.|
+|chief|full|В значении поля department_ids принимаются во внимание только свои отделы.|
+|chief_partner|full|В значении поля department_ids принимаются во внимание только свои отделы.|
+|operator|none||
+|admin_partner|full||
+
 ## registerConfirm
 
 ### Описание метода
@@ -256,7 +292,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed||
+|chief|managed||
+|chief_partner|managed||
+|operator|user||
+|admin_partner|full||
+
 ## delete
 
 ### Описание метода
@@ -273,7 +315,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full|За исключением самого себя.|
+|manager|none||
+|chief|managed|За исключением самого себя.|
+|chief_partner|managed|За исключением самого себя.|
+|operator|none||
+|admin_partner|full|За исключением самого себя.|
+
 ## resetPassword
 
 ### Описание метода

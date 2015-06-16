@@ -25,7 +25,13 @@ Array.<[Acceptance](/docs/types/Acceptance.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## update
 
 ### Описание метода
@@ -43,4 +49,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||

@@ -25,7 +25,13 @@ HoldRules.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|В параметре site_ids принимаются во внимание только свои сайты.|
+|chief|managed|В параметре site_ids принимаются во внимание только свои сайты.|
+|chief_partner|managed|В параметре site_ids принимаются во внимание только свои сайты.|
+|operator|none||
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -43,7 +49,13 @@ HoldRules.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## list
 
 ### Описание метода
@@ -64,7 +76,13 @@ Array.<[HoldRule](/docs/types/HoldRule.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## update
 
 ### Описание метода
@@ -86,7 +104,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только свои сценарии.|
+|chief|managed|Только свои сценарии.|
+|chief_partner|managed|Только свои сценарии.|
+|operator|none||
+|admin_partner|full||
+
 ## delete
 
 ### Описание метода
@@ -103,4 +127,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только свои сценарии.|
+|chief|managed|Только свои сценарии.|
+|chief_partner|managed|Только свои сценарии.|
+|operator|none||
+|admin_partner|full||

@@ -22,4 +22,10 @@ Conversations.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|None|admin_partner
+|admin|full||
+|manager|None|Обращения, в которых есть свои диалоги (чаты, звонки, лиды).|
+|chief|managed|Обращения, в которых есть свои диалоги (чаты, звонки, лиды).|
+|chief_partner|managed|Обращения, в которых есть свои диалоги (чаты, звонки, лиды).|
+|operator|managed|Обращения, в которых есть свои диалоги (чаты, звонки, лиды).|
+|None|None||
+|admin_partner|full||

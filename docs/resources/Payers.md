@@ -25,7 +25,13 @@ Array.<[Payer](/docs/types/Payer.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## add
 
 ### Описание метода
@@ -44,7 +50,13 @@ Payers.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## transferBalance
 
 ### Описание метода
@@ -61,7 +73,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## update
 
 ### Описание метода
@@ -79,7 +97,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## show
 
 ### Описание метода
@@ -97,4 +121,9 @@ Payers.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||

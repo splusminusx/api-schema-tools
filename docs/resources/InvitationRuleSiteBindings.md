@@ -24,7 +24,13 @@ InvitationRuleSiteBindings.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только, если site_id указывает на свой сайт.|
+|chief|managed|Только, если site_id указывает на свой сайт.|
+|chief_partner|managed|Только, если site_id указывает на свой сайт.|
+|operator|none||
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -42,7 +48,13 @@ InvitationRuleSiteBindings.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## list
 
 ### Описание метода
@@ -63,7 +75,13 @@ Array.<[InvitationRuleSiteBinding](/docs/types/InvitationRuleSiteBinding.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## update
 
 ### Описание метода
@@ -84,7 +102,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только, если предыдущее и новое значение site_id указывает на свой сайт.|
+|chief|managed|Только, если предыдущее и новое значение site_id указывает на свой сайт.|
+|chief_partner|managed|Только, если предыдущее и новое значение site_id указывает на свой сайт.|
+|operator|none||
+|admin_partner|full||
+
 ## delete
 
 ### Описание метода
@@ -101,4 +125,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только, если site_id указывает на свой сайт.|
+|chief|managed|Только, если site_id указывает на свой сайт.|
+|chief_partner|managed|Только, если site_id указывает на свой сайт.|
+|operator|none||
+|admin_partner|full||

@@ -25,7 +25,13 @@ Array.<[Site](/docs/types/Site.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Данные только для своих сайтов.|
+|chief|managed|Данные только для своих сайтов.|
+|chief_partner|managed|Данные только для своих сайтов.|
+|operator|user||
+|admin_partner|full||
+
 ## listByEmployee
 
 ### Описание метода
@@ -46,7 +52,13 @@ Array.<[Employee](/docs/types/Employee.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Данные только для своих сотрудников.|
+|chief|managed|Данные только для своих сотрудников.|
+|chief_partner|managed|Данные только для своих сотрудников.|
+|operator|user||
+|admin_partner|full||
+
 ## listByDepartment
 
 ### Описание метода
@@ -67,4 +79,9 @@ Array.<[Department](/docs/types/Department.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Данные только для своих отделов.|
+|chief|managed|Данные только для своих отделов.|
+|chief_partner|managed|Данные только для своих отделов.|
+|operator|user||
+|admin_partner|full||

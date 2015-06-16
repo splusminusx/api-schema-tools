@@ -25,7 +25,13 @@ Array.<[Complaint](/docs/types/Complaint.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Жалобы в обращениях, в которых есть свои диалоги.|
+|chief|managed|Жалобы в обращениях, в которых есть свои диалоги.|
+|chief_partner|managed|Жалобы в обращениях, в которых есть свои диалоги.|
+|operator|managed|Жалобы в обращениях, в которых есть свои диалоги.|
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -43,4 +49,9 @@ Complaints.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Жалобы в обращениях, в которых есть свои диалоги.|
+|chief|managed|Жалобы в обращениях, в которых есть свои диалоги.|
+|chief_partner|managed|Жалобы в обращениях, в которых есть свои диалоги.|
+|operator|none|Жалобы в обращениях, в которых есть свои диалоги.|
+|admin_partner|full||

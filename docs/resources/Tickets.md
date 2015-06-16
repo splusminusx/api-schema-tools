@@ -22,7 +22,13 @@ Tickets.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## list
 
 ### Описание метода
@@ -43,7 +49,13 @@ Array.<[Ticket](/docs/types/Ticket.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|user|Только свои тикеты|
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -61,4 +73,9 @@ Tickets.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|user|Только свои тикеты.|
+|admin_partner|full||

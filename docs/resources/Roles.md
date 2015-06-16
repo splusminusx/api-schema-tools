@@ -25,4 +25,9 @@ Array.<[Role](/docs/types/Role.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||

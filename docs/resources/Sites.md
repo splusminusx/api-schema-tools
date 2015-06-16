@@ -26,7 +26,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## showSiteCallSettings
 
 ### Описание метода
@@ -43,7 +49,13 @@ Sites.showSiteCallSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -61,7 +73,13 @@ Sites.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## list
 
 ### Описание метода
@@ -82,7 +100,13 @@ Array.<[Site](/docs/types/Site.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## WARNING: DEPRECATED
 
 ## updateChatFormSettings
@@ -120,7 +144,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## showSiteChatSettings
 
 ### Описание метода
@@ -137,7 +167,13 @@ Sites.showSiteChatSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## WARNING: DEPRECATED
 
 ## showChatWelcomeSettings
@@ -157,7 +193,13 @@ Sites.showChatWelcomeSettings – DEPRECATED<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## batchUpdate
 
 ### Описание метода
@@ -179,7 +221,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только для своих сайтов.|
+|chief|managed|Только для своих сайтов.|
+|chief_partner|managed|Только для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## WARNING: DEPRECATED
 
 ## showOfflineFormSettings
@@ -199,7 +247,13 @@ Sites.showOfflineFormSettings – DEPRECATED<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## showOfflineMailSettings
 
 ### Описание метода
@@ -216,7 +270,13 @@ Sites.showOfflineMailSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## showSiteWidgetSettings
 
 ### Описание метода
@@ -233,7 +293,13 @@ Sites.showSiteWidgetSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## add
 
 ### Описание метода
@@ -263,7 +329,13 @@ Sites.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|full||
+|operator|none||
+|admin_partner|full||
+
 ## WARNING: DEPRECATED
 
 ## showChatFormSettings
@@ -283,7 +355,13 @@ Sites.showChatFormSettings - DEPRECATED<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## updateSiteChatSettings
 
 ### Описание метода
@@ -305,7 +383,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## WARNING: DEPRECATED
 
 ## updateCallLabelSettings
@@ -332,7 +416,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## updateSiteWidgetSettings
 
 ### Описание метода
@@ -362,7 +452,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## showSiteXWidgetSettings
 
 ### Описание метода
@@ -379,7 +475,13 @@ Sites.showSiteXWidgetSettings<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## WARNING: DEPRECATED
 
 ## updateOfflineFormSettings
@@ -411,7 +513,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## WARNING: DEPRECATED
 
 ## updateChatWelcomeSettings
@@ -432,7 +540,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## update
 
 ### Описание метода
@@ -463,7 +577,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только для своих сайтов.|
+|chief|managed|Только для своих сайтов.|
+|chief_partner|managed|Только для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## WARNING: DEPRECATED
 
 ## updateLeadFormSettings
@@ -501,7 +621,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## WARNING: DEPRECATED
 
 ## showLeadFormSettings
@@ -521,7 +647,13 @@ Sites.showLeadFormSettings - DEPRECATED<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## batchUpdateSiteXWidgetSettings
 
 ### Описание метода
@@ -542,7 +674,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только для своих сайтов.|
+|chief|managed|Только для своих сайтов.|
+|chief_partner|managed|Только для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## updateSiteXWidgetSettings
 
 ### Описание метода
@@ -563,7 +701,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## unbindAllDepartments
 
 ### Описание метода
@@ -580,7 +724,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только для своих сайтов.|
+|chief|managed|Только для своих сайтов.|
+|chief_partner|managed|Только для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## updateSiteCallSettings
 
 ### Описание метода
@@ -604,7 +754,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## WARNING: DEPRECATED
 
 ## showCallLabelSettings
@@ -624,7 +780,13 @@ Sites.showCallLabelSettings - DEPRECATED<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Для своих сайтов.|
+|chief|managed|Для своих сайтов.|
+|chief_partner|managed|Для своих сайтов.|
+|operator|none||
+|admin_partner|full||
+
 ## delete
 
 ### Описание метода
@@ -641,4 +803,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|managed|Только для своих сайтов.|
+|chief_partner|managed|Только для своих сайтов.|
+|operator|none||
+|admin_partner|full||

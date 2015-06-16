@@ -27,7 +27,13 @@ DepartmentSiteBindings.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только связи своих отделов со своими сайтами.|
+|chief|managed|Только связи своих отделов со своими сайтами.|
+|chief_partner|managed|Только связи своих отделов со своими сайтами.|
+|operator|none||
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -45,7 +51,13 @@ DepartmentSiteBindings.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## list
 
 ### Описание метода
@@ -66,7 +78,13 @@ Array.<[DepartmentSiteBinding](/docs/types/DepartmentSiteBinding.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## update
 
 ### Описание метода
@@ -90,7 +108,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только связи своих отделов со своими сайтами.|
+|chief|managed|Только связи своих отделов со своими сайтами.|
+|chief_partner|managed|Только связи своих отделов со своими сайтами.|
+|operator|none||
+|admin_partner|full||
+
 ## delete
 
 ### Описание метода
@@ -107,4 +131,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Только связи своих отделов со своими сайтами.|
+|chief|managed|Только связи своих отделов со своими сайтами.|
+|chief_partner|managed|Только связи своих отделов со своими сайтами.|
+|operator|none||
+|admin_partner|full||

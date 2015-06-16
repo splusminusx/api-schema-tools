@@ -22,7 +22,13 @@ Leads.showRouted<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|None|Все адресованные лиды.|
+|manager|None|Все адресованные лиды.|
+|chief|None|Все адресованные лиды.|
+|chief_partner|None|Все адресованные лиды.|
+|operator|None|Все адресованные лиды.|
+|admin_partner|None|Все адресованные лиды.|
+
 ## show
 
 ### Описание метода
@@ -40,7 +46,13 @@ Leads.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Все лиды, но без text и answer_text.|
+|chief|managed|Все лиды, но без text и answer_text.|
+|chief_partner|managed|Все лиды, но без text и answer_text.|
+|operator|managed|Все лиды, но без text и answer_text.|
+|admin_partner|full||
+
 ## lock
 
 ### Описание метода
@@ -57,7 +69,13 @@ Leads.lock<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|None|Только для адресованных лидов.|
+|manager|None|Только для адресованных лидов.|
+|chief|None|Только для адресованных лидов.|
+|chief_partner|None|Только для адресованных лидов.|
+|operator|None|Только для адресованных лидов.|
+|admin_partner|None|Только для адресованных лидов.|
+
 ## listRouted
 
 ### Описание метода
@@ -78,7 +96,13 @@ Array.<[Lead](/docs/types/Lead.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|None|Все адресованные лиды.|
+|manager|None|Все адресованные лиды.|
+|chief|None|Все адресованные лиды.|
+|chief_partner|None|Все адресованные лиды.|
+|operator|None|Все адресованные лиды.|
+|admin_partner|None|Все адресованные лиды.|
+
 ## list
 
 ### Описание метода
@@ -99,7 +123,13 @@ Array.<[Lead](/docs/types/Lead.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Все лиды, но без text и answer_text.|
+|chief|managed|Все лиды, но без text и answer_text.|
+|chief_partner|managed|Все лиды, но без text и answer_text.|
+|operator|managed|Все лиды, но без text и answer_text.|
+|admin_partner|full||
+
 ## add
 
 ### Описание метода
@@ -123,7 +153,13 @@ Leads.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|full||
+|chief|full||
+|chief_partner|full||
+|operator|full||
+|admin_partner|full||
+
 ## setCompleted
 
 ### Описание метода
@@ -141,7 +177,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|None|Только для адресованных лидов.|
+|manager|None|Только для адресованных лидов.|
+|chief|None|Только для адресованных лидов.|
+|chief_partner|None|Только для адресованных лидов.|
+|operator|None|Только для адресованных лидов.|
+|admin_partner|None|Только для адресованных лидов.|
+
 ## unlock
 
 ### Описание метода
@@ -158,4 +200,9 @@ Leads.unlock<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|None|Только для адресованных лидов.|
+|manager|None|Только для адресованных лидов.|
+|chief|None|Только для адресованных лидов.|
+|chief_partner|None|Только для адресованных лидов.|
+|operator|None|Только для адресованных лидов.|
+|admin_partner|None|Только для адресованных лидов.|

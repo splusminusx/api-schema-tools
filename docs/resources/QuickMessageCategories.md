@@ -24,7 +24,13 @@ QuickMessageCategories.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|managed|Категории быстрые сообщения с is_global = true разрешается создавать только на своих сайтах.|
+|chief|managed|Категории быстрые сообщения с is_global = true разрешается создавать только на своих сайтах.|
+|chief_partner|managed|Категории быстрые сообщения с is_global = true разрешается создавать только на своих сайтах.|
+|operator|user|Разрешается создавать категорий сообщений только с is_global = false.|
+|admin_partner|full||
+
 ## show
 
 ### Описание метода
@@ -42,7 +48,13 @@ QuickMessageCategories.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+|manager|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+|chief|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+|chief_partner|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+|operator|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+|admin_partner|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+
 ## list
 
 ### Описание метода
@@ -63,7 +75,13 @@ Array.<[QuickMessageCategory](/docs/types/QuickMessageCategory.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+|manager|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+|chief|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+|chief_partner|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+|operator|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+|admin_partner|full|За исключением чужих категорий быстрых сообщений с is_global = false.|
+
 ## update
 
 ### Описание метода
@@ -83,7 +101,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full|Только категории быстрые сообщения с is_global = true, а также свои категории с is_global = false.|
+|manager|managed|Категории быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах.|
+|chief|managed|Категории быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах.|
+|chief_partner|managed|Категории быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах.|
+|operator|user|Разрешается обновлять только свои категории сообщений с is_global = false.|
+|admin_partner|full|Только категории быстрые сообщения с is_global = true, а также свои категории с is_global = false.|
+
 ## delete
 
 ### Описание метода
@@ -100,4 +124,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full|Только категории быстрые сообщения с is_global = true, а также свои категории с is_global = false.|
+|manager|managed|Категории быстрые сообщения с is_global = true разрешается удалять только на своих сайтах.|
+|chief|managed|Категории быстрые сообщения с is_global = true разрешается удалять только на своих сайтах.|
+|chief_partner|managed|Категории быстрые сообщения с is_global = true разрешается удалять только на своих сайтах.|
+|operator|user|Разрешается удалять только свои категории сообщений с is_global = false.|
+|admin_partner|full|Только категории быстрые сообщения с is_global = true, а также свои категории с is_global = false.|

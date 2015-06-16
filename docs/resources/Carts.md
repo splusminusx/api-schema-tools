@@ -22,7 +22,13 @@ Carts.addToPeriod<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## show
 
 ### Описание метода
@@ -40,7 +46,13 @@ Carts.show<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## list
 
 ### Описание метода
@@ -61,7 +73,13 @@ Array.<[Cart](/docs/types/Cart.md)>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## update
 
 ### Описание метода
@@ -79,7 +97,13 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## add
 
 ### Описание метода
@@ -97,7 +121,13 @@ Carts.add<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## commit
 
 ### Описание метода
@@ -115,7 +145,13 @@ Carts.commit<br/>
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
+
 ## delete
 
 ### Описание метода
@@ -132,4 +168,9 @@ None
 
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner
+|admin|full||
+|manager|none||
+|chief|full||
+|chief_partner|none||
+|operator|none||
+|admin_partner|none||
