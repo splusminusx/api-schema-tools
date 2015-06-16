@@ -1,8 +1,13 @@
+
 # Employees
+
 ## Описание ресурса
 Employees
+
 # Методы
+
 ## me
+
 ### Описание метода
 Employees.me
 Возвращает данные сотрудника, от учетной записи которого вызывается метод.
@@ -11,14 +16,20 @@ Employees.me
 Объект типа «Employee».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## search
+|admin|manager|chief|chief_partner|operator|admin_partner
+## search
+
 ### Описание метода
 Employees.search
 Выполняет поиск сотрудника по подстроке в имени или фамилии сотрудника.
@@ -28,14 +39,20 @@ Employees.search
 Массив объектов типа «Employee».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |text|True|string|Подстрока в имени или фамилии сотрудника.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 Employees.show
 Возвращает данные указанного сотрудника.
@@ -44,15 +61,21 @@ Employees.show
 Объект типа «Employee».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID сотрудника.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## register
+|admin|manager|chief|chief_partner|operator|admin_partner
+## register
+
 ### Описание метода
 Employees.register
 Создает новый аккаунт LiveTex.
@@ -64,7 +87,9 @@ Employees.register
 Уровень доступа для ролей
 Уровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |first_name|True|string|Полное имя.<br/>Значение будет записано в поле first_name соответствующей сотрудника.<br/>|
@@ -76,10 +101,14 @@ Employees.register
 |referral|False|numeric|Идентификатор аффилированного партнера.<br/>|
 |marketing_data|False|<RegistrationMarketingData >|Дополнительные поля, связанные с регистрацией, важные для отдела маркетинга.<br/>|
 |email|True|email|Адрес электронной почты.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
+
 ## list
+
 ### Описание метода
 Employees.list
 Возвращает список сотрудников.
@@ -105,7 +134,9 @@ Employees.list
 
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID сотрудников;<br/>department_ids – idlist, список ID отделов;<br/>first_name;<br/>last_name;<br/>email;<br/>role;<br/>is_active;<br/>state – enum, состояние сотрудника;<br/>is_managed – boolean, признак своего сотрудника.<br/>|
@@ -113,10 +144,14 @@ Employees.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>last_name:a – по умолчанию, last_name:d;<br/>first_name:a, first_name:d;<br/>is_active:a, is_active:d;<br/>created_at:a, created_at:d;<br/>updated_at:a, updated_at:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 Employees.update
 Изменяет данные указанного сотрудника.
@@ -129,7 +164,9 @@ Employees.update
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |last_name|False|string|Фамилия сотрудника.<br/>|
@@ -154,10 +191,14 @@ Employees.update
 |department_ids|False|idlist|Список, через запятую, ID отделов, в которые входит сотрудник.<br/>|
 |is_lead_notify|False|boolean|Включение/выключение нотификации на электронную почту о поступлении новых лидов.<br/>|
 |is_phone_forward|False|boolean|Включение/выключение переадресации на телефон.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## setNewPassword
+|admin|manager|chief|chief_partner|operator|admin_partner
+## setNewPassword
+
 ### Описание метода
 Employees.setNewPassword
 Устанавливает новый пароль.
@@ -167,15 +208,21 @@ Employees.setNewPassword
 Метод ничего не возвращает.
 Уровень доступа для ролей
 Уровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |password|True|string|Новый пароль.<br/>|
 |hash|True|string|Одноразовый ключ, отправленный по email, указанному при вызове метода Employees.resetPassword.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
+
 ## registerAddPromo
+
 ### Описание метода
 Employees.registerAddPromo
 Добавляет промо-код к только что созданному аккаунту.
@@ -187,15 +234,21 @@ Employees.registerAddPromo
 Уровень доступа для ролей
 Уровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.<br/>|
 |promo_code|True|string|Промо код.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
+
 ## add
+
 ### Описание метода
 Employees.add
 Создает учетную запись сотрудника.
@@ -204,7 +257,9 @@ Employees.add
 Объект типа «Employee».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |sip_forward_number|False|string|Номер для переадресации на SIP.<br/>Обязательно при is_sip_forward=true.<br/>|
@@ -227,10 +282,14 @@ Employees.add
 |role_code|False|string|Код роли. По умолчанию назначается роль, имеющая признак is_default = true.<br/>|
 |email|True|email|Адрес электронной почты.<br/>|
 |is_phone_forward|False|boolean|Включение/выключение переадресации на телефон.<br/>По умолчанию – false.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## registerConfirm
+|admin|manager|chief|chief_partner|operator|admin_partner
+## registerConfirm
+
 ### Описание метода
 Employees.registerConfirm
 Активирует новый аккаунт LiveTex и неявно выполняет аутентификацию пользователя.
@@ -241,15 +300,21 @@ Employees.registerConfirm
 Уровень доступа для ролей
 Уровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |hash|True|string|Ключ активации, отправленный по email, указанному при вызове метода Employees.register.<br/>|
 |id|True|numeric|Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
+
 ## batchUpdate
+
 ### Описание метода
 Employees.batchUpdate
 Выполняет пакетное изменение данных указанных сотрудников.
@@ -285,7 +350,9 @@ curl https://api.livetex.ru/v2/employees/batchupdate \
 
 Уровень доступа для ролей
 ВНИМАНИЕ! При изменении конкретного сотрудника работает уровень доступа метода Employees.update в соответствующих условиях.
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |sip_forward_number|False|string|Номер для переадресации на SIP.<br/>Обязательно при is_sip_forward=true.<br/>|
@@ -298,10 +365,14 @@ curl https://api.livetex.ru/v2/employees/batchupdate \
 |is_call|False|boolean|Включение/выключение функциональности звонков.<br/>Принимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.<br/>|
 |phone_forward_number|False|string|Номер для переадресации на телефон.<br/>Обязательно при is_phone_forward=true.<br/>|
 |is_phone_forward|False|boolean|Включение/выключение переадресации на телефон.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## delete
+|admin|manager|chief|chief_partner|operator|admin_partner
+## delete
+
 ### Описание метода
 Employees.delete
 Удаляет указанного сотрудника.
@@ -311,14 +382,20 @@ Employees.delete
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID сотрудника.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## resetPassword
+|admin|manager|chief|chief_partner|operator|admin_partner
+## resetPassword
+
 ### Описание метода
 Employees.resetPassword
 Инициирует процедуру установки нового пароля для указанного адреса электронной почты. Отправляется письмо с уникальной ссылкой на страницу ввода нового пароля.
@@ -328,10 +405,14 @@ Employees.resetPassword
 Метод ничего не возвращает.
 Уровень доступа для ролей
 Уровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |email|True|string|Адрес электронной почты сотрудника.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|

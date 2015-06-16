@@ -1,8 +1,13 @@
+
 # ConsoleNews
+
 ## Описание ресурса
 ConsoleNews
+
 # Методы
+
 ## markRead
+
 ### Описание метода
 ConsoleNews.markRead
 Помечает новость как прочитанную.
@@ -11,26 +16,36 @@ ConsoleNews.markRead
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID новости.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## listLatest
+|admin|manager|chief|chief_partner|operator|admin_partner
+## listLatest
+
 ### Описание метода
 ConsoleNews.listLatest
 Возвращает список последних новостей для Пульта оператора в предопределенном порядке.
 Параметры
 Результат
 Массив объектов типа «ConsoleNews».
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|

@@ -1,8 +1,13 @@
+
 # Contacts
+
 ## Описание ресурса
 Contacts
+
 # Методы
+
 ## list
+
 ### Описание метода
 Contacts.list
 Возвращает список элементов контактных данных.
@@ -12,7 +17,9 @@ Contacts.list
 Массив объектов типа «Contact».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов;<br/>source_type – enum, тип источника контактных данных;<br/>creator_type – enum, тип создателя контактных данных;<br/>is_auto;<br/>created_at.<br/>|
@@ -20,10 +27,14 @@ Contacts.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 Contacts.show
 Возвращает данные указанного элемента контактных данных.
@@ -33,12 +44,16 @@ Contacts.show
 Объект типа «Contact».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID элемента контактных данных.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

@@ -1,8 +1,13 @@
+
 # InvitationRules
+
 ## Описание ресурса
 InvitationRules
+
 # Методы
+
 ## add
+
 ### Описание метода
 InvitationRules.add
 Добавляет новый сценарий вовлечения.
@@ -23,7 +28,9 @@ curl "https://api.livetex.ru/v2/invitationrules" \
 	-d "site_bindings[0][department_id]=65432"
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |site_bindings|False|Array.<InvitationRuleSiteBinding>|Массив связей сценария вовлечения с сайтами.<br/>Состав полей объектов в массиве точно такой же, как и состав параметров метода  InvitationRuleSiteBinding.add, за исключением поля invitation_rule_id. В данном контексте оно игнорируется.<br/>|
@@ -45,10 +52,14 @@ curl "https://api.livetex.ru/v2/invitationrules" \
 |confirmation_lead|False|string|Подтверждающее сообщение, которое показывается посетителю после отправки формы лида.<br/>Максимум 180 символов.<br/>Обязательно для action = lead или vary.<br/>|
 |max_count|False|numeric|Максимальное количество показов конкретному посетителю приглашений по данному сценарию в течение календарных суток.<br/>Счетчик показов обнуляется по истечению суток с момента последнего показа.<br/>Отсутствие значения или 0 – ограничения нет.<br/>|
 |page_url|False|string|Показывать приглашение на странице с указанным адресом.<br/>Адрес указывается без приставки «http://» или «https://», например:<br/>www.mycompany.ru/about/contacts<br/>Если page_type=specified, то одно из двух полей page_url или page_title должно быть указано.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 InvitationRules.show
 Возвращает данные указанного сценария вовлечения.
@@ -57,15 +68,21 @@ InvitationRules.show
 Объект типа «InvitationRule».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID сценария вовлечения.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## list
+|admin|manager|chief|chief_partner|operator|admin_partner
+## list
+
 ### Описание метода
 InvitationRules.list
 Возвращает список сценариев вовлечения.
@@ -74,7 +91,9 @@ InvitationRules.list
 Массив объектов типа «InvitationRule».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID сценариев вовлечения.<br/>site_ids – idlist, список ID сайтов.<br/>text – поиск по текстам полей welcome, welcome_mobile, confirmation, confirmation_mobile;<br/>action – enum, список возможных значение поля action;<br/>title;<br/>is_active.<br/>|
@@ -82,10 +101,14 @@ InvitationRules.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>title:a – по умолчанию;<br/>created_at:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 InvitationRules.update
 Изменяет указанный сценарий вовлечения.
@@ -106,7 +129,9 @@ curl "https://api.livetex.ru/v2/invitationrules/12345" \
 Уровень доступа для ролей
 
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |site_bindings|False|Array.<InvitationRuleSiteBinding>|Массив связей сценария вовлечения с сайтами.<br/>Состав полей объектов в массиве точно такой же, как и состав параметров метода  InvitationRuleSiteBinding.add, за исключением поля invitation_rule_id. В данном контексте оно игнорируется.<br/>ВНИМАНИЕ!<br/>Значение этого параметра полностью замещает текущие связи сценария с сайтами, как если бы старые связи были удалены и созданы новые.<br/>Указание пустого массива приведет к удалению всех связей сценария с сайтами.<br/>|
@@ -129,10 +154,14 @@ curl "https://api.livetex.ru/v2/invitationrules/12345" \
 |max_count|False|numeric|Максимальное количество показов конкретному посетителю приглашений по данному сценарию в течение календарных суток.<br/>Счетчик показов обнуляется по истечению суток с момента последнего показа.<br/>Отсутствие значения или 0 – ограничения нет.<br/>|
 |id|True|numeric|ID сценария вовлечения.<br/>|
 |page_url|False|string|Показывать приглашение на странице с указанным адресом.<br/>Адрес указывается без приставки «http://» или «https://», например:<br/>www.mycompany.ru/about/contacts<br/>Если page_type=specified, то одно из двух полей page_url или page_title должно быть указано.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## delete
+|admin|manager|chief|chief_partner|operator|admin_partner
+## delete
+
 ### Описание метода
 InvitationRules.delete
 Удаляет указанный сценария вовлечения.
@@ -141,11 +170,15 @@ InvitationRules.delete
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID сценария вовлечения.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

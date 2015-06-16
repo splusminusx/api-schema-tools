@@ -1,8 +1,13 @@
+
 # Departments
+
 ## Описание ресурса
 Departments
+
 # Методы
+
 ## add
+
 ### Описание метода
 Departments.add
 Создает новый отдел.
@@ -14,16 +19,22 @@ Departments.add
 Объект типа «Department».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |site_ids|True|idlist|Список, через запятую, ID сайтов, с которыми требуется связать отдел. <br/>На основе этого поля автоматически создаются связи отдела с указанными сайтами (DepartmentSiteBinding). При этом в качестве псевдонима используется название отдела.<br/>|
 |title|True|string|Название отдела.<br/>|
 |employee_ids|True|idlist|Список, через запятую, ID сотрудников, входящих в отдел.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 Departments.show
 Возвращает данные указанного отдела.
@@ -32,15 +43,21 @@ Departments.show
 Объект типа «Department».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID отдела.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## list
+|admin|manager|chief|chief_partner|operator|admin_partner
+## list
+
 ### Описание метода
 Departments.list
 Возвращает список отделов.
@@ -49,7 +66,9 @@ Departments.list
 Массив объектов типа «Department».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID отделов;<br/>employee_ids – idlist, список ID сотрудников;<br/>site_ids – idlist, список ID сайтов;<br/>title;<br/>is_managed – boolean, признак своего отдела.<br/>|
@@ -57,10 +76,14 @@ Departments.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>title:a – по умолчанию;<br/>created_at:a;<br/>updated_at:a.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 Departments.update
 Изменяет данные указанного отдела.
@@ -71,16 +94,22 @@ Departments.update
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |title|False|string|Название отдела.<br/>|
 |id|True|numeric|ID отдела.<br/>|
 |employee_ids|False|idlist|Список, через запятую, ID сотрудников, входящих в отдел.<br/>Если указать пустое значение, то все сотрудники будут отвязаны от отдела и отдел будет удален.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## delete
+|admin|manager|chief|chief_partner|operator|admin_partner
+## delete
+
 ### Описание метода
 Departments.delete
 Удаляет указанный отдел.
@@ -93,11 +122,15 @@ Departments.delete
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID отдела.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

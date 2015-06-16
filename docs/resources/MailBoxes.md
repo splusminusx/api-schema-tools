@@ -1,8 +1,13 @@
+
 # MailBoxes
+
 ## Описание ресурса
 MailBoxes
+
 # Методы
+
 ## add
+
 ### Описание метода
 MailBoxes.add
 Добавляет новый почтовый ящик.
@@ -11,7 +16,9 @@ MailBoxes.add
 Объект типа «MailBox».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |username|False|string|Логин для подключения к почтовому серверу.<br/>|
@@ -20,10 +27,14 @@ MailBoxes.add
 |smtp_server|True|string|Адрес почтового сервера.<br/>|
 |password|False|string|Пароль для подключения к почтовому серверу.<br/>|
 |email|True|email|Адрес электронной почты.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 MailBoxes.show
 Возвращает данные указанного почтового ящика.
@@ -32,15 +43,21 @@ MailBoxes.show
 Объект типа «MailBox».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID почтового ящика.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## list
+|admin|manager|chief|chief_partner|operator|admin_partner
+## list
+
 ### Описание метода
 MailBoxes.list
 Возвращает список почтовых ящиков.
@@ -49,7 +66,9 @@ MailBoxes.list
 Массив объектов типа «MailBox».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID почтовых ящиков.<br/>|
@@ -57,10 +76,14 @@ MailBoxes.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 MailBoxes.update
 Обновляет данные указанного почтового ящика.
@@ -69,7 +92,9 @@ MailBoxes.update
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |username|False|string|Логин для подключения к почтовому серверу.<br/>|
@@ -79,10 +104,14 @@ MailBoxes.update
 |id|True|numeric|ID почтового ящика.<br/>|
 |password|False|string|Пароль для подключения к почтовому серверу.<br/>|
 |email|False|email|Адрес электронной почты.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## delete
+|admin|manager|chief|chief_partner|operator|admin_partner
+## delete
+
 ### Описание метода
 MailBoxes.delete
 Удаляет указанный почтовый ящик.
@@ -91,11 +120,15 @@ MailBoxes.delete
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID почтового ящика.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

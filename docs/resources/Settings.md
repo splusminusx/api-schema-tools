@@ -1,8 +1,13 @@
+
 # Settings
+
 ## Описание ресурса
 Settings
+
 # Методы
+
 ## showFeatureStates
+
 ### Описание метода
 Settings.showFeatureStates
 Возвращает данные о доступности функциональных возможностей на аккаунте.
@@ -12,13 +17,19 @@ Settings.showFeatureStates
 Объект типа «FeatureStates».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## showCobrowseSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## showCobrowseSettings
+
 ### Описание метода
 Settings.showCobrowseSettings
 Возвращает настройки функции «Виртуальный ассистент».
@@ -28,13 +39,19 @@ Settings.showCobrowseSettings
 Объект типа «CobrowseSettings».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## showFileTransferSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## showFileTransferSettings
+
 ### Описание метода
 Settings.showFileTransferSettings
 Возвращает настройки функции «Передача файлов».
@@ -44,13 +61,19 @@ Settings.showFileTransferSettings
 Объект типа «FileTransferSettings».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 Settings.show
 Возвращает глобальные настройки.
@@ -60,13 +83,19 @@ Settings.show
 Объект типа «Settings».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## updateCobrowseSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## updateCobrowseSettings
+
 ### Описание метода
 Settings.updateCobrowseSettings
 Изменяет настройки функции "Виртуальный ассистент".
@@ -75,14 +104,20 @@ Settings.updateCobrowseSettings
 Методов ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |is_active|False|boolean|Включение/выключение функции «Виртуальный ассистент».<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## updateAcceptanceByEmailSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## updateAcceptanceByEmailSettings
+
 ### Описание метода
 Settings.updateAcceptanceByEmailSettings
 Изменяет настройки отправки актов по электронной почте.
@@ -91,15 +126,21 @@ Settings.updateAcceptanceByEmailSettings
 Методов ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |is_active|False|boolean|Включение/выключение отправки актов на электронную почту.<br/>|
 |emails|False|string|Список через запятую адресов электронной почты.<br/><br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## showAcceptanceByEmailSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## showAcceptanceByEmailSettings
+
 ### Описание метода
 Settings.showAcceptanceByEmailSettings
 Возвращает настройки отправки актов по электронной почте.
@@ -109,13 +150,19 @@ Settings.showAcceptanceByEmailSettings
 Объект типа «AcceptanceByEmailSettings».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## updateEmployeeRemarkSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## updateEmployeeRemarkSettings
+
 ### Описание метода
 Settings.updateEmployeeRemarkSettings
 Изменяет настройки функции оценок сотрудника.
@@ -124,14 +171,20 @@ Settings.updateEmployeeRemarkSettings
 Методов ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |is_active|False|boolean|Включение/выключение возможности оценки чатов сотрудниками.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## updateFileTransferSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## updateFileTransferSettings
+
 ### Описание метода
 Settings.updateFileTransferSettings
 Изменяет настройки функции «Передача файлов».
@@ -140,14 +193,20 @@ Settings.updateFileTransferSettings
 Методов ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |is_active|False|boolean|Включение/выключение функции «Передача файлов».<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## showCallSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## showCallSettings
+
 ### Описание метода
 Settings.showCallSettings
 Возвращает настройки звонковой функциональности.
@@ -157,13 +216,19 @@ Settings.showCallSettings
 Объект типа «CallSettings».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## showTypingIndicatorSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## showTypingIndicatorSettings
+
 ### Описание метода
 Settings.showTypingIndicatorSettings
 Возвращает настройки функции «Подглядывания».
@@ -173,13 +238,19 @@ Settings.showTypingIndicatorSettings
 Объект типа «TypingIndicatorSettings».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## showReportByEmailSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## showReportByEmailSettings
+
 ### Описание метода
 Settings.showReportByEmailSettings
 Возвращает настройки отправки отчетов по email.
@@ -189,13 +260,19 @@ Settings.showReportByEmailSettings
 Объект типа «ReportByEmailSettings».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## updateTypingIndicatorSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## updateTypingIndicatorSettings
+
 ### Описание метода
 Settings.updateTypingIndicatorSettings
 Изменяет настройки функции «Подглядывание».
@@ -204,14 +281,20 @@ Settings.updateTypingIndicatorSettings
 Методов ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |is_active|False|boolean|Включение/выключение функции «Подглядывание».<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## updateCallSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## updateCallSettings
+
 ### Описание метода
 Settings.updateCallSettings
 Изменяет настройки звонковой функциональности.
@@ -220,7 +303,9 @@ Settings.updateCallSettings
 Методов ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |is_forward|False|boolean|Включение/выключение переадресации.<br/>|
@@ -229,10 +314,14 @@ Settings.updateCallSettings
 |forward_sip_login|False|string|Логин для подключения по SIP.<br/>Обязательно при forward_type=SIP и is_forward=true.<br/>|
 |forward_sip_password|False|string|Пароль для подключения по SIP.<br/>Обязательно при forward_type=SIP и is_forward=true.<br/>|
 |forward_type|False|string|Тип переадресации.<br/>Возможные значения:<br/>sip – переадресация на SIP,<br/>phone – переадресация на телефон.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## updateReportByEmailSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## updateReportByEmailSettings
+
 ### Описание метода
 Settings.updateReportByEmailSettings
 Изменяет настройки отправки отчетом по email.
@@ -241,16 +330,22 @@ Settings.updateReportByEmailSettings
 Методов ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |is_active|False|boolean|Включение/выключение отправки отчетов на email.<br/>|
 |period|False|string|Периодичность.<br/>Возможные значения:<br/>daily – ежедневно;<br/>weekly – еженедельно;<br/>monthly – ежемесячно.<br/>|
 |emails|False|string|Список через запятую адресов электронной почты, на которые следует отправлять отчеты.<br/>Если указана пустая строка, то отчеты отправляться не будут.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## showEmployeeRemarkSettings
+|admin|manager|chief|chief_partner|operator|admin_partner
+## showEmployeeRemarkSettings
+
 ### Описание метода
 Settings.showEmployeeRemarkSettings
 Возвращает настройки оценок сотрудника.
@@ -260,10 +355,14 @@ Settings.showEmployeeRemarkSettings
 Объект типа «EmployeeRemarkSettings».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

@@ -1,8 +1,13 @@
+
 # CallButtons
+
 ## Описание ресурса
 CallButtons
+
 # Методы
+
 ## add
+
 ### Описание метода
 CallButtons.add
 Создает новую кнопку.
@@ -11,7 +16,9 @@ CallButtons.add
 Объект типа «CallButton».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |image_online|False|file|Картинка кнопки, когда есть доступные операторы.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
@@ -21,10 +28,14 @@ CallButtons.add
 |image_offline|False|file|Картинка кнопки, когда нет доступных операторов.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
 |size|True|string|Размер кнопки.<br/>Возможные значения:<br/>small – маленький, 146x50 пикселей;<br/>middle  – средний,  193x69 пикселей;<br/>large – большой, 223x100 пикселей.<br/>Принимается во внимание при design_type = predefined.<br/>|
 |department_id|False|numeric|ID отдел.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 CallButtons.show
 Возвращает данные указанной кнопки.
@@ -33,15 +44,21 @@ CallButtons.show
 Объект типа «CallButton».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID кнопки.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## list
+|admin|manager|chief|chief_partner|operator|admin_partner
+## list
+
 ### Описание метода
 CallButtons.list
 Возвращает список звонковых кнопок.
@@ -50,7 +67,9 @@ CallButtons.list
 Массив объектов типа «CallButton».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID кнопок;<br/>site_ids – idlist, список ID сайтов.<br/>|
@@ -58,10 +77,14 @@ CallButtons.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>id:a – по умолчанию;<br/>updated_at:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 CallButtons.update
 Изменяет указанную кнопку.
@@ -70,7 +93,9 @@ CallButtons.update
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |image_online|False|file|Картинка кнопки, когда есть доступные операторы.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
@@ -81,10 +106,14 @@ CallButtons.update
 |size|False|string|Размер кнопки.<br/>Возможные значения:<br/>small – маленький, 146x50 пикселей;<br/>middle – средний,  193x69 пикселей;<br/>large – большой, 223x100 пикселей.<br/>Принимается во внимание при design_type = predefined.<br/>|
 |id|True|numeric|ID кнопки.<br/>|
 |department_id|False|numeric|ID отдел.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## delete
+|admin|manager|chief|chief_partner|operator|admin_partner
+## delete
+
 ### Описание метода
 CallButtons.delete
 Удаляет указанную кнопку.
@@ -93,11 +122,15 @@ CallButtons.delete
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID кнопки.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

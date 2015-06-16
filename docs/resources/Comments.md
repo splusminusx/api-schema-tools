@@ -1,8 +1,13 @@
+
 # Comments
+
 ## Описание ресурса
 Comments
+
 # Методы
+
 ## add
+
 ### Описание метода
 Comments.add
 Добавляет новый комментарий к обращению в поддержку.
@@ -11,15 +16,21 @@ Comments.add
 Объект типа «Comment».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |text|True|string|Текст комментария.<br/>Максимум 2000 символов.<br/>|
 |ticket_id|True|numeric|ID обращения в поддержку.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## list
+|admin|manager|chief|chief_partner|operator|admin_partner
+## list
+
 ### Описание метода
 Comments.list
 Возвращает список комментариев к обращению в поддержку.
@@ -28,7 +39,9 @@ Comments.list
 Массив объектов типа «Comment».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID тикетов;<br/>ticket_ids – idlist, список ID тикетов;<br/>employee_ids – idlist, список ID сотрудников.<br/>created_at.<br/>|
@@ -36,10 +49,14 @@ Comments.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 Comments.show
 Возвращает данные указанного обращения в поддержку.
@@ -48,12 +65,16 @@ Comments.show
 Объект типа «Comment».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID комментария к обращению в поддержку.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

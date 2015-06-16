@@ -1,8 +1,13 @@
+
 # Payers
+
 ## Описание ресурса
 Payers
+
 # Методы
+
 ## list
+
 ### Описание метода
 Payers.list
 Возвращает список плательщиков.
@@ -11,7 +16,9 @@ Payers.list
 Массив объектов типа «Payer».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID плательщиков;<br/>is_active – boolean, если указано, то возвращаются записи с указанным значением.<br/>|
@@ -19,10 +26,14 @@ Payers.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## add
+|admin|manager|chief|chief_partner|operator|admin_partner
+## add
+
 ### Описание метода
 Payers.add
 Создает нового плательщика.
@@ -33,16 +44,22 @@ Payers.add
 Объект типа «Payer».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |requisites|True|Requisites|Реквизиты плательщика.<br/>|
 |currency|False|currency|Валюта плательщика.<br/>|
 |payer_type|True|string|Тип плательщика.<br/>Возможные значения:<br/>ru_person – физическое лицо РФ;<br/>ru_legal – юридическое лицо РФ;<br/>ua_person – физическое лицо Украины;<br/>ua_legal – юридическое лицо Украины;<br/>ua_sp – ФОП Украины.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## transferBalance
+|admin|manager|chief|chief_partner|operator|admin_partner
+## transferBalance
+
 ### Описание метода
 Payers.transferBalance
 Переносит остатки на счете на активного плательщика.
@@ -54,14 +71,20 @@ Payers.transferBalance
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID плательщика, остатки со счета которого требуется перенести на активного плательщика.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 Payers.update
 Обновляет данные указанного плательщика.
@@ -70,15 +93,21 @@ Payers.update
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |is_recurring|False|boolean|Включение/выключение рекуррентных платежей.<br/>|
 |id|True|numeric|ID плательщика.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 Payers.show
 Возвращает данные указанного плательщика.
@@ -87,12 +116,16 @@ Payers.show
 Объект типа «Payer».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID плательщика.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

@@ -1,8 +1,13 @@
+
 # EmployeeEvents
+
 ## Описание ресурса
 EmployeeEvents
+
 # Методы
+
 ## list
+
 ### Описание метода
 EmployeeEvents.list
 Возвращает список события сотрудника.
@@ -32,7 +37,9 @@ curl https://api.livetex.ru/v2/employeeevents?employee_ids=12345 \
 }
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>employee_ids – idlist, список ID сотрудников;<br/>event_type;<br/>created_at.<br/>|
@@ -40,7 +47,9 @@ curl https://api.livetex.ru/v2/employeeevents?employee_ids=12345 \
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

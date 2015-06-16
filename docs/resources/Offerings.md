@@ -1,8 +1,13 @@
+
 # Offerings
+
 ## Описание ресурса
 Offerings
+
 # Методы
+
 ## list
+
 ### Описание метода
 Offerings.list
 Возвращает список активных предложений, доступных текущему клиенту.
@@ -11,7 +16,9 @@ Offerings.list
 Массив объектов типа «Offering».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID предложений;<br/>cart_id – ID корзины, для которых нужно вернуть совместимые предложения;<br/>is_tariff;<br/>is_trial;<br/>resource_type;<br/>price;<br/>days.<br/>|
@@ -19,10 +26,14 @@ Offerings.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>id:d - по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 Offerings.show
 Возвращает данные указанного предложения.
@@ -31,12 +42,16 @@ Offerings.show
 Объект типа «Offering».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID предложения.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

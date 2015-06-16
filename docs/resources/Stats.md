@@ -1,9 +1,14 @@
+
 # Stats
+
 ## Описание ресурса
 Stats
 Статистические данные различного типа.
+
 # Методы
+
 ## employees
+
 ### Описание метода
 Stats.employees
 Возвращает статистику по сотрудникам.
@@ -89,16 +94,22 @@ curl "https://api.livetex.ru/v2/stats/employees?fields=id,first_name,last_name,c
 
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>is_online – boolean, признак присутствия оператора в онлайн. Если указано, то метод вернет статистику по операторам с соответствующим текущим статусом.<br/>|
 |fields|False|string|Список возвращаемых полей через запятую.<br/>Возможные значения приведены в нижеследующей таблице.<br/>По умолчанию возвращаются следующие поля:<br/>id;<br/>first_name;<br/>last_name;<br/>online_time_avg;<br/>chats_total;<br/>calls_total;<br/>leads_total.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>last_name:a – по умолчанию;<br/>first_name:a;<br/>online_time_avg:a, online_time_avg:d;<br/>chats_total:a, chats_total:d;<br/>calls_total:a, calls_total:d;<br/>leads_total:a, leads_total:d.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## contacts
+|admin|manager|chief|chief_partner|operator|admin_partner
+## contacts
+
 ### Описание метода
 Stats.contacts
 Возвращает статистику по контактным данным.
@@ -109,13 +120,19 @@ Stats.contacts
 Перечень доступных статистических данных
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## sites
+|admin|manager|chief|chief_partner|operator|admin_partner
+## sites
+
 ### Описание метода
 Stats.sites
 Возвращает статистику по сайтам.
@@ -288,16 +305,22 @@ curl "https://api.livetex.ru/v2/stats/sites?fields=id,url,chats_total,by_employe
 
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий фильтрации.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>|
 |fields|False|string|Список возвращаемых полей через запятую.<br/>Возможные значения приведены в нижеследующей таблице.<br/>По умолчанию возвращаются следующие поля:<br/>id;<br/>url;<br/>online_time_avg;<br/>chats_total;<br/>calls_total;<br/>leads_total.<br/>Если указано поле by_department, то принимаются во внимание также указания типа department(field_name), где field_name – имя поля отдела.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>url:a – по умолчанию;<br/>online_time_avg:a, online_time_avg:d;<br/>chats_total:a, chats_total:d;<br/>calls_total:a, calls_total:d;<br/>leads_total:a, leads_total:d.<br/>Указанная сортировка распространяется также на порядок данных в ключах "by_department" и "by_employee".<br/>Если указано "url:a", то для сортировки данных в ключе "by_department" можно указать одно из следующих возможных значений:<br/>department(title):a.<br/>А в ключе "by_employee":<br/>employee(last_name):a;<br/>employee(first_name):a.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## departments
+|admin|manager|chief|chief_partner|operator|admin_partner
+## departments
+
 ### Описание метода
 Stats.departments
 Возвращает статистику по отделам.
@@ -379,16 +402,22 @@ curl "https://api.livetex.ru/v2/stats/departments?fields=department,chats_total,
 
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий фильтрации.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>|
 |fields|False|string|Список возвращаемых полей через запятую.<br/>Возможные значения приведены в нижеследующей таблице.<br/>По умолчанию возвращаются следующие поля:<br/>online_time_avg;<br/>chats_total;<br/>calls_total;<br/>leads_total.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>title:a – по умолчанию;<br/>online_time_avg:a, online_time_avg:d;<br/>chats_total:a, chats_total:d;<br/>calls_total:a, calls_total:d;<br/>leads_total:a, leads_total:d.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## summary
+|admin|manager|chief|chief_partner|operator|admin_partner
+## summary
+
 ### Описание метода
 Stats.summary
 Возвращает общую статистику.
@@ -456,12 +485,16 @@ curl https://api.livetex.ru/v2/stats/summary -G \
 
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>|
 |fields|False|string|Список возвращаемых полей через запятую.<br/>Возможные значения приведены в нижеследующей таблице.<br/>По умолчанию возвращаются следующие поля:<br/>online_time_avg;<br/>chats_total;<br/>calls_total;<br/>leads_total;<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

@@ -1,8 +1,13 @@
+
 # EmployeeRemarks
+
 ## Описание ресурса
 EmployeeRemarks
+
 # Методы
+
 ## add
+
 ### Описание метода
 EmployeeRemarks.add
 Создает новую запись в списке оценок сотрудника.
@@ -11,15 +16,21 @@ EmployeeRemarks.add
 Объект типа «EmployeeRemark».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |text|True|string|Текст оценки.<br/>|
 |position|False|numeric|Порядковый номер оценки.<br/>Если не указано, то оценка будет последней.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 EmployeeRemarks.show
 Возвращает данные указанной оценки сотрудника.
@@ -28,15 +39,21 @@ EmployeeRemarks.show
 Объект типа «EmployeeRemark».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID оценки.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## list
+|admin|manager|chief|chief_partner|operator|admin_partner
+## list
+
 ### Описание метода
 EmployeeRemarks.list
 Возвращает список оценок сотрудника.
@@ -46,7 +63,9 @@ EmployeeRemarks.list
 Уровень доступа для ролей
 
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID оценок.<br/>|
@@ -54,10 +73,14 @@ EmployeeRemarks.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>position:a – по умолчанию,<br/>text:a, text:d,<br/>created_at:d,<br/>updated_at:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 EmployeeRemarks.update
 Изменяет данные оценки оператора.
@@ -66,16 +89,22 @@ EmployeeRemarks.update
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |text|False|string|Текст оценки.<br/>|
 |id|True|numeric|ID оценки.<br/>|
 |position|False|numeric|Порядковый номер оценки.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## delete
+|admin|manager|chief|chief_partner|operator|admin_partner
+## delete
+
 ### Описание метода
 EmployeeRemarks.delete
 Удаляет указанную оценку сотрудника.
@@ -84,11 +113,15 @@ EmployeeRemarks.delete
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID оценки.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

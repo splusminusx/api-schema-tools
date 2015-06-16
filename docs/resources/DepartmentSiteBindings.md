@@ -1,8 +1,13 @@
+
 # DepartmentSiteBindings
+
 ## Описание ресурса
 DepartmentSiteBindings
+
 # Методы
+
 ## add
+
 ### Описание метода
 DepartmentSiteBindings.add
 Создает новую связь отдела и сайта.
@@ -15,7 +20,9 @@ DepartmentSiteBindings.add
 Уровень доступа для ролей
 
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |prechats_chat|False|Array.<Prechat>|Массив пречат-полей.<br/>Максимум 2 элемента.<br/>|
@@ -25,10 +32,14 @@ DepartmentSiteBindings.add
 |position|False|numeric|Порядковый номер отдела на данном сайте.<br/>Если не указано, то отдел будет последним по порядку в указанном сайте.<br/>|
 |callback_url|False|string|Настройка Callback URL.<br/>|
 |department_id|True|numeric|ID отдела.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 DepartmentSiteBindings.show
 Возвращает данные указанной связи отдела и сайта.
@@ -37,15 +48,21 @@ DepartmentSiteBindings.show
 Объект типа «DepartmentSiteBinding».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID связи.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## list
+|admin|manager|chief|chief_partner|operator|admin_partner
+## list
+
 ### Описание метода
 DepartmentSiteBindings.list
 Возвращает список связей отделов и сайтов.
@@ -54,7 +71,9 @@ DepartmentSiteBindings.list
 Массив объектов типа «DepartmentSiteBinding».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID связей.<br/>department_ids – idlist, список ID отделов.<br/>site_ids – idlist, список ID сайтов.<br/>|
@@ -62,10 +81,14 @@ DepartmentSiteBindings.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>updated_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 DepartmentSiteBindings.update
 Обновляет свойства связи отдела и сайта.
@@ -77,7 +100,9 @@ DepartmentSiteBindings.update
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |prechats_chat|False|Array.<Prechat>|Массив пречат-полей.<br/>Максимум 2 элемента.<br/>|
@@ -88,10 +113,14 @@ DepartmentSiteBindings.update
 |callback_url|False|string|Настройка Callback URL.<br/>|
 |id|True|numeric|ID связи.<br/>|
 |department_id|False|numeric|ID отдела.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## delete
+|admin|manager|chief|chief_partner|operator|admin_partner
+## delete
+
 ### Описание метода
 DepartmentSiteBindings.delete
 Удаляет указанную связь отдела и сайта.
@@ -103,11 +132,15 @@ DepartmentSiteBindings.delete
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID связи.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

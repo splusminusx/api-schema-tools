@@ -12,15 +12,15 @@ class MarkdownSerializer(object):
         self._repo_path = repo_path
         self._doc_path = doc_path
 
-    DEPRECATION_WARNING = u'## WARNING: Type is DEPRECATED\n'
-    TYPE_DESCRIPTION_HEADING = u'### Описание типа\n'
-    RESOURCE_DESCRIPTION_HEADING = u'## Описание ресурса\n'
-    METHOD_DESCRIPTION_HEADING = u'### Описание метода\n'
-    METHODS_HEADING = u'# Методы\n'
-    PERMISSIONS_HEADING = u'### Доступы к методу\n'
-    FIELDS_HEADING = u'### Поля\n'
-    FIELDS_TABLE_HEADING = u'| Имя поля | Необходимость | Тип данных | Комментарий |\n|---|---|---|---|\n'
-    PERMISSIONS_TABLE_HEADING = u'| Имя роли | доступ | Комментарий |\n|---|---|---|\n'
+    DEPRECATION_WARNING = u'\n## WARNING: Type is DEPRECATED\n'
+    TYPE_DESCRIPTION_HEADING = u'\n### Описание типа\n'
+    RESOURCE_DESCRIPTION_HEADING = u'\n## Описание ресурса\n'
+    METHOD_DESCRIPTION_HEADING = u'\n### Описание метода\n'
+    METHODS_HEADING = u'\n# Методы\n'
+    PERMISSIONS_HEADING = u'\n### Доступы к методу\n'
+    FIELDS_HEADING = u'\n### Поля\n'
+    FIELDS_TABLE_HEADING = u'\n| Имя поля | Необходимость | Тип данных | Комментарий |\n|---|---|---|---|\n'
+    PERMISSIONS_TABLE_HEADING = u'\n| Имя роли | доступ | Комментарий |\n|---|---|---|\n'
 
     @staticmethod
     def _escape_description(description):
@@ -59,7 +59,7 @@ class MarkdownSerializer(object):
         with io.open(self._get_full_path(obj), 'w', encoding='utf-8') as f:
             if obj.deprecated:
                 f.write(self.DEPRECATION_WARNING)
-            f.write(u'## ' + obj.name + u'\n')
+            f.write(u'\n## ' + obj.name + u'\n')
             f.write(self.TYPE_DESCRIPTION_HEADING)
             f.write(obj.description)
             f.write(self.FIELDS_HEADING)
@@ -79,14 +79,14 @@ class MarkdownSerializer(object):
         with io.open(self._get_full_path(obj), 'w', encoding='utf-8') as f:
             if obj.deprecated:
                 f.write(self.DEPRECATION_WARNING)
-            f.write(u'## ' + obj.name + u'\n')
+            f.write(u'\n## ' + obj.name + u'\n')
             f.write(self.TYPE_DESCRIPTION_HEADING)
             f.write(obj.description)
         f.close()
 
     def _serialize_resource(self, obj):
         with io.open(self._get_full_path(obj), 'w', encoding='utf-8') as f:
-            f.write(u'# ' + obj.name + u'\n')
+            f.write(u'\n# ' + obj.name + u'\n')
             f.write(self.RESOURCE_DESCRIPTION_HEADING)
             f.write(obj.description)
             f.write(self.METHODS_HEADING)
@@ -94,7 +94,7 @@ class MarkdownSerializer(object):
                 method = obj.methods[method_name]
                 if method.deprecated:
                     f.write(self.DEPRECATION_WARNING)
-                f.write(u'## ' + method.name + u'\n')
+                f.write(u'\n## ' + method.name + u'\n')
                 f.write(self.METHOD_DESCRIPTION_HEADING)
                 f.write(method.description)
                 f.write(self.FIELDS_HEADING)

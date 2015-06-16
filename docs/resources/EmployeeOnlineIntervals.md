@@ -1,8 +1,13 @@
+
 # EmployeeOnlineIntervals
+
 ## Описание ресурса
 EmployeeOnlineIntervals
+
 # Методы
+
 ## listBySite
+
 ### Описание метода
 EmployeeOnlineIntervals.listBySite
 Возвращает интервалы времени онлайн сотрудников сгруппированные по сайтам.
@@ -54,7 +59,9 @@ curl https://api.livetex.ru/v2/employeeonlineintervals.listbysite \
 Уровень доступа для ролей
 
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>Максимум - 30 дней. По умолчанию устанавливается период равный предыдущим суткам.<br/>time – time, период времени в течение суток, принимаемый во внимание при поиске сотрудников в состоянии «В сети». Возможные значения от 00:00:00 до 23:59:59.<br/>|
@@ -62,10 +69,14 @@ curl https://api.livetex.ru/v2/employeeonlineintervals.listbysite \
 |limit|False|numeric|По умолчанию – 5.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>url:a – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## listByEmployee
+|admin|manager|chief|chief_partner|operator|admin_partner
+## listByEmployee
+
 ### Описание метода
 EmployeeOnlineIntervals.listByEmployee
 Возвращает интервалы времени онлайн сотрудников.
@@ -114,7 +125,9 @@ curl https://api.livetex.ru/v2/employeeonlineintervals/listbyemployee \
 
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>Максимум - 30 дней. По умолчанию устанавливается период равный предыдущим суткам.<br/>time – time, период времени в течение суток, принимаемый во внимание при поиске сотрудников в состоянии «В сети». Возможные значения от 00:00:00 до 23:59:59.<br/>|
@@ -122,10 +135,14 @@ curl https://api.livetex.ru/v2/employeeonlineintervals/listbyemployee \
 |limit|False|numeric|По умолчанию – 5.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>last_name:a – по умолчанию;<br/>first_name:a.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## listByDepartment
+|admin|manager|chief|chief_partner|operator|admin_partner
+## listByDepartment
+
 ### Описание метода
 EmployeeOnlineIntervals.listByDepartment
 Возвращает интервалы времени онлайн сотрудников сгруппированные по отделам.
@@ -176,7 +193,9 @@ curl https://api.livetex.ru/v2/employeeonlineintervals.listbydepartment \
 
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>Максимум - 30 дней. По умолчанию устанавливается период равный предыдущим суткам.<br/>time – time, период времени в течение суток, принимаемый во внимание при поиске сотрудников в состоянии "В сети". Возможные значения от 00:00:00 до 23:59:59.<br/>|
@@ -184,7 +203,9 @@ curl https://api.livetex.ru/v2/employeeonlineintervals.listbydepartment \
 |limit|False|numeric|По умолчанию – 5.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>title:a – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

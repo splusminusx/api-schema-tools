@@ -1,8 +1,13 @@
+
 # CartItems
+
 ## Описание ресурса
 CartItems
+
 # Методы
+
 ## add
+
 ### Описание метода
 CartItems.add
 Добавляет позицию в указанную корзину.
@@ -11,15 +16,21 @@ CartItems.add
 Объект типа «CartItem».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |product_addition|False|ProductAddition|Дополнение продукта.<br/>|
 |cart_id|True|numeric|ID корзины.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 CartItems.update
 Обновляет указанную позицию корзины.
@@ -29,15 +40,21 @@ CartItems.update
 Уровень доступа для ролей
 
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |product_addition|True|ProductAddition|Дополнение продукта.<br/>|
 |id|True|numeric|ID позиции корзины.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## delete
+|admin|manager|chief|chief_partner|operator|admin_partner
+## delete
+
 ### Описание метода
 CartItems.delete
 Удаляет указанную позицию корзины.
@@ -46,11 +63,15 @@ CartItems.delete
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID позиции корзины.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

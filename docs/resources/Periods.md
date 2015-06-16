@@ -1,8 +1,13 @@
+
 # Periods
+
 ## Описание ресурса
 Periods
+
 # Методы
+
 ## list
+
 ### Описание метода
 Periods.list
 Возвращает список периодов.
@@ -11,7 +16,9 @@ Periods.list
 Массив объектов типа «Period».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID периодов;<br/>has_order – boolean, если false, то только периоды с корзинами и без заказов;<br/>period_state. <br/>|
@@ -19,10 +26,14 @@ Periods.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 Periods.update
 Обновляет данные указанного периода.
@@ -31,12 +42,16 @@ Periods.update
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |is_autorenewal|False|boolean|Признак автоматического продления.<br/>|
 |id|True|numeric|ID периода.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

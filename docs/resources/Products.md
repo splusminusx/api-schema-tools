@@ -1,8 +1,13 @@
+
 # Products
+
 ## Описание ресурса
 Products
+
 # Методы
+
 ## list
+
 ### Описание метода
 Products.list
 Возвращает список продуктов клиента, в том числе и ранее подключенных, если они есть в базе.
@@ -11,7 +16,9 @@ Products.list
 Массив объектов типа «Product».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID продуктов;<br/>product_state – enum, статус продукта.<br/>|
@@ -19,10 +26,14 @@ Products.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 Products.show
 Возвращает данные указанного продукта клиента.
@@ -31,12 +42,16 @@ Products.show
 Объект типа «Product».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID продукта.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

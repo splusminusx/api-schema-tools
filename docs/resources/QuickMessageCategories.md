@@ -1,8 +1,13 @@
+
 # QuickMessageCategories
+
 ## Описание ресурса
 QuickMessageCategories
+
 # Методы
+
 ## add
+
 ### Описание метода
 QuickMessageCategories.add
 Добавляет новую категорию быстрых сообщений.
@@ -11,17 +16,23 @@ QuickMessageCategories.add
 Объект типа «QuickMessageCategory».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |color|False|string|Цвет.<br/>Возможные значения:<br/>green – зеленый;<br/>orange – оранжевый;<br/>blue – синий;<br/>red – красный;<br/>purple – фиолетовый;<br/>gray – серый;<br/>rose – розовый;<br/>black – черный;<br/>yellow – желтый;<br/>white – белый.<br/>По умолчанию новой категории назначается следующий по порядку цвет относительно хронологически последней созданной категории в сайте.<br/>|
 |is_global|True|boolean|Признак глобальности категории.<br/>Если false, то значение site_id игнорируется, поскольку персональные категории сотрудников не связаны с сайтами.<br/>|
 |site_id|False|numeric|ID сайт.<br/>Должен быть указан, если is_global = true.<br/>|
 |title|True|string|Название категории.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 QuickMessageCategories.show
 Возвращает данные указанной категории быстрых сообщений.
@@ -30,15 +41,21 @@ QuickMessageCategories.show
 Объект типа «QuickMessageCategory».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID категории быстрых сообщений.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## list
+|admin|manager|chief|chief_partner|operator|admin_partner
+## list
+
 ### Описание метода
 QuickMessageCategories.list
 Возвращает список глобальных категорий быстрых сообщений, а также персональных категорий, созданных текущим пользователем.
@@ -47,7 +64,9 @@ QuickMessageCategories.list
 Массив объектов типа «QuickMessageCategory».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID категорий быстрых сообщений;<br/>site_ids – idlist, список ID сайтов.<br/>|
@@ -55,10 +74,14 @@ QuickMessageCategories.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>title:a – по умолчанию.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## update
+|admin|manager|chief|chief_partner|operator|admin_partner
+## update
+
 ### Описание метода
 QuickMessageCategories.update
 Обновляет категорию быстрых сообщений.
@@ -67,17 +90,23 @@ QuickMessageCategories.update
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |color|False|string|Цвет.<br/>Возможные значения:<br/>green – зеленый;<br/>orange – оранжевый;<br/>blue – синий;<br/>red – красный;<br/>purple – фиолетовый;<br/>gray – серый;<br/>rose – розовый;<br/>black – черный;<br/>yellow – желтый;<br/>white – белый.<br/>|
 |site_id|False|numeric|ID сайта.<br/>Принимается во внимание только для глобальных категорий, поскольку персональные категории не связаны с сайтами.<br/>|
 |id|True|numeric|ID категории быстрых сообщений.<br/>|
 |title|False|string|Название категории.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## delete
+|admin|manager|chief|chief_partner|operator|admin_partner
+## delete
+
 ### Описание метода
 QuickMessageCategories.delete
 Удаляет указанную категорию быстрых сообщений.
@@ -86,11 +115,15 @@ QuickMessageCategories.delete
 Метод ничего не возвращает.
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |id|True|numeric|ID категории быстрых сообщений.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner

@@ -1,8 +1,13 @@
+
 # Invoices
+
 ## Описание ресурса
 Invoices
+
 # Методы
+
 ## list
+
 ### Описание метода
 Invoices.list
 Возвращает список выставленных счетов.
@@ -11,7 +16,9 @@ Invoices.list
 Массив объектов типа «Invoice».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID счетов;<br/>payer_ids – idlist, список ID плательщиков;<br/>is_bound – boolean, признак связанности счета с каким-либо периодом;<br/>is_paid – boolean, если указан, то возвращаются счета с соответствующим значением этого признака. <br/>|
@@ -19,10 +26,14 @@ Invoices.list
 |limit|False|numeric|По умолчанию – 50.<br/>|
 |sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию; <br/>paid_at:d.<br/>|
 |offset|False|numeric|По умолчанию – 0.<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
-|admin|manager|chief|chief_partner|operator|admin_partner## show
+|admin|manager|chief|chief_partner|operator|admin_partner
+## show
+
 ### Описание метода
 Invoices.show
 Возвращает данные указанного счета.
@@ -31,12 +42,16 @@ Invoices.show
 Объект типа «Invoice».
 Уровень доступа для ролей
 
+
 ### Поля
+
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |fields|False|string|Список через запятую возвращаемых полей.<br/>|
 |id|True|numeric|ID счета<br/>|
+
 ### Доступы к методу
+
 | Имя роли | доступ | Комментарий |
 |---|---|---|
 |admin|manager|chief|chief_partner|operator|admin_partner
