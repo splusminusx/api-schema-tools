@@ -25,7 +25,7 @@
                     "description": "ID корзины.\n"
                 }
             ], 
-            "description": "Добавляет позицию в указанную корзину.\nОбъект типа «CartItem».\n\n", 
+            "description": "Добавляет позицию в указанную корзину.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -95,7 +95,7 @@
                     "description": "ID позиции корзины.\n"
                 }
             ], 
-            "description": "Обновляет указанную позицию корзины.\nМетод ничего не возвращает.\n\n\n", 
+            "description": "Обновляет указанную позицию корзины.\n\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -152,7 +152,7 @@
                     "description": "ID позиции корзины.\n"
                 }
             ], 
-            "description": "Удаляет указанную позицию корзины.\nМетод ничего не возвращает.\n\n", 
+            "description": "Удаляет указанную позицию корзины.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [

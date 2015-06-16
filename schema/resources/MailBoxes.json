@@ -65,7 +65,7 @@
                     "description": "Адрес электронной почты.\n"
                 }
             ], 
-            "description": "Добавляет новый почтовый ящик.\nОбъект типа «MailBox».\n\n", 
+            "description": "Добавляет новый почтовый ящик.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -125,7 +125,7 @@
                     "description": "ID почтового ящика.\n"
                 }
             ], 
-            "description": "Удаляет указанный почтовый ящик.\nМетод ничего не возвращает.\n\n", 
+            "description": "Удаляет указанный почтовый ящик.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -222,7 +222,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Возвращает список почтовых ящиков.\nМассив объектов типа «MailBox».\n\n", 
+            "description": "Возвращает список почтовых ящиков.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -346,7 +346,7 @@
                     "description": "ID почтового ящика.\n"
                 }
             ], 
-            "description": "Обновляет данные указанного почтового ящика.\nМетод ничего не возвращает.\n\n", 
+            "description": "Обновляет данные указанного почтового ящика.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -413,7 +413,7 @@
                     "description": "ID почтового ящика.\n"
                 }
             ], 
-            "description": "Возвращает данные указанного почтового ящика.\nОбъект типа «MailBox».\n\n", 
+            "description": "Возвращает данные указанного почтового ящика.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

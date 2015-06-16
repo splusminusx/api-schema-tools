@@ -59,7 +59,7 @@ def get_method_description(node):
     for idx, b in enumerate(node.blocks):
         if isinstance(b, Paragraph):
             if b.text.startswith(u'Результат'):
-                result_header_index = idx
+                result_header_index = idx + 1
     for idx, b in enumerate(node.blocks):
         if isinstance(b, Paragraph):
             if b.text == node.name:

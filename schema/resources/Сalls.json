@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию;\nupdated_at:d;\nduration:a, duration:d;\nanswer_time:a, answer_time:d;\nresult:a, result:d.\n"
                 }
             ], 
-            "description": "Возвращает список звонков.\nМассив объектов типа «Call».\n\n", 
+            "description": "Возвращает список звонков.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID звонка.\n"
                 }
             ], 
-            "description": "Возвращает данные указанного звонка.\nОбъект типа «Call».\n\n", 
+            "description": "Возвращает данные указанного звонка.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

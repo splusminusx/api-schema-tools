@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:a – по умолчанию.\n"
                 }
             ], 
-            "description": "Возвращает список сообщений межоператорского чата.\nМассив объектов типа «EmployeeChatMessage».\n\n", 
+            "description": "Возвращает список сообщений межоператорского чата.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 

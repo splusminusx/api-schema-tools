@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию; \npaid_at:d.\n"
                 }
             ], 
-            "description": "Возвращает список выставленных счетов.\nМассив объектов типа «Invoice».\n\n", 
+            "description": "Возвращает список выставленных счетов.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID счета\n"
                 }
             ], 
-            "description": "Возвращает данные указанного счета.\nОбъект типа «Invoice».\n\n", 
+            "description": "Возвращает данные указанного счета.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

@@ -59,7 +59,7 @@
                     "description": "Название сценария удержания.\n"
                 }
             ], 
-            "description": "Создает новый сценарий удержания.\nОбъект типа «HoldRule».\nПример вызова\ncurl \"https://api.livetex.ru/v2/holdrules\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t-d \"title=Одно сообщение и перевод\" \\\n\t-d \"hold_messages[0][text]=Оператор скоро вам ответит\" \\\n\t-d \"hold_messages[0][send_after]=15\" \\\n\t-d \"is_transfer=true\" \\\n\t-d \"transfer_after=15\"\n\n\n", 
+            "description": "Создает новый сценарий удержания.\nПример вызова\ncurl \"https://api.livetex.ru/v2/holdrules\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t-d \"title=Одно сообщение и перевод\" \\\n\t-d \"hold_messages[0][text]=Оператор скоро вам ответит\" \\\n\t-d \"hold_messages[0][send_after]=15\" \\\n\t-d \"is_transfer=true\" \\\n\t-d \"transfer_after=15\"\n\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -119,7 +119,7 @@
                     "description": "ID сценария удержания.\n"
                 }
             ], 
-            "description": "Удаляет указанный сценария удержания.\nМетод ничего не возвращает.\n\n", 
+            "description": "Удаляет указанный сценария удержания.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -216,7 +216,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ntitle:a – по умолчанию, title:d.\n"
                 }
             ], 
-            "description": "Возвращает список сценариев удержания.\nМассив объектов типа «HoldRule».\n\n", 
+            "description": "Возвращает список сценариев удержания.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -334,7 +334,7 @@
                     "description": "ID сценария удержания.\n"
                 }
             ], 
-            "description": "Изменяет указанный сценарий удержания.\nМетод ничего не возвращает.\n\n", 
+            "description": "Изменяет указанный сценарий удержания.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -401,7 +401,7 @@
                     "description": "ID сценария удержания.\n"
                 }
             ], 
-            "description": "Возвращает данные указанного сценария удержания.\nОбъект типа «HoldRule».\n\n", 
+            "description": "Возвращает данные указанного сценария удержания.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

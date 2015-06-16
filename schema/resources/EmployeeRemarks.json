@@ -25,7 +25,7 @@
                     "description": "Порядковый номер оценки.\nЕсли не указано, то оценка будет последней.\n"
                 }
             ], 
-            "description": "Создает новую запись в списке оценок сотрудника.\nОбъект типа «EmployeeRemark».\n\n", 
+            "description": "Создает новую запись в списке оценок сотрудника.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -85,7 +85,7 @@
                     "description": "ID оценки.\n"
                 }
             ], 
-            "description": "Удаляет указанную оценку сотрудника.\nМетод ничего не возвращает.\n\n", 
+            "description": "Удаляет указанную оценку сотрудника.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -182,7 +182,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\nposition:a – по умолчанию,\ntext:a, text:d,\ncreated_at:d,\nupdated_at:d.\n"
                 }
             ], 
-            "description": "Возвращает список оценок сотрудника.\nМассив объектов типа «EmployeeRemark».\n\n\n", 
+            "description": "Возвращает список оценок сотрудника.\n\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -266,7 +266,7 @@
                     "description": "Порядковый номер оценки.\n"
                 }
             ], 
-            "description": "Изменяет данные оценки оператора.\nМетод ничего не возвращает.\n\n", 
+            "description": "Изменяет данные оценки оператора.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -333,7 +333,7 @@
                     "description": "ID оценки.\n"
                 }
             ], 
-            "description": "Возвращает данные указанной оценки сотрудника.\nОбъект типа «EmployeeRemark».\n\n", 
+            "description": "Возвращает данные указанной оценки сотрудника.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 

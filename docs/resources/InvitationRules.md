@@ -8,7 +8,7 @@
 ## add
 
 ### Описание метода
-Добавляет новый сценарий вовлечения.<br/>Объект типа «InvitationRule».<br/>Пример вызова<br/>curl "https://api.livetex.ru/v2/invitationrules" \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>	-d "title=Первое посещение из России" \<br/>	-d "action=chat" \<br/>	-d "welcome=Могу ли я вам чем-то помочь?" \<br/>	-d "is_active=true" \<br/>	-d "is_new_visitor=true" \<br/>	-d "locations[0][country][id]=123" \<br/>	-d "locations[0][city][id]=3245" \<br/>	-d "site_bindings[0][site_id]=6789" \<br/>	-d "site_bindings[0][department_id]=65432"<br/><br/>
+Добавляет новый сценарий вовлечения.<br/>Пример вызова<br/>curl "https://api.livetex.ru/v2/invitationrules" \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>	-d "title=Первое посещение из России" \<br/>	-d "action=chat" \<br/>	-d "welcome=Могу ли я вам чем-то помочь?" \<br/>	-d "is_active=true" \<br/>	-d "is_new_visitor=true" \<br/>	-d "locations[0][country][id]=123" \<br/>	-d "locations[0][city][id]=3245" \<br/>	-d "site_bindings[0][site_id]=6789" \<br/>	-d "site_bindings[0][department_id]=65432"<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -49,7 +49,7 @@
 ## show
 
 ### Описание метода
-Возвращает данные указанного сценария вовлечения.<br/>Объект типа «InvitationRule».<br/><br/>
+Возвращает данные указанного сценария вовлечения.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -73,7 +73,7 @@
 ## list
 
 ### Описание метода
-Возвращает список сценариев вовлечения.<br/>Массив объектов типа «InvitationRule».<br/><br/>
+Возвращает список сценариев вовлечения.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -100,7 +100,7 @@ Array.<[InvitationRule](/docs/types/InvitationRule.md)>
 ## update
 
 ### Описание метода
-Изменяет указанный сценарий вовлечения.<br/>Метод ничего не возвращает.<br/>Пример вызова<br/>curl "https://api.livetex.ru/v2/invitationrules/12345" \<br/>	-H "Authorization: Bearer ACCESS_TOKEN" \<br/>	–X PATCH \<br/>	-d "title=Первое посещение из России" \<br/>	-d "locations[0][country][id]=123" \<br/>	-d "locations[0][city][id]=3245" \<br/>	-d "site_bindings[0][site_id]=6789" \<br/>	-d "site_bindings[0][department_id]=65432"<br/>	-d "site_bindings[1][site_id]=6785"<br/><br/><br/><br/>
+Изменяет указанный сценарий вовлечения.<br/>Пример вызова<br/>curl "https://api.livetex.ru/v2/invitationrules/12345" \<br/>	-H "Authorization: Bearer ACCESS_TOKEN" \<br/>	–X PATCH \<br/>	-d "title=Первое посещение из России" \<br/>	-d "locations[0][country][id]=123" \<br/>	-d "locations[0][city][id]=3245" \<br/>	-d "site_bindings[0][site_id]=6789" \<br/>	-d "site_bindings[0][department_id]=65432"<br/>	-d "site_bindings[1][site_id]=6785"<br/><br/><br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -142,7 +142,7 @@ None
 ## delete
 
 ### Описание метода
-Удаляет указанный сценария вовлечения.<br/>Метод ничего не возвращает.<br/><br/>
+Удаляет указанный сценария вовлечения.<br/><br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |

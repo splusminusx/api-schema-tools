@@ -85,7 +85,7 @@
                     "description": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\nПринимается во внимание при design_type=predefined.\n"
                 }
             ], 
-            "description": "Создает новую кнопку.\nОбъект типа «ChatButton».\n\n", 
+            "description": "Создает новую кнопку.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -145,7 +145,7 @@
                     "description": "ID кнопки.\n"
                 }
             ], 
-            "description": "Удаляет указанную кнопку.\nМетод ничего не возвращает.\n\n", 
+            "description": "Удаляет указанную кнопку.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -242,7 +242,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\nid:a – по умолчанию;\nupdated_at:d.\n"
                 }
             ], 
-            "description": "Возвращает список кнопок.\nМассив объектов типа «ChatButton».\n\n", 
+            "description": "Возвращает список кнопок.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -386,7 +386,7 @@
                     "description": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\n"
                 }
             ], 
-            "description": "Изменяет указанную кнопку.\nМетод ничего не возвращает.\n\n", 
+            "description": "Изменяет указанную кнопку.\n\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -453,7 +453,7 @@
                     "description": "ID кнопки.\n"
                 }
             ], 
-            "description": "Возвращает данные указанной кнопки.\nОбъект типа «ChatButton».\n\n", 
+            "description": "Возвращает данные указанной кнопки.\n\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
