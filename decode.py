@@ -43,4 +43,4 @@ if __name__ == '__main__':
         f.write(u'## Ресурсы\n')
         for resource in resources:
             serializer.serialize(resource)
-            f.write(u'- [' + complex_type.name + u'](docs/resources/' + complex_type.name + u'.md)\n')
+            f.write(u'- [' + resource.name + u'](docs/resources/' + resource.name + u'.md)\n')
