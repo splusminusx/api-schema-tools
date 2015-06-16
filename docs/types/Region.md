@@ -10,6 +10,6 @@ Region
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|country|True|None|Страна<br/>|
-|id|True|None|ID региона.<br/>|
-|title|True|None|Название региона.<br/>|
+|country|True|Country|Страна<br/>|
+|id|True|numeric|ID региона.<br/>|
+|title|True|string|Название региона.<br/>|

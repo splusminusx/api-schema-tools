@@ -12,13 +12,13 @@ CallButton
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|image_online|False|None|Картинка кнопки, когда есть доступные операторы.<br/>Принимается во внимание при design_type=custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
-|color|True|None|Цветовая схема.<br/>Возможные значения:<br/>green – зеленая;<br/>orange – оранжевая;<br/>blue – синяя;<br/>red – красная;<br/>purple – фиолетовая;<br/>gray – серая;<br/>rose – розовая;<br/>black – черная;<br/>yellow – желтая;<br/>white – белая.<br/>Принимается во внимание при design_type=predefined.<br/>|
-|created_at|True|None|Дата создания.<br/>|
-|site|True|None|Сайт, на котором размещается кнопка.<br/>|
-|image_offline|False|None|Картинка кнопки, когда нет доступных операторов.<br/>Принимается во внимание при design_type=custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
-|updated_at|True|None|Дата последнего обновления.<br/>|
-|id|True|None|ID кнопки.<br/>|
-|department|False|None|Отдел.<br/>|
-|design_type|True|None|Тип дизайна.<br/>Возможные значения:<br/>predefined – предустановленный;<br/>custom – свой дизайн.<br/>|
-|size|True|None|Размер кнопки.<br/>Возможные значения:<br/>small – маленький, 146x50 пикселей;<br/>middle – средний,  193x69 пикселей;<br/>large – большой, 223x100 пикселей.<br/>Принимается во внимание при design_type=predefined.<br/>|
+|image_online|False|file|Картинка кнопки, когда есть доступные операторы.<br/>Принимается во внимание при design_type=custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
+|color|True|string|Цветовая схема.<br/>Возможные значения:<br/>green – зеленая;<br/>orange – оранжевая;<br/>blue – синяя;<br/>red – красная;<br/>purple – фиолетовая;<br/>gray – серая;<br/>rose – розовая;<br/>black – черная;<br/>yellow – желтая;<br/>white – белая.<br/>Принимается во внимание при design_type=predefined.<br/>|
+|created_at|True|datetime|Дата создания.<br/>|
+|site|True|Site|Сайт, на котором размещается кнопка.<br/>|
+|image_offline|False|file|Картинка кнопки, когда нет доступных операторов.<br/>Принимается во внимание при design_type=custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
+|updated_at|True|datetime|Дата последнего обновления.<br/>|
+|id|True|numeric|ID кнопки.<br/>|
+|department|False|Department|Отдел.<br/>|
+|design_type|True|string|Тип дизайна.<br/>Возможные значения:<br/>predefined – предустановленный;<br/>custom – свой дизайн.<br/>|
+|size|True|string|Размер кнопки.<br/>Возможные значения:<br/>small – маленький, 146x50 пикселей;<br/>middle – средний,  193x69 пикселей;<br/>large – большой, 223x100 пикселей.<br/>Принимается во внимание при design_type=predefined.<br/>|

@@ -12,8 +12,8 @@ EmployeeRemark
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|text|True|None|Текст оценки.<br/>|
-|created_at|True|None|Дата создания.<br/>|
-|position|True|None|Порядковый номер оценки в списке.<br/>|
-|updated_at|True|None|Дата последнего обновления.<br/>|
-|id|True|None|ID оценки оператора.<br/>|
+|text|True|string|Текст оценки.<br/>|
+|created_at|True|datetime|Дата создания.<br/>|
+|position|True|numeric|Порядковый номер оценки в списке.<br/>|
+|updated_at|True|datetime|Дата последнего обновления.<br/>|
+|id|True|numeric|ID оценки оператора.<br/>|

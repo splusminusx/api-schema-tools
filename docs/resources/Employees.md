@@ -21,10 +21,10 @@ Employees.me
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|fields|False|string|Список через запятую возвращаемых полей.<br/>|
 
 ### Резудьтат
-None
+Employee
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -46,7 +46,7 @@ Employees.search
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|text|True|None|Подстрока в имени или фамилии сотрудника.<br/>|
+|text|True|string|Подстрока в имени или фамилии сотрудника.<br/>|
 
 ### Резудьтат
 Array.<[Employee](/docs/types/Employee.md)>
@@ -70,11 +70,11 @@ Employees.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|None|Список через запятую возвращаемых полей.<br/>|
-|id|True|None|ID сотрудника.<br/>|
+|fields|False|string|Список через запятую возвращаемых полей.<br/>|
+|id|True|numeric|ID сотрудника.<br/>|
 
 ### Резудьтат
-None
+Employee
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -98,15 +98,15 @@ Employees.register
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|first_name|True|None|Полное имя.<br/>Значение будет записано в поле first_name соответствующей сотрудника.<br/>|
-|password|True|None|Пароль.<br/>|
-|site_name|True|None|Адрес сайта, на котором планируется использовать сервис LiveTex.<br/>|
-|phone|False|None|Телефон.<br/>|
-|invite_id|False|None|Идентификатор приглашения.<br/>|
-|partner_data|False|None|Дополнительные поля, связанные с регистрацией, важные для партнерского отдела.<br/>|
-|referral|False|None|Идентификатор аффилированного партнера.<br/>|
-|marketing_data|False|None|Дополнительные поля, связанные с регистрацией, важные для отдела маркетинга.<br/>|
-|email|True|None|Адрес электронной почты.<br/>|
+|first_name|True|string|Полное имя.<br/>Значение будет записано в поле first_name соответствующей сотрудника.<br/>|
+|password|True|string|Пароль.<br/>|
+|site_name|True|string|Адрес сайта, на котором планируется использовать сервис LiveTex.<br/>|
+|phone|False|phone|Телефон.<br/>|
+|invite_id|False|numeric|Идентификатор приглашения.<br/>|
+|partner_data|False|<RegistrationPartnerData>|Дополнительные поля, связанные с регистрацией, важные для партнерского отдела.<br/>|
+|referral|False|numeric|Идентификатор аффилированного партнера.<br/>|
+|marketing_data|False|<RegistrationMarketingData >|Дополнительные поля, связанные с регистрацией, важные для отдела маркетинга.<br/>|
+|email|True|email|Адрес электронной почты.<br/>|
 
 ### Резудьтат
 None
@@ -147,11 +147,11 @@ Employees.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|None|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID сотрудников;<br/>department_ids – idlist, список ID отделов;<br/>first_name;<br/>last_name;<br/>email;<br/>role;<br/>is_active;<br/>state – enum, состояние сотрудника;<br/>is_managed – boolean, признак своего сотрудника.<br/>|
-|fields|False|None|Список через запятую возвращаемых полей.<br/>|
-|limit|False|None|По умолчанию – 50.<br/>|
-|sort|False|None|Сортировка результатов.<br/>Возможные значения:<br/>last_name:a – по умолчанию, last_name:d;<br/>first_name:a, first_name:d;<br/>is_active:a, is_active:d;<br/>created_at:a, created_at:d;<br/>updated_at:a, updated_at:d.<br/>|
-|offset|False|None|По умолчанию – 0.<br/>|
+|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID сотрудников;<br/>department_ids – idlist, список ID отделов;<br/>first_name;<br/>last_name;<br/>email;<br/>role;<br/>is_active;<br/>state – enum, состояние сотрудника;<br/>is_managed – boolean, признак своего сотрудника.<br/>|
+|fields|False|string|Список через запятую возвращаемых полей.<br/>|
+|limit|False|numeric|По умолчанию – 50.<br/>|
+|sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>last_name:a – по умолчанию, last_name:d;<br/>first_name:a, first_name:d;<br/>is_active:a, is_active:d;<br/>created_at:a, created_at:d;<br/>updated_at:a, updated_at:d.<br/>|
+|offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Employee](/docs/types/Employee.md)>
@@ -179,28 +179,28 @@ Employees.update
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|last_name|False|None|Фамилия сотрудника.<br/>|
-|chat_limit|False|None|Количество одновременно обрабатываемых чатов.<br/>0 - отсутствие ограничения.<br/>|
-|photo|False|None|Фотография сотрудника.<br/>Изображение в формате JPEG, GIF или PNG с размерами не менее 60x70px и не более 2560x2560px.<br/>Максимальный размер файла – 5 MB.<br/>|
-|is_sip_forward|False|None|Включение/выключение переадресации на SIP.<br/>|
-|is_cobrowse|False|None|Включение/выключение функции «Виртуальный ассистент».<br/>Принимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.<br/>|
-|phone_forward_number|False|None|Номер для переадресации на телефон.<br/>Обязательно при is_phone_forward=true.<br/>|
-|id|True|None|ID сотрудника.<br/>|
-|first_name|False|None|Имя сотрудника.<br/>|
-|password|False|None|Новый пароль.<br/>Если не указано или пусто, то старый пароль не меняется.<br/>Минимальная длина – 6 символов.<br/>|
-|role_code|False|None|Код роли.<br/>|
-|managed_department_ids|False|None|Список, через запятую, ID отделов, входящих в область видимости сотрудника.<br/>Возможно указание удаленных отделов.<br/>|
-|is_lead_assigned|False|None|Признак закрепления за оператором, созданных им лидов из чатов.<br/>|
-|email|False|None|Адрес электронной почты.<br/>|
-|sip_forward_number|False|None|Номер для переадресации на SIP.<br/>Обязательно при is_sip_forward=true.<br/>|
-|is_call|False|None|Включение/выключение функциональности звонков.<br/>Принимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.<br/>|
-|is_active|False|None|Признак активности учетной записи сотрудника.<br/>|
-|phone|False|None|Телефон сотрудника.<br/>|
-|managed_site_ids|False|None|Список, через запятую, ID сайтов, входящих в область видимости сотрудника.<br/>Возможно указание удаленных сайтов.<br/>|
-|is_first_steps_passed|False|None|Признак завершения первичного обучения.<br/>|
-|department_ids|False|None|Список, через запятую, ID отделов, в которые входит сотрудник.<br/>|
-|is_lead_notify|False|None|Включение/выключение нотификации на электронную почту о поступлении новых лидов.<br/>|
-|is_phone_forward|False|None|Включение/выключение переадресации на телефон.<br/>|
+|last_name|False|string|Фамилия сотрудника.<br/>|
+|chat_limit|False|numeric|Количество одновременно обрабатываемых чатов.<br/>0 - отсутствие ограничения.<br/>|
+|photo|False|file|Фотография сотрудника.<br/>Изображение в формате JPEG, GIF или PNG с размерами не менее 60x70px и не более 2560x2560px.<br/>Максимальный размер файла – 5 MB.<br/>|
+|is_sip_forward|False|boolean|Включение/выключение переадресации на SIP.<br/>|
+|is_cobrowse|False|boolean|Включение/выключение функции «Виртуальный ассистент».<br/>Принимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.<br/>|
+|phone_forward_number|False|string|Номер для переадресации на телефон.<br/>Обязательно при is_phone_forward=true.<br/>|
+|id|True|numeric|ID сотрудника.<br/>|
+|first_name|False|string|Имя сотрудника.<br/>|
+|password|False|string|Новый пароль.<br/>Если не указано или пусто, то старый пароль не меняется.<br/>Минимальная длина – 6 символов.<br/>|
+|role_code|False|string|Код роли.<br/>|
+|managed_department_ids|False|idlist|Список, через запятую, ID отделов, входящих в область видимости сотрудника.<br/>Возможно указание удаленных отделов.<br/>|
+|is_lead_assigned|False|boolean|Признак закрепления за оператором, созданных им лидов из чатов.<br/>|
+|email|False|email|Адрес электронной почты.<br/>|
+|sip_forward_number|False|string|Номер для переадресации на SIP.<br/>Обязательно при is_sip_forward=true.<br/>|
+|is_call|False|boolean|Включение/выключение функциональности звонков.<br/>Принимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.<br/>|
+|is_active|False|boolean|Признак активности учетной записи сотрудника.<br/>|
+|phone|False|phone|Телефон сотрудника.<br/>|
+|managed_site_ids|False|idlist|Список, через запятую, ID сайтов, входящих в область видимости сотрудника.<br/>Возможно указание удаленных сайтов.<br/>|
+|is_first_steps_passed|False|boolean|Признак завершения первичного обучения.<br/>|
+|department_ids|False|idlist|Список, через запятую, ID отделов, в которые входит сотрудник.<br/>|
+|is_lead_notify|False|boolean|Включение/выключение нотификации на электронную почту о поступлении новых лидов.<br/>|
+|is_phone_forward|False|boolean|Включение/выключение переадресации на телефон.<br/>|
 
 ### Резудьтат
 None
@@ -225,8 +225,8 @@ Employees.setNewPassword
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|password|True|None|Новый пароль.<br/>|
-|hash|True|None|Одноразовый ключ, отправленный по email, указанному при вызове метода Employees.resetPassword.<br/>|
+|password|True|string|Новый пароль.<br/>|
+|hash|True|string|Одноразовый ключ, отправленный по email, указанному при вызове метода Employees.resetPassword.<br/>|
 
 ### Резудьтат
 None
@@ -253,8 +253,8 @@ Employees.registerAddPromo
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|None|Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.<br/>|
-|promo_code|True|None|Промо код.<br/>|
+|id|True|numeric|Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.<br/>|
+|promo_code|True|string|Промо код.<br/>|
 
 ### Резудьтат
 None
@@ -278,29 +278,29 @@ Employees.add
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|sip_forward_number|False|None|Номер для переадресации на SIP.<br/>Обязательно при is_sip_forward=true.<br/>|
-|first_name|True|None|Имя сотрудника.<br/>|
-|last_name|False|None|Фамилия сотрудника.<br/>|
-|is_cobrowse|False|None|Включение/выключение функции «Виртуальный ассистент».<br/>Принимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.<br/>По умолчанию – true.<br/>|
-|chat_limit|False|None|Количество одновременно обрабатываемых чатов.<br/>По умолчанию – 0, что означает отсутствие ограничения.<br/>|
-|photo|False|None|Фотография сотрудника.<br/>Изображение в формате JPEG, GIF или PNG с размерами не менее 60x70px и не более 2560x2560px.<br/>Максимальный размер файла – 5 MB.<br/>|
-|department_ids|False|None|Список, через запятую, ID отделов, в которые входит сотрудник.<br/>|
-|is_active|False|None|Признак активности учетной записи сотрудника.<br/>По умолчанию – true.<br/>|
-|is_sip_forward|False|None|Включение/выключение переадресации на SIP.<br/>По умолчанию – false.<br/>|
-|is_lead_notify|False|None|Включение/выключение нотификации на электронную почту о поступлении новых лидов.<br/>По умолчанию – false.<br/>|
-|phone|False|None|Телефон сотрудника.<br/>|
-|managed_site_ids|False|None|Список, через запятую, ID сайтов, входящих в область видимости сотрудника.<br/>Возможно указание удаленных сайтов.<br/>|
-|managed_department_ids|False|None|Список, через запятую, ID отделов, входящих в область видимости сотрудника.<br/>Возможно указание удаленных отделов.<br/>|
-|is_lead_assigned|False|None|Признак закрепления за оператором, созданных им лидов из чатов.<br/>По умолчанию – false.<br/>|
-|is_call|False|None|Включение/выключение функциональности звонков.<br/>Принимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.<br/>По умолчанию – false.<br/>|
-|phone_forward_number|False|None|Номер для переадресации на телефон.<br/>Обязательно при is_phone_forward=true.<br/>|
-|password|True|None|Пароль.<br/>Минимальная длина – 6 символов.<br/>|
-|role_code|False|None|Код роли. По умолчанию назначается роль, имеющая признак is_default = true.<br/>|
-|email|True|None|Адрес электронной почты.<br/>|
-|is_phone_forward|False|None|Включение/выключение переадресации на телефон.<br/>По умолчанию – false.<br/>|
+|sip_forward_number|False|string|Номер для переадресации на SIP.<br/>Обязательно при is_sip_forward=true.<br/>|
+|first_name|True|string|Имя сотрудника.<br/>|
+|last_name|False|string|Фамилия сотрудника.<br/>|
+|is_cobrowse|False|boolean|Включение/выключение функции «Виртуальный ассистент».<br/>Принимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.<br/>По умолчанию – true.<br/>|
+|chat_limit|False|numeric|Количество одновременно обрабатываемых чатов.<br/>По умолчанию – 0, что означает отсутствие ограничения.<br/>|
+|photo|False|file|Фотография сотрудника.<br/>Изображение в формате JPEG, GIF или PNG с размерами не менее 60x70px и не более 2560x2560px.<br/>Максимальный размер файла – 5 MB.<br/>|
+|department_ids|False|idlist|Список, через запятую, ID отделов, в которые входит сотрудник.<br/>|
+|is_active|False|boolean|Признак активности учетной записи сотрудника.<br/>По умолчанию – true.<br/>|
+|is_sip_forward|False|boolean|Включение/выключение переадресации на SIP.<br/>По умолчанию – false.<br/>|
+|is_lead_notify|False|boolean|Включение/выключение нотификации на электронную почту о поступлении новых лидов.<br/>По умолчанию – false.<br/>|
+|phone|False|phone|Телефон сотрудника.<br/>|
+|managed_site_ids|False|idlist|Список, через запятую, ID сайтов, входящих в область видимости сотрудника.<br/>Возможно указание удаленных сайтов.<br/>|
+|managed_department_ids|False|idlist|Список, через запятую, ID отделов, входящих в область видимости сотрудника.<br/>Возможно указание удаленных отделов.<br/>|
+|is_lead_assigned|False|boolean|Признак закрепления за оператором, созданных им лидов из чатов.<br/>По умолчанию – false.<br/>|
+|is_call|False|boolean|Включение/выключение функциональности звонков.<br/>Принимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.<br/>По умолчанию – false.<br/>|
+|phone_forward_number|False|string|Номер для переадресации на телефон.<br/>Обязательно при is_phone_forward=true.<br/>|
+|password|True|string|Пароль.<br/>Минимальная длина – 6 символов.<br/>|
+|role_code|False|string|Код роли. По умолчанию назначается роль, имеющая признак is_default = true.<br/>|
+|email|True|email|Адрес электронной почты.<br/>|
+|is_phone_forward|False|boolean|Включение/выключение переадресации на телефон.<br/>По умолчанию – false.<br/>|
 
 ### Резудьтат
-None
+Employee
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -323,8 +323,8 @@ Employees.registerConfirm
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|hash|True|None|Ключ активации, отправленный по email, указанному при вызове метода Employees.register.<br/>|
-|id|True|None|Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.<br/>|
+|hash|True|string|Ключ активации, отправленный по email, указанному при вызове метода Employees.register.<br/>|
+|id|True|numeric|Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.<br/>|
 
 ### Резудьтат
 None
@@ -375,16 +375,16 @@ curl https://api.livetex.ru/v2/employees/batchupdate \
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|sip_forward_number|False|None|Номер для переадресации на SIP.<br/>Обязательно при is_sip_forward=true.<br/>|
-|is_lead_notify|False|None|Включение/выключение нотификации на электронную почту о поступлении новых лидов.<br/>|
-|is_cobrowse|False|None|Включение/выключение функции «Виртуальный ассистент».<br/>Принимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.<br/>|
-|chat_limit|False|None|Количество одновременно обрабатываемых чатов.<br/>0 - отсутствие ограничения.<br/>|
-|is_active|False|None|Признак активности учетной записи сотрудника.<br/>|
-|ids|True|None|Список, через запятую, ID сотрудников.<br/>|
-|is_sip_forward|False|None|Включение/выключение переадресации на SIP.<br/>|
-|is_call|False|None|Включение/выключение функциональности звонков.<br/>Принимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.<br/>|
-|phone_forward_number|False|None|Номер для переадресации на телефон.<br/>Обязательно при is_phone_forward=true.<br/>|
-|is_phone_forward|False|None|Включение/выключение переадресации на телефон.<br/>|
+|sip_forward_number|False|string|Номер для переадресации на SIP.<br/>Обязательно при is_sip_forward=true.<br/>|
+|is_lead_notify|False|boolean|Включение/выключение нотификации на электронную почту о поступлении новых лидов.<br/>|
+|is_cobrowse|False|boolean|Включение/выключение функции «Виртуальный ассистент».<br/>Принимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.<br/>|
+|chat_limit|False|numeric|Количество одновременно обрабатываемых чатов.<br/>0 - отсутствие ограничения.<br/>|
+|is_active|False|boolean|Признак активности учетной записи сотрудника.<br/>|
+|ids|True|idlist|Список, через запятую, ID сотрудников.<br/>|
+|is_sip_forward|False|boolean|Включение/выключение переадресации на SIP.<br/>|
+|is_call|False|boolean|Включение/выключение функциональности звонков.<br/>Принимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.<br/>|
+|phone_forward_number|False|string|Номер для переадресации на телефон.<br/>Обязательно при is_phone_forward=true.<br/>|
+|is_phone_forward|False|boolean|Включение/выключение переадресации на телефон.<br/>|
 
 ### Резудьтат
 None
@@ -409,7 +409,7 @@ Employees.delete
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|None|ID сотрудника.<br/>|
+|id|True|numeric|ID сотрудника.<br/>|
 
 ### Резудьтат
 None
@@ -434,7 +434,7 @@ Employees.resetPassword
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|email|True|None|Адрес электронной почты сотрудника.<br/>|
+|email|True|string|Адрес электронной почты сотрудника.<br/>|
 
 ### Резудьтат
 None

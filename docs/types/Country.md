@@ -11,6 +11,6 @@ Country
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|code|False|None|Двухбуквенный код страны по стандарту ISO 3166-1 alpha-2.<br/><br/>|
-|id|True|None|ID страны.<br/>|
-|title|True|None|Название страны.<br/>|
+|code|False|string|Двухбуквенный код страны по стандарту ISO 3166-1 alpha-2.<br/><br/>|
+|id|True|numeric|ID страны.<br/>|
+|title|True|string|Название страны.<br/>|

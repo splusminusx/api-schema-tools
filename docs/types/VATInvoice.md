@@ -11,11 +11,11 @@ VATInvoice
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|comment|False|None|Текст счета (перечисление всех заказанных услуг).<br/>|
-|invoice|True|None|Счет. <br/>|
-|payer|True|None|Плательщик.<br/>|
-|created_at|False|None|Дата создания.<br/>|
-|number|True|None|Номер счета-фактуры.<br/>|
-|amount|True|None|Общая сумма.<br/>|
-|file|True|None|Файл счета-фактуры в формате PDF.<br/>|
-|id|True|None|Внутренний ID счета.<br/>|
+|comment|False|string|Текст счета (перечисление всех заказанных услуг).<br/>|
+|invoice|True|Invoice|Счет. <br/>|
+|payer|True|Payer|Плательщик.<br/>|
+|created_at|False|datetime|Дата создания.<br/>|
+|number|True|string|Номер счета-фактуры.<br/>|
+|amount|True|numeric|Общая сумма.<br/>|
+|file|True|file|Файл счета-фактуры в формате PDF.<br/>|
+|id|True|numeric|Внутренний ID счета.<br/>|

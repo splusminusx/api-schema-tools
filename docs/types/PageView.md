@@ -11,6 +11,6 @@ PageView
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|created_at|True|None|Дата просмотра.<br/>|
-|page_title|True|None|Название страницы.<br/>|
-|page_url|True|None|URL страницы.<br/>|
+|created_at|True|datetime|Дата просмотра.<br/>|
+|page_title|True|string|Название страницы.<br/>|
+|page_url|True|string|URL страницы.<br/>|

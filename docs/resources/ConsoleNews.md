@@ -21,7 +21,7 @@ ConsoleNews.markRead
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|None|ID новости.<br/>|
+|id|True|numeric|ID новости.<br/>|
 
 ### Резудьтат
 None
@@ -43,9 +43,9 @@ ConsoleNews.listLatest
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|None|Список через запятую возвращаемых полей.<br/>|
-|limit|False|None|По умолчанию – 50.<br/>|
-|offset|False|None|По умолчанию – 0.<br/>|
+|fields|False|string|Список через запятую возвращаемых полей.<br/>|
+|limit|False|numeric|По умолчанию – 50.<br/>|
+|offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[ConsoleNews](/docs/types/ConsoleNews.md)>

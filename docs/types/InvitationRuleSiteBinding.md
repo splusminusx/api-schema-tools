@@ -11,10 +11,10 @@ InvitationRuleSiteBinding
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|invitation_rule|True|None|Сценарий вовлечения.<br/>|
-|created_at|False|None|Дата создания.<br/>|
-|site|True|None|Сайт.<br/>|
-|updated_at|False|None|Дата последнего изменения.<br/>|
-|department|False|None|Отдел, на который будет адресовано приглашение.<br/>|
-|employee|False|None|Сотрудник, на которого будет назначен чат или лид.<br/>|
-|id|True|None|ID связи.<br/>|
+|invitation_rule|True|InvitationRule|Сценарий вовлечения.<br/>|
+|created_at|False|datetime|Дата создания.<br/>|
+|site|True|Site|Сайт.<br/>|
+|updated_at|False|datetime|Дата последнего изменения.<br/>|
+|department|False|Department|Отдел, на который будет адресовано приглашение.<br/>|
+|employee|False|Employee|Сотрудник, на которого будет назначен чат или лид.<br/>|
+|id|True|numeric|ID связи.<br/>|

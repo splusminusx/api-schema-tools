@@ -11,8 +11,8 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|comment|True|None|Комментарий.<br/>|
-|created_at|True|None|Дата создания.<br/>|
-|amount|True|None|Сумма.<br/>|
-|invoice|False|None|Внутренний ID инвойса, к которому относится платеж.<br/>|
-|payer|True|None|Плательщик.<br/>|
+|comment|True|string|Комментарий.<br/>|
+|created_at|True|datetime|Дата создания.<br/>|
+|amount|True|numeric|Сумма.<br/>|
+|invoice|False|Invoice|Внутренний ID инвойса, к которому относится платеж.<br/>|
+|payer|True|Payer|Плательщик.<br/>|

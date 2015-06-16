@@ -20,11 +20,11 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|None|Критерий поиска.<br/>Доступные поля:<br/>payer_ids – idlist, список ID плательщиков.<br/>|
-|fields|False|None|Список через запятую возвращаемых полей.<br/>|
-|limit|False|None|По умолчанию – 50.<br/>|
-|sort|False|None|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
-|offset|False|None|По умолчанию – 0.<br/>|
+|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>payer_ids – idlist, список ID плательщиков.<br/>|
+|fields|False|string|Список через запятую возвращаемых полей.<br/>|
+|limit|False|numeric|По умолчанию – 50.<br/>|
+|sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
+|offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Payment](/docs/types/Payment.md)>

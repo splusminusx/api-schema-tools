@@ -11,7 +11,7 @@ City
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|country|True|None|Страна.<br/>|
-|region|True|None|Регион.<br/>|
-|id|True|None|ID города.<br/>|
-|title|True|None|Название города.<br/>|
+|country|True|Country|Страна.<br/>|
+|region|True|Region|Регион.<br/>|
+|id|True|numeric|ID города.<br/>|
+|title|True|string|Название города.<br/>|

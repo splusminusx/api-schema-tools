@@ -11,6 +11,6 @@ Location
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|country|True|None|Страна.<br/>|
-|region|False|None|Регион.<br/>|
-|City|False|None|Город.<br/>|
+|country|True|Country|Страна.<br/>|
+|region|False|Region|Регион.<br/>|
+|City|False|City|Город.<br/>|

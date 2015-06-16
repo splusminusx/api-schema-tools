@@ -21,11 +21,11 @@ Comments.add
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|text|True|None|Текст комментария.<br/>Максимум 2000 символов.<br/>|
-|ticket_id|True|None|ID обращения в поддержку.<br/>|
+|text|True|string|Текст комментария.<br/>Максимум 2000 символов.<br/>|
+|ticket_id|True|numeric|ID обращения в поддержку.<br/>|
 
 ### Резудьтат
-None
+Comment
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -46,11 +46,11 @@ Comments.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|None|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID тикетов;<br/>ticket_ids – idlist, список ID тикетов;<br/>employee_ids – idlist, список ID сотрудников.<br/>created_at.<br/>|
-|fields|False|None|Список через запятую возвращаемых полей.<br/>|
-|limit|False|None|По умолчанию – 50.<br/>|
-|sort|False|None|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
-|offset|False|None|По умолчанию – 0.<br/>|
+|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID тикетов;<br/>ticket_ids – idlist, список ID тикетов;<br/>employee_ids – idlist, список ID сотрудников.<br/>created_at.<br/>|
+|fields|False|string|Список через запятую возвращаемых полей.<br/>|
+|limit|False|numeric|По умолчанию – 50.<br/>|
+|sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
+|offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Comment](/docs/types/Comment.md)>
@@ -74,11 +74,11 @@ Comments.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|None|Список через запятую возвращаемых полей.<br/>|
-|id|True|None|ID комментария к обращению в поддержку.<br/>|
+|fields|False|string|Список через запятую возвращаемых полей.<br/>|
+|id|True|numeric|ID комментария к обращению в поддержку.<br/>|
 
 ### Резудьтат
-None
+Comment
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

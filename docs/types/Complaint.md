@@ -11,14 +11,14 @@ Complaint
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|phone|False|None|Номер телефона.<br/>Одно из полей email или phone должно быть указано.<br/>|
-|text|True|None|Текст жалобы.<br/>|
-|created_at|True|None|Дата создания.<br/>|
-|updated_at|True|None|Дата последнего обновления.<br/>|
-|site|True|None|Сайт.<br/>|
-|conversation|True|None|Обращение, в ходе которого отправлена жалоба.<br/>|
-|department|False|None|Отдел.<br/>|
-|id|True|None|ID жалобы.<br/>|
-|visitor|True|None|Посетитель.<br/>|
-|employee|False|None|Сотрудник.<br/><br/>|
-|email|False|None|Адрес электронной почты.<br/>Одно из полей email или phone должно быть указано.<br/>|
+|phone|False|string|Номер телефона.<br/>Одно из полей email или phone должно быть указано.<br/>|
+|text|True|string|Текст жалобы.<br/>|
+|created_at|True|datetime|Дата создания.<br/>|
+|updated_at|True|datetime|Дата последнего обновления.<br/>|
+|site|True|Site|Сайт.<br/>|
+|conversation|True|Conversation|Обращение, в ходе которого отправлена жалоба.<br/>|
+|department|False|Department|Отдел.<br/>|
+|id|True|string|ID жалобы.<br/>|
+|visitor|True|Visitor|Посетитель.<br/>|
+|employee|False|Employee|Сотрудник.<br/><br/>|
+|email|False|string|Адрес электронной почты.<br/>Одно из полей email или phone должно быть указано.<br/>|

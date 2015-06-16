@@ -11,5 +11,5 @@ ProductAddition
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|offering_id|True|None|ID базового объекта Offering.<br/>|
-|quantity|True|None|Количество ресурсов, например, операторов.<br/>|
+|offering_id|True|numeric|ID базового объекта Offering.<br/>|
+|quantity|True|numeric|Количество ресурсов, например, операторов.<br/>|

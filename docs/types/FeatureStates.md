@@ -12,11 +12,11 @@ FeatureStates
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|online_monitoring|True|None|Онлайн-статистика.<br/>|
-|call_forwarding_sip|True|None|Переадресация на SIP.<br/>|
-|lead_generator|True|None|Генератор лидов.<br/>|
-|call|True|None|Звонки.<br/>|
-|chat|True|None|Чат.<br/>|
-|online_statistics|True|None|Онлайн-мониторинг.<br/>|
-|call_forwarding_phone|True|None|Переадресация на телефон.<br/>|
-|x_widget|True|None|X-widget.<br/>|
+|online_monitoring|True|boolean|Онлайн-статистика.<br/>|
+|call_forwarding_sip|True|boolean|Переадресация на SIP.<br/>|
+|lead_generator|True|boolean|Генератор лидов.<br/>|
+|call|True|boolean|Звонки.<br/>|
+|chat|True|boolean|Чат.<br/>|
+|online_statistics|True|boolean|Онлайн-мониторинг.<br/>|
+|call_forwarding_phone|True|boolean|Переадресация на телефон.<br/>|
+|x_widget|True|boolean|X-widget.<br/>|
