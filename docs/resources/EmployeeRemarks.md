@@ -13,8 +13,8 @@ EmployeeRemarks.add<br/>Создает новую запись в списке �
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*text*|True|[string](/docs/types/string.md)|Текст оценки.<br/>|
-|*position*|False|[numeric](/docs/types/numeric.md)|Порядковый номер оценки.<br/>Если не указано, то оценка будет последней.<br/>|
+|**text**|True|[string](/docs/types/string.md)|Текст оценки.<br/>|
+|**position**|False|[numeric](/docs/types/numeric.md)|Порядковый номер оценки.<br/>Если не указано, то оценка будет последней.<br/>|
 
 ### Резудьтат
 [EmployeeRemark](/docs/types/EmployeeRemark.md)
@@ -31,8 +31,8 @@ EmployeeRemarks.show<br/>Возвращает данные указанной о
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID оценки.<br/>|
+|**fields**|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|**id**|True|[numeric](/docs/types/numeric.md)|ID оценки.<br/>|
 
 ### Резудьтат
 [EmployeeRemark](/docs/types/EmployeeRemark.md)
@@ -49,11 +49,11 @@ EmployeeRemarks.list<br/>Возвращает список оценок сотр
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*q*|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID оценок.<br/>|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*limit*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
-|*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>position:a – по умолчанию,<br/>text:a, text:d,<br/>created_at:d,<br/>updated_at:d.<br/>|
-|*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
+|**q**|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID оценок.<br/>|
+|**fields**|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
+|**limit**|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
+|**sort**|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>position:a – по умолчанию,<br/>text:a, text:d,<br/>created_at:d,<br/>updated_at:d.<br/>|
+|**offset**|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[EmployeeRemark](/docs/types/EmployeeRemark.md)>
@@ -70,9 +70,9 @@ EmployeeRemarks.update<br/>Изменяет данные оценки опера
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*text*|False|[string](/docs/types/string.md)|Текст оценки.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID оценки.<br/>|
-|*position*|False|[numeric](/docs/types/numeric.md)|Порядковый номер оценки.<br/>|
+|**text**|False|[string](/docs/types/string.md)|Текст оценки.<br/>|
+|**id**|True|[numeric](/docs/types/numeric.md)|ID оценки.<br/>|
+|**position**|False|[numeric](/docs/types/numeric.md)|Порядковый номер оценки.<br/>|
 
 ### Резудьтат
 None
@@ -89,7 +89,7 @@ EmployeeRemarks.delete<br/>Удаляет указанную оценку сот
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID оценки.<br/>|
+|**id**|True|[numeric](/docs/types/numeric.md)|ID оценки.<br/>|
 
 ### Резудьтат
 None

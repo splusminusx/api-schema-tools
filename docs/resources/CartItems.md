@@ -13,8 +13,8 @@ CartItems.add<br/>Добавляет позицию в указанную кор
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*product_addition*|False|[ProductAddition](/docs/types/ProductAddition.md)|Дополнение продукта.<br/>|
-|*cart_id*|True|[numeric](/docs/types/numeric.md)|ID корзины.<br/>|
+|**product_addition**|False|[ProductAddition](/docs/types/ProductAddition.md)|Дополнение продукта.<br/>|
+|**cart_id**|True|[numeric](/docs/types/numeric.md)|ID корзины.<br/>|
 
 ### Резудьтат
 [CartItem](/docs/types/CartItem.md)
@@ -31,8 +31,8 @@ CartItems.update<br/>Обновляет указанную позицию кор
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*product_addition*|True|[ProductAddition](/docs/types/ProductAddition.md)|Дополнение продукта.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID позиции корзины.<br/>|
+|**product_addition**|True|[ProductAddition](/docs/types/ProductAddition.md)|Дополнение продукта.<br/>|
+|**id**|True|[numeric](/docs/types/numeric.md)|ID позиции корзины.<br/>|
 
 ### Резудьтат
 None
@@ -49,7 +49,7 @@ CartItems.delete<br/>Удаляет указанную позицию корзи
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID позиции корзины.<br/>|
+|**id**|True|[numeric](/docs/types/numeric.md)|ID позиции корзины.<br/>|
 
 ### Резудьтат
 None

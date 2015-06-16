@@ -7,5 +7,5 @@ ProductAddition<br/>Дополнение к набору продуктов.<br/
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*offering_id*|True|[numeric](/docs/types/numeric.md)|ID базового объекта Offering.<br/>|
-|*quantity*|True|[numeric](/docs/types/numeric.md)|Количество ресурсов, например, операторов.<br/>|
+|**offering_id**|True|[numeric](/docs/types/numeric.md)|ID базового объекта Offering.<br/>|
+|**quantity**|True|[numeric](/docs/types/numeric.md)|Количество ресурсов, например, операторов.<br/>|

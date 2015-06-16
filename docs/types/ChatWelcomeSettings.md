@@ -9,4 +9,4 @@ ChatWelcomeSettings - DEPRECATED<br/>ВНИМАНИЕ! Сущность явля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*text*|True|[string](/docs/types/string.md)|Текст приветствия.<br/>Максимум 180 символов.<br/>|
+|**text**|True|[string](/docs/types/string.md)|Текст приветствия.<br/>Максимум 180 символов.<br/>|
