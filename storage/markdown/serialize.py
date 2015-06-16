@@ -73,8 +73,8 @@ class MarkdownSerializer(object):
             for field_name in obj.fields:
                 field = obj.fields[field_name]
                 f.write(
-                    u'|**' + field.name +
-                    u'**|' + unicode(field.required) +
+                    u'|*' + field.name +
+                    u'*|' + unicode(field.required) +
                     u'|' + self._get_data_type_link(field.datatypename) +
                     u'|' + self._escape_description(field.description) +
                     u'|\n'
@@ -108,8 +108,8 @@ class MarkdownSerializer(object):
                 for field_name in method.fields:
                     field = method.fields[field_name]
                     f.write(
-                        u'|**' + field.name +
-                        u'**|' + unicode(field.required) +
+                        u'|*' + field.name +
+                        u'*|' + unicode(field.required) +
                         u'|' + self._get_data_type_link(field.datatypename) +
                         u'|' + self._escape_description(field.description) +
                         u'|\n'

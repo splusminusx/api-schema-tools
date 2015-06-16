@@ -7,4 +7,4 @@ TypingIndicatorSettings<br/>Настройки функции «Подгляды
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|**is_active**|True|[boolean](/docs/types/boolean.md)|Включение/выключение функции «Подглядывание».<br/>|
+|*is_active*|True|[boolean](/docs/types/boolean.md)|Включение/выключение функции «Подглядывание».<br/>|

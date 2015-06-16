@@ -7,5 +7,5 @@ RegistrationPartnerData<br/>Абстрактный тип данных. Испо
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|**invitation_id**|False|[numeric](/docs/types/numeric.md)|id приглашения<br/>|
-|**partner_id**|True|[numeric](/docs/types/numeric.md)|id аффилированного партнера<br/>|
+|*invitation_id*|False|[numeric](/docs/types/numeric.md)|id приглашения<br/>|
+|*partner_id*|True|[numeric](/docs/types/numeric.md)|id аффилированного партнера<br/>|
