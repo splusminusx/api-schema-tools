@@ -21,11 +21,11 @@ Acceptances.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID актов;<br/>is_bound – boolean, признак связанности акта с каким-либо периодом;<br/>created_at.<br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию, created_at:a.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|None|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID актов;<br/>is_bound – boolean, признак связанности акта с каким-либо периодом;<br/>created_at.<br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|limit|False|None|По умолчанию – 50.<br/>|
+|sort|False|None|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию, created_at:a.<br/>|
+|offset|False|None|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Acceptance](/docs/types/Acceptance.md)>
@@ -50,8 +50,8 @@ Acceptances.update
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|numeric|ID акта.<br/>|
-|file_signed|False|file|Файл акта, подписанного клиентом.<br/>Допустимые типы файлов: PDF, TIFF, JPEG, PNG, GIF.<br/>Максимальный размер файла – 10 MB.<br/>|
+|id|True|None|ID акта.<br/>|
+|file_signed|False|None|Файл акта, подписанного клиентом.<br/>Допустимые типы файлов: PDF, TIFF, JPEG, PNG, GIF.<br/>Максимальный размер файла – 10 MB.<br/>|
 
 ### Резудьтат
 None

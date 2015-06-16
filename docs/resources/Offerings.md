@@ -21,11 +21,11 @@ Offerings.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID предложений;<br/>cart_id – ID корзины, для которых нужно вернуть совместимые предложения;<br/>is_tariff;<br/>is_trial;<br/>resource_type;<br/>price;<br/>days.<br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>id:d - по умолчанию.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|None|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID предложений;<br/>cart_id – ID корзины, для которых нужно вернуть совместимые предложения;<br/>is_tariff;<br/>is_trial;<br/>resource_type;<br/>price;<br/>days.<br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|limit|False|None|По умолчанию – 50.<br/>|
+|sort|False|None|Сортировка результатов.<br/>Возможные значения:<br/>id:d - по умолчанию.<br/>|
+|offset|False|None|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Offering](/docs/types/Offering.md)>
@@ -49,8 +49,8 @@ Offerings.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|numeric|ID предложения.<br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|id|True|None|ID предложения.<br/>|
 
 ### Резудьтат
 None

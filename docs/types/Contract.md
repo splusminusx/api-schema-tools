@@ -11,6 +11,6 @@ Contract
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|date|True|date|Дата договора.<br/>|
-|number|True|string|Номер договора.<br/>|
-|file|True|file|Файл договора.<br/>|
+|date|True|None|Дата договора.<br/>|
+|number|True|None|Номер договора.<br/>|
+|file|True|None|Файл договора.<br/>|

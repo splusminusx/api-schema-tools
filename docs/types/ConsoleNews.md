@@ -12,11 +12,11 @@ ConsoleNews
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|content|True|string|Текст.<br/>|
-|title|True|string|Заголовок.<br/>|
-|image|True|file|Картинка.<br/>|
-|annotation|True|string|Анонс.<br/>|
-|is_read|True|boolean|Признак прочитанной новости.<br/>|
-|position|True|numeric|Порядковый номер в списке.<br/>|
-|created_at|True|datetime|Дата и время создания.<br/>|
-|id|True|numeric|ID новости.<br/>|
+|content|True|None|Текст.<br/>|
+|title|True|None|Заголовок.<br/>|
+|image|True|None|Картинка.<br/>|
+|annotation|True|None|Анонс.<br/>|
+|is_read|True|None|Признак прочитанной новости.<br/>|
+|position|True|None|Порядковый номер в списке.<br/>|
+|created_at|True|None|Дата и время создания.<br/>|
+|id|True|None|ID новости.<br/>|

@@ -91,7 +91,7 @@ curl https://api.livetex.ru/v2/utils/batch \
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|methods|True|Array.<BatchRequest>|Массив методов и их параметров.<br/>Максимум 10 элементов. Одиннадцатый элемент и далее будут проигнорированы.<br/>|
+|methods|True|Array.<[BatchRequest](/docs/types/BatchRequest.md)>|Массив методов и их параметров.<br/>Максимум 10 элементов. Одиннадцатый элемент и далее будут проигнорированы.<br/>|
 
 ### Резудьтат
 Array.<[BatchResponse](/docs/types/BatchResponse.md)>

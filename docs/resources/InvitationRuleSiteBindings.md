@@ -22,10 +22,10 @@ InvitationRuleSiteBindings.add
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|invitation_rule_id|True|numeric|Сценарий вовлечения.<br/>|
-|employee_id|False|numeric|ID сотрудника, на которого будет назначен чат или лид.<br/>|
-|site_id|True|numeric|Сайт.<br/>|
-|department_id|False|numeric|ID отдела, на который будет адресовано приглашение.<br/>|
+|invitation_rule_id|True|None|Сценарий вовлечения.<br/>|
+|employee_id|False|None|ID сотрудника, на которого будет назначен чат или лид.<br/>|
+|site_id|True|None|Сайт.<br/>|
+|department_id|False|None|ID отдела, на который будет адресовано приглашение.<br/>|
 
 ### Резудьтат
 None
@@ -49,8 +49,8 @@ InvitationRuleSiteBindings.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|numeric|ID связи сценария вовлечения и сайта.<br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|id|True|None|ID связи сценария вовлечения и сайта.<br/>|
 
 ### Резудьтат
 None
@@ -74,11 +74,11 @@ InvitationRuleSiteBindings.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID сценариев вовлечения;<br/>site_ids – idlist, список ID сайтов.<br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:a – по умолчанию.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|None|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID сценариев вовлечения;<br/>site_ids – idlist, список ID сайтов.<br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|limit|False|None|По умолчанию – 50.<br/>|
+|sort|False|None|Сортировка результатов.<br/>Возможные значение:<br/>created_at:a – по умолчанию.<br/>|
+|offset|False|None|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[InvitationRuleSiteBinding](/docs/types/InvitationRuleSiteBinding.md)>
@@ -103,11 +103,11 @@ InvitationRuleSiteBindings.update
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|invitation_rule_id|False|numeric|Сценарий вовлечения.<br/>|
-|employee_id|False|numeric|ID сотрудника, на которого будет назначен чат или лид.<br/>|
-|site_id|False|numeric|Сайт.<br/>|
-|id|True|numeric|ID связи.<br/>|
-|department_id|False|numeric|ID отдела, на который будет адресовано приглашение.<br/>|
+|invitation_rule_id|False|None|Сценарий вовлечения.<br/>|
+|employee_id|False|None|ID сотрудника, на которого будет назначен чат или лид.<br/>|
+|site_id|False|None|Сайт.<br/>|
+|id|True|None|ID связи.<br/>|
+|department_id|False|None|ID отдела, на который будет адресовано приглашение.<br/>|
 
 ### Резудьтат
 None
@@ -131,7 +131,7 @@ InvitationRuleSiteBindings.delete
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|numeric|ID связи.<br/>|
+|id|True|None|ID связи.<br/>|
 
 ### Резудьтат
 None

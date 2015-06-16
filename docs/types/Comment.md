@@ -11,8 +11,8 @@ Comment
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|employee|False|Employee|Сотрудник, пославший комментарий.<br/>Если null, то отправителем является сотрудник LiveTex.<br/>|
-|text|True|string|Текст комментария.<br/>Максимум 2000 символов.<br/>|
-|ticket|True|Ticket|Обращение в поддержку.<br/>|
-|id|True|numeric|ID комментария.<br/>|
-|created_at|True|datetime|Дата создания.<br/>|
+|employee|False|None|Сотрудник, пославший комментарий.<br/>Если null, то отправителем является сотрудник LiveTex.<br/>|
+|text|True|None|Текст комментария.<br/>Максимум 2000 символов.<br/>|
+|ticket|True|None|Обращение в поддержку.<br/>|
+|id|True|None|ID комментария.<br/>|
+|created_at|True|None|Дата создания.<br/>|

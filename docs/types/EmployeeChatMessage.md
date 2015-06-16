@@ -11,8 +11,8 @@ EmployeeChatMessage
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|text|True|string|Текст сообщения.<br/>|
-|created_at|True|datetime|Дата создания.<br/>|
-|employee_to|True|Employee|Сотрудник, которому было адресовано сообщение.<br/>|
-|employee_from|True|Employee|Сотрудник, отправивший сообщение.<br/>|
-|id|True|numeric|ID сообщения.<br/>|
+|text|True|None|Текст сообщения.<br/>|
+|created_at|True|None|Дата создания.<br/>|
+|employee_to|True|None|Сотрудник, которому было адресовано сообщение.<br/>|
+|employee_from|True|None|Сотрудник, отправивший сообщение.<br/>|
+|id|True|None|ID сообщения.<br/>|

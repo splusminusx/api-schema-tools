@@ -11,5 +11,5 @@ RegistrationPartnerData
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|invitation_id|False|numeric|id приглашения<br/>|
-|partner_id|True|numeric|id аффилированного партнера<br/>|
+|invitation_id|False|None|id приглашения<br/>|
+|partner_id|True|None|id аффилированного партнера<br/>|

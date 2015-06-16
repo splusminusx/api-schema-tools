@@ -72,7 +72,7 @@ class MarkdownSerializer(object):
                 f.write(
                     u'|' + field.name +
                     u'|' + unicode(field.required) +
-                    u'|' + unicode(field.datatypename) +
+                    u'|' + self._get_data_type_link(field.datatypename) +
                     u'|' + self._escape_description(field.description) +
                     u'|\n'
                 )
@@ -107,7 +107,7 @@ class MarkdownSerializer(object):
                     f.write(
                         u'|' + field.name +
                         u'|' + unicode(field.required) +
-                        u'|' + unicode(field.datatypename) +
+                        u'|' + self._get_data_type_link(field.datatypename) +
                         u'|' + self._escape_description(field.description) +
                         u'|\n'
                     )

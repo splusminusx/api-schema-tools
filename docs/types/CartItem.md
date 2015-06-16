@@ -12,8 +12,8 @@ CartItem
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|created_at|True|datetime|Дата создания.<br/>|
-|quantity|True|numeric|Количество ресурсов (например, операторов).<br/>|
-|amount|True|numeric|Стоимость.<br/>|
-|offering|True|Offering|Предложение.<br/>|
-|id|True|numeric|ID позиции.<br/>|
+|created_at|True|None|Дата создания.<br/>|
+|quantity|True|None|Количество ресурсов (например, операторов).<br/>|
+|amount|True|None|Стоимость.<br/>|
+|offering|True|None|Предложение.<br/>|
+|id|True|None|ID позиции.<br/>|

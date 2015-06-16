@@ -21,11 +21,11 @@ Periods.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID периодов;<br/>has_order – boolean, если false, то только периоды с корзинами и без заказов;<br/>period_state. <br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|None|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID периодов;<br/>has_order – boolean, если false, то только периоды с корзинами и без заказов;<br/>period_state. <br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|limit|False|None|По умолчанию – 50.<br/>|
+|sort|False|None|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
+|offset|False|None|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Period](/docs/types/Period.md)>
@@ -49,8 +49,8 @@ Periods.update
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|is_autorenewal|False|boolean|Признак автоматического продления.<br/>|
-|id|True|numeric|ID периода.<br/>|
+|is_autorenewal|False|None|Признак автоматического продления.<br/>|
+|id|True|None|ID периода.<br/>|
 
 ### Резудьтат
 None

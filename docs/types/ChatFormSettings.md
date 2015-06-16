@@ -17,23 +17,23 @@ ChatFormSettings - DEPRECATED
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|size|True|string|Размер ярлыка.<br/>Возможные значения:<br/>small – маленький, 24x106 пикселей;<br/>large – большой, 40x178 пикселей (по умолчанию).<br/>|
-|offset_value|True|numeric|Значение отступа.<br/>Целое число в диапазоне:<br/>от 0 до 100 для offset_type = percent;<br/>от 0 до 2000 для offset_type = pixel.<br/>|
-|color|False|string|Цветовая схема.<br/>Возможные значения:<br/>green – зеленая;<br/>orange – оранжевая;<br/>blue – синяя;<br/>red – красная;<br/>purple – фиолетовая;<br/>gray – серая;<br/>rose – розовая;<br/>black – черная;<br/>yellow – желтая;<br/>white – белая.<br/>Поле обязательно для color_type = preset.<br/>|
-|background_typе|True|string|Тип фона.<br/>Возможные значения:<br/>none – без фона;<br/>default – стандартный фон;<br/>custom – загружаемый фон.<br/>Актуально только для внешнего окна.<br/>|
-|color_type|True|string|Тип указания цветовой схемы.<br/>Возможные значения:<br/>preset – стандартная схема;<br/>custom – явное указание цветов.<br/>|
-|updated_at|True|datetime|Дата последнего обновления.<br/>|
-|is_hidden_offline|True|boolean|Скрывать ярлык, если сотрудники офлайн.<br/>|
-|color_main|False|color|Основной цвет.<br/>Поле обязательно для color_type = custom.<br/>|
-|banner_type|True|string|Тип баннера.<br/>Возможные значения:<br/>none – без баннера;<br/>default – стандартный баннер;<br/>custom – загружаемый баннер.<br/>Актуально только для внешнего окна.<br/>|
-|is_custom|True|boolean|Признак заказного дизайна ярлыка и окна чата.<br/>Если true, то изменение некоторых настроек может не иметь должного результата, поскольку соответствующий аспект внешнего вида переопределяются заказным дизайном.<br/>Это признак доступен только для чтения.<br/>|
-|color_background|False|color|Цвет фона.<br/>Поле обязательно для color_type = custom.<br/>|
-|banner_custom|False|file|Загруженная баннер для banner_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.<br/>Поле обязательно для banner_type = custom.<br/>Актуально только для внешнего окна.<br/>|
-|banner_link|False|string|Ссылка с баннера.<br/>Поле обязательно для banner_type = custom.<br/>Актуально только для внешнего окна.<br/>|
-|position|True|string|Положение ярлыка.<br/>Возможные значения:<br/>top – сверху;<br/>right – справа;<br/>bottom – снизу;<br/>left – слева.<br/>|
-|is_label_visible|True|boolean|Признак отображения ярлыка.<br/>По умолчанию – true.<br/>Если false, ярлык не будет показываться посетителю, даже при наличии доступных операторов.<br/>Это признак автоматически устанавливается в true и не может быть изменен, если подключена опция генератора лидов или для сайта включено встроенное окно чата (site.is_embedded_chat == true).<br/>Признак is_label_visible связан с полем "size". При переключении из false в true поле "size" устанавливается в значение по умолчанию.<br/>|
-|logo_type|True|string|Тип логотипа LiveTex.<br/>Возможные значения:<br/>animated – анимированный;<br/>static – статический.<br/>|
-|offset_type|True|string|Тип отступа.<br/>Возможные значения:<br/>pixel – в пикселах;<br/>percent – в процентах.<br/>|
-|background_custom|False|file|Загруженный фон для background_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с размерами 448x605px.<br/>Поле обязательно для background_type = custom.<br/>Актуально только для внешнего окна.<br/>|
-|photo_size|True|string|Размер фотографии сотрудника.<br/>Возможные значения:<br/>small – маленькая, 60x70 пикселей;<br/>large – большая, 100x116 пикселей.<br/>|
-|color_text|False|color|Цвет текста.<br/>Поле обязательно для color_type = custom.<br/>|
+|size|True|None|Размер ярлыка.<br/>Возможные значения:<br/>small – маленький, 24x106 пикселей;<br/>large – большой, 40x178 пикселей (по умолчанию).<br/>|
+|offset_value|True|None|Значение отступа.<br/>Целое число в диапазоне:<br/>от 0 до 100 для offset_type = percent;<br/>от 0 до 2000 для offset_type = pixel.<br/>|
+|color|False|None|Цветовая схема.<br/>Возможные значения:<br/>green – зеленая;<br/>orange – оранжевая;<br/>blue – синяя;<br/>red – красная;<br/>purple – фиолетовая;<br/>gray – серая;<br/>rose – розовая;<br/>black – черная;<br/>yellow – желтая;<br/>white – белая.<br/>Поле обязательно для color_type = preset.<br/>|
+|background_typе|True|None|Тип фона.<br/>Возможные значения:<br/>none – без фона;<br/>default – стандартный фон;<br/>custom – загружаемый фон.<br/>Актуально только для внешнего окна.<br/>|
+|color_type|True|None|Тип указания цветовой схемы.<br/>Возможные значения:<br/>preset – стандартная схема;<br/>custom – явное указание цветов.<br/>|
+|updated_at|True|None|Дата последнего обновления.<br/>|
+|is_hidden_offline|True|None|Скрывать ярлык, если сотрудники офлайн.<br/>|
+|color_main|False|None|Основной цвет.<br/>Поле обязательно для color_type = custom.<br/>|
+|banner_type|True|None|Тип баннера.<br/>Возможные значения:<br/>none – без баннера;<br/>default – стандартный баннер;<br/>custom – загружаемый баннер.<br/>Актуально только для внешнего окна.<br/>|
+|is_custom|True|None|Признак заказного дизайна ярлыка и окна чата.<br/>Если true, то изменение некоторых настроек может не иметь должного результата, поскольку соответствующий аспект внешнего вида переопределяются заказным дизайном.<br/>Это признак доступен только для чтения.<br/>|
+|color_background|False|None|Цвет фона.<br/>Поле обязательно для color_type = custom.<br/>|
+|banner_custom|False|None|Загруженная баннер для banner_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.<br/>Поле обязательно для banner_type = custom.<br/>Актуально только для внешнего окна.<br/>|
+|banner_link|False|None|Ссылка с баннера.<br/>Поле обязательно для banner_type = custom.<br/>Актуально только для внешнего окна.<br/>|
+|position|True|None|Положение ярлыка.<br/>Возможные значения:<br/>top – сверху;<br/>right – справа;<br/>bottom – снизу;<br/>left – слева.<br/>|
+|is_label_visible|True|None|Признак отображения ярлыка.<br/>По умолчанию – true.<br/>Если false, ярлык не будет показываться посетителю, даже при наличии доступных операторов.<br/>Это признак автоматически устанавливается в true и не может быть изменен, если подключена опция генератора лидов или для сайта включено встроенное окно чата (site.is_embedded_chat == true).<br/>Признак is_label_visible связан с полем "size". При переключении из false в true поле "size" устанавливается в значение по умолчанию.<br/>|
+|logo_type|True|None|Тип логотипа LiveTex.<br/>Возможные значения:<br/>animated – анимированный;<br/>static – статический.<br/>|
+|offset_type|True|None|Тип отступа.<br/>Возможные значения:<br/>pixel – в пикселах;<br/>percent – в процентах.<br/>|
+|background_custom|False|None|Загруженный фон для background_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с размерами 448x605px.<br/>Поле обязательно для background_type = custom.<br/>Актуально только для внешнего окна.<br/>|
+|photo_size|True|None|Размер фотографии сотрудника.<br/>Возможные значения:<br/>small – маленькая, 60x70 пикселей;<br/>large – большая, 100x116 пикселей.<br/>|
+|color_text|False|None|Цвет текста.<br/>Поле обязательно для color_type = custom.<br/>|

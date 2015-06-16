@@ -21,11 +21,11 @@ Invoices.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID счетов;<br/>payer_ids – idlist, список ID плательщиков;<br/>is_bound – boolean, признак связанности счета с каким-либо периодом;<br/>is_paid – boolean, если указан, то возвращаются счета с соответствующим значением этого признака. <br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию; <br/>paid_at:d.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|None|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID счетов;<br/>payer_ids – idlist, список ID плательщиков;<br/>is_bound – boolean, признак связанности счета с каким-либо периодом;<br/>is_paid – boolean, если указан, то возвращаются счета с соответствующим значением этого признака. <br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|limit|False|None|По умолчанию – 50.<br/>|
+|sort|False|None|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию; <br/>paid_at:d.<br/>|
+|offset|False|None|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Invoice](/docs/types/Invoice.md)>
@@ -49,8 +49,8 @@ Invoices.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|numeric|ID счета<br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|id|True|None|ID счета<br/>|
 
 ### Резудьтат
 None

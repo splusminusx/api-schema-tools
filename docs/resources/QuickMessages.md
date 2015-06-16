@@ -21,9 +21,9 @@ QuickMessages.add
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|text|True|string|Текст сообщения.<br/>Максимум 2000 символов.<br/>|
-|is_global|True|boolean|Признак глобальности быстрого сообщения.<br/>Если true, то сообщение видно всем сотрудникам. В противном случае - только сотруднику, создавшему сообщение.<br/>ВНИМАНИЕ! В категории с is_global = false нельзя создать сообщение с is_global = true.<br/>|
-|category_id|True|numeric|ID категории быстрых сообщений.<br/>|
+|text|True|None|Текст сообщения.<br/>Максимум 2000 символов.<br/>|
+|is_global|True|None|Признак глобальности быстрого сообщения.<br/>Если true, то сообщение видно всем сотрудникам. В противном случае - только сотруднику, создавшему сообщение.<br/>ВНИМАНИЕ! В категории с is_global = false нельзя создать сообщение с is_global = true.<br/>|
+|category_id|True|None|ID категории быстрых сообщений.<br/>|
 
 ### Резудьтат
 None
@@ -47,8 +47,8 @@ QuickMessages.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|numeric|ID быстрого сообщения.<br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|id|True|None|ID быстрого сообщения.<br/>|
 
 ### Резудьтат
 None
@@ -72,11 +72,11 @@ QuickMessages.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID сообщений;<br/>category_ids – idlist, список ID категорий;<br/>site_ids – idlist, список ID сайтов.<br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>text:a – по умолчанию.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|None|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID сообщений;<br/>category_ids – idlist, список ID категорий;<br/>site_ids – idlist, список ID сайтов.<br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|limit|False|None|По умолчанию – 50.<br/>|
+|sort|False|None|Сортировка результатов.<br/>Возможные значение:<br/>text:a – по умолчанию.<br/>|
+|offset|False|None|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[QuickMessage](/docs/types/QuickMessage.md)>
@@ -100,9 +100,9 @@ QuickMessages.update
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|text|False|string|Текст сообщения.<br/>Максимум 2000 символов.<br/>|
-|category_id|False|numeric|ID категории быстрых сообщений.<br/>ВНИМАНИЕ! В категории с is_global = false нельзя создать сообщение с is_global = true. <br/>|
-|id|True|numeric|ID быстрого сообщения.<br/>|
+|text|False|None|Текст сообщения.<br/>Максимум 2000 символов.<br/>|
+|category_id|False|None|ID категории быстрых сообщений.<br/>ВНИМАНИЕ! В категории с is_global = false нельзя создать сообщение с is_global = true. <br/>|
+|id|True|None|ID быстрого сообщения.<br/>|
 
 ### Резудьтат
 None
@@ -126,7 +126,7 @@ QuickMessages.delete
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|id|True|numeric|ID быстрого сообщения.<br/>|
+|id|True|None|ID быстрого сообщения.<br/>|
 
 ### Резудьтат
 None

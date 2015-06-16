@@ -22,11 +22,11 @@ Contacts.list
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|q|False|string|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов;<br/>source_type – enum, тип источника контактных данных;<br/>creator_type – enum, тип создателя контактных данных;<br/>is_auto;<br/>created_at.<br/>|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|limit|False|numeric|По умолчанию – 50.<br/>|
-|sort|False|string|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
-|offset|False|numeric|По умолчанию – 0.<br/>|
+|q|False|None|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов;<br/>source_type – enum, тип источника контактных данных;<br/>creator_type – enum, тип создателя контактных данных;<br/>is_auto;<br/>created_at.<br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|limit|False|None|По умолчанию – 50.<br/>|
+|sort|False|None|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
+|offset|False|None|По умолчанию – 0.<br/>|
 
 ### Резудьтат
 Array.<[Contact](/docs/types/Contact.md)>
@@ -51,8 +51,8 @@ Contacts.show
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|fields|False|string|Список через запятую возвращаемых полей.<br/>|
-|id|True|numeric|ID элемента контактных данных.<br/>|
+|fields|False|None|Список через запятую возвращаемых полей.<br/>|
+|id|True|None|ID элемента контактных данных.<br/>|
 
 ### Резудьтат
 None
