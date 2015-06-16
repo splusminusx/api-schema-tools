@@ -71,7 +71,7 @@ curl https://api.livetex.ru/v2/employeeonlineintervals.listbysite \
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Site](types/Site.md)>
+Array.<[Site](/docs/types/Site.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -139,7 +139,7 @@ curl https://api.livetex.ru/v2/employeeonlineintervals/listbyemployee \
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Employee](types/Employee.md)>
+Array.<[Employee](/docs/types/Employee.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -209,7 +209,7 @@ curl https://api.livetex.ru/v2/employeeonlineintervals.listbydepartment \
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Department](types/Department.md)>
+Array.<[Department](/docs/types/Department.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

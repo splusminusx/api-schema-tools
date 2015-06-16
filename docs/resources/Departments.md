@@ -82,7 +82,7 @@ Departments.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Department](types/Department.md)>
+Array.<[Department](/docs/types/Department.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

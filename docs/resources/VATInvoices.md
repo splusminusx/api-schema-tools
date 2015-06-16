@@ -28,7 +28,7 @@ VATInvoices.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[VATInvoice](types/VATInvoice.md)>
+Array.<[VATInvoice](/docs/types/VATInvoice.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

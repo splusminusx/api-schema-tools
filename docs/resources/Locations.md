@@ -27,7 +27,7 @@ Locations.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Location](types/Location.md)>
+Array.<[Location](/docs/types/Location.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

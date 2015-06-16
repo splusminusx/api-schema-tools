@@ -28,7 +28,7 @@ EmployeeChatMessages.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[EmployeeChatMessage](types/EmployeeChatMessage.md)>
+Array.<[EmployeeChatMessage](/docs/types/EmployeeChatMessage.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

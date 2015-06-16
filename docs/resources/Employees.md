@@ -49,7 +49,7 @@ Employees.search
 |text|True|string|Подстрока в имени или фамилии сотрудника.<br/>|
 
 ### Резудьтат
-Array.<[Employee](types/Employee.md)>
+Array.<[Employee](/docs/types/Employee.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -154,7 +154,7 @@ Employees.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Employee](types/Employee.md)>
+Array.<[Employee](/docs/types/Employee.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

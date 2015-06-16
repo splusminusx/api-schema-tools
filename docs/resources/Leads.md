@@ -110,7 +110,7 @@ Leads.listRouted
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Lead](types/Lead.md)>
+Array.<[Lead](/docs/types/Lead.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -138,7 +138,7 @@ Leads.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Lead](types/Lead.md)>
+Array.<[Lead](/docs/types/Lead.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

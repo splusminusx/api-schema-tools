@@ -82,7 +82,7 @@ MailBoxes.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[MailBox](types/MailBox.md)>
+Array.<[MailBox](/docs/types/MailBox.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

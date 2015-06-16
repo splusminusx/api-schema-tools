@@ -48,7 +48,7 @@ ConsoleNews.listLatest
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[ConsoleNews](types/ConsoleNews.md)>
+Array.<[ConsoleNews](/docs/types/ConsoleNews.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

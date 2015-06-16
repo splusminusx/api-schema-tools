@@ -79,7 +79,7 @@ EmployeeRemarks.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[EmployeeRemark](types/EmployeeRemark.md)>
+Array.<[EmployeeRemark](/docs/types/EmployeeRemark.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

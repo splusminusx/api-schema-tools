@@ -27,7 +27,7 @@
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Payment](types/Payment.md)>
+Array.<[Payment](/docs/types/Payment.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -28,7 +28,7 @@ Complaints.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Complaint](types/Complaint.md)>
+Array.<[Complaint](/docs/types/Complaint.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

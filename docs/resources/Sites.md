@@ -106,7 +106,7 @@ Sites.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Site](types/Site.md)>
+Array.<[Site](/docs/types/Site.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

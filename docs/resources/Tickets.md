@@ -54,7 +54,7 @@ Tickets.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Ticket](types/Ticket.md)>
+Array.<[Ticket](/docs/types/Ticket.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -87,7 +87,7 @@ DepartmentSiteBindings.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[DepartmentSiteBinding](types/DepartmentSiteBinding.md)>
+Array.<[DepartmentSiteBinding](/docs/types/DepartmentSiteBinding.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

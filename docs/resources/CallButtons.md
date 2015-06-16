@@ -83,7 +83,7 @@ CallButtons.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[CallButton](types/CallButton.md)>
+Array.<[CallButton](/docs/types/CallButton.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -56,7 +56,7 @@ None
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Chat](types/Chat.md)>
+Array.<[Chat](/docs/types/Chat.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

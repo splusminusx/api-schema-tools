@@ -90,7 +90,7 @@ HoldRules.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[HoldRule](types/HoldRule.md)>
+Array.<[HoldRule](/docs/types/HoldRule.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

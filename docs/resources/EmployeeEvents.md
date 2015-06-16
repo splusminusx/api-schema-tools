@@ -49,7 +49,7 @@ curl https://api.livetex.ru/v2/employeeevents?employee_ids=12345 \
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[EmployeeEvent](types/EmployeeEvent.md)>
+Array.<[EmployeeEvent](/docs/types/EmployeeEvent.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

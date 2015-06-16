@@ -107,7 +107,7 @@ InvitationRules.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[InvitationRule](types/InvitationRule.md)>
+Array.<[InvitationRule](/docs/types/InvitationRule.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

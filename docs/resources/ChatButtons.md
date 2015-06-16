@@ -84,7 +84,7 @@ ChatButtons.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[ChatButton](types/ChatButton.md)>
+Array.<[ChatButton](/docs/types/ChatButton.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

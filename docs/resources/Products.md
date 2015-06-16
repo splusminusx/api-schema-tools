@@ -28,7 +28,7 @@ Products.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Product](types/Product.md)>
+Array.<[Product](/docs/types/Product.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -28,7 +28,7 @@ IgnoreListItems.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[IgnoreListItem](types/IgnoreListItem.md)>
+Array.<[IgnoreListItem](/docs/types/IgnoreListItem.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

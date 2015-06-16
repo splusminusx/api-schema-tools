@@ -104,7 +104,7 @@ curl "https://api.livetex.ru/v2/stats/employees?fields=id,first_name,last_name,c
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>last_name:a – по умолчанию;<br/>first_name:a;<br/>online_time_avg:a, online_time_avg:d;<br/>chats_total:a, chats_total:d;<br/>calls_total:a, calls_total:d;<br/>leads_total:a, leads_total:d.<br/>|
 
 ### Резудьтат
-Array.<[Employee](types/Employee.md)>
+Array.<[Employee](/docs/types/Employee.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -319,7 +319,7 @@ curl "https://api.livetex.ru/v2/stats/sites?fields=id,url,chats_total,by_employe
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>url:a – по умолчанию;<br/>online_time_avg:a, online_time_avg:d;<br/>chats_total:a, chats_total:d;<br/>calls_total:a, calls_total:d;<br/>leads_total:a, leads_total:d.<br/>Указанная сортировка распространяется также на порядок данных в ключах "by_department" и "by_employee".<br/>Если указано "url:a", то для сортировки данных в ключе "by_department" можно указать одно из следующих возможных значений:<br/>department(title):a.<br/>А в ключе "by_employee":<br/>employee(last_name):a;<br/>employee(first_name):a.<br/>|
 
 ### Резудьтат
-Array.<[Site](types/Site.md)>
+Array.<[Site](/docs/types/Site.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -418,7 +418,7 @@ curl "https://api.livetex.ru/v2/stats/departments?fields=department,chats_total,
 |sort|False|string|Сортировка результатов.<br/>Возможные значения:<br/>title:a – по умолчанию;<br/>online_time_avg:a, online_time_avg:d;<br/>chats_total:a, chats_total:d;<br/>calls_total:a, calls_total:d;<br/>leads_total:a, leads_total:d.<br/>|
 
 ### Резудьтат
-Array.<[Department](types/Department.md)>
+Array.<[Department](/docs/types/Department.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

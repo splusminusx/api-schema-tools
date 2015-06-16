@@ -80,7 +80,7 @@ QuickMessageCategories.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[QuickMessageCategory](types/QuickMessageCategory.md)>
+Array.<[QuickMessageCategory](/docs/types/QuickMessageCategory.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -28,7 +28,7 @@ Roles.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Role](types/Role.md)>
+Array.<[Role](/docs/types/Role.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

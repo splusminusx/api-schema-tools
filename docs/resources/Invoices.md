@@ -28,7 +28,7 @@ Invoices.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Invoice](types/Invoice.md)>
+Array.<[Invoice](/docs/types/Invoice.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -28,7 +28,7 @@ Periods.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Period](types/Period.md)>
+Array.<[Period](/docs/types/Period.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

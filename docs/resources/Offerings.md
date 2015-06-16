@@ -28,7 +28,7 @@ Offerings.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Offering](types/Offering.md)>
+Array.<[Offering](/docs/types/Offering.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

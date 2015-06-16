@@ -53,7 +53,7 @@ Comments.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Comment](types/Comment.md)>
+Array.<[Comment](/docs/types/Comment.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

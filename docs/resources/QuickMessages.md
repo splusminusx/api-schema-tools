@@ -79,7 +79,7 @@ QuickMessages.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[QuickMessage](types/QuickMessage.md)>
+Array.<[QuickMessage](/docs/types/QuickMessage.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

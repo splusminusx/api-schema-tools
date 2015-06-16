@@ -28,7 +28,7 @@ Payers.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Payer](types/Payer.md)>
+Array.<[Payer](/docs/types/Payer.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

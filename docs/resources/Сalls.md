@@ -28,7 +28,7 @@
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Call](types/Call.md)>
+Array.<[Call](/docs/types/Call.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

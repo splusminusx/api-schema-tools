@@ -81,7 +81,7 @@ InvitationRuleSiteBindings.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[InvitationRuleSiteBinding](types/InvitationRuleSiteBinding.md)>
+Array.<[InvitationRuleSiteBinding](/docs/types/InvitationRuleSiteBinding.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

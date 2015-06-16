@@ -28,7 +28,7 @@ Documents.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Document](types/Document.md)>
+Array.<[Document](/docs/types/Document.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

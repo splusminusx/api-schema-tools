@@ -29,7 +29,7 @@ Contacts.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Contact](types/Contact.md)>
+Array.<[Contact](/docs/types/Contact.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

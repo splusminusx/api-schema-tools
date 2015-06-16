@@ -28,7 +28,7 @@ Acceptances.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Acceptance](types/Acceptance.md)>
+Array.<[Acceptance](/docs/types/Acceptance.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

@@ -78,7 +78,7 @@ Carts.list
 |offset|False|numeric|По умолчанию – 0.<br/>|
 
 ### Резудьтат
-Array.<[Cart](types/Cart.md)>
+Array.<[Cart](/docs/types/Cart.md)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
