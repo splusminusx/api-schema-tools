@@ -2,13 +2,13 @@
 # HoldRules
 
 ## Описание ресурса
-HoldRules<br/>
+
 # Методы
 
 ## add
 
 ### Описание метода
-HoldRules.add<br/>Создает новый сценарий удержания.<br/>Параметры<br/>Результат<br/>Объект типа «HoldRule».<br/>Пример вызова<br/>curl "https://api.livetex.ru/v2/holdrules" \<br/>-H "Authorization: Bearer ACCESS_TOKEN" \<br/>	-d "title=Одно сообщение и перевод" \<br/>	-d "hold_messages[0][text]=Оператор скоро вам ответит" \<br/>	-d "hold_messages[0][send_after]=15" \<br/>	-d "is_transfer=true" \<br/>	-d "transfer_after=15"<br/><br/>Уровень доступа для ролей<br/><br/>
+HoldRules.add<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -19,7 +19,7 @@ HoldRules.add<br/>Создает новый сценарий удержания.
 |*transfer_after*|False|[numeric](/docs/types/numeric.md)|Интервал в секундах после последнего сообщения, по истечение которого выполнить перенаправление на другого оператора, если указано is_transfer.<br/>Должен быть от 5 до 3600 секунд.<br/>Обязательно, если is_transfer = true.<br/>Принимается во внимание, только если hold_messages содержит хотя бы один элемент.<br/>|
 |*title*|True|[string](/docs/types/string.md)|Название сценария удержания.<br/>|
 
-### Резудьтат
+### Результат
 [HoldRule](/docs/types/HoldRule.md)
 ### Доступы к методу
 
@@ -29,7 +29,7 @@ HoldRules.add<br/>Создает новый сценарий удержания.
 ## show
 
 ### Описание метода
-HoldRules.show<br/>Возвращает данные указанного сценария удержания.<br/>Параметры<br/>Результат<br/>Объект типа «HoldRule».<br/>Уровень доступа для ролей<br/><br/>
+HoldRules.show<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -37,7 +37,7 @@ HoldRules.show<br/>Возвращает данные указанного сце
 |*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
 |*id*|True|[numeric](/docs/types/numeric.md)|ID сценария удержания.<br/>|
 
-### Резудьтат
+### Результат
 [HoldRule](/docs/types/HoldRule.md)
 ### Доступы к методу
 
@@ -47,7 +47,7 @@ HoldRules.show<br/>Возвращает данные указанного сце
 ## list
 
 ### Описание метода
-HoldRules.list<br/>Возвращает список сценариев удержания.<br/>Параметры<br/>Результат<br/>Массив объектов типа «HoldRule».<br/>Уровень доступа для ролей<br/><br/>
+HoldRules.list<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -58,7 +58,7 @@ HoldRules.list<br/>Возвращает список сценариев удер
 |*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>title:a – по умолчанию, title:d.<br/>|
 |*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
-### Резудьтат
+### Результат
 Array.<[HoldRule](/docs/types/HoldRule.md)>
 ### Доступы к методу
 
@@ -68,7 +68,7 @@ Array.<[HoldRule](/docs/types/HoldRule.md)>
 ## update
 
 ### Описание метода
-HoldRules.update<br/>Изменяет указанный сценарий удержания.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
+HoldRules.update<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -80,7 +80,7 @@ HoldRules.update<br/>Изменяет указанный сценарий уде
 |*hold_messages*|False|Array.<[HoldMessage](/docs/types/HoldMessage.md)>|Массив удерживающих сообщений.<br/>От 1 до 3 элементов.<br/>|
 |*id*|True|[numeric](/docs/types/numeric.md)|ID сценария удержания.<br/>|
 
-### Резудьтат
+### Результат
 None
 ### Доступы к методу
 
@@ -90,14 +90,14 @@ None
 ## delete
 
 ### Описание метода
-HoldRules.delete<br/>Удаляет указанный сценария удержания.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
+HoldRules.delete<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |*id*|True|[numeric](/docs/types/numeric.md)|ID сценария удержания.<br/>|
 
-### Резудьтат
+### Результат
 None
 ### Доступы к методу
 

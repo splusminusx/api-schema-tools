@@ -25,7 +25,7 @@
                     "description": "ID периода.\n"
                 }
             ], 
-            "description": "Carts.addToPeriod\nСоздает новую корзину в указанном периоде.\nПараметры\nРезультат\nОбъект типа «Cart».\nУровень доступа для ролей\n\n", 
+            "description": "Carts.addToPeriod\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -95,7 +95,7 @@
                     "description": "ID корзины.\n"
                 }
             ], 
-            "description": "Carts.show\nВозвращает данные указанной корзины.\nПараметры\nРезультат\nОбъект типа «Cart».\nУровень доступа для ролей\n\n", 
+            "description": "Carts.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -195,7 +195,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Carts.list\nВозвращает список корзин.\nПараметры\nРезультат\nМассив объектов типа «Cart».\nУровень доступа для ролей\n\n", 
+            "description": "Carts.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -269,7 +269,7 @@
                     "description": "ID корзины.\n"
                 }
             ], 
-            "description": "Carts.update\nИзменяет указанную корзину.\nПараметры\nРезультат\nМетод ничего не возвращает. \nУровень доступа для ролей\n\n\n\n", 
+            "description": "Carts.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -336,7 +336,7 @@
                     "description": "Признак текущего периода.\nЕсли true (по умолчанию), то корзина создается для текущего периода. \nЕсли false, то будет создан новый период.\n"
                 }
             ], 
-            "description": "Carts.add\nСоздает новую корзину.\nПараметры\nРезультат\nОбъект типа «Cart».\nУровень доступа для ролей\n\n\n", 
+            "description": "Carts.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -406,7 +406,7 @@
                     "description": "ID плательщика.\nЕсли не указано, то счет будет выписан на активного плательщика.\n"
                 }
             ], 
-            "description": "Carts.commit\nОперация покупки позиций указанной корзины.\nМетод создает заказ, выставляет счет на оплату на активного плательщика и удаляет корзину. \n Параметры\nРезультат\nОбъект типа «Order».\nУровень доступа для ролей\n\n", 
+            "description": "Carts.commit\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -466,7 +466,7 @@
                     "description": "ID корзины.\n"
                 }
             ], 
-            "description": "Carts.delete\nУдаляет указанную корзину.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Carts.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -511,5 +511,5 @@
     ], 
     "kind": "Resource", 
     "name": "Carts", 
-    "description": "Carts\n"
+    "description": ""
 }

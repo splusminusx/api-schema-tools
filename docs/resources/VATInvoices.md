@@ -2,13 +2,13 @@
 # VATInvoices
 
 ## Описание ресурса
-VATInvoices<br/>
+
 # Методы
 
 ## list
 
 ### Описание метода
-VATInvoices.list<br/>Возвращает список счетов-фактур.<br/>Параметры<br/>Результат<br/>Массив объектов типа «VATInvoice».<br/>Уровень доступа для ролей<br/><br/>
+VATInvoices.list<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -19,7 +19,7 @@ VATInvoices.list<br/>Возвращает список счетов-фактур
 |*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
 |*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
-### Резудьтат
+### Результат
 Array.<[VATInvoice](/docs/types/VATInvoice.md)>
 ### Доступы к методу
 

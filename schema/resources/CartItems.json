@@ -25,7 +25,7 @@
                     "description": "ID корзины.\n"
                 }
             ], 
-            "description": "CartItems.add\nДобавляет позицию в указанную корзину.\nПараметры\nРезультат\nОбъект типа «CartItem».\nУровень доступа для ролей\n\n", 
+            "description": "CartItems.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -95,7 +95,7 @@
                     "description": "ID позиции корзины.\n"
                 }
             ], 
-            "description": "CartItems.update\nОбновляет указанную позицию корзины.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n\n", 
+            "description": "CartItems.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -152,7 +152,7 @@
                     "description": "ID позиции корзины.\n"
                 }
             ], 
-            "description": "CartItems.delete\nУдаляет указанную позицию корзины.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "CartItems.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -197,5 +197,5 @@
     ], 
     "kind": "Resource", 
     "name": "CartItems", 
-    "description": "CartItems\n"
+    "description": ""
 }

@@ -2,13 +2,13 @@
 # EmployeeChatMessages
 
 ## Описание ресурса
-EmployeeChatMessages<br/>
+
 # Методы
 
 ## list
 
 ### Описание метода
-EmployeeChatMessages.list<br/>Возвращает список сообщений межоператорского чата.<br/>Параметры<br/>Результат<br/>Массив объектов типа «EmployeeChatMessage».<br/>Уровень доступа для ролей<br/><br/>
+EmployeeChatMessages.list<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -19,7 +19,7 @@ EmployeeChatMessages.list<br/>Возвращает список сообщени
 |*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>created_at:a – по умолчанию.<br/>|
 |*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
-### Резудьтат
+### Результат
 Array.<[EmployeeChatMessage](/docs/types/EmployeeChatMessage.md)>
 ### Доступы к методу
 

@@ -24,5 +24,5 @@
             "description": "Количество ресурсов, например, операторов.\n"
         }
     ], 
-    "description": "ProductAddition\nДополнение к набору продуктов.\nИспользуется в методах CartItems.add и CartItems.update.\nТаблица 65. Поля дополнения в набору продуктов\n"
+    "description": "Дополнение к набору продуктов.\nИспользуется в методах CartItems.add и CartItems.update.\n"
 }

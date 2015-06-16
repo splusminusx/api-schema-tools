@@ -25,7 +25,7 @@
                     "description": "ID обращения.\n"
                 }
             ], 
-            "description": "Conversations.show\nВозвращает данные указанного обращения.\nПараметры\nРезультат\nОбъект типа «Conversation».\nУровень доступа для ролей\n\n", 
+            "description": "Conversations.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -79,5 +79,5 @@
     ], 
     "kind": "Resource", 
     "name": "Conversations", 
-    "description": "Conversations\n"
+    "description": ""
 }

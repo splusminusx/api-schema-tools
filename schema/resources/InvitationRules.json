@@ -203,7 +203,7 @@
                     "description": "Текст приглашения для мобильных устройств.\nМаксимум 130 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
                 }
             ], 
-            "description": "InvitationRules.add\nДобавляет новый сценарий вовлечения.\nПараметры\nРезультат\nОбъект типа «InvitationRule».\nПример вызова\ncurl \"https://api.livetex.ru/v2/invitationrules\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t-d \"title=Первое посещение из России\" \\\n\t-d \"action=chat\" \\\n\t-d \"welcome=Могу ли я вам чем-то помочь?\" \\\n\t-d \"is_active=true\" \\\n\t-d \"is_new_visitor=true\" \\\n\t-d \"locations[0][country][id]=123\" \\\n\t-d \"locations[0][city][id]=3245\" \\\n\t-d \"site_bindings[0][site_id]=6789\" \\\n\t-d \"site_bindings[0][department_id]=65432\"\nУровень доступа для ролей\n\n", 
+            "description": "InvitationRules.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -263,7 +263,7 @@
                     "description": "ID сценария вовлечения.\n"
                 }
             ], 
-            "description": "InvitationRules.delete\nУдаляет указанный сценария вовлечения.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "InvitationRules.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -360,7 +360,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ntitle:a – по умолчанию;\ncreated_at:d.\n"
                 }
             ], 
-            "description": "InvitationRules.list\nВозвращает список сценариев вовлечения.\nПараметры\nРезультат\nМассив объектов типа «InvitationRule».\nУровень доступа для ролей\n\n", 
+            "description": "InvitationRules.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -622,7 +622,7 @@
                     "description": "Текст приглашения для мобильных устройств.\nМаксимум 130 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
                 }
             ], 
-            "description": "InvitationRules.update\nИзменяет указанный сценарий вовлечения.\nПараметры\nРезультат\nМетод ничего не возвращает.\nПример вызова\ncurl \"https://api.livetex.ru/v2/invitationrules/12345\" \\\n\t-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t–X PATCH \\\n\t-d \"title=Первое посещение из России\" \\\n\t-d \"locations[0][country][id]=123\" \\\n\t-d \"locations[0][city][id]=3245\" \\\n\t-d \"site_bindings[0][site_id]=6789\" \\\n\t-d \"site_bindings[0][department_id]=65432\"\n\t-d \"site_bindings[1][site_id]=6785\"\n\nУровень доступа для ролей\n\n\n", 
+            "description": "InvitationRules.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -689,7 +689,7 @@
                     "description": "ID сценария вовлечения.\n"
                 }
             ], 
-            "description": "InvitationRules.show\nВозвращает данные указанного сценария вовлечения.\nПараметры\nРезультат\nОбъект типа «InvitationRule».\nУровень доступа для ролей\n\n", 
+            "description": "InvitationRules.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -737,5 +737,5 @@
     ], 
     "kind": "Resource", 
     "name": "InvitationRules", 
-    "description": "InvitationRules\n"
+    "description": ""
 }

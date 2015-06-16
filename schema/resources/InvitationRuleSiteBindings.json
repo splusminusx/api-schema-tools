@@ -45,7 +45,7 @@
                     "description": "ID отдела, на который будет адресовано приглашение.\n"
                 }
             ], 
-            "description": "InvitationRuleSiteBindings.add\nДобавляет новую связь сценария вовлечения и сайта.\nВозможно существование только одной связи конкретного сайта и конкретного сценария вовлечения.\nПараметры\nРезультат\nОбъект типа «InvitationRuleSiteBinding».\nУровень доступа для ролей\n\n", 
+            "description": "InvitationRuleSiteBindings.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -105,7 +105,7 @@
                     "description": "ID связи.\n"
                 }
             ], 
-            "description": "InvitationRuleSiteBindings.delete\nУдаляет указанную связь сценария вовлечения и сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "InvitationRuleSiteBindings.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -202,7 +202,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:a – по умолчанию.\n"
                 }
             ], 
-            "description": "InvitationRuleSiteBindings.list\nВозвращает список связей сценариев вовлечения и сайтов.\nПараметры\nРезультат\nМассив объектов типа «InvitationRuleSiteBinding».\nУровень доступа для ролей\n\n", 
+            "description": "InvitationRuleSiteBindings.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -306,7 +306,7 @@
                     "description": "ID отдела, на который будет адресовано приглашение.\n"
                 }
             ], 
-            "description": "InvitationRuleSiteBindings.update\nИзменяет указанную связь сценария вовлечения и сайта.\nВозможно существование только одной связи конкретного сайта и конкретного сценария вовлечения.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "InvitationRuleSiteBindings.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -373,7 +373,7 @@
                     "description": "ID связи сценария вовлечения и сайта.\n"
                 }
             ], 
-            "description": "InvitationRuleSiteBindings.show\nВозвращает данные указанной связи сценария вовлечения и сайта.\nПараметры\nРезультат\nОбъект типа «InvitationRuleSiteBinding».\nУровень доступа для ролей\n\n", 
+            "description": "InvitationRuleSiteBindings.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -421,5 +421,5 @@
     ], 
     "kind": "Resource", 
     "name": "InvitationRuleSiteBindings", 
-    "description": "InvitationRuleSiteBindings\n"
+    "description": ""
 }

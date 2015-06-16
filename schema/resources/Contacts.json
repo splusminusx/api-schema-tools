@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Contacts.list\nВозвращает список элементов контактных данных.\nВНИМАНИЕ! Метод доступен только при наличии опции «Генератор лидов».\nПараметры\nРезультат\nМассив объектов типа «Contact».\nУровень доступа для ролей\n\n", 
+            "description": "Contacts.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID элемента контактных данных.\n"
                 }
             ], 
-            "description": "Contacts.show\nВозвращает данные указанного элемента контактных данных.\nВНИМАНИЕ! Метод доступен только при наличии опции «Генератор лидов».\nПараметры\nРезультат\nОбъект типа «Contact».\nУровень доступа для ролей\n\n", 
+            "description": "Contacts.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -177,5 +177,5 @@
     ], 
     "kind": "Resource", 
     "name": "Contacts", 
-    "description": "Contacts\n"
+    "description": ""
 }

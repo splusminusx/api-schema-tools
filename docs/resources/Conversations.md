@@ -2,13 +2,13 @@
 # Conversations
 
 ## Описание ресурса
-Conversations<br/>
+
 # Методы
 
 ## show
 
 ### Описание метода
-Conversations.show<br/>Возвращает данные указанного обращения.<br/>Параметры<br/>Результат<br/>Объект типа «Conversation».<br/>Уровень доступа для ролей<br/><br/>
+Conversations.show<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -16,7 +16,7 @@ Conversations.show<br/>Возвращает данные указанного о
 |*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
 |*id*|True|[numeric](/docs/types/numeric.md)|ID обращения.<br/>|
 
-### Резудьтат
+### Результат
 [Conversation](/docs/types/Conversation.md)
 ### Доступы к методу
 

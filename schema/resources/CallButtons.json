@@ -75,7 +75,7 @@
                     "description": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle  – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\nПринимается во внимание при design_type = predefined.\n"
                 }
             ], 
-            "description": "CallButtons.add\nСоздает новую кнопку.\nПараметры\nРезультат\nОбъект типа «CallButton».\nУровень доступа для ролей\n\n", 
+            "description": "CallButtons.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -135,7 +135,7 @@
                     "description": "ID кнопки.\n"
                 }
             ], 
-            "description": "CallButtons.delete\nУдаляет указанную кнопку.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "CallButtons.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -232,7 +232,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\nid:a – по умолчанию;\nupdated_at:d.\n"
                 }
             ], 
-            "description": "CallButtons.list\nВозвращает список звонковых кнопок.\nПараметры\nРезультат\nМассив объектов типа «CallButton».\nУровень доступа для ролей\n\n", 
+            "description": "CallButtons.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -366,7 +366,7 @@
                     "description": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\nПринимается во внимание при design_type = predefined.\n"
                 }
             ], 
-            "description": "CallButtons.update\nИзменяет указанную кнопку.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "CallButtons.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -433,7 +433,7 @@
                     "description": "ID кнопки.\n"
                 }
             ], 
-            "description": "CallButtons.show\nВозвращает данные указанной кнопки.\nПараметры\nРезультат\nОбъект типа «CallButton».\nУровень доступа для ролей\n\n", 
+            "description": "CallButtons.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -481,5 +481,5 @@
     ], 
     "kind": "Resource", 
     "name": "CallButtons", 
-    "description": "CallButtons\n"
+    "description": ""
 }

@@ -74,5 +74,5 @@
             "description": "Значение соответствующего GET параметра со страницы регистрации\n"
         }
     ], 
-    "description": "RegistrationMarketingData\nАбстрактный тип данных. Используется только в методе Employees.register\nТаблица 69. Поля почтового ящика\n"
+    "description": "Абстрактный тип данных. Используется только в методе Employees.register\n"
 }

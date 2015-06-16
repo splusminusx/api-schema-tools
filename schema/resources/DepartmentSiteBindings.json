@@ -79,7 +79,7 @@
                     "description": "ID отдела.\n"
                 }
             ], 
-            "description": "DepartmentSiteBindings.add\nСоздает новую связь отдела и сайта.\nВозможно существование только одной связи конкретного отдела и конкретного сайта.\nВНИМАНИЕ!\nПри создании связи отдела с сайтом, в котором еще нет отделов, все прямые связи такого сайта с сотрудниками удаляются.\nПараметры\nРезультат\nОбъект типа «DepartmentSiteBinding».\nУровень доступа для ролей\n\n\n", 
+            "description": "DepartmentSiteBindings.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -139,7 +139,7 @@
                     "description": "ID связи.\n"
                 }
             ], 
-            "description": "DepartmentSiteBindings.delete\nУдаляет указанную связь отдела и сайта.\nВНИМАНИЕ!\nПри удалении последней связи отдела с сайтами, отдел удаляется.\nЕсли удаляется последняя связь сайта с отделами, сотрудники этого отдела напрямую связываются с сайтом.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "DepartmentSiteBindings.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -236,7 +236,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\nupdated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "DepartmentSiteBindings.list\nВозвращает список связей отделов и сайтов.\nПараметры\nРезультат\nМассив объектов типа «DepartmentSiteBinding».\nУровень доступа для ролей\n\n", 
+            "description": "DepartmentSiteBindings.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -374,7 +374,7 @@
                     "description": "ID отдела.\n"
                 }
             ], 
-            "description": "DepartmentSiteBindings.update\nОбновляет свойства связи отдела и сайта.\nВозможно существование только одной связи конкретного отдела и конкретного сайта.\nВНИМАНИЕ!\nПри создании связи отдела с сайтом, в котором еще нет отделов, все прямые связи такого сайта с сотрудниками удаляются. \nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "DepartmentSiteBindings.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -441,7 +441,7 @@
                     "description": "ID связи.\n"
                 }
             ], 
-            "description": "DepartmentSiteBindings.show\nВозвращает данные указанной связи отдела и сайта.\nПараметры\nРезультат\nОбъект типа «DepartmentSiteBinding».\nУровень доступа для ролей\n\n", 
+            "description": "DepartmentSiteBindings.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -489,5 +489,5 @@
     ], 
     "kind": "Resource", 
     "name": "DepartmentSiteBindings", 
-    "description": "DepartmentSiteBindings\n"
+    "description": ""
 }

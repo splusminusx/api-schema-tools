@@ -59,7 +59,7 @@
                     "description": "Название сценария удержания.\n"
                 }
             ], 
-            "description": "HoldRules.add\nСоздает новый сценарий удержания.\nПараметры\nРезультат\nОбъект типа «HoldRule».\nПример вызова\ncurl \"https://api.livetex.ru/v2/holdrules\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t-d \"title=Одно сообщение и перевод\" \\\n\t-d \"hold_messages[0][text]=Оператор скоро вам ответит\" \\\n\t-d \"hold_messages[0][send_after]=15\" \\\n\t-d \"is_transfer=true\" \\\n\t-d \"transfer_after=15\"\n\nУровень доступа для ролей\n\n", 
+            "description": "HoldRules.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -119,7 +119,7 @@
                     "description": "ID сценария удержания.\n"
                 }
             ], 
-            "description": "HoldRules.delete\nУдаляет указанный сценария удержания.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "HoldRules.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -216,7 +216,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ntitle:a – по умолчанию, title:d.\n"
                 }
             ], 
-            "description": "HoldRules.list\nВозвращает список сценариев удержания.\nПараметры\nРезультат\nМассив объектов типа «HoldRule».\nУровень доступа для ролей\n\n", 
+            "description": "HoldRules.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -334,7 +334,7 @@
                     "description": "ID сценария удержания.\n"
                 }
             ], 
-            "description": "HoldRules.update\nИзменяет указанный сценарий удержания.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "HoldRules.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -401,7 +401,7 @@
                     "description": "ID сценария удержания.\n"
                 }
             ], 
-            "description": "HoldRules.show\nВозвращает данные указанного сценария удержания.\nПараметры\nРезультат\nОбъект типа «HoldRule».\nУровень доступа для ролей\n\n", 
+            "description": "HoldRules.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -449,5 +449,5 @@
     ], 
     "kind": "Resource", 
     "name": "HoldRules", 
-    "description": "HoldRules\n"
+    "description": ""
 }

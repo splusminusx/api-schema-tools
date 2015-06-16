@@ -2,13 +2,13 @@
 # Payments
 
 ## Описание ресурса
-- Payments<br/>
+
 # Методы
 
 ## list
 
 ### Описание метода
-- Payments.list<br/>Возвращает список платежей.<br/>Параметры<br/>Результат<br/>Массив объектов типа «- Payment».<br/>Уровень доступа для ролей<br/>
+- Payments.list<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -19,7 +19,7 @@
 |*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию.<br/>|
 |*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
-### Резудьтат
+### Результат
 Array.<[Payment](/docs/types/Payment.md)>
 ### Доступы к методу
 

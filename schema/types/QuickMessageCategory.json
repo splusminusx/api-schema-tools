@@ -74,5 +74,5 @@
             "description": "ID категории быстрых сообщений.\n"
         }
     ], 
-    "description": "QuickMessageCategory\nКатегория быстрых сообщений.\nТаблица 67. Поля быстрого сообщения\n\nКонтроллер: QuickMessageCategories.\n"
+    "description": "Категория быстрых сообщений.\n\nКонтроллер: QuickMessageCategories.\n"
 }

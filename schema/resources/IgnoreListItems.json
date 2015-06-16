@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:a – по умолчанию.\n"
                 }
             ], 
-            "description": "IgnoreListItems.list\nВозвращает список записей игнор-листа.\nПараметры\nРезультат\nМассив объектов типа «IgnoreListItem».\nУровень доступа для ролей\n\n", 
+            "description": "IgnoreListItems.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "IgnoreListItems.delete\nУдаляет запись в игнор-листе.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n\n", 
+            "description": "IgnoreListItems.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -174,5 +174,5 @@
     ], 
     "kind": "Resource", 
     "name": "IgnoreListItems", 
-    "description": "IgnoreListItems\n"
+    "description": ""
 }

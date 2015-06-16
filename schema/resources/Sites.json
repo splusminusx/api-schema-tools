@@ -65,7 +65,7 @@
                     "description": "Тема письма.\nМаксимум 60 символов.\n"
                 }
             ], 
-            "description": "Sites.updateOfflineMailSettings\nИзменяет настройки офлайн почты.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Sites.updateOfflineMailSettings\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -122,7 +122,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.showSiteCallSettings\nВозвращает настройки звонков указанного сайта.\nПараметры\nРезультат\nОбъект типа «SiteCallSettings».\nУровень доступа для ролей\n\n", 
+            "description": "Sites.showSiteCallSettings\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -192,7 +192,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.show\nВозвращает данные указанного сайта.\nПараметры\nРезультат\nОбъект типа «Site».\nУровень доступа для ролей\n\n", 
+            "description": "Sites.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -296,7 +296,7 @@
                     "description": "Массив дней недели, в которые необходимо показывать приглашение к заказу обратного звонка.\nПонедельник – 0, вторник - 1 и т.д.\n"
                 }
             ], 
-            "description": "Sites.updateSiteXWidgetSettings\nИзменяет настройки продукта «X-widget» для указанного сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Sites.updateSiteXWidgetSettings\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -533,7 +533,7 @@
                     "description": "Цвет текста.\nПоле обязательно для color_type = custom.\n"
                 }
             ], 
-            "description": "Sites.updateChatFormSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.\nИзменяет настройки окна чата сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Sites.updateChatFormSettings - DEPRECATED\n", 
             "is_deprecated": true, 
             "result_type": null, 
             "permissions": [
@@ -590,7 +590,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.showSiteChatSettings\nВозвращает настройки чата для указанного сайта.\nПараметры\nРезультат\nОбъект типа «SiteChatSettings».\nУровень доступа для ролей\n\n", 
+            "description": "Sites.showSiteChatSettings\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -650,7 +650,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.showChatWelcomeSettings – DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.\nВозвращает настройки окна приветствия указанного сайта.\nПараметры\nРезультат\nОбъект типа «ChatWelcomeSettings».\nУровень доступа для ролей\n\n", 
+            "description": "Sites.showChatWelcomeSettings – DEPRECATED\n", 
             "is_deprecated": true, 
             "result_type": {
                 "kind": "Reference", 
@@ -760,7 +760,7 @@
                     "description": "Включение/выключение мобильного вида виджета.\n"
                 }
             ], 
-            "description": "Sites.batchUpdate\nВыполняет пакетное изменение данных указанных сайтов.\nМетод вызывает Sites.update для каждого ID сайта и передает указанные параметры.\nПараметры\nРезультат\nМассив объектов c ID, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.\nПример\ncurl https://api.livetex.ru/v2/sites/batchupdate \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n-d \"ids=123,456,789\" \\\n-d \"is_callback=false\"\n\n{\n    \"results\": [\n        {\n            \"id\": \"123\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"456\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"789\",\n            \"code\": 403,\n            \"message\": \"Forbidden\"\n        }\n    ]\n}\n\nУровень доступа для ролей\n\nВНИМАНИЕ!\nПри изменении конкретного сайта работает уровень доступа метода Sites.update в соответствующих условиях.\n", 
+            "description": "Sites.batchUpdate\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -817,7 +817,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.showOfflineFormSettings – DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.\nВозвращает настройки формы офлайн-сообщения указанного сайта.\nПараметры\nРезультат\nОбъект типа «OfflineFormSettings».\nПример запроса\ncurl https://api.livetex.ru/v2/sites/showofflineformsettings?id=12345 \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\nУровень доступа для ролей\n\n", 
+            "description": "Sites.showOfflineFormSettings – DEPRECATED\n", 
             "is_deprecated": true, 
             "result_type": {
                 "kind": "Reference", 
@@ -877,7 +877,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.showOfflineMailSettings\nВозвращает настройки офлайн почты.\nПараметры\nРезультат\nОбъект типа «OfflineMailSettings».\nУровень доступа для ролей\n\n", 
+            "description": "Sites.showOfflineMailSettings\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -937,7 +937,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.showSiteWidgetSettings\nВозвращает настройки виджета для указанного сайта.\nПараметры\nРезультат\nОбъект типа «SiteWidgetSettings».\nУровень доступа для ролей\n\n", 
+            "description": "Sites.showSiteWidgetSettings\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -1131,7 +1131,7 @@
                     "description": "ID сценария удержания.\n"
                 }
             ], 
-            "description": "Sites.add\nСоздает новый сайт.\nВНИМАНИЕ!\nНовый сайт автоматически добавляется в поле managed_sites всем сотрудникам с ролью, имеющей is_full_by_default = true.\nПараметры\nРезультат\nОбъект типа «Site».\nУровень доступа для ролей\n\n", 
+            "description": "Sites.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -1191,7 +1191,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.showChatFormSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.\nВозвращает настройки окна чата указанного сайта.\nПараметры\nРезультат\nОбъект типа «ChatFormSettings».\nУровень доступа для ролей\n\n", 
+            "description": "Sites.showChatFormSettings - DEPRECATED\n", 
             "is_deprecated": true, 
             "result_type": {
                 "kind": "Reference", 
@@ -1301,7 +1301,7 @@
                     "description": "Текст приветствия в режиме онлайн.\nМаксимум 180 символов.\n"
                 }
             ], 
-            "description": "Sites.updateSiteChatSettings\nИзменяет настройки чата для указанного сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Sites.updateSiteChatSettings\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -1428,7 +1428,7 @@
                     "description": "Размер ярлыка.\nВозможные значения:\nsmall – маленький, 23x118 пикселей;\nlarge – большой, 38x174 пикселей.\n"
                 }
             ], 
-            "description": "Sites.updateCallLabelSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.\nИзменяет звонковые настройки сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Sites.updateCallLabelSettings - DEPRECATED\n", 
             "is_deprecated": true, 
             "result_type": null, 
             "permissions": [
@@ -1615,7 +1615,7 @@
                     "description": "Цвет текста.\nВозможные значения:\nlight – светлый;\ndark – темный;\nauto – значение выбирается автоматически.\n"
                 }
             ], 
-            "description": "Sites.updateSiteWidgetSettings\nИзменяет настройки виджета для указанного сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Sites.updateSiteWidgetSettings\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -1672,7 +1672,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.showSiteXWidgetSettings\nВозвращает настройки продукта «X-widget» для указанного сайта.\nПараметры\nРезультат\nОбъект типа «SiteXWidgetSettings».\nУровень доступа для ролей\n\n", 
+            "description": "Sites.showSiteXWidgetSettings\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -1852,7 +1852,7 @@
                     "description": "Текст приветствия по умолчанию, который отобразится в мобильных браузерах.\nМаксимум 180 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
                 }
             ], 
-            "description": "Sites.updateOfflineFormSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.\nОбновляет настройки офлайн-формы.\nПараметры\nРезультат\nМетод ничего не возвращает.\nПример запроса\ncurl https://api.livetex.ru/v2/sites/updateofflineformsettings \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n–d \"id=12345\" \\\n–d \"banner_type=none\"\nУровень доступа для ролей\n\n", 
+            "description": "Sites.updateOfflineFormSettings - DEPRECATED\n", 
             "is_deprecated": true, 
             "result_type": null, 
             "permissions": [
@@ -1919,7 +1919,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.updateChatWelcomeSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.\nИзменяет настройки окна чата сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Sites.updateChatWelcomeSettings - DEPRECATED\n", 
             "is_deprecated": true, 
             "result_type": null, 
             "permissions": [
@@ -2120,7 +2120,7 @@
                     "description": "ID сценария удержания.\n"
                 }
             ], 
-            "description": "Sites.update\nИзменяет данные указанного сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Sites.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -2357,7 +2357,7 @@
                     "description": "Текст приветствия по умолчанию, который отобразится в мобильных браузерах.\nМаксимум 180 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
                 }
             ], 
-            "description": "Sites.updateLeadFormSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.\nОбновляет настройки формы генератора лидов указанного сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nПример запроса\ncurl https://api.livetex.ru/v2/sites/updateleadformsettings \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n–d \"id=12345\" \\\n–d \"photo_type=none\" \\\nУровень доступа для ролей\n\n", 
+            "description": "Sites.updateLeadFormSettings - DEPRECATED\n", 
             "is_deprecated": true, 
             "result_type": null, 
             "permissions": [
@@ -2414,7 +2414,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.showLeadFormSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.\nВозвращает настройки формы генератора лидов указанного сайта.\nПараметры\nРезультат\nОбъект типа «LeadFormSettings».\nПример запроса\ncurl \"https://api.livetex.ru/v2/sites/showleadformsettings?id=12345\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\nУровень доступа для ролей\n\n", 
+            "description": "Sites.showLeadFormSettings - DEPRECATED\n", 
             "is_deprecated": true, 
             "result_type": {
                 "kind": "Reference", 
@@ -2518,7 +2518,7 @@
                     "description": "Массив дней недели, в которые необходимо показывать приглашение к заказу обратного звонка.\nПонедельник – 0, вторник - 1 и т.д.\n"
                 }
             ], 
-            "description": "Sites.batchUpdateSiteXWidgetSettings\nВыполняет пакетное изменение настроек X-widget указанных сайтов.\nМетод вызывает Sites.updateSiteXWidgetSettings для каждого ID сайта и передает указанные параметры.\nПараметры\nРезультат\nМассив объектов c ID-сайта, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.\nПример\ncurl https://api.livetex.ru/v2/sites/batchupdatesitexwidgetsettings \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n-d \"ids=123,456,789\" \\\n-d \"is_active=false\"\n\n{\n    \"results\": [\n        {\n            \"id\": \"123\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"456\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"789\",\n            \"code\": 403,\n            \"message\": \"Forbidden\"\n        }\n    ]\n}\nУровень доступа для ролей\n\nВНИМАНИЕ!\nПри изменении конкретного сайта работает уровень доступа метода Sites.updateSiteXWidgetSettings в соответствующих условиях.\n\n\n", 
+            "description": "Sites.batchUpdateSiteXWidgetSettings\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -2615,7 +2615,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\nurl:a – по умолчанию;\nupdated_at:a, updated_at:d;\n"
                 }
             ], 
-            "description": "Sites.list\nВозвращает список сайтов.\nПараметры\nРезультат\nМассив объектов типа «Site».\nУровень доступа для ролей\n\n", 
+            "description": "Sites.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -2679,7 +2679,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.unbindAllDepartments\nОтвязывает все отделы от указанного сайта. При этом все сотрудники отделов напрямую связываются с сайтом.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Sites.unbindAllDepartments\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -2736,7 +2736,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.delete\nУдаляет указанный сайт.\nВНИМАНИЕ!\nПри удалении сайта удаляются все связи с отделами. При этом также удаляются отделы, оставшиеся без сайтов.\nПри удалении сайта удаляются все его связи с объектами других сущностей, за исключением чатов, звонков и лидов и связей с сотрудниками в поле managed_sites.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Sites.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -2793,7 +2793,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.showCallLabelSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.\nВозвращает настройки ярлыка звонков указанного сайта.\nПараметры\nРезультат\nОбъект типа «CallLabelSettings».\nПример запроса\ncurl https://api.livetex.ru/v2/sites/showcalllabelsettings?id=12345 \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\nУровень доступа для ролей\n\n", 
+            "description": "Sites.showCallLabelSettings - DEPRECATED\n", 
             "is_deprecated": true, 
             "result_type": {
                 "kind": "Reference", 
@@ -2923,7 +2923,7 @@
                     "description": "ID сайта.\n"
                 }
             ], 
-            "description": "Sites.updateSiteCallSettings\nИзменяет звонковые настройки сайта. \nПараметры\nРезультат\nМетод ничего не возвращает.\nПример запроса\ncurl https://api.livetex.ru/v2/sites/updatecallsettings \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n–d \"id=12345\" \\\n–d \"background_type=none\" \\\nУровень доступа для ролей\n\n", 
+            "description": "Sites.updateSiteCallSettings\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -2968,5 +2968,5 @@
     ], 
     "kind": "Resource", 
     "name": "Sites", 
-    "description": "Sites\n"
+    "description": ""
 }

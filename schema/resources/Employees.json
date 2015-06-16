@@ -15,7 +15,7 @@
                     "description": "Список через запятую возвращаемых полей.\n"
                 }
             ], 
-            "description": "Employees.me\nВозвращает данные сотрудника, от учетной записи которого вызывается метод.\nПараметры\nРезультат\nОбъект типа «Employee».\nУровень доступа для ролей\n\n", 
+            "description": "Employees.me\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -75,7 +75,7 @@
                     "description": "Подстрока в имени или фамилии сотрудника.\n"
                 }
             ], 
-            "description": "Employees.search\nВыполняет поиск сотрудника по подстроке в имени или фамилии сотрудника.\nВозвращает первые 20 записей, отсортированные сначала по фамилии, а потом по имени.\nПараметры\nРезультат\nМассив объектов типа «Employee».\nУровень доступа для ролей\n\n", 
+            "description": "Employees.search\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -149,7 +149,7 @@
                     "description": "Одноразовый ключ, отправленный по email, указанному при вызове метода Employees.resetPassword.\n"
                 }
             ], 
-            "description": "Employees.setNewPassword\nУстанавливает новый пароль.\nМетод не требует аутентификации!\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n", 
+            "description": "Employees.setNewPassword\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": []
@@ -179,7 +179,7 @@
                     "description": "ID сотрудника.\n"
                 }
             ], 
-            "description": "Employees.show\nВозвращает данные указанного сотрудника.\nПараметры\nРезультат\nОбъект типа «Employee».\nУровень доступа для ролей\n\n", 
+            "description": "Employees.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -319,7 +319,7 @@
                     "description": "Адрес электронной почты.\n"
                 }
             ], 
-            "description": "Employees.register\nСоздает новый аккаунт LiveTex.\nПри создании аккаунта автоматически создается учетная запись сотрудника. Ей назначается роль в признаком is_admin = true из числа ролей доступных в аккаунте.\nМетод не требует аутентификации!\nПараметры\nРезультат\nСтроковый идентификатор аккаунта LiveTex (LiveTex ID).\nУровень доступа для ролей\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n\n", 
+            "description": "Employees.register\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": []
@@ -379,7 +379,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\nlast_name:a – по умолчанию, last_name:d;\nfirst_name:a, first_name:d;\nis_active:a, is_active:d;\ncreated_at:a, created_at:d;\nupdated_at:a, updated_at:d.\n"
                 }
             ], 
-            "description": "Employees.list\nВозвращает список сотрудников.\nПараметры\nРезультат\nМассив объектов типа «Employee».\nПример\n{\n    \"total\": 2,\n    \"results\": [\n        {\n            \"id\":10000087,\n            \"first_name\":\"Иван\",\n            \"last_name\":\"Петров\"\n        },\n        {\n            \"id\":10000012,\n            \"first_name\":\"Ольга\",\n            \"last_name\":\"Соколова\"\n        }\n    ]\n}\n\nУровень доступа для ролей\n\n", 
+            "description": "Employees.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -653,7 +653,7 @@
                     "description": "Включение/выключение переадресации на телефон.\n"
                 }
             ], 
-            "description": "Employees.update\nИзменяет данные указанного сотрудника.\nВНИМАНИЕ!\nПри изменении роли сотрудника (role_code) с роли с is_full_by_default = true на роль с is_full_by_default = false поля managed_sites и managed_departments устанавливаются в пустое значение.\nПри изменении роли сотрудника (role_code) с роли с is_full_by_default = false на роль с is_full_by_default = true в поля managed_sites и managed_departments вносятся все сайты и отделы, включая удаленные.\nМетод имеет дополнительные ограничения на изменение данных других сотрудников. См. комментарии в таблице «Уровень доступа для ролей» ниже по тексту.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Employees.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -720,7 +720,7 @@
                     "description": "Промо код.\n"
                 }
             ], 
-            "description": "Employees.registerAddPromo\nДобавляет промо-код к только что созданному аккаунту.\nЭтот метод можно вызвать хронологически между Employees.register и Employees.confirm. \nМетод не требует аутентификации!\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n\n", 
+            "description": "Employees.registerAddPromo\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": []
@@ -930,7 +930,7 @@
                     "description": "Включение/выключение переадресации на телефон.\nПо умолчанию – false.\n"
                 }
             ], 
-            "description": "Employees.add\nСоздает учетную запись сотрудника.\nПараметры\nРезультат\nОбъект типа «Employee».\nУровень доступа для ролей\n\n", 
+            "description": "Employees.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -1000,7 +1000,7 @@
                     "description": "Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.\n"
                 }
             ], 
-            "description": "Employees.registerConfirm\nАктивирует новый аккаунт LiveTex и неявно выполняет аутентификацию пользователя.\nМетод не требует аутентификации!\nПараметры\nРезультат\nОбъект со следующими полями:\nУровень доступа для ролей\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n\n", 
+            "description": "Employees.registerConfirm\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": []
@@ -1110,7 +1110,7 @@
                     "description": "Включение/выключение переадресации на телефон.\n"
                 }
             ], 
-            "description": "Employees.batchUpdate\nВыполняет пакетное изменение данных указанных сотрудников.\nМетод вызывает Employees.update для каждого ID сотрудника и передает указанные параметры.\nПараметры\nРезультат\nМассив объектов c ID, кодами и сообщениями об ошибке в порядке перечисления ID сотрудников в запросе.\nПример\ncurl https://api.livetex.ru/v2/employees/batchupdate \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n-d \"ids=123,456,789\" \\\n-d \"is_active=false\"\n\n{\n    \"results\": [\n        {\n            \"id\": \"123\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"456\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"789\",\n            \"code\": 403,\n            \"message\": \"Forbidden\"\n        }\n    ]\n}\n\nУровень доступа для ролей\nВНИМАНИЕ! При изменении конкретного сотрудника работает уровень доступа метода Employees.update в соответствующих условиях.\n", 
+            "description": "Employees.batchUpdate\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -1167,7 +1167,7 @@
                     "description": "Адрес электронной почты сотрудника.\n"
                 }
             ], 
-            "description": "Employees.resetPassword\nИнициирует процедуру установки нового пароля для указанного адреса электронной почты. Отправляется письмо с уникальной ссылкой на страницу ввода нового пароля.\nМетод не требует аутентификации!\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n", 
+            "description": "Employees.resetPassword\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": []
@@ -1187,7 +1187,7 @@
                     "description": "ID сотрудника.\n"
                 }
             ], 
-            "description": "Employees.delete\nУдаляет указанного сотрудника.\nВНИМАНИЕ! При удалении сотрудника, удаляются также отделы, в которых он был единственным сотрудником.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Employees.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -1232,5 +1232,5 @@
     ], 
     "kind": "Resource", 
     "name": "Employees", 
-    "description": "Employees\n"
+    "description": ""
 }

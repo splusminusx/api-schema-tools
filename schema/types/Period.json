@@ -138,5 +138,5 @@
             "description": "ID периода.\n"
         }
     ], 
-    "description": "Period\nПериод.\nТаблица 62. Поля периода\n\nКонтроллер: Periods.\n"
+    "description": "Период.\n\nКонтроллер: Periods.\n"
 }

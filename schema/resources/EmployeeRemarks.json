@@ -25,7 +25,7 @@
                     "description": "Порядковый номер оценки.\nЕсли не указано, то оценка будет последней.\n"
                 }
             ], 
-            "description": "EmployeeRemarks.add\nСоздает новую запись в списке оценок сотрудника.\nПараметры\nРезультат\nОбъект типа «EmployeeRemark».\nУровень доступа для ролей\n\n", 
+            "description": "EmployeeRemarks.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -85,7 +85,7 @@
                     "description": "ID оценки.\n"
                 }
             ], 
-            "description": "EmployeeRemarks.delete\nУдаляет указанную оценку сотрудника.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "EmployeeRemarks.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -182,7 +182,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\nposition:a – по умолчанию,\ntext:a, text:d,\ncreated_at:d,\nupdated_at:d.\n"
                 }
             ], 
-            "description": "EmployeeRemarks.list\nВозвращает список оценок сотрудника.\nПараметры\nРезультат\nМассив объектов типа «EmployeeRemark».\nУровень доступа для ролей\n\n\n", 
+            "description": "EmployeeRemarks.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -266,7 +266,7 @@
                     "description": "Порядковый номер оценки.\n"
                 }
             ], 
-            "description": "EmployeeRemarks.update\nИзменяет данные оценки оператора.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "EmployeeRemarks.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -333,7 +333,7 @@
                     "description": "ID оценки.\n"
                 }
             ], 
-            "description": "EmployeeRemarks.show\nВозвращает данные указанной оценки сотрудника.\nПараметры\nРезультат\nОбъект типа «EmployeeRemark».\nУровень доступа для ролей\n\n", 
+            "description": "EmployeeRemarks.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -381,5 +381,5 @@
     ], 
     "kind": "Resource", 
     "name": "EmployeeRemarks", 
-    "description": "EmployeeRemarks\n"
+    "description": ""
 }

@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:a – по умолчанию.\n"
                 }
             ], 
-            "description": "EmployeeChatMessages.list\nВозвращает список сообщений межоператорского чата.\nПараметры\nРезультат\nМассив объектов типа «EmployeeChatMessage».\nУровень доступа для ролей\n\n", 
+            "description": "EmployeeChatMessages.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -107,5 +107,5 @@
     ], 
     "kind": "Resource", 
     "name": "EmployeeChatMessages", 
-    "description": "EmployeeChatMessages\n"
+    "description": ""
 }

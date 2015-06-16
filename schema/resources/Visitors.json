@@ -25,7 +25,7 @@
                     "description": "ID посетителя.\n"
                 }
             ], 
-            "description": "Visitors.show\nВозвращает данные указанного посетителя.\nПараметры\nРезультат\nОбъект типа «Visitor».\nУровень доступа для ролей\n\n\n", 
+            "description": "Visitors.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -73,5 +73,5 @@
     ], 
     "kind": "Resource", 
     "name": "Visitors", 
-    "description": "Visitors\n"
+    "description": ""
 }

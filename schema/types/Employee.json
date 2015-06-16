@@ -276,5 +276,5 @@
             "description": "Список сайтов, входящих в область видимости сотрудника.\n"
         }
     ], 
-    "description": "Employee\nСотрудник.\nТаблица 36. Поля сотрудника\n\nПРИМЕЧАНИЕ\nВ данный момент поля is_sip_forward и is_phone_forward технически объединены. Изменение одного приводит к изменению другого. То же самое происходит с полями sip_forward_number и phone_forward_number.\n"
+    "description": "Сотрудник.\n\nПРИМЕЧАНИЕ\nВ данный момент поля is_sip_forward и is_phone_forward технически объединены. Изменение одного приводит к изменению другого. То же самое происходит с полями sip_forward_number и phone_forward_number.\n"
 }

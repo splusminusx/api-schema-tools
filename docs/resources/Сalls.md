@@ -2,13 +2,13 @@
 # Сalls
 
 ## Описание ресурса
-Сalls<br/>
+
 # Методы
 
 ## list
 
 ### Описание метода
-Сalls.list<br/>Возвращает список звонков.<br/>Параметры<br/>Результат<br/>Массив объектов типа «Call».<br/>Уровень доступа для ролей<br/><br/>
+Сalls.list<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -19,7 +19,7 @@
 |*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>created_at:d – по умолчанию;<br/>updated_at:d;<br/>duration:a, duration:d;<br/>answer_time:a, answer_time:d;<br/>result:a, result:d.<br/>|
 |*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
-### Резудьтат
+### Результат
 Array.<[Call](/docs/types/Call.md)>
 ### Доступы к методу
 
@@ -29,7 +29,7 @@ Array.<[Call](/docs/types/Call.md)>
 ## show
 
 ### Описание метода
-Сalls.show<br/>Возвращает данные указанного звонка.<br/>Параметры<br/>Результат<br/>Объект типа «Call».<br/>Уровень доступа для ролей<br/><br/>
+Сalls.show<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -37,7 +37,7 @@ Array.<[Call](/docs/types/Call.md)>
 |*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
 |*id*|True|[numeric](/docs/types/numeric.md)|ID звонка.<br/>|
 
-### Резудьтат
+### Результат
 [Call](/docs/types/Call.md)
 ### Доступы к методу
 

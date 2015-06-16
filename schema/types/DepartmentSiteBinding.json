@@ -108,5 +108,5 @@
             "description": "ID связи.\n"
         }
     ], 
-    "description": "DepartmentSiteBinding\nСвязь отдела и сайта.\nТаблица 34. Поля связи отдела и сайта\n\n"
+    "description": "Связь отдела и сайта.\n\n"
 }

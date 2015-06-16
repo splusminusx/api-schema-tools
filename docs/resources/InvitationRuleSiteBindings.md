@@ -2,13 +2,13 @@
 # InvitationRuleSiteBindings
 
 ## Описание ресурса
-InvitationRuleSiteBindings<br/>
+
 # Методы
 
 ## add
 
 ### Описание метода
-InvitationRuleSiteBindings.add<br/>Добавляет новую связь сценария вовлечения и сайта.<br/>Возможно существование только одной связи конкретного сайта и конкретного сценария вовлечения.<br/>Параметры<br/>Результат<br/>Объект типа «InvitationRuleSiteBinding».<br/>Уровень доступа для ролей<br/><br/>
+InvitationRuleSiteBindings.add<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -18,7 +18,7 @@ InvitationRuleSiteBindings.add<br/>Добавляет новую связь сц
 |*site_id*|True|[numeric](/docs/types/numeric.md)|Сайт.<br/>|
 |*department_id*|False|[numeric](/docs/types/numeric.md)|ID отдела, на который будет адресовано приглашение.<br/>|
 
-### Резудьтат
+### Результат
 [InvitationRuleSiteBinding](/docs/types/InvitationRuleSiteBinding.md)
 ### Доступы к методу
 
@@ -28,7 +28,7 @@ InvitationRuleSiteBindings.add<br/>Добавляет новую связь сц
 ## show
 
 ### Описание метода
-InvitationRuleSiteBindings.show<br/>Возвращает данные указанной связи сценария вовлечения и сайта.<br/>Параметры<br/>Результат<br/>Объект типа «InvitationRuleSiteBinding».<br/>Уровень доступа для ролей<br/><br/>
+InvitationRuleSiteBindings.show<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -36,7 +36,7 @@ InvitationRuleSiteBindings.show<br/>Возвращает данные указа
 |*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
 |*id*|True|[numeric](/docs/types/numeric.md)|ID связи сценария вовлечения и сайта.<br/>|
 
-### Резудьтат
+### Результат
 [InvitationRuleSiteBinding](/docs/types/InvitationRuleSiteBinding.md)
 ### Доступы к методу
 
@@ -46,7 +46,7 @@ InvitationRuleSiteBindings.show<br/>Возвращает данные указа
 ## list
 
 ### Описание метода
-InvitationRuleSiteBindings.list<br/>Возвращает список связей сценариев вовлечения и сайтов.<br/>Параметры<br/>Результат<br/>Массив объектов типа «InvitationRuleSiteBinding».<br/>Уровень доступа для ролей<br/><br/>
+InvitationRuleSiteBindings.list<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -57,7 +57,7 @@ InvitationRuleSiteBindings.list<br/>Возвращает список связе
 |*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значение:<br/>created_at:a – по умолчанию.<br/>|
 |*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
-### Резудьтат
+### Результат
 Array.<[InvitationRuleSiteBinding](/docs/types/InvitationRuleSiteBinding.md)>
 ### Доступы к методу
 
@@ -67,7 +67,7 @@ Array.<[InvitationRuleSiteBinding](/docs/types/InvitationRuleSiteBinding.md)>
 ## update
 
 ### Описание метода
-InvitationRuleSiteBindings.update<br/>Изменяет указанную связь сценария вовлечения и сайта.<br/>Возможно существование только одной связи конкретного сайта и конкретного сценария вовлечения.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
+InvitationRuleSiteBindings.update<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -78,7 +78,7 @@ InvitationRuleSiteBindings.update<br/>Изменяет указанную свя
 |*id*|True|[numeric](/docs/types/numeric.md)|ID связи.<br/>|
 |*department_id*|False|[numeric](/docs/types/numeric.md)|ID отдела, на который будет адресовано приглашение.<br/>|
 
-### Резудьтат
+### Результат
 None
 ### Доступы к методу
 
@@ -88,14 +88,14 @@ None
 ## delete
 
 ### Описание метода
-InvitationRuleSiteBindings.delete<br/>Удаляет указанную связь сценария вовлечения и сайта.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
+InvitationRuleSiteBindings.delete<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |*id*|True|[numeric](/docs/types/numeric.md)|ID связи.<br/>|
 
-### Резудьтат
+### Результат
 None
 ### Доступы к методу
 

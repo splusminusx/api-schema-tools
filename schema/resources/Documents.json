@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию, created_at:a;\n"
                 }
             ], 
-            "description": "Documents.list\nВозвращает список документов.\nПараметры\nРезультат\nМассив объектов типа «Document».\nУровень доступа для ролей\n\n", 
+            "description": "Documents.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -107,5 +107,5 @@
     ], 
     "kind": "Resource", 
     "name": "Documents", 
-    "description": "Documents\n"
+    "description": ""
 }

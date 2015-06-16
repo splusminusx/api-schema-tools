@@ -54,5 +54,5 @@
             "description": "Порядковый номер оценки в списке.\n"
         }
     ], 
-    "description": "EmployeeRemark\nОценка чата сотрудником.\nТаблица 39. Поля оценки сотрудника\n\nКонтроллер: EmployeeRemarks.\n"
+    "description": "Оценка чата сотрудником.\n\nКонтроллер: EmployeeRemarks.\n"
 }

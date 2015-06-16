@@ -84,5 +84,5 @@
             "description": "Внутренний ID счета.\n"
         }
     ], 
-    "description": "VATInvoice\nСчет-фактура.\nТаблица 86. Поля счета\n\n"
+    "description": "Счет-фактура.\n\n"
 }

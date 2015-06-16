@@ -35,7 +35,7 @@
                     "description": "ID категории быстрых сообщений.\n"
                 }
             ], 
-            "description": "QuickMessages.add\nДобавляет новое быстрое сообщение.\nПараметры\nРезультат\nОбъект типа «QuickMessage».\nУровень доступа для ролей\n\n", 
+            "description": "QuickMessages.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -95,7 +95,7 @@
                     "description": "ID быстрого сообщения.\n"
                 }
             ], 
-            "description": "QuickMessages.delete\nУдаляет указанное быстрое сообщение.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "QuickMessages.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -192,7 +192,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ntext:a – по умолчанию.\n"
                 }
             ], 
-            "description": "QuickMessages.list\nВозвращает список быстрых сообщений.\nПараметры\nРезультат\nМассив объектов типа «QuickMessage».\nУровень доступа для ролей\n\n", 
+            "description": "QuickMessages.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -276,7 +276,7 @@
                     "description": "ID быстрого сообщения.\n"
                 }
             ], 
-            "description": "QuickMessages.update\nОбновляет быстрое сообщение.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "QuickMessages.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -343,7 +343,7 @@
                     "description": "ID быстрого сообщения.\n"
                 }
             ], 
-            "description": "QuickMessages.show\nВозвращает данные указанного быстрого сообщения.\nПараметры\nРезультат\nОбъект типа «QuickMessage».\nУровень доступа для ролей\n\n", 
+            "description": "QuickMessages.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -391,5 +391,5 @@
     ], 
     "kind": "Resource", 
     "name": "QuickMessages", 
-    "description": "QuickMessages\n"
+    "description": ""
 }

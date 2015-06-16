@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию; \npaid_at:d.\n"
                 }
             ], 
-            "description": "Invoices.list\nВозвращает список выставленных счетов.\nПараметры\nРезультат\nМассив объектов типа «Invoice».\nУровень доступа для ролей\n\n", 
+            "description": "Invoices.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID счета\n"
                 }
             ], 
-            "description": "Invoices.show\nВозвращает данные указанного счета.\nПараметры\nРезультат\nОбъект типа «Invoice».\nУровень доступа для ролей\n\n", 
+            "description": "Invoices.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -177,5 +177,5 @@
     ], 
     "kind": "Resource", 
     "name": "Invoices", 
-    "description": "Invoices\n"
+    "description": ""
 }

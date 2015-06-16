@@ -68,5 +68,5 @@
             "description": "ID корзины.\n"
         }
     ], 
-    "description": "Cart\nКорзина.\nТаблица 17. Поля корзины\n\nКонтроллер: Carts\n"
+    "description": "Корзина.\n\nКонтроллер: Carts\n"
 }

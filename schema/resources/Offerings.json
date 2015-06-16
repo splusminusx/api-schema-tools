@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\nid:d - по умолчанию.\n"
                 }
             ], 
-            "description": "Offerings.list\nВозвращает список активных предложений, доступных текущему клиенту.\nПараметры\nРезультат\nМассив объектов типа «Offering».\nУровень доступа для ролей\n\n", 
+            "description": "Offerings.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID предложения.\n"
                 }
             ], 
-            "description": "Offerings.show\nВозвращает данные указанного предложения.\nПараметры\nРезультат\nОбъект типа «Offering».\nУровень доступа для ролей\n\n", 
+            "description": "Offerings.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -177,5 +177,5 @@
     ], 
     "kind": "Resource", 
     "name": "Offerings", 
-    "description": "Offerings\n"
+    "description": ""
 }

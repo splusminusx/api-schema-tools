@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Complaints.list\nВозвращает список жалоб посетителей.\nПараметры\nРезультат\nМассив объектов типа «Complaint».\nУровень доступа для ролей\n\n", 
+            "description": "Complaints.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID жалобы.\n"
                 }
             ], 
-            "description": "Complaints.show\nВозвращает данные указанной жалобы.\nПараметры\nРезультат\nОбъект типа «Complaint».\nУровень доступа для ролей\n\n", 
+            "description": "Complaints.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -177,5 +177,5 @@
     ], 
     "kind": "Resource", 
     "name": "Complaints", 
-    "description": "Complaints\n"
+    "description": ""
 }

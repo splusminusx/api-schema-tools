@@ -25,7 +25,7 @@
                     "description": "Тема обращения в техническую поддержку.\n"
                 }
             ], 
-            "description": "Tickets.add\nДобавляет новый тикет.\nПараметры\nРезультат\nОбъект типа «Ticket».\n\nУровень доступа для ролей\n\n", 
+            "description": "Tickets.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -125,7 +125,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию;\ntype:a, type:d;\npriority:a, priority:d;\nstatus:a, status:d.\n"
                 }
             ], 
-            "description": "Tickets.list\nВозвращает список тикетов.\nПараметры\nРезультат\nМассив объектов типа «Ticket».\nУровень доступа для ролей\n\n", 
+            "description": "Tickets.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -199,7 +199,7 @@
                     "description": "ID обращения в техническую поддержку.\n"
                 }
             ], 
-            "description": "Tickets.show\nВозвращает данные указанного обращения в техническую поддержку.\nПараметры\nРезультат\nОбъект типа «Ticket».\nУровень доступа для ролей\n\n", 
+            "description": "Tickets.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -247,5 +247,5 @@
     ], 
     "kind": "Resource", 
     "name": "Tickets", 
-    "description": "Tickets\n"
+    "description": ""
 }

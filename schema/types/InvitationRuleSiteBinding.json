@@ -74,5 +74,5 @@
             "description": "ID связи.\n"
         }
     ], 
-    "description": "InvitationRuleSiteBinding\nСвязь сценария вовлечения и сайта.\nТаблица 48. Поля связи сценария вовлечения и сайта.\n\n"
+    "description": "Связь сценария вовлечения и сайта.\n\n"
 }

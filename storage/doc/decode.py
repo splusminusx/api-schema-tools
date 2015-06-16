@@ -44,7 +44,38 @@ def get_complex_type_description(node):
     paragraphs = []
     for b in node.blocks:
         if isinstance(b, Paragraph):
+            if b.text != node.name and not b.text.startswith(u'Таблица'):
+                paragraphs.append(b)
+    return join_paragraphs(paragraphs)
+
+
+def get_resource_description(node):
+    return get_complex_type_description(node)
+
+
+def get_method_description(node):
+    paragraphs = []
+    result_header_index = None
+    for idx, b in enumerate(node.blocks):
+        if isinstance(b, Paragraph):
+            if b.text.startswith(u'Результат'):
+                result_header_index = idx
+    for idx, b in enumerate(node.blocks):
+        if isinstance(b, Paragraph):
+            if b.text != node.name:
+                continue
+            if b.text.startswith(u'Таблица'):
+                continue
+            if b.text.startswith(u'Параметры'):
+                continue
+            if b.text.startswith(u'Результат'):
+                continue
+            if b.text.startswith(u'Уровень доступа для ролей'):
+                continue
+            if idx == result_header_index:
+                continue
             paragraphs.append(b)
+            result_header_index = None
     return join_paragraphs(paragraphs)
 
 
@@ -138,7 +169,7 @@ def get_permissions(node):
 def get_method(node):
     deprecated = is_complex_type_deprecated(node)
     name = parse_method_name(get_complex_type_name(node))
-    description = get_complex_type_description(node)
+    description = get_method_description(node)
     result = get_result_type_name(node)
     method = Method(name, description, result, deprecated)
 
@@ -211,7 +242,7 @@ def parse_method_name(name):
 
 def populate_resource(reg, node):
     res = Resource(get_complex_type_name(node),
-                   get_complex_type_description(node))
+                   get_resource_description(node))
 
     for ch in node.children:
         method = get_method(ch)

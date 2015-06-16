@@ -2,13 +2,13 @@
 # IgnoreListItems
 
 ## Описание ресурса
-IgnoreListItems<br/>
+
 # Методы
 
 ## list
 
 ### Описание метода
-IgnoreListItems.list<br/>Возвращает список записей игнор-листа.<br/>Параметры<br/>Результат<br/>Массив объектов типа «IgnoreListItem».<br/>Уровень доступа для ролей<br/><br/>
+IgnoreListItems.list<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -19,7 +19,7 @@ IgnoreListItems.list<br/>Возвращает список записей игн
 |*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значение:<br/>created_at:a – по умолчанию.<br/>|
 |*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
-### Резудьтат
+### Результат
 Array.<[IgnoreListItem](/docs/types/IgnoreListItem.md)>
 ### Доступы к методу
 
@@ -29,7 +29,7 @@ Array.<[IgnoreListItem](/docs/types/IgnoreListItem.md)>
 ## delete
 
 ### Описание метода
-IgnoreListItems.delete<br/>Удаляет запись в игнор-листе.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/><br/>
+IgnoreListItems.delete<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -37,7 +37,7 @@ IgnoreListItems.delete<br/>Удаляет запись в игнор-листе.
 |*site_id*|True|[numeric](/docs/types/numeric.md)|ID сайта.<br/>|
 |*visitor_id*|True|[string](/docs/types/string.md)|ID посетителя.<br/>|
 
-### Резудьтат
+### Результат
 None
 ### Доступы к методу
 

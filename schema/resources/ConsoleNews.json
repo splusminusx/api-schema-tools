@@ -15,7 +15,7 @@
                     "description": "ID новости.\n"
                 }
             ], 
-            "description": "ConsoleNews.markRead\nПомечает новость как прочитанную.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "ConsoleNews.markRead\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -92,7 +92,7 @@
                     "description": "По умолчанию – 0.\n"
                 }
             ], 
-            "description": "ConsoleNews.listLatest\nВозвращает список последних новостей для Пульта оператора в предопределенном порядке.\nПараметры\nРезультат\nМассив объектов типа «ConsoleNews».\n", 
+            "description": "ConsoleNews.listLatest\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -107,5 +107,5 @@
     ], 
     "kind": "Resource", 
     "name": "ConsoleNews", 
-    "description": "ConsoleNews\n"
+    "description": ""
 }

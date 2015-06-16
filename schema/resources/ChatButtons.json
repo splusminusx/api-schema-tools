@@ -85,7 +85,7 @@
                     "description": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\nПринимается во внимание при design_type=predefined.\n"
                 }
             ], 
-            "description": "ChatButtons.add\nСоздает новую кнопку.\nПараметры\nРезультат\nОбъект типа «ChatButton».\nУровень доступа для ролей\n\n", 
+            "description": "ChatButtons.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -145,7 +145,7 @@
                     "description": "ID кнопки.\n"
                 }
             ], 
-            "description": "ChatButtons.delete\nУдаляет указанную кнопку.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "ChatButtons.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -242,7 +242,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\nid:a – по умолчанию;\nupdated_at:d.\n"
                 }
             ], 
-            "description": "ChatButtons.list\nВозвращает список кнопок.\nПараметры\nРезультат\nМассив объектов типа «ChatButton».\nУровень доступа для ролей\n\n", 
+            "description": "ChatButtons.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -386,7 +386,7 @@
                     "description": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\n"
                 }
             ], 
-            "description": "ChatButtons.update\nИзменяет указанную кнопку.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "ChatButtons.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -453,7 +453,7 @@
                     "description": "ID кнопки.\n"
                 }
             ], 
-            "description": "ChatButtons.show\nВозвращает данные указанной кнопки.\nПараметры\nРезультат\nОбъект типа «ChatButton».\nУровень доступа для ролей\n\n", 
+            "description": "ChatButtons.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -501,5 +501,5 @@
     ], 
     "kind": "Resource", 
     "name": "ChatButtons", 
-    "description": "ChatButtons\n"
+    "description": ""
 }

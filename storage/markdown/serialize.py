@@ -18,7 +18,7 @@ class MarkdownSerializer(object):
     METHOD_DESCRIPTION_HEADING = u'\n### Описание метода\n'
     METHODS_HEADING = u'\n# Методы\n'
     PERMISSIONS_HEADING = u'\n### Доступы к методу\n'
-    RESULT_HEADING = u'\n### Резудьтат\n'
+    RESULT_HEADING = u'\n### Результат\n'
     FIELDS_HEADING = u'\n### Поля\n'
     FIELDS_TABLE_HEADING = u'\n| Имя поля | Необходимость | Тип данных | Комментарий |\n|---|---|---|---|\n'
     PERMISSIONS_TABLE_HEADING = u'\n| Имя роли | доступ | Комментарий |\n|---|---|---|\n'

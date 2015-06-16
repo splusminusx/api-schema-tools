@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ntitle:a, title:b.\nЕсли не указано, то записи сортируются в порядке убывания привилегий роли.\n"
                 }
             ], 
-            "description": "Roles.list\nВозвращает список ролей.\nПараметры\nРезультат\nМассив объектов типа «Role».\nУровень доступа для ролей\n\n", 
+            "description": "Roles.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -107,5 +107,5 @@
     ], 
     "kind": "Resource", 
     "name": "Roles", 
-    "description": "Roles\n"
+    "description": ""
 }

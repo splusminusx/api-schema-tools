@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ntitle:a – по умолчанию. Записи сортируются по названию страны, затем по названию региона затем по названию города.\n"
                 }
             ], 
-            "description": "Locations.list\nВозвращает список географических расположений.\nПараметры\nРезультат\nМассив объектов типа «Location».\nУровень доступа для ролей\n", 
+            "description": "Locations.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -107,5 +107,5 @@
     ], 
     "kind": "Resource", 
     "name": "Locations", 
-    "description": "Locations\n"
+    "description": ""
 }

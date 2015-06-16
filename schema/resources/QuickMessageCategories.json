@@ -45,7 +45,7 @@
                     "description": "Название категории.\n"
                 }
             ], 
-            "description": "QuickMessageCategories.add\nДобавляет новую категорию быстрых сообщений.\nПараметры\nРезультат\nОбъект типа «QuickMessageCategory».\nУровень доступа для ролей\n\n", 
+            "description": "QuickMessageCategories.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -105,7 +105,7 @@
                     "description": "ID категории быстрых сообщений.\n"
                 }
             ], 
-            "description": "QuickMessageCategories.delete\nУдаляет указанную категорию быстрых сообщений.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "QuickMessageCategories.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -202,7 +202,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ntitle:a – по умолчанию.\n"
                 }
             ], 
-            "description": "QuickMessageCategories.list\nВозвращает список глобальных категорий быстрых сообщений, а также персональных категорий, созданных текущим пользователем.\nПараметры\nРезультат\nМассив объектов типа «QuickMessageCategory».\nУровень доступа для ролей\n\n", 
+            "description": "QuickMessageCategories.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -296,7 +296,7 @@
                     "description": "Название категории.\n"
                 }
             ], 
-            "description": "QuickMessageCategories.update\nОбновляет категорию быстрых сообщений.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "QuickMessageCategories.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -363,7 +363,7 @@
                     "description": "ID категории быстрых сообщений.\n"
                 }
             ], 
-            "description": "QuickMessageCategories.show\nВозвращает данные указанной категории быстрых сообщений.\nПараметры\nРезультат\nОбъект типа «QuickMessageCategory».\nУровень доступа для ролей\n\n", 
+            "description": "QuickMessageCategories.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -411,5 +411,5 @@
     ], 
     "kind": "Resource", 
     "name": "QuickMessageCategories", 
-    "description": "QuickMessageCategories\n"
+    "description": ""
 }

@@ -25,7 +25,7 @@
                     "description": "ID лида.\n"
                 }
             ], 
-            "description": "Leads.showRouted\nВозвращает данные указанного лида в контексте маршрутизации.\nМетод работает точно также, как и метод Leads.show, но предоставляет доступ только к лидам, адресованным текущему сотруднику.\nПараметры\nРезультат\nОбъект типа «Lead».\nУровень доступа для ролей\n\n", 
+            "description": "Leads.showRouted\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -95,7 +95,7 @@
                     "description": "ID лида.\n"
                 }
             ], 
-            "description": "Leads.show\nВозвращает данные указанного лида.\nПараметры\nРезультат\nОбъект типа «Lead».\nУровень доступа для ролей\n\n", 
+            "description": "Leads.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -155,7 +155,7 @@
                     "description": "ID лида.\n"
                 }
             ], 
-            "description": "Leads.lock\nБлокирует указанный лид.\nБлокировка устанавливается на ограниченный период времени – 30 минут. По прошествии этого времени блокировка автоматически снимается.\nНельзя заблокировать лид, уже заблокированный другим сотрудником. Повторный вызов метода для лида, заблокированного текущим сотрудником, выполняется успешно. При этом период блокировки пролонгируется еще на 30 минут. \nПараметры\nРезультат\nBoolean. True – блокировка выполнена успешно. False – блокировка отклонена.\nПример ответа\n{\n    \"results\": true\n}\nУровень доступа для ролей\n\n", 
+            "description": "Leads.lock\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -255,7 +255,7 @@
                     "description": "Сортировка результатов.\nВозможные поля сортировки:\ncreated_at,\nupdated_at,\nduration,\nresult.\n"
                 }
             ], 
-            "description": "Leads.listRouted\nВозвращает список лидов в контексте маршрутизации.\nМетод работает точно также, как и метод Leads.list, но предоставляет доступ только к лидам, адресованным текущему сотруднику.\nПараметры\nРезультат\nМассив объектов типа «Lead».\nУровень доступа для ролей\n\n", 
+            "description": "Leads.listRouted\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -359,7 +359,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:a;\nupdated_at:a;\nduration:a;\nresult:a.\n"
                 }
             ], 
-            "description": "Leads.list\nВозвращает список лидов.\nПараметры\nРезультат\nМассив объектов типа «Lead».\nУровень доступа для ролей\n\n", 
+            "description": "Leads.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -423,7 +423,7 @@
                     "description": "ID лида.\n"
                 }
             ], 
-            "description": "Leads.unlock\nСнимает блокировку с указанного лида.\nСнять блокировку может только тот сотрудник, который ее поставил. Вызов метода для незаблокированного адресованного лида выполняется успешно.\nБлокировки снимаются автоматически через 30 минут.\nПараметры\nРезультат\nBoolean. True – снятие блокировки выполнено успешно. False – операция отклонена.\nПример ответа\n{\n    \"results\": true\n}\nУровень доступа для ролей\n\n", 
+            "description": "Leads.unlock\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -493,7 +493,7 @@
                     "description": "ID лида.\n"
                 }
             ], 
-            "description": "Leads.setCompleted\nУстанавливает признак обработанности (result = completed) указанного лида.\nЕсли указанный лид уже обработан, то вызов метода НЕ приведет к изменению его свойств. При этом результат выполнения метода будет такой же, как если бы операция выполнилась успешно.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Leads.setCompleted\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -620,7 +620,7 @@
                     "description": "ID отдела.\n"
                 }
             ], 
-            "description": "Leads.add\nДобавляет новый лид.\nЛид, созданный с помощью этого получает type = chat.\nПараметры\nРезультат\nОбъект типа «Lead».\nУровень доступа для ролей\n\n", 
+            "description": "Leads.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -668,5 +668,5 @@
     ], 
     "kind": "Resource", 
     "name": "Leads", 
-    "description": "Leads\n"
+    "description": ""
 }

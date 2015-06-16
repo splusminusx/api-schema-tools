@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию;\nupdated_at:d;\nduration:a, duration:d;\nanswer_time:a, answer_time:d;\nresult:a, result:d.\n"
                 }
             ], 
-            "description": "Сalls.list\nВозвращает список звонков.\nПараметры\nРезультат\nМассив объектов типа «Call».\nУровень доступа для ролей\n\n", 
+            "description": "Сalls.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID звонка.\n"
                 }
             ], 
-            "description": "Сalls.show\nВозвращает данные указанного звонка.\nПараметры\nРезультат\nОбъект типа «Call».\nУровень доступа для ролей\n\n", 
+            "description": "Сalls.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -177,5 +177,5 @@
     ], 
     "kind": "Resource", 
     "name": "Сalls", 
-    "description": "Сalls\n"
+    "description": ""
 }

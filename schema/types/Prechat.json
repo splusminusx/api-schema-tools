@@ -64,5 +64,5 @@
             "description": "Дополнительные свойства поля. Зависит от типа.\nОбязательное для field_type=list и field_type=mask.\n"
         }
     ], 
-    "description": "Prechat\nПречат-поле.\nТаблица 63. Поля пречат-поля\n\n"
+    "description": "Пречат-поле.\n\n"
 }

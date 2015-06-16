@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Products.list\nВозвращает список продуктов клиента, в том числе и ранее подключенных, если они есть в базе.\nПараметры\nРезультат\nМассив объектов типа «Product».\nУровень доступа для ролей\n\n", 
+            "description": "Products.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID продукта.\n"
                 }
             ], 
-            "description": "Products.show\nВозвращает данные указанного продукта клиента.\nПараметры\nРезультат\nОбъект типа «Product».\nУровень доступа для ролей\n\n", 
+            "description": "Products.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -177,5 +177,5 @@
     ], 
     "kind": "Resource", 
     "name": "Products", 
-    "description": "Products\n"
+    "description": ""
 }

@@ -45,7 +45,7 @@
                     "description": "По умолчанию – 0.\n"
                 }
             ], 
-            "description": "EmployeeChats.list\nВозвращает список межоператорских чатов.\nМежоператорским чатом считается набор сообщений между двумя операторами в пределах указанного периода времени.\nПараметры\nРезультат\nМассив объектов со следующими полями:\n\nПример\ncurl https://api.livetex.ru/v2/employeechats \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"total\": 1,\n    \"results\": [\n        {\n            \"last_message_at\": \"2012-12-07T09:14:57+04:00\",\n            \"last_message_text\": \"Спасибо за консультацию. Пока!\",\n            \"employees\":[\n                {\n                    \"id\": \"123456\",\n                    \"first_name\": \"Иван\",\n                    \"last_name\": \"Давыдов\"\n                },\n                {\n                    \"id\": \"123457\",\n                    \"first_name\": \"Елена\",\n                    \"last_name\": \"Изосимова\"\n                }\n            ],\n            message_count: 10\n        }\n    ]\n}\n\nУровень доступа для ролей\n\n\n", 
+            "description": "EmployeeChats.list\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -90,5 +90,5 @@
     ], 
     "kind": "Resource", 
     "name": "EmployeeChats", 
-    "description": "EmployeeChats\n"
+    "description": ""
 }

@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "Periods.list\nВозвращает список периодов.\nПараметры\nРезультат\nМассив объектов типа «Period».\nУровень доступа для ролей\n\n", 
+            "description": "Periods.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -129,7 +129,7 @@
                     "description": "ID периода.\n"
                 }
             ], 
-            "description": "Periods.update\nОбновляет данные указанного периода.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "Periods.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -174,5 +174,5 @@
     ], 
     "kind": "Resource", 
     "name": "Periods", 
-    "description": "Periods\n"
+    "description": ""
 }

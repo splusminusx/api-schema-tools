@@ -55,7 +55,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "VATInvoices.list\nВозвращает список счетов-фактур.\nПараметры\nРезультат\nМассив объектов типа «VATInvoice».\nУровень доступа для ролей\n\n", 
+            "description": "VATInvoices.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -107,5 +107,5 @@
     ], 
     "kind": "Resource", 
     "name": "VATInvoices", 
-    "description": "VATInvoices\n"
+    "description": ""
 }

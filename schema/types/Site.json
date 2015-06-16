@@ -320,5 +320,5 @@
             "description": "Дата создания.\n"
         }
     ], 
-    "description": "Site\nСайт.\nТаблица 79. Поля сайта\n\nКонтроллер: Sites.\n"
+    "description": "Сайт.\n\nКонтроллер: Sites.\n"
 }

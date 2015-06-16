@@ -65,7 +65,7 @@
                     "description": "Адрес электронной почты.\n"
                 }
             ], 
-            "description": "MailBoxes.add\nДобавляет новый почтовый ящик.\nПараметры\nРезультат\nОбъект типа «MailBox».\nУровень доступа для ролей\n\n", 
+            "description": "MailBoxes.add\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -125,7 +125,7 @@
                     "description": "ID почтового ящика.\n"
                 }
             ], 
-            "description": "MailBoxes.delete\nУдаляет указанный почтовый ящик.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "MailBoxes.delete\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -222,7 +222,7 @@
                     "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию.\n"
                 }
             ], 
-            "description": "MailBoxes.list\nВозвращает список почтовых ящиков.\nПараметры\nРезультат\nМассив объектов типа «MailBox».\nУровень доступа для ролей\n\n", 
+            "description": "MailBoxes.list\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Generic", 
@@ -346,7 +346,7 @@
                     "description": "ID почтового ящика.\n"
                 }
             ], 
-            "description": "MailBoxes.update\nОбновляет данные указанного почтового ящика.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "description": "MailBoxes.update\n", 
             "is_deprecated": false, 
             "result_type": null, 
             "permissions": [
@@ -413,7 +413,7 @@
                     "description": "ID почтового ящика.\n"
                 }
             ], 
-            "description": "MailBoxes.show\nВозвращает данные указанного почтового ящика.\nПараметры\nРезультат\nОбъект типа «MailBox».\nУровень доступа для ролей\n\n", 
+            "description": "MailBoxes.show\n", 
             "is_deprecated": false, 
             "result_type": {
                 "kind": "Reference", 
@@ -461,5 +461,5 @@
     ], 
     "kind": "Resource", 
     "name": "MailBoxes", 
-    "description": "MailBoxes\n"
+    "description": ""
 }

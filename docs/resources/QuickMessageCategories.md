@@ -2,13 +2,13 @@
 # QuickMessageCategories
 
 ## Описание ресурса
-QuickMessageCategories<br/>
+
 # Методы
 
 ## add
 
 ### Описание метода
-QuickMessageCategories.add<br/>Добавляет новую категорию быстрых сообщений.<br/>Параметры<br/>Результат<br/>Объект типа «QuickMessageCategory».<br/>Уровень доступа для ролей<br/><br/>
+QuickMessageCategories.add<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -18,7 +18,7 @@ QuickMessageCategories.add<br/>Добавляет новую категорию 
 |*site_id*|False|[numeric](/docs/types/numeric.md)|ID сайт.<br/>Должен быть указан, если is_global = true.<br/>|
 |*title*|True|[string](/docs/types/string.md)|Название категории.<br/>|
 
-### Резудьтат
+### Результат
 [QuickMessageCategory](/docs/types/QuickMessageCategory.md)
 ### Доступы к методу
 
@@ -28,7 +28,7 @@ QuickMessageCategories.add<br/>Добавляет новую категорию 
 ## show
 
 ### Описание метода
-QuickMessageCategories.show<br/>Возвращает данные указанной категории быстрых сообщений.<br/>Параметры<br/>Результат<br/>Объект типа «QuickMessageCategory».<br/>Уровень доступа для ролей<br/><br/>
+QuickMessageCategories.show<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -36,7 +36,7 @@ QuickMessageCategories.show<br/>Возвращает данные указанн
 |*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
 |*id*|True|[numeric](/docs/types/numeric.md)|ID категории быстрых сообщений.<br/>|
 
-### Резудьтат
+### Результат
 [QuickMessageCategory](/docs/types/QuickMessageCategory.md)
 ### Доступы к методу
 
@@ -46,7 +46,7 @@ QuickMessageCategories.show<br/>Возвращает данные указанн
 ## list
 
 ### Описание метода
-QuickMessageCategories.list<br/>Возвращает список глобальных категорий быстрых сообщений, а также персональных категорий, созданных текущим пользователем.<br/>Параметры<br/>Результат<br/>Массив объектов типа «QuickMessageCategory».<br/>Уровень доступа для ролей<br/><br/>
+QuickMessageCategories.list<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -57,7 +57,7 @@ QuickMessageCategories.list<br/>Возвращает список глобаль
 |*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значение:<br/>title:a – по умолчанию.<br/>|
 |*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
 
-### Резудьтат
+### Результат
 Array.<[QuickMessageCategory](/docs/types/QuickMessageCategory.md)>
 ### Доступы к методу
 
@@ -67,7 +67,7 @@ Array.<[QuickMessageCategory](/docs/types/QuickMessageCategory.md)>
 ## update
 
 ### Описание метода
-QuickMessageCategories.update<br/>Обновляет категорию быстрых сообщений.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
+QuickMessageCategories.update<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
@@ -77,7 +77,7 @@ QuickMessageCategories.update<br/>Обновляет категорию быст
 |*id*|True|[numeric](/docs/types/numeric.md)|ID категории быстрых сообщений.<br/>|
 |*title*|False|[string](/docs/types/string.md)|Название категории.<br/>|
 
-### Резудьтат
+### Результат
 None
 ### Доступы к методу
 
@@ -87,14 +87,14 @@ None
 ## delete
 
 ### Описание метода
-QuickMessageCategories.delete<br/>Удаляет указанную категорию быстрых сообщений.<br/>Параметры<br/>Результат<br/>Метод ничего не возвращает.<br/>Уровень доступа для ролей<br/><br/>
+QuickMessageCategories.delete<br/>
 ### Поля
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
 |*id*|True|[numeric](/docs/types/numeric.md)|ID категории быстрых сообщений.<br/>|
 
-### Резудьтат
+### Результат
 None
 ### Доступы к методу
 
