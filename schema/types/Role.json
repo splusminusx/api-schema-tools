@@ -1,0 +1,78 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Role", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "code", 
+            "description": "Код роли.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "description", 
+            "description": "Описание роли.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "title", 
+            "description": "Название роли.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_default", 
+            "description": "Признак роли, назначаемой по умолчанию при создании нового сотрудника.\nВ аккаунте может существовать только одна роль с is_default = true.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_admin", 
+            "description": "Признак роли со следующими характеристиками:\nМожет быть только один сотрудник с такой ролью.\nСотрудник с такой ролью не может быть удален или заблокирован.\nСотруднику с такой ролью нельзя изменить роль.\nРоль имеет доступ ко всем объектам системы вне зависимости от значения настроек managed_departments и managed_sites.\nВ аккаунте может существовать только одна роль с is_admin = true.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_full_by_default", 
+            "description": "Если true, то при включении роли для сотрудника, поля managed_departments и managed_sites автоматически заполняются всеми сайтами и всеми отделами. В дальнейшем при добавлении сайта или отдела, он автоматически попадает в соответствующее поле сотрудника.\nЕсли false, то при включении роли для сотрудника, поля managed_departments и managed_sites автоматически сбрасываются в пустое значение. В дальнейшем при добавлении сайта или отдела он НЕ попадает в соответствующее поле сотрудника.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Object"
+            }, 
+            "name": "permissions", 
+            "description": "Объект, содержащий перечень методов, соответствующих уровней разрешений и списка полей сущностей доступных в рамках этого метода.\nВозможные значения уровней разрешений (level):\nnone – доступ запрещен;\nuser – только объекты текущего пользователя;\nmanaged – объекты, связанные с отделами и сайтами, указанными в полях managed_departments и managed_sites соответственно.\nrouted – объекты типа чат, звонок или лид, адресованные на сотрудника.\nfull – все объекты.\nСписок доступных полей (allowed_fields) может быть 2-х типов:\nстрока со значением «all» – доступны все поля.\nМассив строк – названий полей сущности или параметров метода.\nПример фрагмента объекта permissions:\n\"Employees\" : {\n    \"list\" : {\n        \"level\": \"user\",\n        \"allowed_fields\": \"all\"\n    },\n    \"update\" : {\n        \"level\": \"user\",\n        \"allowed_ fields\": [\n            \"first_name\",\n            \"last_name\",\n            \"email\",\n            \"password\",\n            \"phone\",\n            \"photo\"\n         ]\n    }\n}\n"
+        }
+    ], 
+    "description": "Role\nРоль.\nТаблица 77. Поля роли\n\n"
+}

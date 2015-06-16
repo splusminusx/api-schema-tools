@@ -1,0 +1,181 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "list", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "q", 
+                    "description": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID счетов;\npayer_ids – idlist, список ID плательщиков;\nis_bound – boolean, признак связанности счета с каким-либо периодом;\nis_paid – boolean, если указан, то возвращаются счета с соответствующим значением этого признака. \n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset", 
+                    "description": "По умолчанию – 0.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "limit", 
+                    "description": "По умолчанию – 50.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sort", 
+                    "description": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию; \npaid_at:d.\n"
+                }
+            ], 
+            "description": "Invoices.list\nВозвращает список выставленных счетов.\nПараметры\nРезультат\nМассив объектов типа «Invoice».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Invoice"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "show", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID счета\n"
+                }
+            ], 
+            "description": "Invoices.show\nВозвращает данные указанного счета.\nПараметры\nРезультат\nОбъект типа «Invoice».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "Invoice"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "Invoices", 
+    "description": "Invoices\n"
+}

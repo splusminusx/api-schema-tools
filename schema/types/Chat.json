@@ -1,0 +1,334 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Chat", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Object"
+            }, 
+            "name": "visitor_variables", 
+            "description": "Объект с переменными посетителя на момент создания чата.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "rem_transfer", 
+            "description": "Признак \"Ручной перевод\".\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Message"
+            }, 
+            "name": "first_message", 
+            "description": "Первое сообщение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_contact_info_exist", 
+            "description": "Признак присутствия контактной информации в сообщениях чата.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Visitor"
+            }, 
+            "name": "visitor", 
+            "description": "Посетитель.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "rem_lost_in_queue", 
+            "description": "Признак \"Потерянный в очереди\".\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Site"
+            }, 
+            "name": "site", 
+            "description": "Сайт.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "result", 
+            "description": "Итог.\nВозможные значения:\nmissed – пропущенный,\ncompleted – состоявшийся.\ntransfer_manual – передан вручную\nransfer_auto – передан автоматически\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "duration", 
+            "description": "Длительность чата в секундах, включая answer_time и queue_time.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID диалога.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_closed", 
+            "description": "Признак завершённого чата.\nУстанавливается, когда оператор удалил посетителя из панели активных чатов в ПО \"Пульт оператора\".\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Object"
+                }
+            }, 
+            "name": "prechats_chat", 
+            "description": "Пречат поля, видимые в Пульте оператора.\nЭти поля могут быть настроены в Личном кабинете. В этом случае их значение указывает посетитель при старте чата.\nКроме того, пречат поля могут быть программно определены в параметрах chatAttributes методов Client API: .\nЗначение поля – массив объектов, каждый из которых имеет 2 ключа: name и value, содержащие соответственно имя и значение пречат поля.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "rem_long_answer", 
+            "description": "Признак \"Долгий ответ\".\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "visitor_vote", 
+            "description": "Оценка посетителя.\nВозможные значения:\npositive – положительная оценка,\nnegative – отрицательная оценка,\nundefined – посетитель не поставил оценку.\nВНИМАНИЕ!\nПосетитель может поставит только одну оценку в обращении. И, вне зависимости от того, во время какого чата она установлена, ее получит хронологически первый чат в обращении. Все остальные чаты будут без оценки.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Department"
+            }, 
+            "name": "department", 
+            "description": "Отдел, в контексте которого инициировано обращение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "queue_time", 
+            "description": "Время в секундах, проведенное посетителем в очереди.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "first_answer_time", 
+            "description": "Время в секундах, через которое оператор ответил на первое сообщение посетителя.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "ConversationEvents"
+                }
+            }, 
+            "name": "events", 
+            "description": "Список событий обращения в хронологическом порядке за время чата.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Object"
+                }
+            }, 
+            "name": "prechats_hidden", 
+            "description": "Скрытые пречат поля. В Пульте оператора они не отображаются.\nПречат поля этого типа могут быть программно определены в параметрах hiddenAttributes методов Client API: .\nЗначение поля – массив объектов, каждый из которых имеет 2 ключа: name и value, содержащие соответственно имя и значение пречат поля.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "EmployeeRemark"
+            }, 
+            "name": "employee_remark", 
+            "description": "Оценка сотрудника.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_managed", 
+            "description": "True, если чат входит в число своих чатов сотрудника, вызывающего метод.\nЭто признак доступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "rem_empty", 
+            "description": "Признак \"Отсеянный\".\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "message_count", 
+            "description": "Количество сообщений.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "name": "employee", 
+            "description": "Сотрудник.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "rem_auto", 
+            "description": "Признак \"Автоматический перевод\". \n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Message"
+                }
+            }, 
+            "name": "messages", 
+            "description": "Список сообщений в хронологическом порядке.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Conversation"
+            }, 
+            "name": "conversation", 
+            "description": "Обращение, в рамках которого инициирован чат.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "answer_time_avg", 
+            "description": "Среднее время в секундах ответа оператора на вопросы посетителя в чате.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "callback_url", 
+            "description": "Значение настройки Callback URL на момент начала чата.\n"
+        }
+    ], 
+    "description": "Chat\nЧат – текстовый диалог между конкретным сотрудником и посетителем.\nТаблица 19. Поля чата\n\nКонтроллер: Сhats.\n"
+}

@@ -1,0 +1,324 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Site", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "DepartmentSiteBinding"
+                }
+            }, 
+            "name": "department_site_bindings", 
+            "description": "Список связей сайта с отделами.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_lead", 
+            "description": "Включение/выключение функциональности генератора лидов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "OfflineFormSettings"
+            }, 
+            "name": "offline_form_settings", 
+            "description": "Настройки офлайн формы.\nDEPRECATED!\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "SiteXWidgetSettings"
+            }, 
+            "name": "x_widget_settings", 
+            "description": "Настройки продукта «X-widget».\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_site_prechats", 
+            "description": "Признак использования пречат-полей сайта.\nЕсли false, то будут использоваться пречаты из связей отделов с сайтом.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID сайта.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Prechat"
+                }
+            }, 
+            "name": "prechats_chat", 
+            "description": "Массив пречат-полей.\nМаксимум 2 элемента.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_comlaint", 
+            "description": "Включение/выключение жалоб.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "HoldRule"
+            }, 
+            "name": "hold_rule", 
+            "description": "Сценарий удержания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_mobile", 
+            "description": "Включение/выключение мобильного вида виджета.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "SiteWidgetSettings"
+            }, 
+            "name": "widget_settings", 
+            "description": "Настройки виджета.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Prechat"
+                }
+            }, 
+            "name": "prechats_lead", 
+            "description": "Массив пречат-полей.\nМаксимум 2 элемента.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "email"
+            }, 
+            "name": "complaint_email", 
+            "description": "Адрес электронной почты, на который будут отправляться нотификации о поступлении новой жалобы.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_hidden_offline", 
+            "description": "Скрывать ярлык, если сотрудники офлайн.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_vote", 
+            "description": "Включение/выключение функциональности оценки чата посетителем.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_custom_buttons", 
+            "description": "Признак заказного дизайна кнопок.\nЕсли true, то изменение некоторых визуальных настроек кнопок чата и звонка может не иметь должного результата, поскольку соответствующий аспект внешнего вида переопределяются заказным дизайном.\nЭто признак доступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "ChatWelcomeSettings"
+            }, 
+            "name": "chat_welcome_settings", 
+            "description": "Настройки окна приветствия.\nDEPRECATED!\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "SiteCallSettings"
+            }, 
+            "name": "call_settings", 
+            "description": "Звонковые настройки сайта.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "ChatFormSettings"
+            }, 
+            "name": "chat_form_settings", 
+            "description": "Настройки ярлыка и окна чата.\nDEPRECATED!\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_deleted", 
+            "description": "Признак удаленного объекта.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "url", 
+            "description": "Адрес сайта.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_callback", 
+            "description": "Включение/выключение функциональности «Перезвоните мне».\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Employee"
+                }
+            }, 
+            "name": "employees", 
+            "description": "Список сотрудников, связанных с данным сайтом.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "LeadFormSettings"
+            }, 
+            "name": "lead_form_settings", 
+            "description": "Настройки формы генератора лидов.\nDEPRECATED!\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_managed", 
+            "description": "True, если сайт входит в число своих сайтов сотрудника, вызывающего метод.\nЭто признак доступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "OfflineMailSettings"
+            }, 
+            "name": "offline_mail_settings", 
+            "description": "Настройки офлайн почты.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "CallLabelSettings"
+            }, 
+            "name": "call_label_settings", 
+            "description": "Настройки ярлыка звонка.\nDEPRECATED!\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "callback_url", 
+            "description": "Настройка Callback URL.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }
+    ], 
+    "description": "Site\nСайт.\nТаблица 79. Поля сайта\n\nКонтроллер: Sites.\n"
+}

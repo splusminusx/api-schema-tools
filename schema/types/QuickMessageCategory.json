@@ -1,0 +1,78 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "QuickMessageCategory", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_global", 
+            "description": "Признак глобальности категории.\nЕсли true, то категория видна всем сотрудникам. В противном случае - только сотруднику, создавшему категорию.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "title", 
+            "description": "Название категории.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "color", 
+            "description": "Цвет.\nВозможные значения:\ngreen – зеленый;\norange – оранжевый;\nblue – синий;\nred – красный;\npurple – фиолетовый;\ngray – серый;\nrose – розовый;\nblack – черный;\nyellow – желтый;\nwhite – белый.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Site"
+            }, 
+            "name": "site", 
+            "description": "Сайт.\nНе указывается для персональных категорий, созданных сотрудниками (is_global = false). Такие категории не могут быть специфичными для сайтов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID категории быстрых сообщений.\n"
+        }
+    ], 
+    "description": "QuickMessageCategory\nКатегория быстрых сообщений.\nТаблица 67. Поля быстрого сообщения\n\nКонтроллер: QuickMessageCategories.\n"
+}

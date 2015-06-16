@@ -1,0 +1,1236 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "me", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }
+            ], 
+            "description": "Employees.me\nВозвращает данные сотрудника, от учетной записи которого вызывается метод.\nПараметры\nРезультат\nОбъект типа «Employee».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "search", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "text", 
+                    "description": "Подстрока в имени или фамилии сотрудника.\n"
+                }
+            ], 
+            "description": "Employees.search\nВыполняет поиск сотрудника по подстроке в имени или фамилии сотрудника.\nВозвращает первые 20 записей, отсортированные сначала по фамилии, а потом по имени.\nПараметры\nРезультат\nМассив объектов типа «Employee».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Employee"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "setNewPassword", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "password", 
+                    "description": "Новый пароль.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "hash", 
+                    "description": "Одноразовый ключ, отправленный по email, указанному при вызове метода Employees.resetPassword.\n"
+                }
+            ], 
+            "description": "Employees.setNewPassword\nУстанавливает новый пароль.\nМетод не требует аутентификации!\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": []
+        }, 
+        {
+            "kind": "Method", 
+            "name": "show", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сотрудника.\n"
+                }
+            ], 
+            "description": "Employees.show\nВозвращает данные указанного сотрудника.\nПараметры\nРезультат\nОбъект типа «Employee».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "register", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "first_name", 
+                    "description": "Полное имя.\nЗначение будет записано в поле first_name соответствующей сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "referral", 
+                    "description": "Идентификатор аффилированного партнера.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "site_name", 
+                    "description": "Адрес сайта, на котором планируется использовать сервис LiveTex.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "<RegistrationPartnerData>"
+                    }, 
+                    "name": "partner_data", 
+                    "description": "Дополнительные поля, связанные с регистрацией, важные для партнерского отдела.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "invite_id", 
+                    "description": "Идентификатор приглашения.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "phone"
+                    }, 
+                    "name": "phone", 
+                    "description": "Телефон.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "password", 
+                    "description": "Пароль.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "<RegistrationMarketingData >"
+                    }, 
+                    "name": "marketing_data", 
+                    "description": "Дополнительные поля, связанные с регистрацией, важные для отдела маркетинга.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "email"
+                    }, 
+                    "name": "email", 
+                    "description": "Адрес электронной почты.\n"
+                }
+            ], 
+            "description": "Employees.register\nСоздает новый аккаунт LiveTex.\nПри создании аккаунта автоматически создается учетная запись сотрудника. Ей назначается роль в признаком is_admin = true из числа ролей доступных в аккаунте.\nМетод не требует аутентификации!\nПараметры\nРезультат\nСтроковый идентификатор аккаунта LiveTex (LiveTex ID).\nУровень доступа для ролей\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": []
+        }, 
+        {
+            "kind": "Method", 
+            "name": "list", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "q", 
+                    "description": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID сотрудников;\ndepartment_ids – idlist, список ID отделов;\nfirst_name;\nlast_name;\nemail;\nrole;\nis_active;\nstate – enum, состояние сотрудника;\nis_managed – boolean, признак своего сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset", 
+                    "description": "По умолчанию – 0.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "limit", 
+                    "description": "По умолчанию – 50.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sort", 
+                    "description": "Сортировка результатов.\nВозможные значения:\nlast_name:a – по умолчанию, last_name:d;\nfirst_name:a, first_name:d;\nis_active:a, is_active:d;\ncreated_at:a, created_at:d;\nupdated_at:a, updated_at:d.\n"
+                }
+            ], 
+            "description": "Employees.list\nВозвращает список сотрудников.\nПараметры\nРезультат\nМассив объектов типа «Employee».\nПример\n{\n    \"total\": 2,\n    \"results\": [\n        {\n            \"id\":10000087,\n            \"first_name\":\"Иван\",\n            \"last_name\":\"Петров\"\n        },\n        {\n            \"id\":10000012,\n            \"first_name\":\"Ольга\",\n            \"last_name\":\"Соколова\"\n        }\n    ]\n}\n\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Employee"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "update", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "last_name", 
+                    "description": "Фамилия сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "chat_limit", 
+                    "description": "Количество одновременно обрабатываемых чатов.\n0 - отсутствие ограничения.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "photo", 
+                    "description": "Фотография сотрудника.\nИзображение в формате JPEG, GIF или PNG с размерами не менее 60x70px и не более 2560x2560px.\nМаксимальный размер файла – 5 MB.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "role_code", 
+                    "description": "Код роли.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_call", 
+                    "description": "Включение/выключение функциональности звонков.\nПринимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "phone_forward_number", 
+                    "description": "Номер для переадресации на телефон.\nОбязательно при is_phone_forward=true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "first_name", 
+                    "description": "Имя сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "password", 
+                    "description": "Новый пароль.\nЕсли не указано или пусто, то старый пароль не меняется.\nМинимальная длина – 6 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_sip_forward", 
+                    "description": "Включение/выключение переадресации на SIP.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "managed_department_ids", 
+                    "description": "Список, через запятую, ID отделов, входящих в область видимости сотрудника.\nВозможно указание удаленных отделов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_lead_assigned", 
+                    "description": "Признак закрепления за оператором, созданных им лидов из чатов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "email"
+                    }, 
+                    "name": "email", 
+                    "description": "Адрес электронной почты.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sip_forward_number", 
+                    "description": "Номер для переадресации на SIP.\nОбязательно при is_sip_forward=true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_cobrowse", 
+                    "description": "Включение/выключение функции «Виртуальный ассистент».\nПринимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Признак активности учетной записи сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "phone"
+                    }, 
+                    "name": "phone", 
+                    "description": "Телефон сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "managed_site_ids", 
+                    "description": "Список, через запятую, ID сайтов, входящих в область видимости сотрудника.\nВозможно указание удаленных сайтов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_first_steps_passed", 
+                    "description": "Признак завершения первичного обучения.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "department_ids", 
+                    "description": "Список, через запятую, ID отделов, в которые входит сотрудник.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_lead_notify", 
+                    "description": "Включение/выключение нотификации на электронную почту о поступлении новых лидов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_phone_forward", 
+                    "description": "Включение/выключение переадресации на телефон.\n"
+                }
+            ], 
+            "description": "Employees.update\nИзменяет данные указанного сотрудника.\nВНИМАНИЕ!\nПри изменении роли сотрудника (role_code) с роли с is_full_by_default = true на роль с is_full_by_default = false поля managed_sites и managed_departments устанавливаются в пустое значение.\nПри изменении роли сотрудника (role_code) с роли с is_full_by_default = false на роль с is_full_by_default = true в поля managed_sites и managed_departments вносятся все сайты и отделы, включая удаленные.\nМетод имеет дополнительные ограничения на изменение данных других сотрудников. См. комментарии в таблице «Уровень доступа для ролей» ниже по тексту.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": "Для самого себя разрешено изменении всех полей, за исключением:"
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Только для своих сотрудников, за исключением сотрудника с ролью, имеющей признак is_admin = true."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для сотрудников с ролью «Оператор» разрешено изменении всех полей за исключением:"
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Только для своих сотрудников, за исключением сотрудника с ролью, имеющей признак is_admin = true."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "Разрешено изменение только самого себя и только следующих полей:"
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": "Для самого себя разрешено изменении всех полей, за исключением:"
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "registerAddPromo", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "promo_code", 
+                    "description": "Промо код.\n"
+                }
+            ], 
+            "description": "Employees.registerAddPromo\nДобавляет промо-код к только что созданному аккаунту.\nЭтот метод можно вызвать хронологически между Employees.register и Employees.confirm. \nМетод не требует аутентификации!\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": []
+        }, 
+        {
+            "kind": "Method", 
+            "name": "add", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sip_forward_number", 
+                    "description": "Номер для переадресации на SIP.\nОбязательно при is_sip_forward=true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "first_name", 
+                    "description": "Имя сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "last_name", 
+                    "description": "Фамилия сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_cobrowse", 
+                    "description": "Включение/выключение функции «Виртуальный ассистент».\nПринимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.\nПо умолчанию – true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "chat_limit", 
+                    "description": "Количество одновременно обрабатываемых чатов.\nПо умолчанию – 0, что означает отсутствие ограничения.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "photo", 
+                    "description": "Фотография сотрудника.\nИзображение в формате JPEG, GIF или PNG с размерами не менее 60x70px и не более 2560x2560px.\nМаксимальный размер файла – 5 MB.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "department_ids", 
+                    "description": "Список, через запятую, ID отделов, в которые входит сотрудник.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Признак активности учетной записи сотрудника.\nПо умолчанию – true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_sip_forward", 
+                    "description": "Включение/выключение переадресации на SIP.\nПо умолчанию – false.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_lead_notify", 
+                    "description": "Включение/выключение нотификации на электронную почту о поступлении новых лидов.\nПо умолчанию – false.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "phone"
+                    }, 
+                    "name": "phone", 
+                    "description": "Телефон сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "managed_site_ids", 
+                    "description": "Список, через запятую, ID сайтов, входящих в область видимости сотрудника.\nВозможно указание удаленных сайтов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "managed_department_ids", 
+                    "description": "Список, через запятую, ID отделов, входящих в область видимости сотрудника.\nВозможно указание удаленных отделов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_lead_assigned", 
+                    "description": "Признак закрепления за оператором, созданных им лидов из чатов.\nПо умолчанию – false.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_call", 
+                    "description": "Включение/выключение функциональности звонков.\nПринимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.\nПо умолчанию – false.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "phone_forward_number", 
+                    "description": "Номер для переадресации на телефон.\nОбязательно при is_phone_forward=true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "password", 
+                    "description": "Пароль.\nМинимальная длина – 6 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "role_code", 
+                    "description": "Код роли. По умолчанию назначается роль, имеющая признак is_default = true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "email"
+                    }, 
+                    "name": "email", 
+                    "description": "Адрес электронной почты.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_phone_forward", 
+                    "description": "Включение/выключение переадресации на телефон.\nПо умолчанию – false.\n"
+                }
+            ], 
+            "description": "Employees.add\nСоздает учетную запись сотрудника.\nПараметры\nРезультат\nОбъект типа «Employee».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "В значении поля department_ids принимаются во внимание только свои отделы."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "В значении поля department_ids принимаются во внимание только свои отделы."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "В значении поля department_ids принимаются во внимание только свои отделы."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "registerConfirm", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "hash", 
+                    "description": "Ключ активации, отправленный по email, указанному при вызове метода Employees.register.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.\n"
+                }
+            ], 
+            "description": "Employees.registerConfirm\nАктивирует новый аккаунт LiveTex и неявно выполняет аутентификацию пользователя.\nМетод не требует аутентификации!\nПараметры\nРезультат\nОбъект со следующими полями:\nУровень доступа для ролей\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": []
+        }, 
+        {
+            "kind": "Method", 
+            "name": "batchUpdate", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sip_forward_number", 
+                    "description": "Номер для переадресации на SIP.\nОбязательно при is_sip_forward=true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_cobrowse", 
+                    "description": "Включение/выключение функции «Виртуальный ассистент».\nПринимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "chat_limit", 
+                    "description": "Количество одновременно обрабатываемых чатов.\n0 - отсутствие ограничения.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_sip_forward", 
+                    "description": "Включение/выключение переадресации на SIP.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Признак активности учетной записи сотрудника.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "ids", 
+                    "description": "Список, через запятую, ID сотрудников.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_lead_notify", 
+                    "description": "Включение/выключение нотификации на электронную почту о поступлении новых лидов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_call", 
+                    "description": "Включение/выключение функциональности звонков.\nПринимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "phone_forward_number", 
+                    "description": "Номер для переадресации на телефон.\nОбязательно при is_phone_forward=true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_phone_forward", 
+                    "description": "Включение/выключение переадресации на телефон.\n"
+                }
+            ], 
+            "description": "Employees.batchUpdate\nВыполняет пакетное изменение данных указанных сотрудников.\nМетод вызывает Employees.update для каждого ID сотрудника и передает указанные параметры.\nПараметры\nРезультат\nМассив объектов c ID, кодами и сообщениями об ошибке в порядке перечисления ID сотрудников в запросе.\nПример\ncurl https://api.livetex.ru/v2/employees/batchupdate \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n-d \"ids=123,456,789\" \\\n-d \"is_active=false\"\n\n{\n    \"results\": [\n        {\n            \"id\": \"123\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"456\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"789\",\n            \"code\": 403,\n            \"message\": \"Forbidden\"\n        }\n    ]\n}\n\nУровень доступа для ролей\nВНИМАНИЕ! При изменении конкретного сотрудника работает уровень доступа метода Employees.update в соответствующих условиях.\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "resetPassword", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "email", 
+                    "description": "Адрес электронной почты сотрудника.\n"
+                }
+            ], 
+            "description": "Employees.resetPassword\nИнициирует процедуру установки нового пароля для указанного адреса электронной почты. Отправляется письмо с уникальной ссылкой на страницу ввода нового пароля.\nМетод не требует аутентификации!\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": []
+        }, 
+        {
+            "kind": "Method", 
+            "name": "delete", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сотрудника.\n"
+                }
+            ], 
+            "description": "Employees.delete\nУдаляет указанного сотрудника.\nВНИМАНИЕ! При удалении сотрудника, удаляются также отделы, в которых он был единственным сотрудником.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": "За исключением самого себя."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "За исключением самого себя."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "За исключением самого себя."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": "За исключением самого себя."
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "Employees", 
+    "description": "Employees\n"
+}

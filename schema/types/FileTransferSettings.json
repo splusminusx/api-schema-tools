@@ -1,0 +1,18 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "FileTransferSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Включение/выключение функции «Передача файлов».\n"
+        }
+    ], 
+    "description": "FileTransferSettings\nНастройки функции «Передача файлов».\nТаблица 43. Поля настроек функции «Передача файлов»\n\n"
+}

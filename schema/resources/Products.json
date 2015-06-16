@@ -1,0 +1,181 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "list", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "q", 
+                    "description": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID продуктов;\nproduct_state – enum, статус продукта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset", 
+                    "description": "По умолчанию – 0.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "limit", 
+                    "description": "По умолчанию – 50.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sort", 
+                    "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
+                }
+            ], 
+            "description": "Products.list\nВозвращает список продуктов клиента, в том числе и ранее подключенных, если они есть в базе.\nПараметры\nРезультат\nМассив объектов типа «Product».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Product"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "show", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID продукта.\n"
+                }
+            ], 
+            "description": "Products.show\nВозвращает данные указанного продукта клиента.\nПараметры\nРезультат\nОбъект типа «Product».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "Product"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "Products", 
+    "description": "Products\n"
+}

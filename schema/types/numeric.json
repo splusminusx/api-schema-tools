@@ -1,0 +1,6 @@
+{
+    "is_deprecated": false, 
+    "kind": "PrimitiveDataType", 
+    "name": "numeric", 
+    "description": "Число.\nВ качестве разделителя целой и дробный частей используется точка.\nНапример:\n12345\n-5432\n12.34\n"
+}

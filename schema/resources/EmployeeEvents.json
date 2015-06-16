@@ -1,0 +1,111 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "list", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "q", 
+                    "description": "Критерий поиска.\nДоступные поля:\nemployee_ids – idlist, список ID сотрудников;\nevent_type;\ncreated_at.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset", 
+                    "description": "По умолчанию – 0.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "limit", 
+                    "description": "По умолчанию – 50.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sort", 
+                    "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
+                }
+            ], 
+            "description": "EmployeeEvents.list\nВозвращает список события сотрудника.\nПараметры\nРезультат\nМассив объектов типа «EmployeeEvent».\nПример\ncurl https://api.livetex.ru/v2/employeeevents?employee_ids=12345 \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n\t\"total\": 2,\n\t\"results\": [\n\t\t{\n\t\t\t\"created_at\": \"2012-12-07T09:14:57+04:00\",\n\t\t\t\"event_type\":\"online\"\n\t\t},\n\t\t{\n\t\t\t\"created_at\": \"2012-12-07T12:34:23+04:00\",\n\t\t\t\"event_type\":\"busy\"\n\t\t},\n\t\t{\n\t\t\t\"created_at\": \"2012-12-07T18:10:13+04:00\",\n\t\t\t\"event_type\":\"offline\"\n\t\t}\n\t]\n}\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "EmployeeEvent"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "События своих сотрудников."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "События своих сотрудников."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "События своих сотрудников."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "Свои данные."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "EmployeeEvents", 
+    "description": "EmployeeEvents\n"
+}

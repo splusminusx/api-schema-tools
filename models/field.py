@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+
 class Field(object):
     def __init__(self, name, datatypename, description, required):
         self._name = name

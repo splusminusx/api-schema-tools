@@ -1,0 +1,148 @@
+{
+    "is_deprecated": true, 
+    "kind": "ComplexDataType", 
+    "name": "OfflineFormSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "confirmation", 
+            "description": "Текст подтверждения по умолчанию. Максимум 180 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "contacts", 
+            "description": "Запрашиваемые контактные данные.\nemail -  запрашивается только email;\nphone – запрашивается только телефон;\nemail_or_phone – запрашивается телефон или email;\nemail_and_phone – запрашивается телефон и email.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "color", 
+            "description": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная,\nyellow – желтая;\nwhite – белая.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "required_fields", 
+            "description": "Обязательность полей при contacts = email_and_phone.\nemail – e-mail;\nphone – телефон;\nemail_and_phone – email и телефон.\nЭто поле обязательно при contacts = email_and_phone.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "welcome", 
+            "description": "Текст приветствия по умолчанию. Максимум 180 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "banner_custom", 
+            "description": "Загруженная баннер для banner_type = custom.\nИзображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.\nПоле обязательно для banner_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "background_custom", 
+            "description": "Загруженный фон для background_type = custom.\nИзображение в формате JPEG, GIF или PNG с размерами 448x605px.\nПоле обязательно для background_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "banner_type", 
+            "description": "Тип баннера.\nВозможные значения:\nnone – без баннера;\ndefault – стандартный баннер;\ncustom – загружаемый баннер.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_custom", 
+            "description": "Признак заказного дизайна офлайн-формы.\nЕсли true, то изменение некоторых настроек может не иметь должного результата, поскольку соответствующий аспект внешнего вида переопределяются заказным дизайном.\nЭто признак доступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "banner_link", 
+            "description": "Ссылка с баннера.\nПоле обязательно для banner_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "confirmation_mobile", 
+            "description": "Текст подтверждения по умолчанию, который отобразится в мобильном браузере. Максимум 180 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "background_typе", 
+            "description": "Тип фона.\nВозможные значения:\nnone – без фона;\ndefault – стандартный фон;\ncustom – загружаемый фон.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "welcome_mobile", 
+            "description": "Текст приветствия по умолчанию, который отобразиться в мобильном браузере. Максимум 180 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+        }
+    ], 
+    "description": "OfflineFormSettings - DEPRECATED\nВНИМАНИЕ! Сущность является устаревшей после ее объединения с LeadFormSettings.\nНастройки офлайн-формы.\nТаблица 56. Настройки офлайн-формы\n\n"
+}

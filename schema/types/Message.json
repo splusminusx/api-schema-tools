@@ -1,0 +1,68 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Message", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "text", 
+            "description": "Текст сообщения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Visitor"
+            }, 
+            "name": "visitor", 
+            "description": "Посетитель, отправивший сообщение.\nЕсли сообщение отправлено оператором, то – null.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_delivered", 
+            "description": "Признак доставленного сообщения до адресата.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "name": "employee", 
+            "description": "Сотрудник, отправивший сообщение.\nЕсли сообщение отправлено посетителем, то – null.\nОдно из полей employee или visitor должно быть указано.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID сообщения.\n"
+        }
+    ], 
+    "description": "Message\nСообщение.\nТаблица 54. Поля сообщения\n\n"
+}

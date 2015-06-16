@@ -1,0 +1,138 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Payer", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Requisites"
+            }, 
+            "name": "requisites", 
+            "description": "Реквизиты плательщика.\nТип реквизитов должен соответствовать payer_type.\nСм. подразделы раздела Requisites.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_recurring", 
+            "description": "Включение/выключение рекуррентных платежей.\nПо умолчанию – false.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "payer_type", 
+            "description": "Тип плательщика.\nВозможные значения:\nru_person – физическое лицо РФ;\nru_legal – юридическое лицо РФ;\nua_person – физическое лицо Украины;\nua_legal – юридическое лицо Украины;\nua_sp – ФОП Украины.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Признак активного плательщика.\nВ один момент времени может быть только один активный плательщик. Таковым всегда является последний созданный плательщик.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата изменения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Contract"
+            }, 
+            "name": "contract", 
+            "description": "Договор.\nЕсли null, то плательщик действует по стандартному договору оферты.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "balance_bonus", 
+            "description": "Остаток на подарочном счете.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "currency"
+            }, 
+            "name": "currency", 
+            "description": "Валюта плательщика.\nУстанавливается для payer_type. Только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "recurring_card", 
+            "description": "4 последние цифры номера карты, зарегистрированной для рекуррентных платежей.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "recurring_order", 
+            "description": "Номер договора на рекуррентные платежи.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "balance", 
+            "description": "Остаток на cчете.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID плательщика.\n"
+        }
+    ], 
+    "description": "Payer\nПлательщик.\nТаблица 60. Поля плательщика\n\n"
+}

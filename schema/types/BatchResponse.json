@@ -1,0 +1,48 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "BatchResponse", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "message", 
+            "description": "Текстовое описание кода ответа\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "code", 
+            "description": "Код ответа.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "id", 
+            "description": "Идентификатор вызова, указанный в одноименном параметре соответствующего BatchRequest.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Object"
+            }, 
+            "name": "results", 
+            "description": "Результат выполнения метода.\n"
+        }
+    ], 
+    "description": "BatchResponse\nРезультат выполнения пакетного запроса.\nТаблица 12. Поля результата выполнения пакетного запроса\n\nВ составе объекта типа BatchResponse могут быть и другие ключи. Подробнее об этом см. в разделе \"1.2.4 Структура и форматы результатов\".\n\n"
+}

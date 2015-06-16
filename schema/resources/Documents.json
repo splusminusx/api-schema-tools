@@ -1,0 +1,111 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "list", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "q", 
+                    "description": "Критерий поиска.\nДоступные поля:\ndoc_type – enum, документа.\nis_bound – boolean, признак связанности документа с каким-либо периодом.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset", 
+                    "description": "По умолчанию – 0.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "limit", 
+                    "description": "По умолчанию – 50.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sort", 
+                    "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию, created_at:a;\n"
+                }
+            ], 
+            "description": "Documents.list\nВозвращает список документов.\nПараметры\nРезультат\nМассив объектов типа «Document».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Document"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "Documents", 
+    "description": "Documents\n"
+}

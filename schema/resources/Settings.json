@@ -1,0 +1,927 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "showFeatureStates", 
+            "fields": [], 
+            "description": "Settings.showFeatureStates\nВозвращает данные о доступности функциональных возможностей на аккаунте.\nПараметры\nМетод не имеет параметров.\nРезультат\nОбъект типа «FeatureStates».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "FeatureStates"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showCobrowseSettings", 
+            "fields": [], 
+            "description": "Settings.showCobrowseSettings\nВозвращает настройки функции «Виртуальный ассистент».\nПараметры\nМетод не имеет параметров.\nРезультат\nОбъект типа «CobrowseSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "CobrowseSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateEmployeeRemarkSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Включение/выключение возможности оценки чатов сотрудниками.\n"
+                }
+            ], 
+            "description": "Settings.updateEmployeeRemarkSettings\nИзменяет настройки функции оценок сотрудника.\nПараметры\nРезультат\nМетодов ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateAcceptanceByEmailSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Включение/выключение отправки актов на электронную почту.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "emails", 
+                    "description": "Список через запятую адресов электронной почты.\n\n"
+                }
+            ], 
+            "description": "Settings.updateAcceptanceByEmailSettings\nИзменяет настройки отправки актов по электронной почте.\nПараметры\nРезультат\nМетодов ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateCobrowseSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Включение/выключение функции «Виртуальный ассистент».\n"
+                }
+            ], 
+            "description": "Settings.updateCobrowseSettings\nИзменяет настройки функции \"Виртуальный ассистент\".\nПараметры\nРезультат\nМетодов ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "show", 
+            "fields": [], 
+            "description": "Settings.show\nВозвращает глобальные настройки.\nПараметры\nМетод не имеет параметров.\nРезультат\nОбъект типа «Settings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "Settings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showAcceptanceByEmailSettings", 
+            "fields": [], 
+            "description": "Settings.showAcceptanceByEmailSettings\nВозвращает настройки отправки актов по электронной почте.\nПараметры\nМетод не имеет параметров.\nРезультат\nОбъект типа «AcceptanceByEmailSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "AcceptanceByEmailSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showCallSettings", 
+            "fields": [], 
+            "description": "Settings.showCallSettings\nВозвращает настройки звонковой функциональности.\nПараметры\nМетод не имеет параметров.\nРезультат\nОбъект типа «CallSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "CallSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateFileTransferSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Включение/выключение функции «Передача файлов».\n"
+                }
+            ], 
+            "description": "Settings.updateFileTransferSettings\nИзменяет настройки функции «Передача файлов».\nПараметры\nРезультат\nМетодов ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showFileTransferSettings", 
+            "fields": [], 
+            "description": "Settings.showFileTransferSettings\nВозвращает настройки функции «Передача файлов».\nПараметры\nМетод не имеет параметров.\nРезультат\nОбъект типа «FileTransferSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "FileTransferSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showTypingIndicatorSettings", 
+            "fields": [], 
+            "description": "Settings.showTypingIndicatorSettings\nВозвращает настройки функции «Подглядывания».\nПараметры\nМетод не имеет параметров.\nРезультат\nОбъект типа «TypingIndicatorSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "TypingIndicatorSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showReportByEmailSettings", 
+            "fields": [], 
+            "description": "Settings.showReportByEmailSettings\nВозвращает настройки отправки отчетов по email.\nПараметры\nМетод не имеет параметров.\nРезультат\nОбъект типа «ReportByEmailSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "ReportByEmailSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateTypingIndicatorSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Включение/выключение функции «Подглядывание».\n"
+                }
+            ], 
+            "description": "Settings.updateTypingIndicatorSettings\nИзменяет настройки функции «Подглядывание».\nПараметры\nРезультат\nМетодов ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateCallSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_forward", 
+                    "description": "Включение/выключение переадресации.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Включение/выключение функциональности звонков.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "forward_sip_host", 
+                    "description": "Имя хоста SIP.\nОбязательно при forward_type=SIP и is_forward=true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "forward_sip_login", 
+                    "description": "Логин для подключения по SIP.\nОбязательно при forward_type=SIP и is_forward=true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "forward_sip_password", 
+                    "description": "Пароль для подключения по SIP.\nОбязательно при forward_type=SIP и is_forward=true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "forward_type", 
+                    "description": "Тип переадресации.\nВозможные значения:\nsip – переадресация на SIP,\nphone – переадресация на телефон.\n"
+                }
+            ], 
+            "description": "Settings.updateCallSettings\nИзменяет настройки звонковой функциональности.\nПараметры\nРезультат\nМетодов ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateReportByEmailSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Включение/выключение отправки отчетов на email.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "period", 
+                    "description": "Периодичность.\nВозможные значения:\ndaily – ежедневно;\nweekly – еженедельно;\nmonthly – ежемесячно.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "emails", 
+                    "description": "Список через запятую адресов электронной почты, на которые следует отправлять отчеты.\nЕсли указана пустая строка, то отчеты отправляться не будут.\n"
+                }
+            ], 
+            "description": "Settings.updateReportByEmailSettings\nИзменяет настройки отправки отчетом по email.\nПараметры\nРезультат\nМетодов ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showEmployeeRemarkSettings", 
+            "fields": [], 
+            "description": "Settings.showEmployeeRemarkSettings\nВозвращает настройки оценок сотрудника.\nПараметры\nМетод не имеет параметров.\nРезультат\nОбъект типа «EmployeeRemarkSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "EmployeeRemarkSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "Settings", 
+    "description": "Settings\n"
+}

@@ -1,0 +1,6 @@
+{
+    "is_deprecated": false, 
+    "kind": "PrimitiveDataType", 
+    "name": "date", 
+    "description": "Дата без времени в формате, соответствующем стандарту ISO 8601.\n\n"
+}

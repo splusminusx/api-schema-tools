@@ -3,19 +3,12 @@ class Resource(object):
         self._name = name
         self._description = description
         self._methods = {}
-        self._permissions = {}
 
     def add_method(self, method):
         self._methods[method.name] = method
 
     def get_method(self, name):
         return self._methods[name]
-
-    def add_permission(self, permission):
-        self._permissions[permission.role] = permission
-
-    def get_permission(self, role):
-        return self._permissions[role]
 
     @property
     def name(self):

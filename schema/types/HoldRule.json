@@ -1,0 +1,96 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "HoldRule", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "title", 
+            "description": "Название сценария удержания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата и время создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Site"
+                }
+            }, 
+            "name": "site", 
+            "description": "Массив сайтов, на которых включен сценарий удержания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата и время последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "transfer_after", 
+            "description": "Интервал в секундах после последнего сообщения, по истечение которого выполнить перенаправление на другого оператора, если указано is_transfer.\nДолжен быть от 5 до 3600 секунд.\nОбязательно, если is_transfer = true.\nПринимается во внимание, только если hold_messages содержит хотя бы один элемент.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_transfer", 
+            "description": "Признак перенаправления на другого оператора после последнего сообщения.\nПринимается во внимание, только если hold_messages содержит хотя бы один элемент.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "HoldMessage"
+                }
+            }, 
+            "name": "hold_messages", 
+            "description": "Массив удерживающих сообщений.\nОт 1 до 3 элементов. \n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID сценария удержания.\n"
+        }
+    ], 
+    "description": "HoldRule\nСценарий удержания.\nТаблица 45. Поля сценария удержания\n\n"
+}

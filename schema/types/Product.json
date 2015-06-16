@@ -1,0 +1,108 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Product", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "begin_at", 
+            "description": "Дата подключения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Offering"
+            }, 
+            "name": "offering", 
+            "description": "Предложение, на котором базируется этот продукт клиента.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "frozen_at", 
+            "description": "Дата последней заморозки.\nПрисутствует только для product_state = frozen.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "product_state", 
+            "description": "Статус основного продукта в периоде.\nВозможные значения:\nexpired – завершен,\nfrozen – заморожен,\nactive – активен,\nwaiting – ждет.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "amount", 
+            "description": "Стоимость покупки в валюте плательщика.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "frozen_till", 
+            "description": "Дата, до которой заморожен продукт (после этого произойдет блокировка). Присутствует только для product_state = frozen.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID продукта клиента.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "expire_at", 
+            "description": "Дата отключения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "quantity", 
+            "description": "Количество ресурсов (например, операторов).\n"
+        }
+    ], 
+    "description": "Product\nПродукт клиента – это приобретенный продукт (тариф, опция).\nТаблица 64. Поля продукта клиента\n"
+}

@@ -1,0 +1,2972 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "updateOfflineMailSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "from_name", 
+                    "description": "Отправитель.\nМаксимум 60 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Включение/выключение использования внешнего почтового ящика.\nЕсли функция выключена, то письма будут отправляться через сервера LiveTex c системными значениями отправителя, темы и подписи.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "signature", 
+                    "description": "Подпись.\nМаксимум 60 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "mailbox_id", 
+                    "description": "ID почтового ящика.\nЕсли указано null, то для отправки почты будут использоваться сервера LiveTex.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "subject", 
+                    "description": "Тема письма.\nМаксимум 60 символов.\n"
+                }
+            ], 
+            "description": "Sites.updateOfflineMailSettings\nИзменяет настройки офлайн почты.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showSiteCallSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.showSiteCallSettings\nВозвращает настройки звонков указанного сайта.\nПараметры\nРезультат\nОбъект типа «SiteCallSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "SiteCallSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "show", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.show\nВозвращает данные указанного сайта.\nПараметры\nРезультат\nОбъект типа «Site».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "Site"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateSiteXWidgetSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "number"
+                    }, 
+                    "name": "interval_end", 
+                    "description": "Конец интервала. Количество секунд от 00:00.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "number"
+                    }, 
+                    "name": "interval_begin", 
+                    "description": "Начало интервала. Количество секунд от 00:00.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Включение/выключение функции на сайте.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Generic", 
+                        "name": "Array", 
+                        "type_parameter": {
+                            "kind": "Reference", 
+                            "name": "numeric"
+                        }
+                    }, 
+                    "name": "days", 
+                    "description": "Массив дней недели, в которые необходимо показывать приглашение к заказу обратного звонка.\nПонедельник – 0, вторник - 1 и т.д.\n"
+                }
+            ], 
+            "description": "Sites.updateSiteXWidgetSettings\nИзменяет настройки продукта «X-widget» для указанного сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateChatFormSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "photo_size", 
+                    "description": "Размер фотографии сотрудника.\nВозможные значения:\nsmall – маленькая, 60x70 пикселей;\nlarge – большая, 100x116 пикселей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset_value", 
+                    "description": "Значение отступа.\nЦелое число в диапазоне:\nот 0 до 100 для offset_type = percent;\nот 0 до 2000 для offset_type = pixel.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color", 
+                    "description": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\nПоле обязательно для color_type = preset.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color_type", 
+                    "description": "Тип указания цветовой схемы.\nВозможные значения:\npreset – стандартная схема;\ncustom – явное указание цветов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "color"
+                    }, 
+                    "name": "color_main", 
+                    "description": "Основной цвет.\nПоле обязательно для color_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_hidden_offline", 
+                    "description": "Скрывать ярлык, если сотрудники офлайн.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "offset_type", 
+                    "description": "Тип отступа.\nВозможные значения:\npixel – в пикселах;\npercent – в процентах.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "background_custom", 
+                    "description": "Загруженный фон для background_type = custom.\nИзображение в формате JPEG, GIF или PNG с размерами 448x605px.\nПоле обязательно для background_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "banner_type", 
+                    "description": "Тип баннера.\nВозможные значения:\nnone – без баннера;\ndefault – стандартный баннер;\ncustom – загружаемый баннер.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "color"
+                    }, 
+                    "name": "color_background", 
+                    "description": "Цвет фона.\nПоле обязательно для color_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "banner_custom", 
+                    "description": "Загруженная баннер для banner_type = custom.\nИзображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.\nПоле обязательно для banner_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "banner_link", 
+                    "description": "Ссылка с баннера.\nПоле обязательно для banner_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "logo_type", 
+                    "description": "Тип логотипа LiveTex.\nВозможные значения:\nanimated – анимированный;\nstatic – статический.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_label_visible", 
+                    "description": "Признак отображения ярлыка.\nПо умолчанию – true.\nЕсли false, ярлык не будет показываться посетителю, даже при наличии доступных операторов.\nЭто признак автоматически устанавливается в true и не может быть изменен, если подключена опция генератора лидов или для сайта включено встроенное окно чата (site.is_embedded_chat == true).\nПризнак is_label_visible связан с полем size. При переключении из false в true поле size устанавливается в значение по умолчанию.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "position", 
+                    "description": "Положение ярлыка.\nВозможные значения:\ntop – сверху;\nright – справа;\nbottom – снизу;\nleft – слева.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "size", 
+                    "description": "Размер ярлыка.\nВозможные значения:\nsmall – маленький, 24x106 пикселей;\nlarge – большой, 40x178 пикселей (по умолчанию).\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "background_typе", 
+                    "description": "Тип фона.\nВозможные значения:\nnone – без фона;\ndefault – стандартный фон;\ncustom – загружаемый фон.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "color"
+                    }, 
+                    "name": "color_text", 
+                    "description": "Цвет текста.\nПоле обязательно для color_type = custom.\n"
+                }
+            ], 
+            "description": "Sites.updateChatFormSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.\nИзменяет настройки окна чата сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": true, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showSiteChatSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.showSiteChatSettings\nВозвращает настройки чата для указанного сайта.\nПараметры\nРезультат\nОбъект типа «SiteChatSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "SiteChatSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showChatWelcomeSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.showChatWelcomeSettings – DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.\nВозвращает настройки окна приветствия указанного сайта.\nПараметры\nРезультат\nОбъект типа «ChatWelcomeSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": true, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "ChatWelcomeSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "batchUpdate", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_complaint", 
+                    "description": "Включение/выключение жалоб.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_callback", 
+                    "description": "Включение/выключение функциональности «Перезвоните мне».\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "ids", 
+                    "description": "Список, через запятую, ID сайтов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "complaint_email", 
+                    "description": "Адрес электронной почты, на который будут отправляться нотификации о поступлении новой жалобы.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_vote", 
+                    "description": "Включение/выключение функциональности оценки чата посетителем.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_mobile", 
+                    "description": "Включение/выключение мобильного вида виджета.\n"
+                }
+            ], 
+            "description": "Sites.batchUpdate\nВыполняет пакетное изменение данных указанных сайтов.\nМетод вызывает Sites.update для каждого ID сайта и передает указанные параметры.\nПараметры\nРезультат\nМассив объектов c ID, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.\nПример\ncurl https://api.livetex.ru/v2/sites/batchupdate \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n-d \"ids=123,456,789\" \\\n-d \"is_callback=false\"\n\n{\n    \"results\": [\n        {\n            \"id\": \"123\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"456\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"789\",\n            \"code\": 403,\n            \"message\": \"Forbidden\"\n        }\n    ]\n}\n\nУровень доступа для ролей\n\nВНИМАНИЕ!\nПри изменении конкретного сайта работает уровень доступа метода Sites.update в соответствующих условиях.\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showOfflineFormSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.showOfflineFormSettings – DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.\nВозвращает настройки формы офлайн-сообщения указанного сайта.\nПараметры\nРезультат\nОбъект типа «OfflineFormSettings».\nПример запроса\ncurl https://api.livetex.ru/v2/sites/showofflineformsettings?id=12345 \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\nУровень доступа для ролей\n\n", 
+            "is_deprecated": true, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "OfflineFormSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showOfflineMailSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.showOfflineMailSettings\nВозвращает настройки офлайн почты.\nПараметры\nРезультат\nОбъект типа «OfflineMailSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "OfflineMailSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showSiteWidgetSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.showSiteWidgetSettings\nВозвращает настройки виджета для указанного сайта.\nПараметры\nРезультат\nОбъект типа «SiteWidgetSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "SiteWidgetSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "add", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Generic", 
+                        "name": "Array", 
+                        "type_parameter": {
+                            "kind": "Reference", 
+                            "name": "Prechat"
+                        }
+                    }, 
+                    "name": "prechats_chat", 
+                    "description": "Массив объектов типа Prechat.\nМаксимум 2 элемента.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_lead", 
+                    "description": "Включение/выключение функциональности генератора лидов.\nПо умолчанию – true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_call_label", 
+                    "description": "Включение/выключение ярлыка звонков.\nDEPRECATED!\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "employee_ids", 
+                    "description": "Список ID сотрудников через запятую.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "url", 
+                    "description": "Адрес сайта.\nНапример: www.mysite.ru\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_callback", 
+                    "description": "Включение/выключение функциональности «Перезвоните мне».\nПо умолчанию – true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_complaint", 
+                    "description": "Включение/выключение жалоб.\nПо умолчанию – false.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_hidden_offline", 
+                    "description": "Скрывать ярлык, если сотрудники офлайн.\nПо умолчанию – false.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "email"
+                    }, 
+                    "name": "complaint_email", 
+                    "description": "Адрес электронной почты, на который будут отправляться нотификации о поступлении новой жалобы.\nОбязателен, если указано is_complaint = true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_vote", 
+                    "description": "Включение/выключение функциональности оценки чата посетителем.\nПо умолчанию – true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_mobile", 
+                    "description": "Включение/выключение мобильного вида виджета.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_site_prechats", 
+                    "description": "Признак использования пречат-полей сайта.\nЕсли false, то будут использоваться пречаты из связей отделов с сайтом.\nПо умолчанию – true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "callback_url", 
+                    "description": "Настройка Callback URL.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "hold_rule_id", 
+                    "description": "ID сценария удержания.\n"
+                }
+            ], 
+            "description": "Sites.add\nСоздает новый сайт.\nВНИМАНИЕ!\nНовый сайт автоматически добавляется в поле managed_sites всем сотрудникам с ролью, имеющей is_full_by_default = true.\nПараметры\nРезультат\nОбъект типа «Site».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "Site"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showChatFormSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.showChatFormSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.\nВозвращает настройки окна чата указанного сайта.\nПараметры\nРезультат\nОбъект типа «ChatFormSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": true, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "ChatFormSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateSiteChatSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "offline_contacts", 
+                    "description": "Запрашиваемые контактные данные в офлайн-режиме.\nВозможные значения:\nemail -  запрашивается только email;\nphone – запрашивается только телефон;\nemail_or_phone – запрашивается телефон или email;\nemail_and_phone – запрашивается телефон и email.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "offline_confirmation", 
+                    "description": "Текст подтверждения в режиме офлайн. Отображается после успешной отправки запроса.\nМаксимум 180 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "offline_contacts_required", 
+                    "description": "Обязательность полей при offline_contacts=email_and_phone.\nВозможные значения:\nemail – e-mail;\nphone – телефон;\nemail_and_phone – email и телефон.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "offline_welcome", 
+                    "description": "Текст приветствия в режиме офлайн.\nМаксимум 180 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "online_welcome", 
+                    "description": "Текст приветствия в режиме онлайн.\nМаксимум 180 символов.\n"
+                }
+            ], 
+            "description": "Sites.updateSiteChatSettings\nИзменяет настройки чата для указанного сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateCallLabelSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_visible", 
+                    "description": "Показывать ярлык.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset_value", 
+                    "description": "Значение отступа.\nЦелое число в диапазоне:\nот 0 до 100 для offset_type = percent;\nот 0 до 2000 для offset_type = pixel.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color", 
+                    "description": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "offset_type", 
+                    "description": "Тип отступа.\nВозможные значения:\npixel – в пикселах;\npercent – в процентах.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "position", 
+                    "description": "Положение ярлыка.\nВозможные значения:\ntop – сверху;\nright – справа;\nbottom – снизу;\nleft – слева.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "department_id", 
+                    "description": "ID отдела.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "size", 
+                    "description": "Размер ярлыка.\nВозможные значения:\nsmall – маленький, 23x118 пикселей;\nlarge – большой, 38x174 пикселей.\n"
+                }
+            ], 
+            "description": "Sites.updateCallLabelSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.\nИзменяет звонковые настройки сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": true, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateSiteWidgetSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_department", 
+                    "description": "Включение/выключение выбора отдела для офлайн режима.\nПри создании сайта устанавливается в false.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset_value", 
+                    "description": "Значение отступа в процентах.\nЧисло в диапазоне от 0 до 100. Может быть дробным.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "banner_link", 
+                    "description": "Ссылка с баннера.\nПоле обязательно для banner_type = custom.\nАктуально только для внешнего окна.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color", 
+                    "description": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\nПоле обязательно для color_type = preset.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color_type", 
+                    "description": "Тип указания цветовой схемы.\nВозможные значения:\npreset – стандартная схема;\ncustom – явное указание цветов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "label_text_online", 
+                    "description": "Текст на ярлыке, когда есть доступные операторы.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "color"
+                    }, 
+                    "name": "color_custom", 
+                    "description": "Цвет.\nПоле обязательно для color_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_embedded", 
+                    "description": "Включение/выключение встроенного окна чата.\nЕсли выключено, то будет использоваться внешнее окно чата.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "banner_custom", 
+                    "description": "Загруженная баннер для banner_type = custom.\nИзображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.\nМаксимальный размер файла – 2 MB.\nПоле обязательно для banner_type = custom.\nАктуально только для внешнего окна.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "banner_type", 
+                    "description": "Тип баннера.\nВозможные значения:\nnone – без баннера;\ndefault – стандартный баннер;\ncustom – загружаемый баннер.\nАктуально только для внешнего окна.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "label_text_offline", 
+                    "description": "Текст на ярлыке, когда доступных операторов нет.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "position", 
+                    "description": "Положение ярлыка.\nВозможные значения:\nright – справа;\nbottom – снизу;\nleft – слева.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color_text", 
+                    "description": "Цвет текста.\nВозможные значения:\nlight – светлый;\ndark – темный;\nauto – значение выбирается автоматически.\n"
+                }
+            ], 
+            "description": "Sites.updateSiteWidgetSettings\nИзменяет настройки виджета для указанного сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showSiteXWidgetSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.showSiteXWidgetSettings\nВозвращает настройки продукта «X-widget» для указанного сайта.\nПараметры\nРезультат\nОбъект типа «SiteXWidgetSettings».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "SiteXWidgetSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateOfflineFormSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "confirmation", 
+                    "description": "Текст подтверждения по умолчанию.\nМаксимум 180 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "contacts", 
+                    "description": "Запрашиваемые контактные данные.\nemail -  запрашивается только email;\nphone – запрашивается только телефон;\nemail_or_phone – запрашивается телефон или email;\nemail_and_phone – запрашивается телефон и email.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color", 
+                    "description": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "required_fields", 
+                    "description": "Обязательность полей при contacts = email_and_phone.\nemail – e-mail;\nphone – телефон;\nemail_and_phone – email и телефон.\nЭто поле обязательно при contacts = email_and_phone.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "welcome", 
+                    "description": "Текст приветствия по умолчанию.\nМаксимум 180 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "banner_custom", 
+                    "description": "Загруженная баннер для banner_type = custom.\nИзображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.\nПоле обязательно для banner_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "background_custom", 
+                    "description": "Загруженный фон для background_type = custom.\nИзображение в формате JPEG, GIF или PNG с размерами 448x605px.\nПоле обязательно для background_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "banner_type", 
+                    "description": "Тип баннера.\nВозможные значения:\nnone – без баннера;\ndefault – стандартный баннер;\ncustom – загружаемый баннер.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "banner_link", 
+                    "description": "Ссылка с баннера.\nПоле обязательно для banner_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "confirmation_mobile", 
+                    "description": "Текст подтверждения по умолчанию, который отобразится в мобильных браузерах.\nМаксимум 180 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "background_typе", 
+                    "description": "Тип фона.\nВозможные значения:\nnone – без фона;\ndefault – стандартный фон;\ncustom – загружаемый фон.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "welcome_mobile", 
+                    "description": "Текст приветствия по умолчанию, который отобразится в мобильных браузерах.\nМаксимум 180 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+                }
+            ], 
+            "description": "Sites.updateOfflineFormSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.\nОбновляет настройки офлайн-формы.\nПараметры\nРезультат\nМетод ничего не возвращает.\nПример запроса\ncurl https://api.livetex.ru/v2/sites/updateofflineformsettings \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n–d \"id=12345\" \\\n–d \"banner_type=none\"\nУровень доступа для ролей\n\n", 
+            "is_deprecated": true, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateChatWelcomeSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "text", 
+                    "description": "Текст приветствия.\nМаксимум 180 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.updateChatWelcomeSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.\nИзменяет настройки окна чата сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": true, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "update", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Generic", 
+                        "name": "Array", 
+                        "type_parameter": {
+                            "kind": "Reference", 
+                            "name": "Prechat"
+                        }
+                    }, 
+                    "name": "prechats_chat", 
+                    "description": "Массив объектов типа Prechat.\nМаксимум 2 элемента.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_lead", 
+                    "description": "Включение/выключение функциональности генератора лидов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_call_label", 
+                    "description": "Включение/выключение ярлыка звонков.\nDEPRECATED!\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "employee_ids", 
+                    "description": "Список ID сотрудников через запятую.\nЕсли с сайтом связан, хотя бы один отдел, то этот параметр игнорируется.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "url", 
+                    "description": "Адрес сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_callback", 
+                    "description": "Включение/выключение функциональности «Перезвоните мне».\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_complaint", 
+                    "description": "Включение/выключение жалоб.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_hidden_offline", 
+                    "description": "Скрывать ярлык, если сотрудники офлайн.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "email"
+                    }, 
+                    "name": "complaint_email", 
+                    "description": "Адрес электронной почты, на который будут отправляться нотификации о поступлении новой жалобы.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_vote", 
+                    "description": "Включение/выключение функциональности оценки чата посетителем.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_mobile", 
+                    "description": "Включение/выключение мобильного вида виджета.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_site_prechats", 
+                    "description": "Признак использования пречат-полей сайта.\nЕсли false, тоe. то будут использоваться пречаты из связей отделов с сайтом.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "callback_url", 
+                    "description": "Настройка Callback URL.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID редактируемого сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "hold_rule_id", 
+                    "description": "ID сценария удержания.\n"
+                }
+            ], 
+            "description": "Sites.update\nИзменяет данные указанного сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateLeadFormSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_department", 
+                    "description": "Включение/выключение выбора отдела в форме лида.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "photo_custom", 
+                    "description": "Загруженная картинка приветствия для photo_type = custom.\nИзображение в формате JPEG, GIF или PNG с размерами 70x70px.\nПоле обязательно для photo_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "confirmation", 
+                    "description": "Текст подтверждения по умолчанию.\nМаксимум 180 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color", 
+                    "description": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\nПоле обязательно для color_type = preset.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color_type", 
+                    "description": "Тип указания цветовой схемы.\nВозможные значения:\npreset – стандартная схема;\ncustom – явное указание цветов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "welcome", 
+                    "description": "Текст приветствия по умолчанию.\nМаксимум 180 символов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "color"
+                    }, 
+                    "name": "color_main", 
+                    "description": "Основной цвет.\nПоле обязательно для color_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "required_fields", 
+                    "description": "Обязательность полей при lead_type = email_and_phone.\nemail – e-mail;\nphone – телефон;\nemail_and_phone – email и телефон.\nПоле обязательно при lead_type = email_and_phone.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "banner_type", 
+                    "description": "Тип баннера.\nВозможные значения:\nnone – без баннера;\ndefault – стандартный баннер;\ncustom – загружаемый баннер.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "label", 
+                    "description": "Надпись на ярлыке.\nВозможные значения:\nquestion – «Задать вопрос»;\naction – «Внимание! Акция»;\ngift – «Внимание! Подарок»;\nhelp – «Обратитесь за помощью»;\nbest – «Посоветуем лучшее»;\nwaiting – «Ждем Ваших вопросов»;\nchoice – «Поможем с выбором»;\nconsulting – «Получить консультацию».\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "color"
+                    }, 
+                    "name": "color_background", 
+                    "description": "Цвет фона.\nПоле обязательно для color_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "banner_custom", 
+                    "description": "Загруженный баннер для banner_type = custom.\nИзображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.\nПоле обязательно для banner_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "banner_link", 
+                    "description": "Ссылка, по которой будет направлен посетитель по клику на баннере.\nПоле обязательно для banner_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "color"
+                    }, 
+                    "name": "color_text", 
+                    "description": "Цвет текста.\nПоле обязательно для color_type = custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "lead_type", 
+                    "description": "Запрашиваемые контактные данные.\nemail -  запрашивается только email;\nphone – запрашивается только телефон;\nemail_or_phone – запрашивается телефон или email;\nemail_and_phone – запрашивается телефон и email.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "photo_type", 
+                    "description": "Тип картинки приветствия.\nВозможные значения:\nnone – без картинки;\ndefault – стандартное фото;\ncustom – загруженное фото.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "confirmation_mobile", 
+                    "description": "Текст подтверждения по умолчанию, который отобразится в мобильных браузерах.\nМаксимум 180 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "welcome_mobile", 
+                    "description": "Текст приветствия по умолчанию, который отобразится в мобильных браузерах.\nМаксимум 180 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+                }
+            ], 
+            "description": "Sites.updateLeadFormSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.\nОбновляет настройки формы генератора лидов указанного сайта.\nПараметры\nРезультат\nМетод ничего не возвращает.\nПример запроса\ncurl https://api.livetex.ru/v2/sites/updateleadformsettings \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n–d \"id=12345\" \\\n–d \"photo_type=none\" \\\nУровень доступа для ролей\n\n", 
+            "is_deprecated": true, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showLeadFormSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.showLeadFormSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в showWidgetSettings.\nВозвращает настройки формы генератора лидов указанного сайта.\nПараметры\nРезультат\nОбъект типа «LeadFormSettings».\nПример запроса\ncurl \"https://api.livetex.ru/v2/sites/showleadformsettings?id=12345\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\nУровень доступа для ролей\n\n", 
+            "is_deprecated": true, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "LeadFormSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "batchUpdateSiteXWidgetSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "number"
+                    }, 
+                    "name": "interval_end", 
+                    "description": "Конец интервала. Количество секунд от 00:00.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "number"
+                    }, 
+                    "name": "interval_begin", 
+                    "description": "Начало интервала. Количество секунд от 00:00.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Включение/выключение мобильного вида виджета.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "idlist"
+                    }, 
+                    "name": "ids", 
+                    "description": "Список, через запятую, ID сайтов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Generic", 
+                        "name": "Array", 
+                        "type_parameter": {
+                            "kind": "Reference", 
+                            "name": "numeric"
+                        }
+                    }, 
+                    "name": "days", 
+                    "description": "Массив дней недели, в которые необходимо показывать приглашение к заказу обратного звонка.\nПонедельник – 0, вторник - 1 и т.д.\n"
+                }
+            ], 
+            "description": "Sites.batchUpdateSiteXWidgetSettings\nВыполняет пакетное изменение настроек X-widget указанных сайтов.\nМетод вызывает Sites.updateSiteXWidgetSettings для каждого ID сайта и передает указанные параметры.\nПараметры\nРезультат\nМассив объектов c ID-сайта, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.\nПример\ncurl https://api.livetex.ru/v2/sites/batchupdatesitexwidgetsettings \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n-d \"ids=123,456,789\" \\\n-d \"is_active=false\"\n\n{\n    \"results\": [\n        {\n            \"id\": \"123\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"456\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"789\",\n            \"code\": 403,\n            \"message\": \"Forbidden\"\n        }\n    ]\n}\nУровень доступа для ролей\n\nВНИМАНИЕ!\nПри изменении конкретного сайта работает уровень доступа метода Sites.updateSiteXWidgetSettings в соответствующих условиях.\n\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "list", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "q", 
+                    "description": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID сайтов.\nurl – string, подстрока в адресе сайта.\nis_managed – boolean, признак своего сайта.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset", 
+                    "description": "По умолчанию – 0.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "limit", 
+                    "description": "По умолчанию – 50.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sort", 
+                    "description": "Сортировка результатов.\nВозможные значения:\nurl:a – по умолчанию;\nupdated_at:a, updated_at:d;\n"
+                }
+            ], 
+            "description": "Sites.list\nВозвращает список сайтов.\nПараметры\nРезультат\nМассив объектов типа «Site».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Site"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "unbindAllDepartments", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.unbindAllDepartments\nОтвязывает все отделы от указанного сайта. При этом все сотрудники отделов напрямую связываются с сайтом.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "delete", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.delete\nУдаляет указанный сайт.\nВНИМАНИЕ!\nПри удалении сайта удаляются все связи с отделами. При этом также удаляются отделы, оставшиеся без сайтов.\nПри удалении сайта удаляются все его связи с объектами других сущностей, за исключением чатов, звонков и лидов и связей с сотрудниками в поле managed_sites.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Только для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "showCallLabelSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.showCallLabelSettings - DEPRECATED\nВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию.\nВозвращает настройки ярлыка звонков указанного сайта.\nПараметры\nРезультат\nОбъект типа «CallLabelSettings».\nПример запроса\ncurl https://api.livetex.ru/v2/sites/showcalllabelsettings?id=12345 \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\nУровень доступа для ролей\n\n", 
+            "is_deprecated": true, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "CallLabelSettings"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "updateSiteCallSettings", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "visitor_callerid_type", 
+                    "description": "Выбор номера телефона, отображаемого посетителю при исходящем звонке.\nВозможные значения:\nlivetex – номер LiveTex (по умолчанию);\nemployee – номер, указанный в поле phone_forward_number сотрудника;\ncustom – номер, указанный в настройке visitor_callerid_custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "phone"
+                    }, 
+                    "name": "visitor_callerid_custom", 
+                    "description": "Номер телефона, который будет отображаться посетителю при исходящем звонке при visitor_callerid_type=custom.\nОбязательно, если visitor_callerid_type=custom.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "greeting_type", 
+                    "description": "Типа мелодии приветствия.\nПриветствие проигрывается всем звонящим, перед соединением с оператором. Оператор отвечает только после того как мелодия полностью проиграется.\nВозможные значения:\nnone – без приветствия,\ncustom – пользовательское приветствие.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "employee_callerid_type", 
+                    "description": "Выбор номера телефона, отображаемого оператору при вызове X-widget.\nВозможные значения:\nlivetex – номер LiveTex (по умолчанию);\nvisitor – номер, указанный посетителем при заказе звонка.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "background_type", 
+                    "description": "Тип фоновой мелодии.\nФоновая мелодия проигрывается во время ожидания, пока кто-нибудь из операторов не ответит на звонок.\nВозможные значения:\nnone – без приветствия,\ndefault – стандартная фоновая мелодия,\ncustom – пользовательская фоновая мелодия.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "background_custom", 
+                    "description": "Пользовательская фоновая мелодия.\nОбязательно, если background_type = custom.\nПоддерживаются форматы MP3, OGG.\nРазмер загружаемого файла должен быть не более 8МB.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "file"
+                    }, 
+                    "name": "greeting_custom", 
+                    "description": "Пользовательское приветствие.\nОбязательно, если greeting_type = custom.\nПоддерживаются форматы MP3, OGG.\nРазмер загружаемого файла должен быть не более 8МB.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сайта.\n"
+                }
+            ], 
+            "description": "Sites.updateSiteCallSettings\nИзменяет звонковые настройки сайта. \nПараметры\nРезультат\nМетод ничего не возвращает.\nПример запроса\ncurl https://api.livetex.ru/v2/sites/updatecallsettings \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n–d \"id=12345\" \\\n–d \"background_type=none\" \\\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Для своих сайтов."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "Sites", 
+    "description": "Sites\n"
+}

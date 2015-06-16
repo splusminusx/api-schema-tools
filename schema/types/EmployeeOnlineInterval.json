@@ -1,0 +1,28 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "EmployeeOnlineInterval", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "start", 
+            "description": "Начало интервала.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "end", 
+            "description": "Конец интервала.\n"
+        }
+    ], 
+    "description": "EmployeeOnlineInterval\nИнтервал времени, в котором сотрудник находился в состоянии «В сети».\nТаблица 41. Поля интервала\n\n"
+}

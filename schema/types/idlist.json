@@ -1,0 +1,6 @@
+{
+    "is_deprecated": false, 
+    "kind": "PrimitiveDataType", 
+    "name": "idlist", 
+    "description": "Строка. Список идентификаторов через запятую.\n"
+}

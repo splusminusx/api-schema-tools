@@ -1,0 +1,88 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "QuickMessage", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "QuickMessageCategory"
+            }, 
+            "name": "category", 
+            "description": "Категория быстрых сообщений.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_global", 
+            "description": "Признак глобальности сообщения.\nЕсли true, то сообщение видно всем сотрудникам. В противном случае - только сотруднику, создавшему сообщение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_common", 
+            "description": "Признак того, является ли быстрое сообщение общедоступным.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "text", 
+            "description": "Текст быстрого сообщения.\nМаксимум 2000 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "creator_id", 
+            "description": "ID сотрудника создавшего быстрое сообщение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID быстрого сообщения.\n"
+        }
+    ], 
+    "description": "QuickMessage\nБыстрое сообщение.\nТаблица 66. Поля быстрого сообщения\n\n"
+}

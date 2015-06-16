@@ -1,0 +1,741 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "add", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "page_type", 
+                    "description": "Тип страницы.\nВозможные значения:\nspecified – показывать приглашение на странице, соответствующей критериям page_url и page_title.\nhome – показывать приглашение на главной страницы;\ninternal – показывать приглашение на внутренней странице;\nany – показывать приглашение на любой странице.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "page_url", 
+                    "description": "Показывать приглашение на странице с указанным адресом.\nАдрес указывается без приставки «http://» или «https://», например:\nwww.mycompany.ru/about/contacts\nЕсли page_type=specified, то одно из двух полей page_url или page_title должно быть указано.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "page_title", 
+                    "description": "Показывать приглашение на странице с указанной подстрокой в названии (тег «title»).\nЕсли page_type=specified, то одно из двух полей page_url или page_title должно быть указано.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "page_time", 
+                    "description": "Время, проведенное на странице посетителем, после которого ему необходимо показывать приглашение.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "site_time", 
+                    "description": "Время в секундах, проведенное на сайте посетителем, после которого ему необходимо показывать приглашение.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "title", 
+                    "description": "Название сценария.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_once_per_day", 
+                    "description": "Показывать приглашение только один раз в сутки.\nTrue – один раз, вне зависимости от значения max_count, false – в соответствии со значением max_count.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "welcome_chat", 
+                    "description": "Текст приглашения, если есть доступные операторы.\nМаксимум 300 символов.\nОбязательно для action = chat или vary.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "page_count", 
+                    "description": "Количество просмотренных страниц посетителем, при котором ему необходимо показывать приглашение.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Признак активности сценария.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "welcome_lead", 
+                    "description": "Текст приглашения, если нет доступных операторов.\nМаксимум 300 символов.\nОбязательно для action = lead или vary.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Generic", 
+                        "name": "Array", 
+                        "type_parameter": {
+                            "kind": "Reference", 
+                            "name": "Location"
+                        }
+                    }, 
+                    "name": "locations", 
+                    "description": "Массив географических расположений.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Generic", 
+                        "name": "Array", 
+                        "type_parameter": {
+                            "kind": "Reference", 
+                            "name": "InvitationRuleSiteBinding"
+                        }
+                    }, 
+                    "name": "site_bindings", 
+                    "description": "Массив связей сценария вовлечения с сайтами.\nСостав полей объектов в массиве точно такой же, как и состав параметров метода  InvitationRuleSiteBinding.add, за исключением поля invitation_rule_id. В данном контексте оно игнорируется.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "max_count", 
+                    "description": "Максимальное количество показов конкретному посетителю приглашений по данному сценарию в течение календарных суток.\nСчетчик показов обнуляется по истечению суток с момента последнего показа.\nОтсутствие значения или 0 – ограничения нет.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "confirmation_lead", 
+                    "description": "Подтверждающее сообщение, которое показывается посетителю после отправки формы лида.\nМаксимум 180 символов.\nОбязательно для action = lead или vary.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_new_visitor", 
+                    "description": "Показывать приглашение только новым посетителям.\nTrue – показывать только новым, false – показывать всем.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "action", 
+                    "description": "Действие, которое следует выполнить, если ситуация подпадает под настройки сценария.\nВозможные значения:\nvary – показать приглашение в чат, если есть доступные операторы или форму генератора лидов, если доступных операторов нет.\nchat – показать приглашение в чат, если есть активные операторы. В противном случае ничего не показывать;\nlead – показать форму генератора лида, если нет активных операторов. В противном случае ничего не показывать.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "confirmation_mobile", 
+                    "description": "Подтверждающее сообщение для мобильных устройств.\nОбязательно для action имеет значение vary или lead.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "welcome_mobile", 
+                    "description": "Текст приглашения для мобильных устройств.\nМаксимум 130 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+                }
+            ], 
+            "description": "InvitationRules.add\nДобавляет новый сценарий вовлечения.\nПараметры\nРезультат\nОбъект типа «InvitationRule».\nПример вызова\ncurl \"https://api.livetex.ru/v2/invitationrules\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t-d \"title=Первое посещение из России\" \\\n\t-d \"action=chat\" \\\n\t-d \"welcome=Могу ли я вам чем-то помочь?\" \\\n\t-d \"is_active=true\" \\\n\t-d \"is_new_visitor=true\" \\\n\t-d \"locations[0][country][id]=123\" \\\n\t-d \"locations[0][city][id]=3245\" \\\n\t-d \"site_bindings[0][site_id]=6789\" \\\n\t-d \"site_bindings[0][department_id]=65432\"\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "InvitationRule"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "В параметре site_bindings принимаются во внимание только site_id своих сайтов. Все остальные игнорируются."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "В параметре site_bindings принимаются во внимание только site_id своих сайтов. Все остальные игнорируются."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "В параметре site_bindings принимаются во внимание только site_id своих сайтов. Все остальные игнорируются."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "delete", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сценария вовлечения.\n"
+                }
+            ], 
+            "description": "InvitationRules.delete\nУдаляет указанный сценария вовлечения.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Только свои сценарии."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Только свои сценарии."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Только свои сценарии."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "list", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "q", 
+                    "description": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID сценариев вовлечения.\nsite_ids – idlist, список ID сайтов.\ntext – поиск по текстам полей welcome, welcome_mobile, confirmation, confirmation_mobile;\naction – enum, список возможных значение поля action;\ntitle;\nis_active.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset", 
+                    "description": "По умолчанию – 0.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "limit", 
+                    "description": "По умолчанию – 50.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sort", 
+                    "description": "Сортировка результатов.\nВозможные значение:\ntitle:a – по умолчанию;\ncreated_at:d.\n"
+                }
+            ], 
+            "description": "InvitationRules.list\nВозвращает список сценариев вовлечения.\nПараметры\nРезультат\nМассив объектов типа «InvitationRule».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "InvitationRule"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "update", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "page_type", 
+                    "description": "Тип страницы.\nВозможные значения:\nspecified – показывать приглашение на странице, соответствующей критериям page_url и page_title.\nhome – показывать приглашение на главной страницы;\ninternal – показывать приглашение на внутренней странице;\nany – показывать приглашение на любой странице.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "page_url", 
+                    "description": "Показывать приглашение на странице с указанным адресом.\nАдрес указывается без приставки «http://» или «https://», например:\nwww.mycompany.ru/about/contacts\nЕсли page_type=specified, то одно из двух полей page_url или page_title должно быть указано.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "page_title", 
+                    "description": "Показывать приглашение на странице с указанной подстрокой в названии (тег «title»).\nЕсли page_type=specified, то одно из двух полей page_url или page_title должно быть указано.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "page_time", 
+                    "description": "Время, проведенное на странице посетителем, после которого ему необходимо показывать приглашение.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "site_time", 
+                    "description": "Время в секундах, проведенное на сайте посетителем, после которого ему необходимо показывать приглашение.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "title", 
+                    "description": "Название сценария.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_once_per_day", 
+                    "description": "Показывать приглашение только один раз в сутки.\nTrue – один раз, вне зависимости от значения max_count, false – в соответствии со значением max_count.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "welcome_chat", 
+                    "description": "Текст приглашения, если есть доступные операторы.\nМаксимум 300 символов.\nОбязательно для action = chat или vary.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "page_count", 
+                    "description": "Количество просмотренных страниц посетителем, при котором ему необходимо показывать приглашение.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_active", 
+                    "description": "Признак активности сценария.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "welcome_lead", 
+                    "description": "Текст приглашения, если нет доступных операторов.\nМаксимум 300 символов.\nОбязательно для action = lead или vary.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Generic", 
+                        "name": "Array", 
+                        "type_parameter": {
+                            "kind": "Reference", 
+                            "name": "Location"
+                        }
+                    }, 
+                    "name": "locations", 
+                    "description": "Массив географических расположений.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Generic", 
+                        "name": "Array", 
+                        "type_parameter": {
+                            "kind": "Reference", 
+                            "name": "InvitationRuleSiteBinding"
+                        }
+                    }, 
+                    "name": "site_bindings", 
+                    "description": "Массив связей сценария вовлечения с сайтами.\nСостав полей объектов в массиве точно такой же, как и состав параметров метода  InvitationRuleSiteBinding.add, за исключением поля invitation_rule_id. В данном контексте оно игнорируется.\nВНИМАНИЕ!\nЗначение этого параметра полностью замещает текущие связи сценария с сайтами, как если бы старые связи были удалены и созданы новые.\nУказание пустого массива приведет к удалению всех связей сценария с сайтами.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "max_count", 
+                    "description": "Максимальное количество показов конкретному посетителю приглашений по данному сценарию в течение календарных суток.\nСчетчик показов обнуляется по истечению суток с момента последнего показа.\nОтсутствие значения или 0 – ограничения нет.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "confirmation_lead", 
+                    "description": "Подтверждающее сообщение, которое показывается посетителю после отправки формы лида.\nМаксимум 180 символов.\nОбязательно для action = lead или vary.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_new_visitor", 
+                    "description": "Показывать приглашение только новым посетителям.\nTrue – показывать только новым, false – показывать всем.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "action", 
+                    "description": "Действие, которое следует выполнить, если ситуация подпадает под настройки сценария.\nВозможные значения:\nvary – показать приглашение в чат, если есть доступные операторы или форму генератора лидов, если доступных операторов нет.\nchat – показать приглашение в чат, если есть активные операторы. В противном случае ничего не показывать;\nlead – показать форму генератора лида, если нет активных операторов. В противном случае ничего не показывать.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "confirmation_mobile", 
+                    "description": "Подтверждающее сообщение для мобильных устройств.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сценария вовлечения.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "welcome_mobile", 
+                    "description": "Текст приглашения для мобильных устройств.\nМаксимум 130 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+                }
+            ], 
+            "description": "InvitationRules.update\nИзменяет указанный сценарий вовлечения.\nПараметры\nРезультат\nМетод ничего не возвращает.\nПример вызова\ncurl \"https://api.livetex.ru/v2/invitationrules/12345\" \\\n\t-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t–X PATCH \\\n\t-d \"title=Первое посещение из России\" \\\n\t-d \"locations[0][country][id]=123\" \\\n\t-d \"locations[0][city][id]=3245\" \\\n\t-d \"site_bindings[0][site_id]=6789\" \\\n\t-d \"site_bindings[0][department_id]=65432\"\n\t-d \"site_bindings[1][site_id]=6785\"\n\nУровень доступа для ролей\n\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Только свои сценарии."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Только свои сценарии."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Только свои сценарии."
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "show", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID сценария вовлечения.\n"
+                }
+            ], 
+            "description": "InvitationRules.show\nВозвращает данные указанного сценария вовлечения.\nПараметры\nРезультат\nОбъект типа «InvitationRule».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "InvitationRule"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": ""
+                }, 
+                {
+                    "access": "none", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "InvitationRules", 
+    "description": "InvitationRules\n"
+}

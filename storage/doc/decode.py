@@ -7,7 +7,9 @@ from storage.doc.helpers import join_paragraphs, iter_block_items
 from storage.doc.model import Node
 from models.data_types import PrimitiveDataType, ComplexDataType
 from models.resource import Resource
-from view.helpers import print_block_type_count
+from models.method import Method
+from models.permissions import Role, Access, Permission
+from view.helpers import print_table
 
 
 def populate_primitive_types(registry, table):
@@ -46,6 +48,32 @@ def get_complex_type_description(node):
     return join_paragraphs(paragraphs)
 
 
+def parse_result_type(description):
+    start_index = description.find(u'«')
+    end_index = description.find(u'»')
+
+    if description.find(u'Boolean.') != -1:
+        return 'Boolean'
+    if start_index != 1 and end_index != -1:
+        if description.find(u'Массив') != -1:
+            return 'Array.<' + description[start_index+1:end_index].split(' ')[-1] + '>'
+        else:
+            return description[start_index+1:end_index].split(' ')[-1]
+    return None
+
+
+def get_result_type_name(node):
+    result_header_index = None
+    for idx, b in enumerate(node.blocks):
+        if isinstance(b, Paragraph):
+            if b.text.startswith(u'Результат'):
+                result_header_index = idx
+    if result_header_index:
+        return parse_result_type(node.blocks[result_header_index+1].text)
+    else:
+        return None
+
+
 def get_tables(node):
     return filter(lambda x: isinstance(x, Table), node.blocks)
 
@@ -79,6 +107,49 @@ def get_complex_type(node):
         populate_fields(data_type, tables[0])
 
     return data_type
+
+
+def parse_permissions_table(table):
+    permissions = []
+    for row in table.rows[1:]:
+        role = Role.get_role(row.cells[0].paragraphs[0].text.strip())
+        access = Access.get_access(row.cells[1].paragraphs[0].text.strip())
+        description = row.cells[2].paragraphs[0].text.strip()
+
+        permissions.append(Permission(role, access, description))
+
+    return permissions
+
+
+def get_permissions(node):
+    heading_index = None
+    for idx, block in enumerate(node.blocks):
+        if isinstance(block, Paragraph):
+            if block.text.find(u'ровень доступа для ролей') != -1:
+                heading_index = idx
+    permissions = []
+    if heading_index:
+        if isinstance(node.blocks[heading_index+1], Table):
+            permissions = parse_permissions_table(node.blocks[heading_index+1])
+
+    return permissions
+
+
+def get_method(node):
+    deprecated = is_complex_type_deprecated(node)
+    name = parse_method_name(get_complex_type_name(node))
+    description = get_complex_type_description(node)
+    result = get_result_type_name(node)
+    method = Method(name, description, result, deprecated)
+
+    tables = get_tables(node)
+    if len(tables) and _filter_methods_without_args(node):
+        populate_fields(method, tables[0])
+
+    for perm in get_permissions(node):
+        method.add_permission(perm)
+
+    return method
 
 
 def populate_complex_type(registry, node):
@@ -143,7 +214,7 @@ def populate_resource(reg, node):
                    get_complex_type_description(node))
 
     for ch in node.children:
-        method = get_complex_type(ch)
+        method = get_method(ch)
         res.add_method(method)
 
     reg.add_type(res)

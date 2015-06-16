@@ -1,0 +1,11 @@
+Stats.contacts Объект с полями, описанными в нижеследующей таблице.
+Stats.summary None
+EmployeeChats.list Массив объектов со следующими полями:
+Employees.register Строковый идентификатор аккаунта LiveTex (LiveTex ID).
+Employees.registerConfirm Объект со следующими полями:
+Employees.batchUpdate Массив объектов c ID, кодами и сообщениями об ошибке в порядке перечисления ID сотрудников в запросе.
+Sites.batchUpdateSiteXWidgetSettings Массив объектов c ID-сайта, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.
+Sites.batchUpdate Массив объектов c ID, кодами и сообщениями об ошибке в порядке перечисления ID сайтов в запросе.
+Leads.unlock Boolean. True – снятие блокировки выполнено успешно. False – операция отклонена.
+Leads.lock Boolean. True – блокировка выполнена успешно. False – блокировка отклонена.
+

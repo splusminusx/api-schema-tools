@@ -1,0 +1,52 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "SiteXWidgetSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "number"
+            }, 
+            "name": "interval_end", 
+            "description": "Конец интервала. Количество секунд от 00:00.\nПо умолчанию – 64800.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "number"
+            }, 
+            "name": "interval_begin", 
+            "description": "Начало интервала. Количество секунд от 00:00.\nПо умолчанию – 36000.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Функциональность активна.\nПо умолчанию – true.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "numeric"
+                }
+            }, 
+            "name": "days", 
+            "description": "Массив дней недели, в которые необходимо показывать приглашение к заказу обратного звонка.\nПонедельник – 0, вторник - 1 и т.д.\nПо умолчанию – [0,1,2,3,4].\n"
+        }
+    ], 
+    "description": "SiteXWidgetSettings\nНастройки продукта «X-widget» уровня сайта.\nТаблица 83. Поля настроек продукта «X-widget» уровня сайта\n\n"
+}

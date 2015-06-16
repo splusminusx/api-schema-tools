@@ -1,0 +1,68 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "CallSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_forward", 
+            "description": "Включение/выключение переадресации.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Включение/выключение функциональности звонков.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "forward_sip_host", 
+            "description": "Имя хоста SIP.\nОбязательно при forward_type=SIP и is_forward=true.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "forward_sip_login", 
+            "description": "Логин для подключения по SIP.\nОбязательно при forward_type=SIP и is_forward=true.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "forward_sip_password", 
+            "description": "Пароль для подключения по SIP.\nОбязательно при forward_type=SIP и is_forward=true.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "forward_type", 
+            "description": "Тип переадресации.\nВозможные значения:\nsip – переадресация на SIP;\nphone – переадресация на телефон.\n"
+        }
+    ], 
+    "description": "CallSettings\nНастройки функциональности звонков.\nТаблица 16. Поля настроек функциональности звонков.\n\n"
+}

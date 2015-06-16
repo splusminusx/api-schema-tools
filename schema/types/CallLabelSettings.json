@@ -1,0 +1,98 @@
+{
+    "is_deprecated": true, 
+    "kind": "ComplexDataType", 
+    "name": "CallLabelSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_visible", 
+            "description": "Показывать ярлык.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "offset_value", 
+            "description": "Значение отступа.\nЦелое число в диапазоне:\nот 0 до 100 для offset_type = percent;\nот 0 до 2000 для offset_type = pixel.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "color", 
+            "description": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "offset_type", 
+            "description": "Тип отступа.\nВозможные значения:\npixel – в пикселах;\npercent – в процентах.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_custom", 
+            "description": "Признак заказного дизайна ярлыка звонка.\nЕсли true, то изменение некоторых настроек может не иметь должного результата, поскольку соответствующий аспект внешнего вида переопределяются заказным дизайном.\nЭто признак доступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Department"
+            }, 
+            "name": "department", 
+            "description": "Отдел.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "position", 
+            "description": "Положение ярлыка.\nВозможные значения:\ntop – сверху;\nright – справа;\nbottom – снизу;\nleft – слева.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "size", 
+            "description": "Размер ярлыка.\nВозможные значения:\nsmall – маленький, 23x118 пикселей;\nlarge – большой, 38x174 пикселей.\n"
+        }
+    ], 
+    "description": "CallLabelSettings - DEPRECATED\nВНИМАНИЕ! Сущность является устаревшей. Ярлыка звонков больше не будет.\nНастройки ярлыка звонка.\nТаблица 15. Поля настроек ярлыка звонка.\n\n"
+}

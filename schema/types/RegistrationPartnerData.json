@@ -1,0 +1,28 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "RegistrationPartnerData", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "invitation_id", 
+            "description": "id приглашения\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "partner_id", 
+            "description": "id аффилированного партнера\n"
+        }
+    ], 
+    "description": "RegistrationPartnerData\nАбстрактный тип данных. Используется только в методе Employees.register\nТаблица 70. Поля почтового ящика\n\n"
+}

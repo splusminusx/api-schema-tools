@@ -1,0 +1,7 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Requisites", 
+    "fields": [], 
+    "description": "Requisites\nРеквизиты плательщика.\nАбстрактный тип данных, который реально является одним из перечисленных в нижеследующих разделах. Используется только в сущности Payer.\n"
+}

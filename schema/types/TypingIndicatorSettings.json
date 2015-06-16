@@ -1,0 +1,18 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "TypingIndicatorSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Включение/выключение функции «Подглядывание».\n"
+        }
+    ], 
+    "description": "TypingIndicatorSettings\nНастройки функции «Подглядывание».\nТаблица 85. Поля настроек функции «Подглядывание».\n\n"
+}

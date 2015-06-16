@@ -1,0 +1,138 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Requisites_ua_legal", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "signer_basis", 
+            "description": "На основании («на пiдставi»).\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "unified_tax", 
+            "description": "Является ли плательщиком единого 5% налога.\nВ данный момент это строковое поле, куда народ пишет всякое. Уточнить, быть может это надо сделать boolean и, соответственно переделать UI.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "address_postal", 
+            "description": "Адрес для приёма корреспонденции.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "pdv", 
+            "description": "Свидетельство ПДВ.\nДопустимы только цифры. 8 или 9 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "account_r", 
+            "description": "Номер счета.\nДопустимы только цифры. От 4 до 14 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "ipn", 
+            "description": "IПН.\nДопустимы только цифры. 15 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "corporate_name", 
+            "description": "Название юридического лица.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "director_name", 
+            "description": "Должность и ФИО лица, подписывающего документы.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "director_name_alt", 
+            "description": "Должность и ФИО представителя юр. лица (в родительном падеже).\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "address_corporate", 
+            "description": "Местонахождение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "mfo", 
+            "description": "МФО.\nДопустимы только цифры. 6 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "edrpou", 
+            "description": "ЄДРПОУ.\nДопустимы только цифры. 8 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "bank", 
+            "description": "Банковские данные.\n"
+        }
+    ], 
+    "description": "Requisites_ua_legal\nРеквизиты плательщика – юридического лица Украины.\nТаблица 74. Поля реквизитов юридического лица Украины\n\n"
+}

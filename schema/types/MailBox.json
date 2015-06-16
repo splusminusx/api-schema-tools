@@ -1,0 +1,78 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "MailBox", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "username", 
+            "description": "Логин для подключения к почтовому серверу.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_ssl", 
+            "description": "Признак использования защищенного соединения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "smtp_port", 
+            "description": "Порт для подключения к почтовому серверу.\nПо умолчанию - 25.\nЦелое число в диапазоне от 1 до 65535.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "smtp_server", 
+            "description": "Адрес почтового сервера.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "email"
+            }, 
+            "name": "email", 
+            "description": "Адрес электронной почты.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "password", 
+            "description": "Пароль для подключения к почтовому серверу.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID почтового ящика.\n"
+        }
+    ], 
+    "description": "MailBox\nПочтовый ящик.\nПочтовые ящики используются для нотификации сотрудников о поступлении нового лида и отправки ответа сотрудника посетителю.\nТаблица 53. Поля почтового ящика\n\n"
+}

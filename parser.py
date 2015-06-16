@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from models.data_types import ComplexDataType
 from models.reg import Registry
 from storage.doc.decode import populate_types_from_node, populate_nodes_from_doc, populate_resources_from_node
+from storage.schema.serialize import SchemaSerializer
 import docx
 import sys
 
@@ -17,20 +17,17 @@ if __name__ == '__main__':
     populate_types_from_node(root, type_reg)
     populate_resources_from_node(root, resource_reg)
 
+    serializer = SchemaSerializer('./schema')
+
     for type_name in type_reg.types:
-        resource = type_reg.types[type_name]
-        print resource.name, resource.deprecated
-        if isinstance(resource, ComplexDataType):
-            for field_name in resource.fields:
-                field = resource.get_field(field_name)
-                print ' ', field.name, field.datatypename, field.required
+        serializer.serialize(type_reg.get_type(type_name))
 
     for resource_name in resource_reg.types:
-        resource = resource_reg.get_type(resource_name)
-        print resource.name
-        for method_name in resource.methods:
-            method = resource.get_method(method_name)
-            print ' ', method.name, method.deprecated, method.description
-            for field_name in method.fields:
-                field = method.get_field(field_name)
-                print '  ', field.name, field.datatypename, field.required
+        serializer.serialize(resource_reg.get_type(resource_name))
+        #res = resource_reg.get_type(resource_name)
+        #for method_name in res.methods:
+        #    method = res.methods[method_name]
+        #    print method.name
+        #    for perm_name in method.permissions:
+        #        perm = method.permissions[perm_name]
+        #        print ' ', perm.role, perm.access, perm.description

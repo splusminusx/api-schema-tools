@@ -1,0 +1,18 @@
+{
+    "is_deprecated": true, 
+    "kind": "ComplexDataType", 
+    "name": "ChatWelcomeSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "text", 
+            "description": "Текст приветствия.\nМаксимум 180 символов.\n"
+        }
+    ], 
+    "description": "ChatWelcomeSettings - DEPRECATED\nВНИМАНИЕ! Сущность является устаревшей. Все переехало в SiteChatSettings.\nНастройки окна приветствия.\nТаблица 22. Поля настроек окна приветствия.\n\n"
+}

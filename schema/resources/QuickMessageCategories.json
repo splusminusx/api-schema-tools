@@ -1,0 +1,415 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "add", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color", 
+                    "description": "Цвет.\nВозможные значения:\ngreen – зеленый;\norange – оранжевый;\nblue – синий;\nred – красный;\npurple – фиолетовый;\ngray – серый;\nrose – розовый;\nblack – черный;\nyellow – желтый;\nwhite – белый.\nПо умолчанию новой категории назначается следующий по порядку цвет относительно хронологически последней созданной категории в сайте.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "boolean"
+                    }, 
+                    "name": "is_global", 
+                    "description": "Признак глобальности категории.\nЕсли false, то значение site_id игнорируется, поскольку персональные категории сотрудников не связаны с сайтами.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "site_id", 
+                    "description": "ID сайт.\nДолжен быть указан, если is_global = true.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "title", 
+                    "description": "Название категории.\n"
+                }
+            ], 
+            "description": "QuickMessageCategories.add\nДобавляет новую категорию быстрых сообщений.\nПараметры\nРезультат\nОбъект типа «QuickMessageCategory».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "QuickMessageCategory"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Категории быстрые сообщения с is_global = true разрешается создавать только на своих сайтах."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Категории быстрые сообщения с is_global = true разрешается создавать только на своих сайтах."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Категории быстрые сообщения с is_global = true разрешается создавать только на своих сайтах."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "Разрешается создавать категорий сообщений только с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "delete", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID категории быстрых сообщений.\n"
+                }
+            ], 
+            "description": "QuickMessageCategories.delete\nУдаляет указанную категорию быстрых сообщений.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": "Только категории быстрые сообщения с is_global = true, а также свои категории с is_global = false."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Категории быстрые сообщения с is_global = true разрешается удалять только на своих сайтах."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Категории быстрые сообщения с is_global = true разрешается удалять только на своих сайтах."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Категории быстрые сообщения с is_global = true разрешается удалять только на своих сайтах."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "Разрешается удалять только свои категории сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": "Только категории быстрые сообщения с is_global = true, а также свои категории с is_global = false."
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "list", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "q", 
+                    "description": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID категорий быстрых сообщений;\nsite_ids – idlist, список ID сайтов.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset", 
+                    "description": "По умолчанию – 0.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "limit", 
+                    "description": "По умолчанию – 50.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sort", 
+                    "description": "Сортировка результатов.\nВозможные значение:\ntitle:a – по умолчанию.\n"
+                }
+            ], 
+            "description": "QuickMessageCategories.list\nВозвращает список глобальных категорий быстрых сообщений, а также персональных категорий, созданных текущим пользователем.\nПараметры\nРезультат\nМассив объектов типа «QuickMessageCategory».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "QuickMessageCategory"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "update", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "color", 
+                    "description": "Цвет.\nВозможные значения:\ngreen – зеленый;\norange – оранжевый;\nblue – синий;\nred – красный;\npurple – фиолетовый;\ngray – серый;\nrose – розовый;\nblack – черный;\nyellow – желтый;\nwhite – белый.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "site_id", 
+                    "description": "ID сайта.\nПринимается во внимание только для глобальных категорий, поскольку персональные категории не связаны с сайтами.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID категории быстрых сообщений.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "title", 
+                    "description": "Название категории.\n"
+                }
+            ], 
+            "description": "QuickMessageCategories.update\nОбновляет категорию быстрых сообщений.\nПараметры\nРезультат\nМетод ничего не возвращает.\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": "Только категории быстрые сообщения с is_global = true, а также свои категории с is_global = false."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Категории быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Категории быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Категории быстрые сообщения с is_global = true разрешается обновлять только на своих сайтах."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "Разрешается обновлять только свои категории сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": "Только категории быстрые сообщения с is_global = true, а также свои категории с is_global = false."
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "show", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID категории быстрых сообщений.\n"
+                }
+            ], 
+            "description": "QuickMessageCategories.show\nВозвращает данные указанной категории быстрых сообщений.\nПараметры\nРезультат\nОбъект типа «QuickMessageCategory».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "QuickMessageCategory"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": "За исключением чужих категорий быстрых сообщений с is_global = false."
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "QuickMessageCategories", 
+    "description": "QuickMessageCategories\n"
+}

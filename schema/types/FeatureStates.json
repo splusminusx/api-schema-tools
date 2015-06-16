@@ -1,0 +1,88 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "FeatureStates", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "online_monitoring", 
+            "description": "Онлайн-статистика.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "call_forwarding_sip", 
+            "description": "Переадресация на SIP.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "lead_generator", 
+            "description": "Генератор лидов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "call", 
+            "description": "Звонки.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "chat", 
+            "description": "Чат.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "online_statistics", 
+            "description": "Онлайн-мониторинг.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "call_forwarding_phone", 
+            "description": "Переадресация на телефон.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "x_widget", 
+            "description": "X-widget.\n"
+        }
+    ], 
+    "description": "FeatureStates\nДанные о доступности функциональных возможностей на аккаунте.\nФункциональные возможности активируются покупкой соответствующего тарифа/опции.\nТаблица 42. Данные о доступности функциональных возможностей\n\n"
+}

@@ -1,0 +1,280 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Employee", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "last_name", 
+            "description": "Фамилия.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "chat_limit", 
+            "description": "Количество одновременно обрабатываемых чатов.\nЕсли 0, то ограничения нет.\nПо умолчанию – 0.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "photo", 
+            "description": "Фотография сотрудника.\nИзображение в формате JPEG, GIF или PNG с размерами не менее 60x70 px и не более 2560x2560 px.\nМаксимальный размер файла – 5 MB.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Department"
+                }
+            }, 
+            "name": "managed_departments", 
+            "description": "Список отделов, входящих в область видимости сотрудника.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_call", 
+            "description": "Включение/выключение функциональности звонков.\nПринимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "phone_forward_number", 
+            "description": "Номер для переадресации на телефон.\nОбязательно при is_phone_forward=true.\nСм. примечание после таблицы.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID сотрудника.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "first_name", 
+            "description": "Имя.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_sip_forward", 
+            "description": "Включение/выключение переадресации на SIP.\nСм. примечание после таблицы.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "state", 
+            "description": "Состояние сотрудника.\nВозможные значения:\nonline – В сети,\nbusy – Нет на месте,\noffline – Офлайн.\nПоле доступно только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Role"
+            }, 
+            "name": "role", 
+            "description": "Роль сотрудника.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_lead_assigned", 
+            "description": "Признак закрепления за оператором, созданных им лидов из чатов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "email"
+            }, 
+            "name": "email", 
+            "description": "Адрес электронной почты.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "sip_forward_number", 
+            "description": "Номер для переадресации на SIP.\nОбязательно при is_sip_forward=true.\nСм. примечание после таблицы.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_cobrowse", 
+            "description": "Включение/выключение функции «Виртуальный ассистент».\nПринимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Активация/блокировка учетной записи сотрудника.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "phone"
+            }, 
+            "name": "phone", 
+            "description": "Телефон сотрудника.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_first_steps_passed", 
+            "description": "Признак завершения первичного обучения.\nПо умолчанию – false.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_deleted", 
+            "description": "Признак удаленного объекта.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_lead_notify", 
+            "description": "Включение/выключение нотификации на электронную почту о поступлении новых лидов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Department"
+                }
+            }, 
+            "name": "departments", 
+            "description": "Список отделов, в которых состоит сотрудник.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_managed", 
+            "description": "True, если сотрудник входит в число своих сотрудников сотрудника, вызывающего метод.\nЭто признак доступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_phone_forward", 
+            "description": "Включение/выключение переадресации на телефон.\nСм. примечание после таблицы.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Site"
+                }
+            }, 
+            "name": "managed_sites", 
+            "description": "Список сайтов, входящих в область видимости сотрудника.\n"
+        }
+    ], 
+    "description": "Employee\nСотрудник.\nТаблица 36. Поля сотрудника\n\nПРИМЕЧАНИЕ\nВ данный момент поля is_sip_forward и is_phone_forward технически объединены. Изменение одного приводит к изменению другого. То же самое происходит с полями sip_forward_number и phone_forward_number.\n"
+}

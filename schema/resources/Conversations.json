@@ -1,0 +1,83 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "show", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID обращения.\n"
+                }
+            ], 
+            "description": "Conversations.show\nВозвращает данные указанного обращения.\nПараметры\nРезультат\nОбъект типа «Conversation».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "Conversation"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Обращения, в которых есть свои диалоги (чаты, звонки, лиды)."
+                }, 
+                {
+                    "access": null, 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Обращения, в которых есть свои диалоги (чаты, звонки, лиды)."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Обращения, в которых есть свои диалоги (чаты, звонки, лиды)."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "Обращения, в которых есть свои диалоги (чаты, звонки, лиды)."
+                }, 
+                {
+                    "access": null, 
+                    "kind": "Permission", 
+                    "role": null, 
+                    "description": ""
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "Conversations", 
+    "description": "Conversations\n"
+}

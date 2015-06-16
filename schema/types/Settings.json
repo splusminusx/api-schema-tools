@@ -1,0 +1,132 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Settings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": null, 
+            "name": "lang", 
+            "description": "Язык пользовательского интерфейса Личного кабинета.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_console_connected", 
+            "description": "Признак подключения оператора.\nУстанавливается в true при первом успешном входе оператора через Пульт.\nДоступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "FileTransferSettings"
+            }, 
+            "name": "file_transfer_settings", 
+            "description": "Настройки функции передачи файлов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "TypingIndicatorSettings"
+            }, 
+            "name": "typing_indicator_settings", 
+            "description": "Настройки функции «Подглядывание».\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "FeatureStates"
+            }, 
+            "name": "feature_states", 
+            "description": "Данные о доступности функциональных возможностей на аккаунте.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": null, 
+            "name": "time_zone", 
+            "description": "Временная зона Личного кабинета.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "CobrowseSettings"
+            }, 
+            "name": "cobrowse_settings", 
+            "description": "Настройки функции «Виртуальный ассистент».\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "EmployeeRemarkSettings"
+            }, 
+            "name": "employee_remark_settings", 
+            "description": "Настройки оценок сотрудников.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "country"
+            }, 
+            "name": "country", 
+            "description": "Двухбуквенный код страны по стандарту ISO 3166-1 alpha-2.\n\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "ReportByEmailSettings"
+            }, 
+            "name": "report_by_email_settings", 
+            "description": "Настройки отправки отчетов на email.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "CallSettings"
+            }, 
+            "name": "call_settings", 
+            "description": "Настройки звонковой функциональности.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "AcceptanceByEmailSettings"
+            }, 
+            "name": "acceptance_by_email_settings", 
+            "description": "Настройки отправки актов на электронную почту.\n"
+        }
+    ], 
+    "description": "Settings\nГлобальные настройки.\nТаблица 78. Поля глобальных настроек\n\n"
+}

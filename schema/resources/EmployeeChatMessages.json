@@ -1,0 +1,111 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "list", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "q", 
+                    "description": "Критерий поиска.\nДоступные поля:\nemployee_ids – idlist, список ID сотрудников – участников переписки.\nЕсли указан только один ID, то в результатах поиска будут сообщения, в которых сотрудник был получателем или отправителем.\nЕсли указано два ID, то в результатах поиска будут только сообщения, переданные между указанными сотрудниками.\nЕсли указано более двух ID, то в результатах поиска будут сообщения, переданные между любыми двумя сотрудниками из числа перечисленных.\ncreated_at – datetime, максимальный период выборки – 30 дней.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset", 
+                    "description": "По умолчанию – 0.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "limit", 
+                    "description": "По умолчанию – 50.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sort", 
+                    "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:a – по умолчанию.\n"
+                }
+            ], 
+            "description": "EmployeeChatMessages.list\nВозвращает список сообщений межоператорского чата.\nПараметры\nРезультат\nМассив объектов типа «EmployeeChatMessage».\nУровень доступа для ролей\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "EmployeeChatMessage"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Все сообщения, в которых свой сотрудник или сам сотрудник, выполняющий запрос, является отправителем или получателем."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Все сообщения, в которых свой сотрудник или сам сотрудник, выполняющий запрос, является отправителем или получателем."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Все сообщения, в которых свой сотрудник или сам сотрудник, выполняющий запрос, является отправителем или получателем."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "Все сообщения, в которых сотрудник является  отправителем или получателем."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "EmployeeChatMessages", 
+    "description": "EmployeeChatMessages\n"
+}

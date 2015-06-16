@@ -1,0 +1,28 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "AcceptanceByEmailSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Включение/выключение отправки актов на электронную почту.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "emails", 
+            "description": "Список через запятую адресов электронной почты.\n\n"
+        }
+    ], 
+    "description": "AcceptanceByEmailSettings\nНастройки отправки актов на электронную почту.\nТаблица 10. Поля настроек функциональности звонков.\n\n"
+}
