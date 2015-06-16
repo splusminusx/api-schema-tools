@@ -53,7 +53,7 @@ class MarkdownSerializer(object):
                 return unicode(
                     generic_name +
                     u'.<[' + parameter_name + u'](' +
-                    os.path.join(self._doc_path, u'types', parameter_name + u'.md)>'))
+                    os.path.join(u'types', parameter_name + u'.md)>'))
 
     def _serialize_complex_data_type(self, obj):
         with io.open(self._get_full_path(obj), 'w', encoding='utf-8') as f:
