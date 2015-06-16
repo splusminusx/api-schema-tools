@@ -1,5 +1,7 @@
 # Содержание
+
 ## Типы данных
+
 ### Примитивные типы данных
 - [boolean](docs/types/boolean.md)
 - [color](docs/types/color.md)
@@ -14,6 +16,7 @@
 - [phone](docs/types/phone.md)
 - [string](docs/types/string.md)
 - [time](docs/types/time.md)
+
 ### Комплексные типы данных
 - [Acceptance](docs/types/Acceptance.md)
 - [AcceptanceByEmailSettings](docs/types/AcceptanceByEmailSettings.md)
@@ -95,6 +98,7 @@
 - [TypingIndicatorSettings](docs/types/TypingIndicatorSettings.md)
 - [VATInvoice](docs/types/VATInvoice.md)
 - [Visitor](docs/types/Visitor.md)
+
 ## Ресурсы
 - [Acceptances](docs/resources/Acceptances.md)
 - [CallButtons](docs/resources/CallButtons.md)
