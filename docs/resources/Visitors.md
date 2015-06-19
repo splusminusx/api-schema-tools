@@ -13,11 +13,11 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*id*|True|[string](/docs/types/string.md)|ID посетителя.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*id*|True|[string](/types/string)|ID посетителя.<br/>|
 
 ### Результат
-[Visitor](/docs/types/Visitor.md)
+[Visitor](/types/Visitor)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

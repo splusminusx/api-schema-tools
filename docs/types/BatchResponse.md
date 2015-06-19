@@ -7,7 +7,7 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*message*|True|[string](/docs/types/string.md)|Текстовое описание кода ответа<br/>|
-|*code*|True|[string](/docs/types/string.md)|Код ответа.<br/>|
-|*id*|False|[string](/docs/types/string.md)|Идентификатор вызова, указанный в одноименном параметре соответствующего BatchRequest.<br/>|
-|*results*|True|[Object](/docs/types/Object.md)|Результат выполнения метода.<br/>|
+|*message*|True|[string](/types/string)|Текстовое описание кода ответа<br/>|
+|*code*|True|[string](/types/string)|Код ответа.<br/>|
+|*id*|False|[string](/types/string)|Идентификатор вызова, указанный в одноименном параметре соответствующего BatchRequest.<br/>|
+|*results*|True|[Object](/types/Object)|Результат выполнения метода.<br/>|

@@ -7,6 +7,6 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*country*|True|[Country](/docs/types/Country.md)|Страна.<br/>|
-|*region*|False|[Region](/docs/types/Region.md)|Регион.<br/>|
-|*City*|False|[City](/docs/types/City.md)|Город.<br/>|
+|*country*|True|[Country](/types/Country)|Страна.<br/>|
+|*region*|False|[Region](/types/Region)|Регион.<br/>|
+|*City*|False|[City](/types/City)|Город.<br/>|

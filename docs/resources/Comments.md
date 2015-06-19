@@ -13,11 +13,11 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*text*|True|[string](/docs/types/string.md)|Текст комментария.<br/>Максимум 2000 символов.<br/>|
-|*ticket_id*|True|[numeric](/docs/types/numeric.md)|ID обращения в поддержку.<br/>|
+|*text*|True|[string](/types/string)|Текст комментария.<br/>Максимум 2000 символов.<br/>|
+|*ticket_id*|True|[numeric](/types/numeric)|ID обращения в поддержку.<br/>|
 
 ### Результат
-[Comment](/docs/types/Comment.md)
+[Comment](/types/Comment)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -37,14 +37,14 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*q*|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID тикетов;<br/>ticket_ids – idlist, список ID тикетов;<br/>employee_ids – idlist, список ID сотрудников.<br/>created_at.<br/>|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*limit*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
-|*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
-|*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
+|*q*|False|[string](/types/string)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID тикетов;<br/>ticket_ids – idlist, список ID тикетов;<br/>employee_ids – idlist, список ID сотрудников.<br/>created_at.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*limit*|False|[numeric](/types/numeric)|По умолчанию – 50.<br/>|
+|*sort*|False|[string](/types/string)|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию.<br/>|
+|*offset*|False|[numeric](/types/numeric)|По умолчанию – 0.<br/>|
 
 ### Результат
-Array.<[Comment](/docs/types/Comment.md)>
+Array.<[Comment](/types/Comment)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -64,11 +64,11 @@ Array.<[Comment](/docs/types/Comment.md)>
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID комментария к обращению в поддержку.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID комментария к обращению в поддержку.<br/>|
 
 ### Результат
-[Comment](/docs/types/Comment.md)
+[Comment](/types/Comment)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

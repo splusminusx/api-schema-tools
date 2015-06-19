@@ -15,7 +15,7 @@
 |---|---|---|---|
 
 ### Результат
-[FeatureStates](/docs/types/FeatureStates.md)
+[FeatureStates](/types/FeatureStates)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -37,7 +37,7 @@
 |---|---|---|---|
 
 ### Результат
-[CobrowseSettings](/docs/types/CobrowseSettings.md)
+[CobrowseSettings](/types/CobrowseSettings)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -59,7 +59,7 @@
 |---|---|---|---|
 
 ### Результат
-[FileTransferSettings](/docs/types/FileTransferSettings.md)
+[FileTransferSettings](/types/FileTransferSettings)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -81,7 +81,7 @@
 |---|---|---|---|
 
 ### Результат
-[Settings](/docs/types/Settings.md)
+[Settings](/types/Settings)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -101,7 +101,7 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*is_active*|False|[boolean](/docs/types/boolean.md)|Включение/выключение функции «Виртуальный ассистент».<br/>|
+|*is_active*|False|[boolean](/types/boolean)|Включение/выключение функции «Виртуальный ассистент».<br/>|
 
 ### Результат
 None
@@ -124,8 +124,8 @@ None
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*is_active*|False|[boolean](/docs/types/boolean.md)|Включение/выключение отправки актов на электронную почту.<br/>|
-|*emails*|False|[string](/docs/types/string.md)|Список через запятую адресов электронной почты.<br/><br/>|
+|*is_active*|False|[boolean](/types/boolean)|Включение/выключение отправки актов на электронную почту.<br/>|
+|*emails*|False|[string](/types/string)|Список через запятую адресов электронной почты.<br/><br/>|
 
 ### Результат
 None
@@ -150,7 +150,7 @@ None
 |---|---|---|---|
 
 ### Результат
-[AcceptanceByEmailSettings](/docs/types/AcceptanceByEmailSettings.md)
+[AcceptanceByEmailSettings](/types/AcceptanceByEmailSettings)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -170,7 +170,7 @@ None
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*is_active*|False|[boolean](/docs/types/boolean.md)|Включение/выключение возможности оценки чатов сотрудниками.<br/>|
+|*is_active*|False|[boolean](/types/boolean)|Включение/выключение возможности оценки чатов сотрудниками.<br/>|
 
 ### Результат
 None
@@ -193,7 +193,7 @@ None
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*is_active*|False|[boolean](/docs/types/boolean.md)|Включение/выключение функции «Передача файлов».<br/>|
+|*is_active*|False|[boolean](/types/boolean)|Включение/выключение функции «Передача файлов».<br/>|
 
 ### Результат
 None
@@ -218,7 +218,7 @@ None
 |---|---|---|---|
 
 ### Результат
-[CallSettings](/docs/types/CallSettings.md)
+[CallSettings](/types/CallSettings)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -240,7 +240,7 @@ None
 |---|---|---|---|
 
 ### Результат
-[TypingIndicatorSettings](/docs/types/TypingIndicatorSettings.md)
+[TypingIndicatorSettings](/types/TypingIndicatorSettings)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -262,7 +262,7 @@ None
 |---|---|---|---|
 
 ### Результат
-[ReportByEmailSettings](/docs/types/ReportByEmailSettings.md)
+[ReportByEmailSettings](/types/ReportByEmailSettings)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -282,7 +282,7 @@ None
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*is_active*|False|[boolean](/docs/types/boolean.md)|Включение/выключение функции «Подглядывание».<br/>|
+|*is_active*|False|[boolean](/types/boolean)|Включение/выключение функции «Подглядывание».<br/>|
 
 ### Результат
 None
@@ -305,12 +305,12 @@ None
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*is_forward*|False|[boolean](/docs/types/boolean.md)|Включение/выключение переадресации.<br/>|
-|*is_active*|False|[boolean](/docs/types/boolean.md)|Включение/выключение функциональности звонков.<br/>|
-|*forward_sip_host*|False|[string](/docs/types/string.md)|Имя хоста SIP.<br/>Обязательно при forward_type=SIP и is_forward=true.<br/>|
-|*forward_sip_login*|False|[string](/docs/types/string.md)|Логин для подключения по SIP.<br/>Обязательно при forward_type=SIP и is_forward=true.<br/>|
-|*forward_sip_password*|False|[string](/docs/types/string.md)|Пароль для подключения по SIP.<br/>Обязательно при forward_type=SIP и is_forward=true.<br/>|
-|*forward_type*|False|[string](/docs/types/string.md)|Тип переадресации.<br/>Возможные значения:<br/>sip – переадресация на SIP,<br/>phone – переадресация на телефон.<br/>|
+|*is_forward*|False|[boolean](/types/boolean)|Включение/выключение переадресации.<br/>|
+|*is_active*|False|[boolean](/types/boolean)|Включение/выключение функциональности звонков.<br/>|
+|*forward_sip_host*|False|[string](/types/string)|Имя хоста SIP.<br/>Обязательно при forward_type=SIP и is_forward=true.<br/>|
+|*forward_sip_login*|False|[string](/types/string)|Логин для подключения по SIP.<br/>Обязательно при forward_type=SIP и is_forward=true.<br/>|
+|*forward_sip_password*|False|[string](/types/string)|Пароль для подключения по SIP.<br/>Обязательно при forward_type=SIP и is_forward=true.<br/>|
+|*forward_type*|False|[string](/types/string)|Тип переадресации.<br/>Возможные значения:<br/>sip – переадресация на SIP,<br/>phone – переадресация на телефон.<br/>|
 
 ### Результат
 None
@@ -333,9 +333,9 @@ None
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*is_active*|False|[boolean](/docs/types/boolean.md)|Включение/выключение отправки отчетов на email.<br/>|
-|*period*|False|[string](/docs/types/string.md)|Периодичность.<br/>Возможные значения:<br/>daily – ежедневно;<br/>weekly – еженедельно;<br/>monthly – ежемесячно.<br/>|
-|*emails*|False|[string](/docs/types/string.md)|Список через запятую адресов электронной почты, на которые следует отправлять отчеты.<br/>Если указана пустая строка, то отчеты отправляться не будут.<br/>|
+|*is_active*|False|[boolean](/types/boolean)|Включение/выключение отправки отчетов на email.<br/>|
+|*period*|False|[string](/types/string)|Периодичность.<br/>Возможные значения:<br/>daily – ежедневно;<br/>weekly – еженедельно;<br/>monthly – ежемесячно.<br/>|
+|*emails*|False|[string](/types/string)|Список через запятую адресов электронной почты, на которые следует отправлять отчеты.<br/>Если указана пустая строка, то отчеты отправляться не будут.<br/>|
 
 ### Результат
 None
@@ -360,7 +360,7 @@ None
 |---|---|---|---|
 
 ### Результат
-[EmployeeRemarkSettings](/docs/types/EmployeeRemarkSettings.md)
+[EmployeeRemarkSettings](/types/EmployeeRemarkSettings)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

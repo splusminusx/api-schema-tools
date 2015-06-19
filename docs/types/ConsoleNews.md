@@ -7,11 +7,11 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*content*|True|[string](/docs/types/string.md)|Текст.<br/>|
-|*title*|True|[string](/docs/types/string.md)|Заголовок.<br/>|
-|*image*|True|[file](/docs/types/file.md)|Картинка.<br/>|
-|*annotation*|True|[string](/docs/types/string.md)|Анонс.<br/>|
-|*is_read*|True|[boolean](/docs/types/boolean.md)|Признак прочитанной новости.<br/>|
-|*position*|True|[numeric](/docs/types/numeric.md)|Порядковый номер в списке.<br/>|
-|*created_at*|True|[datetime](/docs/types/datetime.md)|Дата и время создания.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID новости.<br/>|
+|*content*|True|[string](/types/string)|Текст.<br/>|
+|*title*|True|[string](/types/string)|Заголовок.<br/>|
+|*image*|True|[file](/types/file)|Картинка.<br/>|
+|*annotation*|True|[string](/types/string)|Анонс.<br/>|
+|*is_read*|True|[boolean](/types/boolean)|Признак прочитанной новости.<br/>|
+|*position*|True|[numeric](/types/numeric)|Порядковый номер в списке.<br/>|
+|*created_at*|True|[datetime](/types/datetime)|Дата и время создания.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID новости.<br/>|

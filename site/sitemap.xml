@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>None/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>None/types/Acceptance/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/AcceptanceByEmailSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/BatchRequest/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/BatchResponse/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Call/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/CallButton/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/CallLabelSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/CallSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Cart/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/CartItem/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Chat/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/ChatButton/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/ChatFormSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/ChatWelcomeSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/City/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/CobrowseSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Comment/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Complaint/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/ConsoleNews/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Contact/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Contract/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Conversation/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/ConversationEvent/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Country/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Department/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/DepartmentSiteBinding/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Document/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Employee/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/EmployeeChatMessage/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/EmployeeEvent/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/EmployeeOnlineInterval/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/EmployeeRemark/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/EmployeeRemarkSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/FeatureStates/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/FileTransferSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/HoldMessage/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/HoldRule/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/IgnoreListItem/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/InvitationRule/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/InvitationRuleSiteBinding/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Invoice/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Lead/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/LeadFormSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Location/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/MailBox/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Message/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Offering/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/OfflineFormSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/OfflineMailSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Order/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/PageView/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Payer/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Payment/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Period/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Prechat/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Product/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/ProductAddition/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/QuickMessage/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/QuickMessageCategory/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Region/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/RegistrationMarketingData/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/RegistrationPartnerData/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/ReportByEmailSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Requisites/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Requisites_ru_legal/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Requisites_ru_person/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Requisites_ua_legal/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Requisites_ua_person/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Requisites_ua_sp/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Role/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Settings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Site/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/SiteCallSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/SiteChatSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/SiteWidgetSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/SiteXWidgetSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Ticket/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/TypingIndicatorSettings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/VATInvoice/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/Visitor/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/boolean/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/color/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/country/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/currency/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/date/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/datetime/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/email/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/file/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/idlist/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/numeric/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/phone/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/string/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/types/time/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/resources/Acceptances/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/CallButtons/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/CartItems/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Carts/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/ChatButtons/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Comments/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Complaints/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/ConsoleNews/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Contacts/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Conversations/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/DepartmentSiteBindings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Departments/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Documents/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/EmployeeChatMessages/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/EmployeeChats/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/EmployeeEvents/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/EmployeeOnlineIntervals/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/EmployeeRemarks/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Employees/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/HoldRules/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/IgnoreListItems/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/InvitationRuleSiteBindings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/InvitationRules/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Invoices/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Leads/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Locations/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/MailBoxes/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Offerings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Payers/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Payments/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Periods/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Products/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/QuickMessageCategories/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/QuickMessages/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Roles/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Settings/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Sites/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Stats/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Tickets/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Utils/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/VATInvoices/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Visitors/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Сalls/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/resources/Сhats/</loc>
+     <lastmod>2015-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>

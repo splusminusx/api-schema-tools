@@ -13,11 +13,11 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID обращения.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID обращения.<br/>|
 
 ### Результат
-[Conversation](/docs/types/Conversation.md)
+[Conversation](/types/Conversation)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

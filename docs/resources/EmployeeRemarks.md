@@ -13,11 +13,11 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*text*|True|[string](/docs/types/string.md)|Текст оценки.<br/>|
-|*position*|False|[numeric](/docs/types/numeric.md)|Порядковый номер оценки.<br/>Если не указано, то оценка будет последней.<br/>|
+|*text*|True|[string](/types/string)|Текст оценки.<br/>|
+|*position*|False|[numeric](/types/numeric)|Порядковый номер оценки.<br/>Если не указано, то оценка будет последней.<br/>|
 
 ### Результат
-[EmployeeRemark](/docs/types/EmployeeRemark.md)
+[EmployeeRemark](/types/EmployeeRemark)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -37,11 +37,11 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID оценки.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID оценки.<br/>|
 
 ### Результат
-[EmployeeRemark](/docs/types/EmployeeRemark.md)
+[EmployeeRemark](/types/EmployeeRemark)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -61,14 +61,14 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*q*|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID оценок.<br/>|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*limit*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
-|*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>position:a – по умолчанию,<br/>text:a, text:d,<br/>created_at:d,<br/>updated_at:d.<br/>|
-|*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
+|*q*|False|[string](/types/string)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID оценок.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*limit*|False|[numeric](/types/numeric)|По умолчанию – 50.<br/>|
+|*sort*|False|[string](/types/string)|Сортировка результатов.<br/>Возможные значения:<br/>position:a – по умолчанию,<br/>text:a, text:d,<br/>created_at:d,<br/>updated_at:d.<br/>|
+|*offset*|False|[numeric](/types/numeric)|По умолчанию – 0.<br/>|
 
 ### Результат
-Array.<[EmployeeRemark](/docs/types/EmployeeRemark.md)>
+Array.<[EmployeeRemark](/types/EmployeeRemark)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -88,9 +88,9 @@ Array.<[EmployeeRemark](/docs/types/EmployeeRemark.md)>
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*text*|False|[string](/docs/types/string.md)|Текст оценки.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID оценки.<br/>|
-|*position*|False|[numeric](/docs/types/numeric.md)|Порядковый номер оценки.<br/>|
+|*text*|False|[string](/types/string)|Текст оценки.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID оценки.<br/>|
+|*position*|False|[numeric](/types/numeric)|Порядковый номер оценки.<br/>|
 
 ### Результат
 None
@@ -113,7 +113,7 @@ None
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID оценки.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID оценки.<br/>|
 
 ### Результат
 None

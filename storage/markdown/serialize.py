@@ -3,6 +3,7 @@
 
 from models.data_types import ComplexDataType, PrimitiveDataType
 from models.resource import Resource
+from datetime import datetime
 import io
 import os
 
@@ -55,10 +56,10 @@ class MarkdownSerializer(object):
                 return unicode(
                     generic_name +
                     u'.<[' + parameter_name + u'](' +
-                    os.path.join(u'/docs/types', parameter_name + u'.md)>'))
+                    os.path.join(u'/types', parameter_name + u')>'))
             else:
                 return u'[' + data_type_name + u'](' + \
-                       os.path.join(u'/docs/types', data_type_name + u'.md)')
+                       os.path.join(u'/types', data_type_name + u')')
         return u'None'
 
     def _serialize_complex_data_type(self, obj):

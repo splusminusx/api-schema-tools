@@ -13,16 +13,16 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*image_online*|False|[file](/docs/types/file.md)|Картинка кнопки, когда есть доступные операторы.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
-|*color*|True|[string](/docs/types/string.md)|Цветовая схема.<br/>Возможные значения:<br/>green – зеленая;<br/>orange – оранжевая;<br/>blue – синяя;<br/>red – красная;<br/>purple – фиолетовая;<br/>gray – серая;<br/>rose – розовая;<br/>black – черная;<br/>yellow – желтая;<br/>white – белая.<br/>Принимается во внимание при design_type = predefined.<br/>|
-|*design_type*|True|[string](/docs/types/string.md)|Тип дизайна.<br/>Возможные значения:<br/>predefined – предустановленный;<br/>custom – свой дизайн.<br/>|
-|*site_id*|True|[numeric](/docs/types/numeric.md)|ID сайта<br/>|
-|*image_offline*|False|[file](/docs/types/file.md)|Картинка кнопки, когда нет доступных операторов.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
-|*size*|True|[string](/docs/types/string.md)|Размер кнопки.<br/>Возможные значения:<br/>small – маленький, 146x50 пикселей;<br/>middle  – средний,  193x69 пикселей;<br/>large – большой, 223x100 пикселей.<br/>Принимается во внимание при design_type = predefined.<br/>|
-|*department_id*|False|[numeric](/docs/types/numeric.md)|ID отдел.<br/>|
+|*image_online*|False|[file](/types/file)|Картинка кнопки, когда есть доступные операторы.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
+|*color*|True|[string](/types/string)|Цветовая схема.<br/>Возможные значения:<br/>green – зеленая;<br/>orange – оранжевая;<br/>blue – синяя;<br/>red – красная;<br/>purple – фиолетовая;<br/>gray – серая;<br/>rose – розовая;<br/>black – черная;<br/>yellow – желтая;<br/>white – белая.<br/>Принимается во внимание при design_type = predefined.<br/>|
+|*design_type*|True|[string](/types/string)|Тип дизайна.<br/>Возможные значения:<br/>predefined – предустановленный;<br/>custom – свой дизайн.<br/>|
+|*site_id*|True|[numeric](/types/numeric)|ID сайта<br/>|
+|*image_offline*|False|[file](/types/file)|Картинка кнопки, когда нет доступных операторов.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
+|*size*|True|[string](/types/string)|Размер кнопки.<br/>Возможные значения:<br/>small – маленький, 146x50 пикселей;<br/>middle  – средний,  193x69 пикселей;<br/>large – большой, 223x100 пикселей.<br/>Принимается во внимание при design_type = predefined.<br/>|
+|*department_id*|False|[numeric](/types/numeric)|ID отдел.<br/>|
 
 ### Результат
-[CallButton](/docs/types/CallButton.md)
+[CallButton](/types/CallButton)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -42,11 +42,11 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID кнопки.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID кнопки.<br/>|
 
 ### Результат
-[CallButton](/docs/types/CallButton.md)
+[CallButton](/types/CallButton)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -66,14 +66,14 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*q*|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID кнопок;<br/>site_ids – idlist, список ID сайтов.<br/>|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*limit*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
-|*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значение:<br/>id:a – по умолчанию;<br/>updated_at:d.<br/>|
-|*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
+|*q*|False|[string](/types/string)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID кнопок;<br/>site_ids – idlist, список ID сайтов.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*limit*|False|[numeric](/types/numeric)|По умолчанию – 50.<br/>|
+|*sort*|False|[string](/types/string)|Сортировка результатов.<br/>Возможные значение:<br/>id:a – по умолчанию;<br/>updated_at:d.<br/>|
+|*offset*|False|[numeric](/types/numeric)|По умолчанию – 0.<br/>|
 
 ### Результат
-Array.<[CallButton](/docs/types/CallButton.md)>
+Array.<[CallButton](/types/CallButton)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -93,14 +93,14 @@ Array.<[CallButton](/docs/types/CallButton.md)>
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*image_online*|False|[file](/docs/types/file.md)|Картинка кнопки, когда есть доступные операторы.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
-|*color*|False|[string](/docs/types/string.md)|Цветовая схема.<br/>Возможные значения:<br/>green – зеленая;<br/>orange – оранжевая;<br/>blue – синяя;<br/>red – красная;<br/>purple – фиолетовая;<br/>gray – серая;<br/>rose – розовая;<br/>black – черная;<br/>yellow – желтая;<br/>white – белая.<br/>Принимается во внимание при design_type = predefined.<br/>|
-|*design_type*|False|[string](/docs/types/string.md)|Тип дизайна.<br/>Возможные значения:<br/>predefined – предустановленный;<br/>custom – свой дизайн.<br/>|
-|*site_id*|False|[numeric](/docs/types/numeric.md)|ID сайта<br/>|
-|*image_offline*|False|[file](/docs/types/file.md)|Картинка кнопки, когда нет доступных операторов.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
-|*size*|False|[string](/docs/types/string.md)|Размер кнопки.<br/>Возможные значения:<br/>small – маленький, 146x50 пикселей;<br/>middle – средний,  193x69 пикселей;<br/>large – большой, 223x100 пикселей.<br/>Принимается во внимание при design_type = predefined.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID кнопки.<br/>|
-|*department_id*|False|[numeric](/docs/types/numeric.md)|ID отдел.<br/>|
+|*image_online*|False|[file](/types/file)|Картинка кнопки, когда есть доступные операторы.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
+|*color*|False|[string](/types/string)|Цветовая схема.<br/>Возможные значения:<br/>green – зеленая;<br/>orange – оранжевая;<br/>blue – синяя;<br/>red – красная;<br/>purple – фиолетовая;<br/>gray – серая;<br/>rose – розовая;<br/>black – черная;<br/>yellow – желтая;<br/>white – белая.<br/>Принимается во внимание при design_type = predefined.<br/>|
+|*design_type*|False|[string](/types/string)|Тип дизайна.<br/>Возможные значения:<br/>predefined – предустановленный;<br/>custom – свой дизайн.<br/>|
+|*site_id*|False|[numeric](/types/numeric)|ID сайта<br/>|
+|*image_offline*|False|[file](/types/file)|Картинка кнопки, когда нет доступных операторов.<br/>Принимается во внимание при design_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.<br/>Максимальный размер файла – 2 MB.<br/>|
+|*size*|False|[string](/types/string)|Размер кнопки.<br/>Возможные значения:<br/>small – маленький, 146x50 пикселей;<br/>middle – средний,  193x69 пикселей;<br/>large – большой, 223x100 пикселей.<br/>Принимается во внимание при design_type = predefined.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID кнопки.<br/>|
+|*department_id*|False|[numeric](/types/numeric)|ID отдел.<br/>|
 
 ### Результат
 None
@@ -123,7 +123,7 @@ None
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID кнопки.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID кнопки.<br/>|
 
 ### Результат
 None

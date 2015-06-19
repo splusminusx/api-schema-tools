@@ -7,16 +7,16 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*kpp*|False|[string](/docs/types/string.md)|КПП. 9 символов.<br/>|
-|*signer_basis*|True|[string](/docs/types/string.md)|На основании чего имеет право подписывать документы.<br/>|
-|*address_postal*|True|[string](/docs/types/string.md)|Физический адрес.<br/>|
-|*account_r*|True|[string](/docs/types/string.md)|Расчетный счет.<br/>Допустимы только цифры. 20 символов.<br/>|
-|*bic*|True|[string](/docs/types/string.md)|БИК.<br/>Допустимы только цифры. 9 символов.<br/>|
-|*ogrn*|False|[string](/docs/types/string.md)|ОГРН. 13 или 15 символов.<br/>|
-|*director_name*|True|[string](/docs/types/string.md)|Должность и ФИО лица, подписывающего документы.<br/>|
-|*account_k*|True|[string](/docs/types/string.md)|Корреспондентский счет.<br/>Допустимы только цифры. 20 символов.<br/>|
-|*director_name_alt*|True|[string](/docs/types/string.md)|Должность и ФИО представителя юр. лица (в родительном падеже).<br/>|
-|*address_corporate*|True|[string](/docs/types/string.md)|Юридический адрес.<br/>|
-|*corporate_name*|True|[string](/docs/types/string.md)|Название юридического лица.<br/>|
-|*bank*|True|[string](/docs/types/string.md)|Наименование банка.<br/>|
-|*inn*|False|[string](/docs/types/string.md)|ИНН. Допустимы только цифры. 10 или 12 цифр.<br/>|
+|*kpp*|False|[string](/types/string)|КПП. 9 символов.<br/>|
+|*signer_basis*|True|[string](/types/string)|На основании чего имеет право подписывать документы.<br/>|
+|*address_postal*|True|[string](/types/string)|Физический адрес.<br/>|
+|*account_r*|True|[string](/types/string)|Расчетный счет.<br/>Допустимы только цифры. 20 символов.<br/>|
+|*bic*|True|[string](/types/string)|БИК.<br/>Допустимы только цифры. 9 символов.<br/>|
+|*ogrn*|False|[string](/types/string)|ОГРН. 13 или 15 символов.<br/>|
+|*director_name*|True|[string](/types/string)|Должность и ФИО лица, подписывающего документы.<br/>|
+|*account_k*|True|[string](/types/string)|Корреспондентский счет.<br/>Допустимы только цифры. 20 символов.<br/>|
+|*director_name_alt*|True|[string](/types/string)|Должность и ФИО представителя юр. лица (в родительном падеже).<br/>|
+|*address_corporate*|True|[string](/types/string)|Юридический адрес.<br/>|
+|*corporate_name*|True|[string](/types/string)|Название юридического лица.<br/>|
+|*bank*|True|[string](/types/string)|Наименование банка.<br/>|
+|*inn*|False|[string](/types/string)|ИНН. Допустимы только цифры. 10 или 12 цифр.<br/>|

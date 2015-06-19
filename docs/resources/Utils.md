@@ -13,10 +13,10 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*methods*|True|Array.<[BatchRequest](/docs/types/BatchRequest.md)>|Массив методов и их параметров.<br/>Максимум 10 элементов. Одиннадцатый элемент и далее будут проигнорированы.<br/>|
+|*methods*|True|Array.<[BatchRequest](/types/BatchRequest)>|Массив методов и их параметров.<br/>Максимум 10 элементов. Одиннадцатый элемент и далее будут проигнорированы.<br/>|
 
 ### Результат
-Array.<[BatchResponse](/docs/types/BatchResponse.md)>
+Array.<[BatchResponse](/types/BatchResponse)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

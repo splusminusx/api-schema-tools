@@ -13,11 +13,11 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*product_addition*|False|[ProductAddition](/docs/types/ProductAddition.md)|Дополнение продукта.<br/>|
-|*cart_id*|True|[numeric](/docs/types/numeric.md)|ID корзины.<br/>|
+|*product_addition*|False|[ProductAddition](/types/ProductAddition)|Дополнение продукта.<br/>|
+|*cart_id*|True|[numeric](/types/numeric)|ID корзины.<br/>|
 
 ### Результат
-[CartItem](/docs/types/CartItem.md)
+[CartItem](/types/CartItem)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -37,8 +37,8 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*product_addition*|True|[ProductAddition](/docs/types/ProductAddition.md)|Дополнение продукта.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID позиции корзины.<br/>|
+|*product_addition*|True|[ProductAddition](/types/ProductAddition)|Дополнение продукта.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID позиции корзины.<br/>|
 
 ### Результат
 None
@@ -61,7 +61,7 @@ None
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID позиции корзины.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID позиции корзины.<br/>|
 
 ### Результат
 None

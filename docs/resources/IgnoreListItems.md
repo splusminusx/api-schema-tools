@@ -13,14 +13,14 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*q*|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов;<br/>employee_ids – idlist, список ID сотрудников.<br/>created_at.<br/>|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*limit*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
-|*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значение:<br/>created_at:a – по умолчанию.<br/>|
-|*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
+|*q*|False|[string](/types/string)|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов;<br/>employee_ids – idlist, список ID сотрудников.<br/>created_at.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*limit*|False|[numeric](/types/numeric)|По умолчанию – 50.<br/>|
+|*sort*|False|[string](/types/string)|Сортировка результатов.<br/>Возможные значение:<br/>created_at:a – по умолчанию.<br/>|
+|*offset*|False|[numeric](/types/numeric)|По умолчанию – 0.<br/>|
 
 ### Результат
-Array.<[IgnoreListItem](/docs/types/IgnoreListItem.md)>
+Array.<[IgnoreListItem](/types/IgnoreListItem)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -40,8 +40,8 @@ Array.<[IgnoreListItem](/docs/types/IgnoreListItem.md)>
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*site_id*|True|[numeric](/docs/types/numeric.md)|ID сайта.<br/>|
-|*visitor_id*|True|[string](/docs/types/string.md)|ID посетителя.<br/>|
+|*site_id*|True|[numeric](/types/numeric)|ID сайта.<br/>|
+|*visitor_id*|True|[string](/types/string)|ID посетителя.<br/>|
 
 ### Результат
 None

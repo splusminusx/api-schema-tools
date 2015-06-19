@@ -8,23 +8,23 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*size*|True|[string](/docs/types/string.md)|Размер ярлыка.<br/>Возможные значения:<br/>small – маленький, 24x106 пикселей;<br/>large – большой, 40x178 пикселей (по умолчанию).<br/>|
-|*offset_value*|True|[numeric](/docs/types/numeric.md)|Значение отступа.<br/>Целое число в диапазоне:<br/>от 0 до 100 для offset_type = percent;<br/>от 0 до 2000 для offset_type = pixel.<br/>|
-|*color*|False|[string](/docs/types/string.md)|Цветовая схема.<br/>Возможные значения:<br/>green – зеленая;<br/>orange – оранжевая;<br/>blue – синяя;<br/>red – красная;<br/>purple – фиолетовая;<br/>gray – серая;<br/>rose – розовая;<br/>black – черная;<br/>yellow – желтая;<br/>white – белая.<br/>Поле обязательно для color_type = preset.<br/>|
-|*background_typе*|True|[string](/docs/types/string.md)|Тип фона.<br/>Возможные значения:<br/>none – без фона;<br/>default – стандартный фон;<br/>custom – загружаемый фон.<br/>Актуально только для внешнего окна.<br/>|
-|*color_type*|True|[string](/docs/types/string.md)|Тип указания цветовой схемы.<br/>Возможные значения:<br/>preset – стандартная схема;<br/>custom – явное указание цветов.<br/>|
-|*updated_at*|True|[datetime](/docs/types/datetime.md)|Дата последнего обновления.<br/>|
-|*is_hidden_offline*|True|[boolean](/docs/types/boolean.md)|Скрывать ярлык, если сотрудники офлайн.<br/>|
-|*color_main*|False|[color](/docs/types/color.md)|Основной цвет.<br/>Поле обязательно для color_type = custom.<br/>|
-|*banner_type*|True|[string](/docs/types/string.md)|Тип баннера.<br/>Возможные значения:<br/>none – без баннера;<br/>default – стандартный баннер;<br/>custom – загружаемый баннер.<br/>Актуально только для внешнего окна.<br/>|
-|*is_custom*|True|[boolean](/docs/types/boolean.md)|Признак заказного дизайна ярлыка и окна чата.<br/>Если true, то изменение некоторых настроек может не иметь должного результата, поскольку соответствующий аспект внешнего вида переопределяются заказным дизайном.<br/>Это признак доступен только для чтения.<br/>|
-|*color_background*|False|[color](/docs/types/color.md)|Цвет фона.<br/>Поле обязательно для color_type = custom.<br/>|
-|*banner_custom*|False|[file](/docs/types/file.md)|Загруженная баннер для banner_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.<br/>Поле обязательно для banner_type = custom.<br/>Актуально только для внешнего окна.<br/>|
-|*banner_link*|False|[string](/docs/types/string.md)|Ссылка с баннера.<br/>Поле обязательно для banner_type = custom.<br/>Актуально только для внешнего окна.<br/>|
-|*position*|True|[string](/docs/types/string.md)|Положение ярлыка.<br/>Возможные значения:<br/>top – сверху;<br/>right – справа;<br/>bottom – снизу;<br/>left – слева.<br/>|
-|*is_label_visible*|True|[boolean](/docs/types/boolean.md)|Признак отображения ярлыка.<br/>По умолчанию – true.<br/>Если false, ярлык не будет показываться посетителю, даже при наличии доступных операторов.<br/>Это признак автоматически устанавливается в true и не может быть изменен, если подключена опция генератора лидов или для сайта включено встроенное окно чата (site.is_embedded_chat == true).<br/>Признак is_label_visible связан с полем "size". При переключении из false в true поле "size" устанавливается в значение по умолчанию.<br/>|
-|*logo_type*|True|[string](/docs/types/string.md)|Тип логотипа LiveTex.<br/>Возможные значения:<br/>animated – анимированный;<br/>static – статический.<br/>|
-|*offset_type*|True|[string](/docs/types/string.md)|Тип отступа.<br/>Возможные значения:<br/>pixel – в пикселах;<br/>percent – в процентах.<br/>|
-|*background_custom*|False|[file](/docs/types/file.md)|Загруженный фон для background_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с размерами 448x605px.<br/>Поле обязательно для background_type = custom.<br/>Актуально только для внешнего окна.<br/>|
-|*photo_size*|True|[string](/docs/types/string.md)|Размер фотографии сотрудника.<br/>Возможные значения:<br/>small – маленькая, 60x70 пикселей;<br/>large – большая, 100x116 пикселей.<br/>|
-|*color_text*|False|[color](/docs/types/color.md)|Цвет текста.<br/>Поле обязательно для color_type = custom.<br/>|
+|*size*|True|[string](/types/string)|Размер ярлыка.<br/>Возможные значения:<br/>small – маленький, 24x106 пикселей;<br/>large – большой, 40x178 пикселей (по умолчанию).<br/>|
+|*offset_value*|True|[numeric](/types/numeric)|Значение отступа.<br/>Целое число в диапазоне:<br/>от 0 до 100 для offset_type = percent;<br/>от 0 до 2000 для offset_type = pixel.<br/>|
+|*color*|False|[string](/types/string)|Цветовая схема.<br/>Возможные значения:<br/>green – зеленая;<br/>orange – оранжевая;<br/>blue – синяя;<br/>red – красная;<br/>purple – фиолетовая;<br/>gray – серая;<br/>rose – розовая;<br/>black – черная;<br/>yellow – желтая;<br/>white – белая.<br/>Поле обязательно для color_type = preset.<br/>|
+|*background_typе*|True|[string](/types/string)|Тип фона.<br/>Возможные значения:<br/>none – без фона;<br/>default – стандартный фон;<br/>custom – загружаемый фон.<br/>Актуально только для внешнего окна.<br/>|
+|*color_type*|True|[string](/types/string)|Тип указания цветовой схемы.<br/>Возможные значения:<br/>preset – стандартная схема;<br/>custom – явное указание цветов.<br/>|
+|*updated_at*|True|[datetime](/types/datetime)|Дата последнего обновления.<br/>|
+|*is_hidden_offline*|True|[boolean](/types/boolean)|Скрывать ярлык, если сотрудники офлайн.<br/>|
+|*color_main*|False|[color](/types/color)|Основной цвет.<br/>Поле обязательно для color_type = custom.<br/>|
+|*banner_type*|True|[string](/types/string)|Тип баннера.<br/>Возможные значения:<br/>none – без баннера;<br/>default – стандартный баннер;<br/>custom – загружаемый баннер.<br/>Актуально только для внешнего окна.<br/>|
+|*is_custom*|True|[boolean](/types/boolean)|Признак заказного дизайна ярлыка и окна чата.<br/>Если true, то изменение некоторых настроек может не иметь должного результата, поскольку соответствующий аспект внешнего вида переопределяются заказным дизайном.<br/>Это признак доступен только для чтения.<br/>|
+|*color_background*|False|[color](/types/color)|Цвет фона.<br/>Поле обязательно для color_type = custom.<br/>|
+|*banner_custom*|False|[file](/types/file)|Загруженная баннер для banner_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.<br/>Поле обязательно для banner_type = custom.<br/>Актуально только для внешнего окна.<br/>|
+|*banner_link*|False|[string](/types/string)|Ссылка с баннера.<br/>Поле обязательно для banner_type = custom.<br/>Актуально только для внешнего окна.<br/>|
+|*position*|True|[string](/types/string)|Положение ярлыка.<br/>Возможные значения:<br/>top – сверху;<br/>right – справа;<br/>bottom – снизу;<br/>left – слева.<br/>|
+|*is_label_visible*|True|[boolean](/types/boolean)|Признак отображения ярлыка.<br/>По умолчанию – true.<br/>Если false, ярлык не будет показываться посетителю, даже при наличии доступных операторов.<br/>Это признак автоматически устанавливается в true и не может быть изменен, если подключена опция генератора лидов или для сайта включено встроенное окно чата (site.is_embedded_chat == true).<br/>Признак is_label_visible связан с полем "size". При переключении из false в true поле "size" устанавливается в значение по умолчанию.<br/>|
+|*logo_type*|True|[string](/types/string)|Тип логотипа LiveTex.<br/>Возможные значения:<br/>animated – анимированный;<br/>static – статический.<br/>|
+|*offset_type*|True|[string](/types/string)|Тип отступа.<br/>Возможные значения:<br/>pixel – в пикселах;<br/>percent – в процентах.<br/>|
+|*background_custom*|False|[file](/types/file)|Загруженный фон для background_type = custom.<br/>Изображение в формате JPEG, GIF или PNG с размерами 448x605px.<br/>Поле обязательно для background_type = custom.<br/>Актуально только для внешнего окна.<br/>|
+|*photo_size*|True|[string](/types/string)|Размер фотографии сотрудника.<br/>Возможные значения:<br/>small – маленькая, 60x70 пикселей;<br/>large – большая, 100x116 пикселей.<br/>|
+|*color_text*|False|[color](/types/color)|Цвет текста.<br/>Поле обязательно для color_type = custom.<br/>|

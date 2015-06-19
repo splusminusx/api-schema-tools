@@ -7,6 +7,6 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*country*|True|[Country](/docs/types/Country.md)|Страна<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID региона.<br/>|
-|*title*|True|[string](/docs/types/string.md)|Название региона.<br/>|
+|*country*|True|[Country](/types/Country)|Страна<br/>|
+|*id*|True|[numeric](/types/numeric)|ID региона.<br/>|
+|*title*|True|[string](/types/string)|Название региона.<br/>|

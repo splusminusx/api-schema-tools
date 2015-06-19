@@ -13,14 +13,14 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*q*|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>Максимум - 30 дней. По умолчанию устанавливается период равный предыдущим суткам.<br/>time – time, период времени в течение суток, принимаемый во внимание при поиске сотрудников в состоянии «В сети». Возможные значения от 00:00:00 до 23:59:59.<br/>|
-|*fields*|False|[string](/docs/types/string.md)|Список возвращаемых полей через запятую.<br/>По умолчанию возвращаются стандартные поля сайта, а также:<br/>online_time;<br/>intervals.<br/>|
-|*limit*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 5.<br/>|
-|*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>url:a – по умолчанию.<br/>|
-|*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
+|*q*|False|[string](/types/string)|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>Максимум - 30 дней. По умолчанию устанавливается период равный предыдущим суткам.<br/>time – time, период времени в течение суток, принимаемый во внимание при поиске сотрудников в состоянии «В сети». Возможные значения от 00:00:00 до 23:59:59.<br/>|
+|*fields*|False|[string](/types/string)|Список возвращаемых полей через запятую.<br/>По умолчанию возвращаются стандартные поля сайта, а также:<br/>online_time;<br/>intervals.<br/>|
+|*limit*|False|[numeric](/types/numeric)|По умолчанию – 5.<br/>|
+|*sort*|False|[string](/types/string)|Сортировка результатов.<br/>Возможные значения:<br/>url:a – по умолчанию.<br/>|
+|*offset*|False|[numeric](/types/numeric)|По умолчанию – 0.<br/>|
 
 ### Результат
-Array.<[Site](/docs/types/Site.md)>
+Array.<[Site](/types/Site)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -40,14 +40,14 @@ Array.<[Site](/docs/types/Site.md)>
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*q*|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>Максимум - 30 дней. По умолчанию устанавливается период равный предыдущим суткам.<br/>time – time, период времени в течение суток, принимаемый во внимание при поиске сотрудников в состоянии «В сети». Возможные значения от 00:00:00 до 23:59:59.<br/>|
-|*fields*|False|[string](/docs/types/string.md)|Список возвращаемых полей через запятую.<br/>По умолчанию возвращаются стандартные поля сайта, а также:<br/>online_time;<br/>intervals.<br/>|
-|*limit*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 5.<br/>|
-|*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>last_name:a – по умолчанию;<br/>first_name:a.<br/>|
-|*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
+|*q*|False|[string](/types/string)|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>Максимум - 30 дней. По умолчанию устанавливается период равный предыдущим суткам.<br/>time – time, период времени в течение суток, принимаемый во внимание при поиске сотрудников в состоянии «В сети». Возможные значения от 00:00:00 до 23:59:59.<br/>|
+|*fields*|False|[string](/types/string)|Список возвращаемых полей через запятую.<br/>По умолчанию возвращаются стандартные поля сайта, а также:<br/>online_time;<br/>intervals.<br/>|
+|*limit*|False|[numeric](/types/numeric)|По умолчанию – 5.<br/>|
+|*sort*|False|[string](/types/string)|Сортировка результатов.<br/>Возможные значения:<br/>last_name:a – по умолчанию;<br/>first_name:a.<br/>|
+|*offset*|False|[numeric](/types/numeric)|По умолчанию – 0.<br/>|
 
 ### Результат
-Array.<[Employee](/docs/types/Employee.md)>
+Array.<[Employee](/types/Employee)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -67,14 +67,14 @@ Array.<[Employee](/docs/types/Employee.md)>
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*q*|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>Максимум - 30 дней. По умолчанию устанавливается период равный предыдущим суткам.<br/>time – time, период времени в течение суток, принимаемый во внимание при поиске сотрудников в состоянии "В сети". Возможные значения от 00:00:00 до 23:59:59.<br/>|
-|*fields*|False|[string](/docs/types/string.md)|Список возвращаемых полей через запятую.<br/>По умолчанию возвращаются стандартные поля сайта, а также:<br/>online_time;<br/>intervals.<br/>|
-|*limit*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 5.<br/>|
-|*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>title:a – по умолчанию.<br/>|
-|*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
+|*q*|False|[string](/types/string)|Критерий поиска.<br/>Доступные поля:<br/>site_ids – idlist, список ID сайтов.<br/>department_ids – idlist, список ID отделов.<br/>employee_ids – idlist, список ID сотрудников.<br/>date – date, период, за который запрашивается статистика.<br/>Максимум - 30 дней. По умолчанию устанавливается период равный предыдущим суткам.<br/>time – time, период времени в течение суток, принимаемый во внимание при поиске сотрудников в состоянии "В сети". Возможные значения от 00:00:00 до 23:59:59.<br/>|
+|*fields*|False|[string](/types/string)|Список возвращаемых полей через запятую.<br/>По умолчанию возвращаются стандартные поля сайта, а также:<br/>online_time;<br/>intervals.<br/>|
+|*limit*|False|[numeric](/types/numeric)|По умолчанию – 5.<br/>|
+|*sort*|False|[string](/types/string)|Сортировка результатов.<br/>Возможные значения:<br/>title:a – по умолчанию.<br/>|
+|*offset*|False|[numeric](/types/numeric)|По умолчанию – 0.<br/>|
 
 ### Результат
-Array.<[Department](/docs/types/Department.md)>
+Array.<[Department](/types/Department)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

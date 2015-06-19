@@ -7,5 +7,5 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*start*|True|[datetime](/docs/types/datetime.md)|Начало интервала.<br/>|
-|*end*|True|[datetime](/docs/types/datetime.md)|Конец интервала.<br/>|
+|*start*|True|[datetime](/types/datetime)|Начало интервала.<br/>|
+|*end*|True|[datetime](/types/datetime)|Конец интервала.<br/>|

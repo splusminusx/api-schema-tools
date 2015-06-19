@@ -13,14 +13,14 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*q*|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID счетов;<br/>payer_ids – idlist, список ID плательщиков;<br/>is_bound – boolean, признак связанности счета с каким-либо периодом;<br/>is_paid – boolean, если указан, то возвращаются счета с соответствующим значением этого признака. <br/>|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*limit*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
-|*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию; <br/>paid_at:d.<br/>|
-|*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
+|*q*|False|[string](/types/string)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID счетов;<br/>payer_ids – idlist, список ID плательщиков;<br/>is_bound – boolean, признак связанности счета с каким-либо периодом;<br/>is_paid – boolean, если указан, то возвращаются счета с соответствующим значением этого признака. <br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*limit*|False|[numeric](/types/numeric)|По умолчанию – 50.<br/>|
+|*sort*|False|[string](/types/string)|Сортировка результатов.<br/>Возможные значение:<br/>created_at:d – по умолчанию; <br/>paid_at:d.<br/>|
+|*offset*|False|[numeric](/types/numeric)|По умолчанию – 0.<br/>|
 
 ### Результат
-Array.<[Invoice](/docs/types/Invoice.md)>
+Array.<[Invoice](/types/Invoice)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -40,11 +40,11 @@ Array.<[Invoice](/docs/types/Invoice.md)>
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID счета<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID счета<br/>|
 
 ### Результат
-[Invoice](/docs/types/Invoice.md)
+[Invoice](/types/Invoice)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |

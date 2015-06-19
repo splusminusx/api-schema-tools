@@ -7,8 +7,8 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*text*|True|[string](/docs/types/string.md)|Текст сообщения.<br/>|
-|*created_at*|True|[datetime](/docs/types/datetime.md)|Дата создания.<br/>|
-|*employee_to*|True|[Employee](/docs/types/Employee.md)|Сотрудник, которому было адресовано сообщение.<br/>|
-|*employee_from*|True|[Employee](/docs/types/Employee.md)|Сотрудник, отправивший сообщение.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID сообщения.<br/>|
+|*text*|True|[string](/types/string)|Текст сообщения.<br/>|
+|*created_at*|True|[datetime](/types/datetime)|Дата создания.<br/>|
+|*employee_to*|True|[Employee](/types/Employee)|Сотрудник, которому было адресовано сообщение.<br/>|
+|*employee_from*|True|[Employee](/types/Employee)|Сотрудник, отправивший сообщение.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID сообщения.<br/>|

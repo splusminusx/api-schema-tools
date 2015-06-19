@@ -7,5 +7,5 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*offering_id*|True|[numeric](/docs/types/numeric.md)|ID базового объекта Offering.<br/>|
-|*quantity*|True|[numeric](/docs/types/numeric.md)|Количество ресурсов, например, операторов.<br/>|
+|*offering_id*|True|[numeric](/types/numeric)|ID базового объекта Offering.<br/>|
+|*quantity*|True|[numeric](/types/numeric)|Количество ресурсов, например, операторов.<br/>|

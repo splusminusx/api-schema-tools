@@ -7,12 +7,12 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*city*|False|[string](/docs/types/string.md)|Город.<br/>|
-|*name*|True|[string](/docs/types/string.md)|Имя посетителя.<br/>|
-|*site_id*|True|[numeric](/docs/types/numeric.md)|ID сайта.<br/>|
-|*created_at*|True|[datetime](/docs/types/datetime.md)|Дата и время создания записи.<br/>|
-|*visitor_id*|True|[string](/docs/types/string.md)|ID посетителя.<br/>|
-|*reason*|True|[string](/docs/types/string.md)|Причина добавления в игнор-лист.<br/>|
-|*chat_id*|False|[numeric](/docs/types/numeric.md)|Чат, в котором выполнена блокировка.<br/>|
-|*ip*|True|[string](/docs/types/string.md)|IP-адрес.<br/>|
-|*employee*|True|[Employee](/docs/types/Employee.md)|Сотрудник, выполнивший блокировку.<br/>|
+|*city*|False|[string](/types/string)|Город.<br/>|
+|*name*|True|[string](/types/string)|Имя посетителя.<br/>|
+|*site_id*|True|[numeric](/types/numeric)|ID сайта.<br/>|
+|*created_at*|True|[datetime](/types/datetime)|Дата и время создания записи.<br/>|
+|*visitor_id*|True|[string](/types/string)|ID посетителя.<br/>|
+|*reason*|True|[string](/types/string)|Причина добавления в игнор-лист.<br/>|
+|*chat_id*|False|[numeric](/types/numeric)|Чат, в котором выполнена блокировка.<br/>|
+|*ip*|True|[string](/types/string)|IP-адрес.<br/>|
+|*employee*|True|[Employee](/types/Employee)|Сотрудник, выполнивший блокировку.<br/>|

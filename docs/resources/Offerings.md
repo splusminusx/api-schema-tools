@@ -13,14 +13,14 @@
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*q*|False|[string](/docs/types/string.md)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID предложений;<br/>cart_id – ID корзины, для которых нужно вернуть совместимые предложения;<br/>is_tariff;<br/>is_trial;<br/>resource_type;<br/>price;<br/>days.<br/>|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*limit*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 50.<br/>|
-|*sort*|False|[string](/docs/types/string.md)|Сортировка результатов.<br/>Возможные значения:<br/>id:d - по умолчанию.<br/>|
-|*offset*|False|[numeric](/docs/types/numeric.md)|По умолчанию – 0.<br/>|
+|*q*|False|[string](/types/string)|Критерий поиска.<br/>Доступные поля:<br/>ids – idlist, список ID предложений;<br/>cart_id – ID корзины, для которых нужно вернуть совместимые предложения;<br/>is_tariff;<br/>is_trial;<br/>resource_type;<br/>price;<br/>days.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*limit*|False|[numeric](/types/numeric)|По умолчанию – 50.<br/>|
+|*sort*|False|[string](/types/string)|Сортировка результатов.<br/>Возможные значения:<br/>id:d - по умолчанию.<br/>|
+|*offset*|False|[numeric](/types/numeric)|По умолчанию – 0.<br/>|
 
 ### Результат
-Array.<[Offering](/docs/types/Offering.md)>
+Array.<[Offering](/types/Offering)>
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
@@ -40,11 +40,11 @@ Array.<[Offering](/docs/types/Offering.md)>
 
 | Имя поля | Необходимость | Тип данных | Комментарий |
 |---|---|---|---|
-|*fields*|False|[string](/docs/types/string.md)|Список через запятую возвращаемых полей.<br/>|
-|*id*|True|[numeric](/docs/types/numeric.md)|ID предложения.<br/>|
+|*fields*|False|[string](/types/string)|Список через запятую возвращаемых полей.<br/>|
+|*id*|True|[numeric](/types/numeric)|ID предложения.<br/>|
 
 ### Результат
-[Offering](/docs/types/Offering.md)
+[Offering](/types/Offering)
 ### Доступы к методу
 
 | Имя роли | доступ | Комментарий |
