@@ -1,0 +1,472 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":1000}, null, "Значение должно быть меньше 1000"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "url": [["string"]],
+                "is_managed": [["boolean"]]
+            }
+        }
+    },
+
+    "add": {
+        "fields": {
+            "url": [
+                ["required"],
+                ["string"]
+            ],
+            "is_mobile": [
+                ["boolean"]
+            ],
+            "is_vote": [
+                ["boolean"]
+            ],
+            "is_lead": [
+                ["boolean"]
+            ],
+            "is_complaint": [
+                ["boolean"]
+            ],
+            "complaint_email": [
+                ["email"]
+            ],
+            "is_call_label": [
+                ["boolean"]
+            ],
+            "prechats_chat" : [
+                ["arrayOf", {"type":"App\\Model\\DB\\Billing\\Prechat"}]
+            ],
+            "hold_rule_id" : [
+                ["integer"]
+            ],
+            "employee_ids" : [
+                ["idList"]
+            ],
+            "is_callback": [
+                ["boolean"]
+            ],
+            "callback_url": [
+                ["string"]
+            ],
+            "is_site_prechats": [
+                ["boolean"]
+            ],
+            "is_hidden_offline": [
+                ["boolean"]
+            ]
+        }
+    },
+
+    "batchUpdate": {
+        "fields": {
+            "ids": [
+                ["required"],
+                ["idList"]
+            ],
+            "is_mobile": [
+                ["boolean"]
+            ],
+            "is_vote": [
+                ["boolean"]
+            ],
+            "is_complaint": [
+                ["boolean"]
+            ],
+            "complaint_email": [
+                ["email", {"empty" : true}]
+            ],
+            "is_callback": [
+                ["boolean"]
+            ],
+            "is_hidden_offline": [
+                ["boolean"]
+            ]
+        }
+    },
+    
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "url": [
+                ["string"]
+            ],
+            "is_mobile": [
+                ["boolean"]
+            ],
+            "is_vote": [
+                ["boolean"]
+            ],
+            "is_lead": [
+                ["boolean"]
+            ],
+            "is_complaint": [
+                ["boolean"]
+            ],
+            "complaint_email": [
+                ["email", {"empty" : true}]
+            ],
+            "is_call_label": [
+                ["boolean"]
+            ],
+            "prechats_chat" : [
+                ["arrayOf", {"type":"App\\Model\\DB\\Billing\\Prechat"}]
+            ],
+            "hold_rule_id" : [
+                ["integer"]
+            ],
+            "employee_ids" : [
+                ["idList"]
+            ],
+            "is_callback": [
+                ["boolean"]
+            ],
+            "callback_url": [
+                ["string"]
+            ],
+            "is_site_prechats": [
+                ["boolean"]
+            ],
+            "is_hidden_offline": [
+                ["boolean"]
+            ]
+        }
+    },
+
+    "delete": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+
+    "show" : {
+        "fields" : {
+            "id" : [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+    
+    "unbindAllDepartments" : {
+        "fields" : {
+            "id" : [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+
+    "showSiteCallSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+
+    "updateSiteCallSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "greeting_type" : [
+                ["string"],
+                ["match", {"pattern":"#^(none|custom)$#"}]
+            ],
+            "greeting_custom" : [
+                ["file", {"entity" : ["siteCallSettings.greeting_custom"]}]
+            ],
+            "background_type" : [
+                ["string"],
+                ["match", {"pattern":"#^(none|default|custom)$#"}]
+            ],
+            "background_custom" : [
+                ["file", {"entity" : ["siteCallSettings.background_custom"]}]
+            ]
+        }
+    },
+
+    "showCallLabelSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+
+    "updateCallLabelSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "department_id" : [
+                ["integer"]
+            ],
+            "color" : [
+                ["match", {"pattern": "#^(green|orange|blue|red|purple|gray|rose|black|yellow|white)$#"}]
+            ],
+            "size" : [
+                ["match", {"pattern":"#^(small|large)$#"}]
+            ],
+            "position" : [
+                ["match", {"pattern": "#^(top|right|bottom|left)$#"}]
+            ],
+            "offset_type" : [
+                ["match", {"pattern":"#^(pixel|percent)$#"}]
+            ],
+            "offset_value" : [
+                ["digit"]
+            ],
+            "is_visible" : [
+                ["boolean"]
+            ]
+        }
+    },
+
+    "showOfflineMailSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+
+    "updateOfflineMailSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "from_name" : [
+                ["string", {"length": 60}]
+            ],
+            "subject" : [
+                ["string", {"length": 60}]
+            ],
+            "signature" : [
+                ["string", {"length": 60}]
+            ],
+            "mailbox_id" : [
+                ["integer"]
+            ],
+            "is_active" : [
+                ["boolean"]
+            ]
+        }
+    },
+
+    "showSiteChatSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+
+    "updateSiteChatSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "online_welcome" : [
+                ["string", {"length" : 180}]
+            ],
+            "offline_welcome" : [
+                ["string", {"length" : 180}]
+            ],
+            "offline_confirmation" : [
+                ["string", {"length" : 180}]
+            ],
+            "offline_contacts" : [
+                ["match", {"pattern": "#^(email|phone|email_or_phone|email_and_phone)$#"}]
+            ],
+            "offline_contacts_required" : [
+                ["match", {"pattern": "#^(email|phone|email_and_phone)$#"}]
+            ]
+        }
+    },
+
+    "showSiteXWidgetSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+
+    "updateSiteXWidgetSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "is_active" : [
+                ["boolean"]
+            ],
+            "interval_begin" : [
+                ["integer"]
+            ],
+            "interval_end" : [
+                ["integer"]
+            ],
+            "days" : [
+                ["allowEmpty"],
+                ["arrayOf", {"type": "integer"}]
+            ],
+            "show_always" : [
+                ["boolean"]
+            ],
+            "show_button" : [
+              ["boolean"]
+            ],
+            "show_window" : [
+              ["boolean"]
+            ],
+            "phone_for_visitor" : [
+              ["string"]
+            ],
+            "phone_for_employee_type" : [
+                ["string"],
+                ["match", {"pattern": "#^(livetex|visitor)$#"}]
+            ]
+        }
+    },
+
+    "batchUpdateSiteXWidgetSettings": {
+        "fields": {
+            "ids": [
+                ["required"],
+                ["idList", {"type": "integer"}]
+            ],
+            "is_active" : [
+                ["boolean"]
+            ],
+            "interval_begin" : [
+                ["integer"]
+            ],
+            "interval_end" : [
+                ["integer"]
+            ],
+            "days" : [
+                ["allowEmpty"],
+                ["arrayOf", {"type": "integer"}]
+            ],
+            "show_always" : [
+              ["boolean"]
+            ],
+            "show_button" : [
+              ["boolean"]
+            ],
+            "show_window" : [
+              ["boolean"]
+            ],
+            "phone_for_visitor" : [
+              ["string"]
+            ],
+            "phone_for_employee_type" : [
+                ["string"],
+                ["match", {"pattern": "#^(livetex|visitor)$#"}]
+            ]
+        }
+    },
+
+    "showSiteWidgetSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+
+    "updateSiteWidgetSettings": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "is_embedded" : [
+                ["boolean"]
+            ],
+            "label_text_online" : [
+                ["string"]
+            ],
+            "label_text_offline" : [
+                ["string"]
+            ],
+            "color_type" : [
+                ["match", {"pattern":"#^(preset|custom)$#"}]
+            ],
+            "color" : [
+                ["match", {"pattern": "#^(green|orange|blue|red|purple|gray|rose|black|yellow|white)$#"}]
+            ],
+            "color_custom" : [
+                ["color"]
+            ],
+            "color_text" : [
+                ["match", {"pattern":"#^(dark|light|auto)$#"}]
+            ],
+            "position" : [
+                ["match", {"pattern":"#^(left|right|bottom)$#"}]
+            ],
+            "indent_position" : [
+                ["match", {"pattern":"#^(left|right|bottom|top)$#"}]
+            ],
+            "offset_value" : [
+                ["digit", {"min":-15, "max":100}]
+            ],
+            "banner_type" : [
+                ["match", {"pattern":"#^(none|default|custom)$#"}]
+            ],
+            "banner_custom" : [
+                ["file", {"entity" : ["siteWidgetSettings.banner_custom"]}]
+            ],
+            "banner_link" : [
+                ["string"]
+            ],
+            "is_department" : [
+                ["boolean"]
+            ],
+            "invitation_photo_type": [
+                ["match", {"pattern":"#^(man|woman|operator|custom)$#"}]
+            ],
+            "invitation_photo_custom" : [
+                ["file", {"entity": ["siteWidgetSettings.invitation_photo_custom"]}]
+            ]
+        }
+    }
+}

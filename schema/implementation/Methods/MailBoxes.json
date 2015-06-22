@@ -1,0 +1,99 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation" : {
+            "q" : {
+                "ids" : [["idList"]]
+            }
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+
+    "add": {
+        "fields": {
+            "email": [
+                ["required"],
+                ["email"]
+            ],
+            "username" : [
+                ["string"]
+            ],
+            "password" : [
+                ["string"]
+            ],
+            "smtp_server" : [
+                ["required"],
+                ["string"]
+            ],
+            "smtp_port" : [
+                ["integer"]
+            ],
+            "is_ssl" : [
+                ["boolean"]
+            ]
+        }
+    },
+
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "email": [
+                ["email"]
+            ],
+            "username" : [
+                ["string"]
+            ],
+            "password" : [
+                ["string"]
+            ],
+            "smtp_server" : [
+                ["string"]
+            ],
+            "smtp_port" : [
+                ["integer"]
+            ],
+            "is_ssl" : [
+                ["boolean"]
+            ]
+        }
+    },
+
+    "delete": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["required", {"default":"created_at:d"}],
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "employee_ids": [["idList"]],
+                "event_type": [["match", {"pattern":"#^(offline|online|busy)$#"}]],
+                "created_at": [["datetime"]]
+            }
+        }
+    }
+}

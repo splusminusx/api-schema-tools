@@ -1,0 +1,126 @@
+{
+    "show": {
+        "fields": {}
+    },
+
+    "showCallSettings": {
+        "fields": {}
+    },
+
+    "updateCallSettings": {
+        "fields": {
+            "is_active": [
+                ["boolean"]
+            ],
+            "is_forward": [
+                ["boolean"]
+            ],
+            "forward_type" : [
+                ["match", {"pattern":"#^(sip|phone)$#"}]
+            ],
+            "forward_sip_host" : [
+                ["string"]
+            ],
+            "forward_sip_login": [
+                ["string"]
+            ],
+            "forward_sip_password": [
+                ["string"]
+            ]
+        }
+    },
+
+    "showCobrowseSettings": {
+        "fields": {}
+    },
+
+    "updateCobrowseSettings": {
+        "fields": {
+            "is_active" : [
+                ["boolean"]
+            ]
+        }
+    },
+
+    "showTypingIndicatorSettings": {
+        "fields": {}
+    },
+
+    "updateTypingIndicatorSettings": {
+        "fields": {
+            "is_active" : [
+                ["boolean"]
+            ]
+        }
+    },
+    
+    "showEmployeeRemarkSettings": {
+        "fields": {}
+    },
+
+    "updateEmployeeRemarkSettings": {
+        "fields": {
+            "is_active" : [
+                ["boolean"]
+            ]
+        }
+    },
+
+    "showAcceptanceByEmailSettings": {
+        "fields": {}
+    },
+
+    "updateAcceptanceByEmailSettings": {
+        "fields": {
+            "is_active" : [
+                ["boolean"]
+            ],
+            "emails": [
+                ["string"]
+            ]
+        }
+    },
+
+    "showFileTransferSettings": {
+        "fields": {}
+    },
+
+    "updateFileTransferSettings": {
+        "fields": {
+            "is_active" : [
+                ["boolean"]
+            ]
+        }
+    },
+
+    "showReportByEmailSettings": {
+        "fields": {}
+    },
+
+    "updateReportByEmailSettings": {
+        "fields": {
+            "is_active" : [
+                ["boolean"]
+            ],
+            "period" : [
+                ["match", {"pattern":"#^(daily|weekly|monthly)$#"}]
+            ],
+            "emails" : [
+                ["string"]
+            ]
+        }
+    },
+
+    "showFeatureStates": {
+        "fields":[]
+    },
+
+    "finishWelcomeWizard": {
+        "fields":[]
+    },
+
+    "finishMigrationWizard": {
+        "fields":[]
+    }
+
+}

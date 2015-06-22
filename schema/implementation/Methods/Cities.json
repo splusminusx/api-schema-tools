@@ -1,0 +1,41 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "title": [["string"]],
+                "country_ids": [["idList"]],
+                "region_ids": [["idList"]]
+            }
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    }
+}

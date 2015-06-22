@@ -1,0 +1,43 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "site_ids": [["idList"]],
+                "is_auto": [["boolean"]],
+                "created_at": [["datetime"]],
+                "source_type": [ ["enum", ["chat","lead","complaint"]] ],
+                "creator_type": [ ["enum", ["employee", "visitor"]] ]
+            }
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    }
+}

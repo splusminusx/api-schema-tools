@@ -1,0 +1,28 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "employee_ids": [["idList"]],
+                "text": [["string"]],
+                "created_at": [["datetime", {"max": "30 days"}, null, "Максимально возможный интервал - 30 дней"]]
+            }
+        }
+    }
+}

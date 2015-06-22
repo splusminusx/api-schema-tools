@@ -1,0 +1,49 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids":[["idList"]],
+                "period_state" : [["idList", {"type":"string"}]],
+                "has_order": [["boolean"]]
+            }
+        }
+    },
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "is_autorenewal": [
+                ["required"],
+                ["boolean"]
+            ]
+        }
+    },
+    "active": {
+        "private": true,
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}

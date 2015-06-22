@@ -1,0 +1,329 @@
+{
+    "list" : {
+        "fields" : {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["required", {"default" : "last_name:a"}],
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":1000}, null, "Значение должно быть меньше 1000"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "department_ids": [["idList"]],
+                "first_name": [["string"]],
+                "last_name": [["string"]],
+                "email": [["string"]],
+                "is_active": [["boolean"]],
+                "name" : [["string"]],
+                "role" : [["string"]],
+                "state" : [["match", {"pattern":"/^(online|offline|busy)$/"}]]
+            }
+        }
+    },
+    "me" : {
+        "fields" : {
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+    "show" : {
+        "fields" : {
+            "id" : [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+    "add" : {
+        "fields" : {
+            "email" : [
+                ["required"],
+                ["email"]
+            ],
+            "password" : [
+                ["required"],
+                ["string"]
+            ],
+            "first_name" : [
+                ["required"],
+                ["string"]
+            ],
+            "last_name" : [
+                ["string"]
+            ],
+            "photo" : [
+                ["file", {"entity": ["employee.photo"]}]
+            ],
+            "is_cobrowse" : [
+                ["boolean"]
+            ],
+            "is_call" : [
+                ["boolean"]
+            ],
+            "is_sip_forward" : [
+                ["boolean"]
+            ],
+            "sip_forward_number" : [
+                ["string"]
+            ],
+            "is_phone_forward" : [
+                ["boolean"]
+            ],
+            "phone_forward_number" : [
+                ["string"]
+            ],
+            "chat_limit" : [
+                ["required", {"default":0}],
+                ["integer"]
+            ],
+            "is_lead_assigned" : [
+                ["boolean"]
+            ],
+            "is_lead_notify" : [
+                ["boolean"]
+            ],
+            "is_active" : [
+                ["boolean"]
+            ],
+            "department_ids" : [
+                ["idList"]
+            ],
+            "managed_site_ids" : [
+                ["idList"]
+            ],
+            "managed_department_ids" : [
+                ["idList"]
+            ],
+            "phone" : [
+                ["phone"]
+            ],
+            "role_code" : [
+                ["string"]
+            ]
+        }
+    },
+    "update" : {
+        "fields" : {
+            "id" : [
+                ["required"],
+                ["integer"]
+            ],
+            "email" : [
+                ["email"]
+            ],
+            "password" : [
+                ["string"]
+            ],
+            "first_name" : [
+                ["string"]
+            ],
+            "last_name" : [
+                ["string"]
+            ],
+            "photo" : [
+                ["file", {"entity" : ["employee.photo"]}]
+            ],
+            "is_cobrowse" : [
+                ["boolean"]
+            ],
+            "is_call" : [
+                ["boolean"]
+            ],
+            "is_sip_forward" : [
+                ["boolean"]
+            ],
+            "sip_forward_number" : [
+                ["string"]
+            ],
+            "is_phone_forward" : [
+                ["boolean"]
+            ],
+            "phone_forward_number" : [
+                ["string"]
+            ],
+            "chat_limit" : [
+                ["integer"]
+            ],
+            "is_lead_assigned" : [
+                ["boolean"]
+            ],
+            "is_lead_notify" : [
+                ["boolean"]
+            ],
+            "is_active" : [
+                ["boolean"]
+            ],
+            "department_ids" : [
+                ["idList"]
+            ],
+            "managed_site_ids" : [
+                ["idList"]
+            ],
+            "managed_department_ids" : [
+                ["idList"]
+            ],
+            "phone" : [
+                ["phone"]
+            ],
+            "role_code" : [
+                ["string"]
+            ],
+            "is_first_steps_passed" : [
+                ["boolean"]
+            ]
+        }
+    },
+    "delete" : {
+        "fields" : {
+            "id" : [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+    "search" : {
+        "fields" : {
+            "text" : [
+                ["required"],
+                ["string"]
+            ]
+        }
+    },
+
+    "register" : {
+        "no-auth-required": true,
+        "fields" : {
+            "email" : [
+                ["required"],
+                ["email"],
+                ["length", {"min" : 7}]
+            ],
+            "first_name" : [
+                ["required"],
+                ["string"]
+            ],
+            "password" : [
+                ["required"],
+                ["string"],
+                ["length", {"min" : 6}]
+            ],
+            "site_name" : [
+                ["required"],
+                ["string"]
+            ],
+            "phone" : [
+                ["phone"]
+            ],
+            "partner_data" : [
+                ["typeOf", {"type":"\\App\\Model\\Supply\\RegistrationPartnerData"}]
+            ],
+            "marketing_data" : [
+              ["typeOf", {"type":"\\App\\Model\\DB\\Billing\\RegistrationMarketingData"}]
+            ]
+          
+        }
+    },
+    "registerConfirm" : {
+        "no-auth-required": true,
+        "fields" : {
+            "id" : [
+                ["required"],
+                ["integer"]
+            ],
+            "hash" : [
+                ["required"],
+                ["string"]
+            ]
+        }
+    },
+    "registerAddPromo" : {
+        "no-auth-required": true,
+        "fields" : {
+            "id" : [
+                ["required"],
+                ["integer"]
+            ],
+            "promo_code" : [
+                ["required"],
+                ["string"]
+            ]
+        }
+    },
+    "batchUpdate" : {
+        "fields" : {
+            "ids" : [
+                ["required"],
+                ["idList"]
+            ],
+            "chat_limit" : [
+                ["integer"]
+            ],
+            "is_active" : [
+                ["boolean"]
+            ],
+            "is_cobrowse" :[
+                ["boolean"]
+            ],
+            "is_lead_notify" : [
+                ["boolean"]
+            ],
+            "is_call" : [
+                ["boolean"]
+            ],
+            "is_phone_forward" : [
+                ["boolean"]
+            ],
+            "phone_forward_number" : [
+                ["string"]
+            ],
+            "is_sip_forward" : [
+                ["boolean"]
+            ],
+            "sip_forward_number" : [
+                ["string"]
+            ]
+        }
+    },
+
+    "resetPassword" : {
+        "no-auth-required": true,
+        "fields" : {
+            "email" : [
+                ["required"],
+                ["email"]
+            ]
+        }
+    },
+
+    "setNewPassword" : {
+        "no-auth-required": true,
+        "fields" : {
+            "password" : [
+                ["required"],
+                ["string"],
+                ["length", {"min":6}]
+            ],
+            "hash" : [
+                ["required"],
+                ["string"]
+            ]
+        }
+    }
+
+}

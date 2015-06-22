@@ -1,0 +1,23 @@
+{
+    "listLatest": {
+        "fields": {
+            "fields": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        }
+    },
+    "markRead": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}

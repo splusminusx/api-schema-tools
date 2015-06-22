@@ -1,0 +1,189 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "site_ids": [["idList"]],
+                "text": [["string"]],
+                "title": [["string"]],
+                "is_active": [["boolean"]],
+                "action": [["enum", ["vary", "chat", "lead"]]]
+            }
+        }
+    },
+
+    "add": {
+        "fields": {
+            "title": [
+                ["required"],
+                ["string"]
+            ],
+            "action": [
+                ["required"],
+                ["match", {"pattern":"#^(vary|chat|lead)$#"}]
+            ],
+            "welcome_chat": [
+                ["string"],
+                ["length",{"max":300}]
+            ],
+            "welcome_lead": [
+                ["string"],
+                ["length",{"max":300}]
+            ],
+            "confirmation_lead": [
+                ["string", {"length" : 180}]
+            ],
+            "is_active": [
+                ["required"],
+                ["boolean"]
+            ],
+            "is_new_visitor": [
+                ["required"],
+                ["boolean"]
+            ],
+            "locations": [
+                ["arrayOf", {"type":"App\\Model\\DB\\Locations\\Location", "empty":true}]
+            ],
+            "is_locations_exclude": [
+                ["boolean"]
+            ],
+            "site_time": [
+                ["integer"]
+            ],
+            "page_count": [
+                ["integer"]
+            ],
+            "page_url": [
+                ["string"]
+            ],
+            "is_page_url_exclude": [
+                ["boolean"]
+            ],
+            "page_title": [
+                ["string"]
+            ],
+            "page_type": [
+                ["required"],
+                ["match", {"pattern":"#^(excluded|specified|home|internal|any)$#"}]
+            ],
+            "page_time": [
+                ["integer"]
+            ],
+            "max_count": [
+                ["integer"]
+            ],
+            "is_once_per_day": [
+                ["boolean"]
+            ],
+            "site_bindings": [
+                ["arrayOf", {"type":"App\\Model\\DB\\Billing\\InvitationRuleSiteBinding"}]
+            ]
+        }
+    },
+
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "title": [
+                ["string"]
+            ],
+            "action": [
+                ["match", {"pattern":"#^(vary|chat|lead)$#"}]
+            ],
+            "welcome_chat": [
+                ["string"],
+                ["length", {"max":300}]
+            ],
+            "welcome_lead": [
+                ["string"],
+                ["length",{"max":300}]
+            ],
+            "confirmation_lead": [
+                ["string", {"length" : 180}]
+            ],
+            "is_active": [
+                ["boolean"]
+            ],
+            "is_new_visitor": [
+                ["boolean"]
+            ],
+            "locations": [
+                ["arrayOf", {"type":"App\\Model\\DB\\Locations\\Location", "empty":true}]
+            ],
+            "is_locations_exclude": [
+                ["boolean"]
+            ],
+            "site_time": [
+                ["integer"]
+            ],
+            "page_count": [
+                ["integer"]
+            ],
+            "page_url": [
+                ["string"]
+            ],
+            "is_page_url_exclude": [
+                ["boolean"]
+            ],
+            "page_title": [
+                ["string"]
+            ],
+            "page_type": [
+                ["match", {"pattern":"#^(excluded|specified|home|internal|any)$#"}]
+            ],
+            "page_time": [
+                ["integer"]
+            ],
+            "max_count": [
+                ["integer"]
+            ],
+            "is_once_per_day": [
+                ["boolean"]
+            ],
+            "site_bindings": [
+                ["arrayOf", {"type":"App\\Model\\DB\\Billing\\InvitationRuleSiteBinding"}]
+            ]
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+
+    "delete": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}

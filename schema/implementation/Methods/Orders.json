@@ -1,0 +1,11 @@
+{
+    "cancel": {
+        "private": true,
+        "fields": {
+            "order_id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "add" : {
+        "fields" : {
+            "field" : [
+                ["required"]
+            ],
+            "file" : [
+                ["upload"]
+            ]
+        }
+    }
+}

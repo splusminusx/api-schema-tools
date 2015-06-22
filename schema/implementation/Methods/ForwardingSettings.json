@@ -1,0 +1,100 @@
+{
+  "list": {
+    "fields": {
+      "q": [
+        ["string"]
+      ],
+      "fields": [
+        ["string"]
+      ],
+      "sort": [
+        ["string"]
+      ],
+      "offset": [
+        ["integer"]
+      ],
+      "limit": [
+        ["integer", {"max":1000}, null, "Значение должно быть меньше 1000"]
+      ]
+    },
+    "fields_validation": {
+      "q": {
+        "ids": [["idList"]],
+        "type": [["string"], ["match", {"pattern": "#^(sip|phone)$#"}]]
+      }
+    }
+  },
+
+  "add": {
+    "fields": {
+      "type": [
+        ["required"],
+        ["string"],
+        ["match", {"pattern": "#^(sip|phone)$#"}]
+      ],
+      "feature_types": [
+        ["string"],
+        ["match", {"pattern": "#^(xwidget|call_from_site)$#"}]
+      ],
+      "host": [
+        ["string"]
+      ],
+      "port": [
+        ["string"]
+      ],
+      "user": [
+        ["string"]
+      ],
+      "secret": [
+        ["string"]
+      ]
+    }
+  },
+
+  "update": {
+    "fields": {
+      "id": [
+        ["required"],
+        ["integer"]
+      ],
+      "host": [
+        ["string"]
+      ],
+      "port": [
+        ["string"]
+      ],
+      "user": [
+        ["string"]
+      ],
+      "secret": [
+        ["string"]
+      ],
+      "feature_types": [
+        ["string"],
+        ["match", {"pattern": "#^(xwidget|call_from_site)$#"}]
+      ]
+    }
+  },
+
+  "delete": {
+    "fields": {
+      "id": [
+        ["required"],
+        ["integer"]
+      ]
+    }
+  },
+
+  "setFeatures": {
+    "fields": {
+      "id": [
+        ["required"],
+        ["integer"]
+      ],
+      "feature": [
+        ["required"],
+        ["string"]
+      ]
+    }
+  }
+}

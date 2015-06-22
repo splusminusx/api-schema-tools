@@ -1,0 +1,74 @@
+{
+    "UpdateAll" : {
+        "fields" : {},
+        "frequency": 1
+    },
+    "UpdateAccountData" : {
+        "fields" : {}
+    },
+    "UpdateAccountMemberList" : {
+        "fields" : {}
+    },
+    "UpdateSiteData" : {
+        "fields" : {
+            "site_id" : [
+                ["integer"]
+            ]
+        }
+    },
+    "UpdateSiteGroupList" : {
+        "fields" : {
+            "site_id" : [
+                ["integer"]
+            ]
+        }
+    },
+    "UpdateSiteMemberList" : {
+        "fields" : {
+            "site_id" : [
+                ["integer"]
+            ]
+        }
+    },
+    "UpdateGroupMemberList" : {
+        "fields" : {
+            "site_id" : [
+                ["integer"]
+            ],
+            "group_id" : [
+                ["integer"]
+            ]
+        }
+    },
+    "UpdateGroupData" : {
+        "fields" : {
+            "group_id" : [
+                ["integer"]
+            ]
+        }
+    },
+    "UpdateMemberData" : {
+        "fields" : {
+            "member_id" : [
+                ["integer"]
+            ]
+        }
+    },
+    "UpdateMemberSiteList" : {
+        "fields" : {
+            "member_id" : [
+                ["integer"]
+            ]
+        }
+    },
+    "UpdateMemberGroupList" : {
+        "fields" : {
+            "member_id" : [
+                ["integer"]
+            ]
+        }
+    },
+    "GetConfig" : {
+        "fields" : {}
+    }
+}

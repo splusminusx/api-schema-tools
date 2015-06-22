@@ -1,0 +1,89 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "site_ids": [["idList"]],
+                "rule_ids": [["idList"]]
+            }
+        }
+    },
+
+    "add": {
+        "fields": {
+            "invitation_rule_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "site_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "department_id": [
+                ["integer"]
+            ],
+            "employee_id": [
+                ["integer"]
+            ]
+        }
+    },
+
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "invitation_rule_id": [
+                ["integer"]
+            ],
+            "site_id": [
+                ["integer"]
+            ],
+            "department_id": [
+                ["integer"]
+            ],
+            "employee_id": [
+                ["integer"]
+            ]
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+
+    "delete": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}

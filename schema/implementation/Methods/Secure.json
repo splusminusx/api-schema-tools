@@ -1,0 +1,13 @@
+{
+    "login" : {
+        "no-auth-required": true,
+        "fields" : {
+            "chiefId" : [
+                ["integer"]
+            ],
+            "email" : [
+                ["email"]
+            ]
+        }
+    }
+}

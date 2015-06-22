@@ -1,0 +1,10 @@
+{
+  "list": {
+      "no-auth-required": true,
+      "fields" : []
+  },
+  "uploadList": {
+      "no-auth-required": true,
+      "fields" : []
+  }
+}

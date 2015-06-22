@@ -1,0 +1,73 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "site_ids": [["idList"]],
+                "department_ids": [["idList"]],
+                "employee_ids": [["idList"]],
+                "visitor_ids": [["idList", {"type" : "string"}]],
+                "conversation_ids": [["idList"]],
+                "message_text": [["string"]],
+                "result": [ ["idList", {"type" : "string", "pattern": "#^(missed|completed)$#"}] ],
+                "rem_long_answer": [["boolean"]],
+                "rem_transfer": [["boolean"]],
+                "rem_empty": [["boolean"]],
+                "rem_auto": [["boolean"]],
+                "rem_lost_in_queue": [["boolean"]],
+                "message_count": [["integer"]],
+                "first_answer_time": [["integer"]],
+                "duration": [["integer"]],
+                "visitor_vote": [ ["match", {"pattern": "#^(positive|negative|undefined)$#"}] ],
+                "operator_vote_ids": [["idList"]],
+                "created_at": [["datetime"]],
+                "keyword": [["string"]],
+                "is_complaint": [["boolean"]],
+                "employee_remark_ids": [["idList"]],
+                "is_managed": [["boolean"]]
+            }
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+    
+    "setContactInfo" : {
+        "fields" : {
+            "id" : [
+                ["required"],
+                ["integer"]
+            ],
+            "contact_info" : [
+                ["required"],
+                ["typeOf", {"type" : "App\\Model\\DB\\Main\\ContactInfo"}]
+            ]
+        }
+    }
+}

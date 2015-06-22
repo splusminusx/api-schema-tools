@@ -1,0 +1,10 @@
+{
+    "batch": {
+        "fields": {
+            "methods": [
+                ["required"],
+                ["arrayOf", {"type" : "App\\Model\\Supply\\BatchRequest"}]
+            ]
+        }
+    }
+}

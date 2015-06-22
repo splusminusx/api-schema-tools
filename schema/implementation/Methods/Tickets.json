@@ -1,0 +1,67 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "employee_ids": [["idList"]],
+                "type": [["match", {"pattern":"#^(undefined|incident|request)$#"}]],
+                "priority": [["match", {"pattern":"#^(undefined|low|normal|high|critical)$#"}]],
+                "status": [["match", {"pattern":"#^(submitted|inprogress|w4lt|w4e|closed)$#"}]],
+                "created_at": [["datetime"]]
+            }
+        }
+    },
+
+    "add": {
+        "fields": {
+            "text": [
+                ["required"],
+                ["string", {"length" : 2000}]
+            ],
+            "subject": [
+                ["string"]
+            ],
+            "tags":[
+                ["arrayOf"]
+            ],
+            "collaborators":[
+                ["idList"]
+            ],
+            "is_notify":[
+                ["boolean"]
+            ],
+            "is_public_comment":[
+                ["boolean"]
+            ]
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    }
+}

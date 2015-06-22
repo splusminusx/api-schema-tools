@@ -1,0 +1,62 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "site_ids": [["idList"]],
+                "department_ids": [["idList"]],
+                "employee_ids": [["idList"]],
+                "visitor_ids": [["idList", {"type":"string"}]],
+                "conversation_ids": [["idList"]],
+                "message_text": [["string"]],
+                "result": [ ["match", {"pattern": "#^(missed|completed)$#"}] ],
+                "rem_long_answer": [["boolean"]],
+                "rem_transfer": [["boolean"]],
+                "rem_empty": [["boolean"]],
+                "rem_auto": [["boolean"]],
+                "rem_lost_in_queue": [["boolean"]],
+                "message_count": [["integer"]],
+                "answer_time": [["integer"]],
+                "duration": [["integer"]],
+                "visitor_vote": [ ["match", {"pattern": "#^(positive|negative|undefined)$#"}] ],
+                "operator_vote_ids": [["idList"]],
+                "search_engine": [["string"]],
+                "ext_referer": [["string"]],
+                "int_referer": [["string"]],
+                "created_at": [["datetime"]],
+                "keyword": [["string"]],
+                "is_incoming": [["boolean"]],
+                "is_managed": [["boolean"]]
+            }
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    }
+}

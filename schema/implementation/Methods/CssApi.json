@@ -1,0 +1,80 @@
+{
+    "widgets": {
+        "no-auth-required": true,
+        "request_limit": 0,
+        "time_limit": 0,        
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "main_color" : [
+                ["string"]
+            ],
+            "main_text_color" : [
+                ["string"]
+            ],
+            "offset" : [
+                ["integer"]
+            ],
+            "label_pos" : [
+                ["string"]
+            ],
+            "is_lk" : [
+                ["boolean"]
+            ]
+        }
+    },
+    "mobileWidgets": {
+        "no-auth-required": true,
+        "request_limit": 0,
+        "time_limit": 0,        
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "main_color" : [
+                ["string"]
+            ],
+            "main_text_color" : [
+                ["string"]
+            ],
+            "offset" : [
+                ["integer"]
+            ],
+            "label_pos" : [
+                ["string"]
+            ],
+            "is_lk" : [
+                ["boolean"]
+            ]
+        }
+    },
+    "lkWidgets": {
+        "no-auth-required": true,
+        "request_limit": 0,
+        "time_limit": 0,
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "main_color" : [
+                ["string"]
+            ],
+            "main_text_color" : [
+                ["string"]
+            ],
+            "offset" : [
+                ["integer"]
+            ],
+            "label_pos" : [
+                ["string"]
+            ],
+            "is_lk" : [
+              ["boolean"]
+            ]
+        }
+    }
+}

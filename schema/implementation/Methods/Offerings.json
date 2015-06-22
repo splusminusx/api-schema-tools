@@ -1,0 +1,44 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids":[["idList"]],
+                "is_tariff":[["boolean"]],
+                "is_trial" : [["boolean"]],
+                "cart_id" : [["integer"]],
+                "resource_type" : [["idlist", {"type" : "string"}]],
+                "price" : [["integer"]],
+                "days" : [["integer"]]
+            }
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    }
+}

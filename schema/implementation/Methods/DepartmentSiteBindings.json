@@ -1,0 +1,108 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":1000}, null, "Значение должно быть меньше 1000"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "department_ids": [["idList"]],
+                "site_ids": [["idList"]]
+            }
+        }
+    },
+
+    "add": {
+        "fields": {
+            "site_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "department_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "alias": [
+                ["required"],
+                ["string"]
+            ],
+            "prechats_chat": [
+                ["arrayOf", {"type":"App\\Model\\DB\\Billing\\Prechat"}]
+            ],
+            "is_visible": [
+                ["boolean"]
+            ],
+            "position": [
+                ["integer"]
+            ],
+            "callback_url": [
+                ["string"]
+            ]
+        }
+    },
+
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "site_id": [
+                ["integer"]
+            ],
+            "department_id": [
+                ["integer"]
+            ],
+            "alias": [
+                ["string"]
+            ],
+            "prechats_chat": [
+                ["arrayOf", {"type":"App\\Model\\DB\\Billing\\Prechat"}]
+            ],
+            "is_visible": [
+                ["boolean"]
+            ],
+            "position": [
+                ["integer"]
+            ],
+            "callback_url": [
+                ["string"]
+            ]
+        }
+    },
+
+    "delete": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    }
+}

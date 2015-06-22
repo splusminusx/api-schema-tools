@@ -1,0 +1,71 @@
+{
+    "siteCallSettings.greeting_custom" : {
+        "ext" : ["mp3", "ogg"],
+        "size" : "8mb",
+        "mime" : ["audio/mpeg3", "audio/x-mpeg-3", "audio/mpeg", "audio/ogg"]
+    },
+    "siteCallSettings.background_custom" : {
+        "ext" : ["mp3", "ogg"],
+        "size" : "8mb",
+        "mime" : ["audio/mpeg3", "audio/x-mpeg-3", "audio/mpeg", "audio/ogg"]
+    },
+    "employee.photo" : {
+        "ext" : ["png", "jpg", "jpeg", "gif"],
+        "size" : "5mb",
+        "mime" : ["image/gif", "image/png", "image/jpeg", "image/pjpeg"],
+        "width" :  {"gte" : 60, "lte" : 2560},
+        "height" : {"gte" : 70, "lte" : 2560}
+    },
+    "chatButton.image_online" : {
+        "ext" : ["png", "jpg", "jpeg", "gif"],
+        "size" : "2mb",
+        "mime" : ["image/gif", "image/png", "image/jpeg", "image/pjpeg"],
+        "width" :  {"gte" : 1, "lte" : 500},
+        "height" : {"gte" : 1, "lte" : 500}
+    },
+    "chatButton.image_offline" : {
+        "ext" : ["png", "jpg", "jpeg", "gif"],
+        "size" : "2mb",
+        "mime" : ["image/gif", "image/png", "image/jpeg", "image/pjpeg"],
+        "width" :  {"gte" : 1, "lte" : 500},
+        "height" : {"gte" : 1, "lte" : 500}
+    },
+    "callButton.image_online" : {
+        "ext" : ["png", "jpg", "jpeg", "gif"],
+        "size" : "2mb",
+        "mime" : ["image/gif", "image/png", "image/jpeg", "image/pjpeg"],
+        "width" :  {"gte" : 1, "lte" : 500},
+        "height" : {"gte" : 1, "lte" : 500}
+    },
+    "callButton.image_offline" : {
+        "ext" : ["png", "jpg", "jpeg", "gif"],
+        "size" : "2mb",
+        "mime" : ["image/gif", "image/png", "image/jpeg", "image/pjpeg"],
+        "width" :  {"gte" : 1, "lte" : 500},
+        "height" : {"gte" : 1, "lte" : 500}
+    },
+    "payer.contract" : {
+        "ext" : ["pdf", "jpg", "jpeg"],
+        "size" : "2mb",
+        "mime" : ["application/pdf", "application/octet-stream", "image/jpeg"]
+    },
+    "payer.acceptance" : {
+        "ext" : ["pdf", "jpg", "tiff", "gif", "jpeg", "png"],
+        "size" : "10mb",
+        "mime" : ["application/pdf", "application/octet-stream", "image/gif", "image/png", "image/jpeg", "image/tiff"]
+    },
+    "siteWidgetSettings.banner_custom" : {
+        "ext" : ["png", "jpg", "jpeg", "gif"],
+        "size" : "2mb",
+        "mime" : ["image/gif", "image/png", "image/jpeg", "image/pjpeg"],
+        "width" :  {"lte" : 448},
+        "height" : {"eq" : 82}
+    },
+    "siteWidgetSettings.invitation_photo_custom" : {
+        "ext" : ["png", "jpg", "jpeg", "gif"],
+        "size" : "5mb",
+        "mime" : ["image/gif", "image/png", "image/jpeg", "image/pjpeg"],
+        "width" :  {"gte" : 60, "lte" : 2560},
+        "height" : {"gte" : 70, "lte" : 2560}
+    }
+}

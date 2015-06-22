@@ -1,0 +1,128 @@
+{
+  "employees" :  {
+    "fields" : {
+      "q" : [
+        ["string"]
+      ],
+      "fields" : [
+        ["string"]
+      ],
+      "sort" : [
+        ["required", {"default":"last_name:a"}],
+        ["string"]
+      ]
+    },
+    "fields_validation": {
+      "q": {
+        "site_ids": [["idList"]],
+        "department_ids": [["idList"]],
+        "employee_ids": [["idList"]],
+        "date" : [["datetime"]],
+        "is_online" : [["boolean"]]
+      }
+    }
+  },
+  "sites" :  {
+    "fields" : {
+      "q" : [
+        ["string"]
+      ],
+      "fields" : [
+        ["string"]
+      ],
+      "sort" : [
+        ["required", {"default":"url:a"}],
+        ["string"]
+      ]
+    },
+    "fields_validation": {
+      "q": {
+        "site_ids": [["idList"]],
+        "department_ids": [["idList"]],
+        "employee_ids": [["idList"]],
+        "date" : [["datetime"]]
+      }
+    }
+  },
+  "departments" :  {
+    "fields" : {
+      "q" : [
+        ["string"]
+      ],
+      "fields" : [
+        ["string"]
+      ],
+      "sort" : [
+        ["required", {"default":"title:a"}],
+        ["string"]
+      ]
+    },
+    "fields_validation": {
+      "q": {
+        "site_ids": [["idList"]],
+        "department_ids": [["idList"]],
+        "employee_ids": [["idList"]],
+        "date" : [["datetime"]]
+      }
+    }
+  },
+  "siteSummary" : {
+    "fields" : {
+      "q" : [
+        ["string"]
+      ]
+    },
+    "fields_validation" : {
+      "q" : {
+        "site_ids" : [["idList"]],
+        "date" : [["datetime"]]
+      }
+    }
+  },
+  "summary" :  {
+    "fields" : {
+      "q" : [
+        ["string"]
+      ],
+      "fields" : [
+        ["string"]
+      ]
+    },
+    "fields_validation": {
+      "q": {
+        "site_ids": [["idList"]],
+        "department_ids": [["idList"]],
+        "employee_ids": [["idList"]],
+        "date" : [["datetime"]]
+      }
+    }
+  },
+  "onlineIntervals" : {
+      "fields" : {
+          "q" : [
+              ["string"]
+          ]
+      },
+      "fields_validation" : {
+          "q" : {
+              "date" : [["datetime", {"max" : "1 month"}]],
+              "employee_ids" : [["idList"]]
+          }
+      }
+  },
+  
+  "contacts" : {
+      "fields" : {}
+  },
+
+  "monitor" : {
+    "fields" : {
+      "version" : [
+        ["string"]
+      ],
+      "extended" : [
+        ["boolean"]
+      ]
+    }
+  }
+}

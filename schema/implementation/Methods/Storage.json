@@ -1,0 +1,14 @@
+{
+    "get": {
+        "fields": {
+            "source": [
+                ["required"],
+                ["string"]
+            ],
+            "file": [
+                ["required"],
+                ["string"]
+            ]
+        }
+    }
+}

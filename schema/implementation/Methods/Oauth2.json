@@ -1,0 +1,24 @@
+{
+    "token": {
+        "no-auth-required": true,
+        "fields": {
+            "grant_type": [
+                ["required"]
+            ],
+            "username": [
+                ["required"],
+                ["email"]
+            ],
+            "password": [
+                ["required"]
+            ]
+        }
+    },
+    "validateToken": {
+        "no-auth-required": true,
+        "fields": {}
+    },
+    "logout" : {
+        "fields" : {}
+    }
+}

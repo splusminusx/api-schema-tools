@@ -1,0 +1,34 @@
+{
+    "add": {
+        "fields": {
+            "cart_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "product_addition": [
+                ["required"],
+                ["typeOf", {"type":"App\\Model\\Supply\\ProductAddition"}]
+            ]
+        }
+    },
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "product_addition": [
+                ["required"],
+                ["typeOf", {"type":"App\\Model\\Supply\\ProductAddition"}]
+            ]
+        }
+    },
+    "delete": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}

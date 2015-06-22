@@ -1,0 +1,57 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "ticket_ids": [["idList"]],
+                "employee_ids": [["idList"]],
+                "created_at": [["datetime"]]
+            }
+        }
+    },
+
+    "add": {
+        "fields": {
+            "ticket_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "text": [
+                ["required"],
+                ["string", {"length" : 2000}]
+            ],
+            "is_public_comment":[
+              ["boolean"]
+            ]
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    }
+}

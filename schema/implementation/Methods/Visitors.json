@@ -1,0 +1,13 @@
+{
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    }
+}

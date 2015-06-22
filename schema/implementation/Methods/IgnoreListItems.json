@@ -1,0 +1,41 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "site_ids": [["idList"]],
+                "created_at": [["datetime"]],
+                "employee_ids": [["idList"]]
+            }
+        }
+    },
+
+    "delete": {
+        "fields": {
+            "visitor_id": [
+                ["required"],
+                ["string"]
+            ],
+            "site_id": [
+                ["required"],
+                ["string"]
+            ]
+        }
+    }
+}

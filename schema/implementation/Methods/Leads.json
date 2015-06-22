@@ -1,0 +1,170 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "site_ids": [["idList"]],
+                "department_ids": [["idList"]],
+                "created_by_ids": [["idList"]],
+                "assigned_to_ids": [["idList"]],
+                "completed_by_ids": [["idList"]],
+                "visitor_ids": [["idList", {"type": "string"}]],
+                "type": [["match", {"pattern": "#^(form|chat|callback)$#"}]],
+                "result": [["match", {"pattern": "#^(missed|completed)$#"}]],
+                "duration": [["integer"]],
+                "search_engine": [["string"]],
+                "ext_referer": [["string"]],
+                "entry_page": [["string"]],
+                "created_at": [["datetime"]],
+                "text": [["string"]],
+                "keyword": [["string"]],
+                "email_exists": [["boolean"]],
+                "phone_exists": [["boolean"]],
+                "is_managed": [["boolean"]]
+            }
+        }
+    },
+    "listRouted": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "site_ids": [["idList"]],
+                "department_ids": [["idList"]],
+                "created_by_ids": [["idList"]],
+                "assigned_to_ids": [["idList"]],
+                "completed_by_ids": [["idList"]],
+                "visitor_ids": [["idList", {"type": "string"}]],
+                "creator_type": [["match", {"pattern": "#^(visitor|employee)$#"}]],
+                "result": [["match", {"pattern": "#^(missed|completed)$#"}]],
+                "duration": [["integer"]],
+                "search_engine": [["string"]],
+                "ext_referer": [["string"]],
+                "entry_page": [["string"]],
+                "created_at": [["datetime"]],
+                "text": [["string"]],
+                "keyword": [["string"]],
+                "email_exists": [["boolean"]],
+                "phone_exists": [["boolean"]]
+            }
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+    "showRouted": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+
+    "setCompleted": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "answer_text": [
+                ["string"]
+            ]
+        }
+    },
+
+    "add": {
+        "fields": {
+            "conversation_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "site_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "department_id": [
+                ["integer"]
+            ],
+            "name": [
+                ["required"],
+                ["string"]
+            ],
+            "email": [
+                ["email"]
+            ],
+            "phone": [
+                ["phone"]
+            ],
+            "text": [
+                ["string"]
+            ],
+            "result": [
+                ["match", {"pattern": "#^(missed|completed)$#"}]
+            ]
+        }
+    },
+
+    "lock": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    },
+
+    "unlock": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids":[["idList"]],
+                "is_active":[["boolean"]]
+            }
+        }
+    },
+
+    "add": {
+        "fields": {
+            "payer_type": [
+                ["required"],
+                ["match", {"pattern": "#^ru_person|ru_legal|ua_person|ua_legal|ua_sp$#"}, null, "payer_type must be one of 'ru_person', 'ru_legal', 'ua_person', 'ua_legal', 'ua_sp'"]
+            ],
+            "requisites" : [
+                ["required"],
+                ["typeOf", {"type" : "App\\Model\\DB\\Payment\\Requisites"}]
+            ],
+            "currency" : [
+                ["currency"]
+            ]
+        }
+    },
+    
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "is_recurring": [
+                ["boolean"]
+            ],
+            "contract": [
+                ["typeOf", {"type" : "App\\Model\\DB\\CRM\\Contract"}]
+            ]
+        },
+        "private_fields": {
+            "is_active": [
+                ["boolean"]
+            ],
+            "requisites": [
+                ["typeOf", {"type" : "App\\Model\\DB\\Payment\\Requisites"}]
+            ],
+            "recurring_order": {},
+            "recurring_card": {}
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+    
+    "transferBalance": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}

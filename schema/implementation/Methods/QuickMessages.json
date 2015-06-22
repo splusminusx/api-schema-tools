@@ -1,0 +1,82 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "category_ids": [["idList"]],
+                "site_ids": [["idList"]],
+                "is_global": [["boolean"]]
+            }
+        }
+    },
+
+    "add": {
+        "fields": {
+            "category_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "text": [
+                ["required"],
+                ["string", {"length" : 2000}]
+            ],
+            "is_global": [
+                ["required"],
+                ["boolean"]
+            ]
+        }
+    },
+
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "text": [
+                ["string", {"length" : 2000}]
+            ],
+            "category_id": [
+                ["integer"]
+            ]
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+
+    "delete": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}

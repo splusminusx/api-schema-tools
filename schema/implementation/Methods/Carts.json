@@ -1,0 +1,100 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer", {"max":100}, null, "Значение должно быть меньше 100"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids":[["idList"]]
+            }
+        }
+    },
+    "add": {
+        "fields": {
+            "is_current_period": [
+                ["boolean"]
+            ],
+            "activation_type" : [
+                ["match", {"pattern": "#^(now|after_current|after_payment)$#"}]
+            ]
+        }
+    },
+    "addToPeriod": {
+        "fields": {
+            "period_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "activation_type" : [
+                ["match", {"pattern": "#^(now|after_current|after_payment)$#"}]
+            ]
+        }
+    },
+    "commit": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "payer_id": [
+                ["integer"]
+            ]
+        }
+    },
+    "forceCommit": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "payer_id": [
+                ["integer"]
+            ]
+        }
+    },
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "activation_type": [
+                ["required"],
+                ["match", {"pattern": "#^(now|after_current|after_payment)$#"}]
+            ]
+        }
+    },
+    "delete": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }, 
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    }
+}

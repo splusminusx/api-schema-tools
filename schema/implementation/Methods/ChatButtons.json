@@ -1,0 +1,121 @@
+{
+    "list": {
+        "fields": {
+            "q": [
+                ["string"]
+            ],
+            "fields": [
+                ["string"]
+            ],
+            "sort": [
+                ["required", {"default":"id:a"}],
+                ["string"]
+            ],
+            "offset": [
+                ["integer"]
+            ],
+            "limit": [
+                ["integer"]
+            ]
+        },
+        "fields_validation": {
+            "q": {
+                "ids": [["idList"]],
+                "site_ids": [["idList"]]
+            }
+        }
+    },
+
+    "add": {
+        "fields": {
+            "color": [
+                ["required"],
+                ["match", {"pattern": "#^(green|orange|blue|red|purple|gray|rose|black|yellow|white)$#"}]
+            ],
+            "design_type": [
+                ["required"],
+                ["match", {"pattern": "#^(predefined|custom)$#"}]
+            ],
+            "site_id": [
+                ["required"],
+                ["integer"]
+            ],
+            "size": [
+                ["required"],
+                ["match", {"pattern": "#^(small|middle|large)$#"}]
+            ],
+            "department_id": [
+                ["integer"]
+            ],
+            "employee_id": [
+                ["integer"]
+            ],
+            "image_offline": [
+                ["file", {"entity" : ["chatButton.image_offline"], "empty" : true}]
+            ],
+            "image_online": [
+                ["file", {"entity" : ["chatButton.image_online"], "empty" : true}]
+            ],
+            "text": [
+                ["string", {"length": 100}]
+            ]
+        }
+    },
+
+    "update": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "department_id": [
+                ["integer"]
+            ],
+            "design_type": [
+                ["match", {"pattern": "#^(predefined|custom)$#"}]
+            ],
+            "site_id": [
+                ["integer"]
+            ],
+            "size": [
+                ["match", {"pattern": "#^(small|middle|large)$#"}]
+            ],
+            "color": [
+                ["match", {"pattern": "#^(green|orange|blue|red|purple|gray|rose|black|yellow|white)$#"}]
+            ],
+            "employee_id": [
+                ["integer"]
+            ],
+            "image_offline": [
+                ["file", {"entity" : ["chatButton.image_offline"], "empty" : true}]
+            ],
+            "image_online": [
+                ["file", {"entity" : ["chatButton.image_online"], "empty" : true}]
+            ],
+            "text": [
+                ["string", {"length": 100}]
+            ]
+        }
+    },
+
+    "show": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ],
+            "fields": [
+                ["string"]
+            ]
+        }
+    },
+
+    "delete": {
+        "fields": {
+            "id": [
+                ["required"],
+                ["integer"]
+            ]
+        }
+    }
+}
