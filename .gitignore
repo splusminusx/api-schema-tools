@@ -6,5 +6,6 @@ site
 docs/types/*.md
 docs/resources/*.md
 docs/index.md
+.idea
 
 
