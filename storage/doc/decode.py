@@ -9,7 +9,7 @@ from models.data_types import PrimitiveDataType, ComplexDataType
 from models.resource import Resource
 from models.method import Method
 from models.permissions import Role, Access, Permission
-from view.helpers import print_table
+from models.field import Field
 
 
 def populate_primitive_types(registry, table):
@@ -25,7 +25,14 @@ def populate_fields(data_type, table):
         datatypename = row.cells[2].paragraphs[0].text.strip()
         required = row.cells[1].paragraphs[0].text.strip() == u'+'
         description = join_paragraphs(row.cells[3].paragraphs)
-        data_type.add_field(name, datatypename, description, required)
+        data_type.add_field(
+            Field(
+                name,
+                datatypename,
+                description,
+                required
+            )
+        )
 
 
 def get_complex_type_name(node):

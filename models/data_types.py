@@ -27,8 +27,8 @@ class ComplexDataType(PrimitiveDataType):
         super(ComplexDataType, self).__init__(name, description, deprecated)
         self._fields = {}
 
-    def add_field(self, name, datatypename, description, required=False):
-        self._fields[name] = Field(name, datatypename, description, required)
+    def add_field(self, field):
+        self._fields[field.name] = field
 
     def get_field(self, name):
         return self._fields[name]

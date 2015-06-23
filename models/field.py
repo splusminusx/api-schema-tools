@@ -24,3 +24,16 @@ class Field(object):
     @property
     def required(self):
         return self._required
+
+
+class ValidatableField(Field):
+    def __init__(self, name, datatypename, description, required):
+        super(ValidatableField, self).__init__(name, datatypename, description, required)
+        self._validators = []
+
+    def add_validator(self, validator):
+        self._validators.append(validator)
+
+    @property
+    def validators(self):
+        return self._validators

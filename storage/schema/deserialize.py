@@ -4,6 +4,7 @@ from models.data_types import PrimitiveDataType, ComplexDataType
 from models.resource import Resource
 from models.method import Method
 from models.permissions import Permission
+from models.field import Field
 
 
 class SchemaDeserializer(object):
@@ -70,10 +71,12 @@ class SchemaDeserializer(object):
         for field in data:
             data_type = cls._decode_type_string(field[u'type'])
             entity.add_field(
-                field[u'name'],
-                data_type,
-                field[u'description'],
-                field[u'required']
+                Field(
+                    field[u'name'],
+                    data_type,
+                    field[u'description'],
+                    field[u'required']
+                )
             )
 
     @classmethod
