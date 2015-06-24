@@ -3,6 +3,7 @@
 from models.method import ImplMethod
 from models.resource import Resource
 from models.field import ValidatableField
+from models.validator import *
 import json
 import os
 
@@ -23,10 +24,18 @@ class FieldConstrains(object):
 
     # Examples:
     #   ['allowEmpty']
+    #
+    # [+] - EmptinessValidator
+    #
+    # public function allowEmpty($value)
     ALLOW_EMPTY = 'allowEmpty'  # можно передать поля без значения, для пустых строк. Для удаления атрибутов.
 
     # Examples:
     #   ['notEmpty']
+    #
+    # [+] - EmptinessValidator
+    #
+    # public function notEmpty($value)
     NON_EMPTY = 'notEmpty'  # нельзя передать поля без значения
 
     # Examples:
@@ -36,20 +45,26 @@ class FieldConstrains(object):
     #   ['required', {'default': 'id:a'}]
     #   ['required', {'default': 'last_name:a'}]
     #   ['required', {'default': 'title:a'}]
-    #   ['required', {'default': u'url:a'}]
+    #   ['required', {'default': 'url:a'}]
     #   [['required'], ['string']]
+    #
+    # [+] - ValidatableField - args: default, required
+    #
+    # public function required($value, $params = ['default' => null])
     REQUIRED = 'required'  # обязательно для заполнения, но может быть выставлен default
 
     # Generic
 
     # Examples:
-    #   ['arrayOf']
+    #   ['arrayOf'] -> модифицируем в ['arrayOf', {'type': 'string'}]
     #   ['arrayOf', {'max': 3, 'type': u'App\\Model\\DB\\Billing\\HoldMessage', 'min': 1}]
     #   ['arrayOf', {'type': 'App\\Model\\DB\\Billing\\InvitationRuleSiteBinding'}]
     #   ['arrayOf', {'type': 'App\\Model\\DB\\Billing\\Prechat'}]
     #   ['arrayOf', {'type': 'App\\Model\\DB\\Locations\\Location', 'empty': True}]
     #   ['arrayOf', {'type': 'App\\Model\\Supply\\BatchRequest'}]
     #   ['arrayOf', {'type': 'integer'}]
+    #
+    # [+] ImplTypeValidator, MinMaxValidator, EmptinessValidator
     ARRAY_OF = 'arrayOf'
 
     # Examples:
@@ -59,6 +74,8 @@ class FieldConstrains(object):
     #   ['typeOf', {'type': 'App\\Model\\DB\\Payment\\Requisites'}]
     #   ['typeOf', {'type': 'App\\Model\\Supply\\ProductAddition'}]
     #   ['typeOf', {'type': '\\App\\Model\\Supply\\RegistrationPartnerData'}]
+    #
+    # [-] ImplTypeValidator
     TYPE_OF = 'typeOf'  # сущность в коде с валидаторами для полей.
 
     # Content
@@ -67,6 +84,10 @@ class FieldConstrains(object):
     #   ['length', {'max': 300}]
     #   ['length', {'min': 6}]
     #   ['length', {'min': 7}]
+    #
+    # [+] - MinMaxValidator
+    #
+    # public function length($value, $params = ['min' => 0, 'max' => null])
     LENGTH = 'length'  # ограничение на длину строки
 
     # Examples:
@@ -104,11 +125,19 @@ class FieldConstrains(object):
     #   ['match', {'pattern': '#^(vary|chat|lead)$#'}]
     #   ['match', {'pattern': '#^(visitor|employee)$#'}]
     #   ['match', {'pattern': '#^(xwidget|call_from_site)$#'}]
+    #
+    # [+] - MatchValidator
+    #
+    # public function match($value, $params = ['pattern' => '#.*#'])
     MATCH = 'match'  # любая регулярка
 
     # WTF?????
     # Examples:
     #   ['upload']
+    #
+    # [-]
+    #
+    # public function upload($value)
     UPLOAD = 'upload'  # в паре с field идентификатор поля в сущности для загрузки содержимого файла
 
     # Non specified data types
@@ -116,6 +145,10 @@ class FieldConstrains(object):
     # Examples:
     #   ['digit']
     #   ['digit', {'max': 100, 'min': -15}]
+    #
+    # [+] MinMaxValidator, ImplTypeValidator
+    #
+    # public function digit($value, $params = ['min' => null, 'max' => null])
     DIGIT = 'digit'  # может быть float или int
 
     # Examples:
@@ -123,6 +156,10 @@ class FieldConstrains(object):
     #   ['integer', {'max': 1000}, None, 'Значение должно быть меньше 1000']
     #   ['integer', {'max': 100}, None, 'Значение должно быть меньше 100']
     #   ['integer', {'max': 3600, 'min': 5}, None, 'Значение должно быть от 5 до 3600']
+    #
+    # [+] MinMaxValidator, MinMaxValidator
+    #
+    # public function integer($value, $params = ['min' => null, 'max' => null])
     INTEGER = 'integer'  # только int
 
     # Examples:
@@ -130,12 +167,18 @@ class FieldConstrains(object):
     #   ['enum', ['chat', 'lead', 'complaint']]
     #   ['enum', ['employee', 'visitor']]
     #   ['enum', ['vary', 'chat', 'lead']]
+    #
+    # [+] ImplTypeValidator
+    #
+    # public function enum($value, $allowedValues = [])
     ENUM = 'enum'  # массив со значениями из enum'а
 
     # Specified data types
 
     # Examples:
     #   ['boolean']
+    #
+    # public function boolean($value, $params = ['strict' => false])
     BOOLEAN = 'boolean'
 
     # Examples:
@@ -144,11 +187,17 @@ class FieldConstrains(object):
 
     # Examples:
     #   ['currency']
+    #
+    # public function currency($value)
     CURRENCY = 'currency'
 
     # Examples:
     #   ['email']
     #   ['email', {'empty': True}]
+    #
+    # [+] - EmptinessValidator
+    #
+    # public function email($value, $params = ['empty' => false])
     EMAIL = 'email'
 
     # Examples:
@@ -162,6 +211,11 @@ class FieldConstrains(object):
     #   ['file', {'entity': ['siteCallSettings.greeting_custom']}]
     #   ['file', {'entity': ['siteWidgetSettings.banner_custom']}]
     #   ['file', {'entity': ['siteWidgetSettings.invitation_photo_custom']}]
+    #
+    # [+] - EmptinessValidator,
+    #
+    # public function file($value, $params)
+    # params: empty, entity
     FILE = 'file'
 
     # Examples:
@@ -185,28 +239,45 @@ class FieldConstrains(object):
     #    ['string', {'length': 2000}]
     #    ['string', {'length': 60}]
     #    [['string'], ['match', {'pattern': u'#^(sip|phone)$#'}]]
+    #
+    # public function string($value, $param = ['length' => 2000])
     STRING = 'string'
+
+    # public function text($value, $param = ['length' => 10000])
+    TEXT = 'text'
 
     # Specified only for fields validation
 
     # Examples:
     #    ['date']
+    #
+    # public function date($value)
     DATE = 'date'
 
     # Examples:
     #   [['datetime']]
     #   [['datetime', {'max': '1 month'}]]
     #   [['datetime', {'max': '30 days'}, None, 'Максимально возможный интервал - 30 дней']]
+    #
+    # public function datetime($value)
     DATETIME = 'datetime'
 
     # Example:
     #   ['time']
+    #
+    # public function time($value)
     TIME = 'time'
 
     # Unspecified
     # NUMERIC = 'numeric' мапиться на digit и integer
 
     _TYPE_CONSTRAINS = [
+        ARRAY_OF,
+        TYPE_OF,
+        UPLOAD,
+        DIGIT,
+        INTEGER,
+        ENUM,
         BOOLEAN,
         COLOR,
         CURRENCY,
@@ -214,18 +285,29 @@ class FieldConstrains(object):
         FILE,
         ID_LIST,
         PHONE,
-        STRING,
+        TEXT,
         DATE,
         DATETIME,
-        TIME,
-        DIGIT,
-        INTEGER,
-        ENUM
+        TIME
     ]
+
+    _VALUE_CONSTRAINS = [
+        ALLOW_EMPTY,
+        NON_EMPTY,
+        REQUIRED,
+        LENGTH,
+        MATCH
+    ]
+
+    DEFAULT = 'string'
 
     @staticmethod
     def is_type_constrain(constrain):
         return constrain in FieldConstrains._TYPE_CONSTRAINS
+
+    @staticmethod
+    def is_value_constrain(constrain):
+        return constrain in FieldConstrains._VALUE_CONSTRAINS
 
 
 class Deserializer(object):
@@ -238,32 +320,24 @@ class Deserializer(object):
             os.listdir(os.path.join(self._path, u'Methods'))
         )
 
-    @staticmethod
-    def _decode_field(name, fields, validators):
-        data_type_name = None
-        required = False
+    def _decode_validators(self, fields):
+        validators = []
         for field in fields:
-            if FieldConstrains.is_type_constrain(field[0]):
-                data_type_name = field[0]
+            if field[0] == FieldConstrains.ALLOW_EMPTY:
+                validators.append(EmptinessValidator(True))
+            if field[0] == FieldConstrains.NON_EMPTY:
+                validators.append(EmptinessValidator(False))
             if field[0] == FieldConstrains.REQUIRED:
-                required = True
-            if field[0] == FieldConstrains.ARRAY_OF:
-                if field[1]:
-                    data_type_name = 'Array.<' + field[1]['type'] + '>'
-                else:
-                    data_type_name = 'Array.<string>'
+                # TODO
 
-        if data_type_name:
-            return ValidatableField(name, data_type_name, '', required)
 
-        for field in fields:
-            if field[0] == FieldConstrains.MATCH:
-                data_type_name = 'string'
+    def _decode_field(self, name, fields, validators):
+        data_type_name = self._decode_data_type(fields)
+        required = self._decode_required(fields)
+        default = self._decode_default(fields)
 
-        if data_type_name:
-            return ValidatableField(name, data_type_name, '', required)
-        else:
-            raise ValueError('Can not understand field "' + name + '" type.')
+        validatedVield = ValidatableField(name, data_type_name, '', required, default)
+
 
     def decode_resource(self, name):
         with open(os.path.join(self._path, u'Methods', name + u'.json')) as f:

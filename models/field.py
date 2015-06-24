@@ -27,9 +27,10 @@ class Field(object):
 
 
 class ValidatableField(Field):
-    def __init__(self, name, datatypename, description, required):
+    def __init__(self, name, datatypename, description, required, default=None):
         super(ValidatableField, self).__init__(name, datatypename, description, required)
         self._validators = []
+        self._default = default
 
     def add_validator(self, validator):
         self._validators.append(validator)
@@ -37,3 +38,7 @@ class ValidatableField(Field):
     @property
     def validators(self):
         return self._validators
+
+    @property
+    def default(self):
+        return self._default
