@@ -19,297 +19,6 @@ class ImplMethodAttributes(object):
     TIME_LIMIT = 'time_limit'  # ???
 
 
-class FieldConstrains(object):
-    # Required
-
-    # Examples:
-    #   ['allowEmpty']
-    #
-    # [+] - EmptinessValidator
-    #
-    # public function allowEmpty($value)
-    ALLOW_EMPTY = 'allowEmpty'  # можно передать поля без значения, для пустых строк. Для удаления атрибутов.
-
-    # Examples:
-    #   ['notEmpty']
-    #
-    # [+] - EmptinessValidator
-    #
-    # public function notEmpty($value)
-    NON_EMPTY = 'notEmpty'  # нельзя передать поля без значения
-
-    # Examples:
-    #   ['required']
-    #   ['required', {'default': 0}]
-    #   ['required', {'default': 'created_at:d'}]
-    #   ['required', {'default': 'id:a'}]
-    #   ['required', {'default': 'last_name:a'}]
-    #   ['required', {'default': 'title:a'}]
-    #   ['required', {'default': 'url:a'}]
-    #   [['required'], ['string']]
-    #
-    # [+] - ValidatableField - args: default, required
-    #
-    # public function required($value, $params = ['default' => null])
-    REQUIRED = 'required'  # обязательно для заполнения, но может быть выставлен default
-
-    # Generic
-
-    # Examples:
-    #   ['arrayOf'] -> модифицируем в ['arrayOf', {'type': 'string'}]
-    #   ['arrayOf', {'max': 3, 'type': u'App\\Model\\DB\\Billing\\HoldMessage', 'min': 1}]
-    #   ['arrayOf', {'type': 'App\\Model\\DB\\Billing\\InvitationRuleSiteBinding'}]
-    #   ['arrayOf', {'type': 'App\\Model\\DB\\Billing\\Prechat'}]
-    #   ['arrayOf', {'type': 'App\\Model\\DB\\Locations\\Location', 'empty': True}]
-    #   ['arrayOf', {'type': 'App\\Model\\Supply\\BatchRequest'}]
-    #   ['arrayOf', {'type': 'integer'}]
-    #
-    # [+] ImplTypeValidator, MinMaxValidator, EmptinessValidator
-    ARRAY_OF = 'arrayOf'
-
-    # Examples:
-    #   ['typeOf', {'type': '\\App\\Model\\DB\\Billing\\RegistrationMarketingData'}]
-    #   ['typeOf', {'type': 'App\\Model\\DB\\CRM\\Contract'}]
-    #   ['typeOf', {'type': 'App\\Model\\DB\\Main\\ContactInfo'}]
-    #   ['typeOf', {'type': 'App\\Model\\DB\\Payment\\Requisites'}]
-    #   ['typeOf', {'type': 'App\\Model\\Supply\\ProductAddition'}]
-    #   ['typeOf', {'type': '\\App\\Model\\Supply\\RegistrationPartnerData'}]
-    #
-    # [-] ImplTypeValidator
-    TYPE_OF = 'typeOf'  # сущность в коде с валидаторами для полей.
-
-    # Content
-
-    # Examples:
-    #   ['length', {'max': 300}]
-    #   ['length', {'min': 6}]
-    #   ['length', {'min': 7}]
-    #
-    # [+] - MinMaxValidator
-    #
-    # public function length($value, $params = ['min' => 0, 'max' => null])
-    LENGTH = 'length'  # ограничение на длину строки
-
-    # Examples:
-    #   ['match', {'pattern': '#^(daily|weekly|monthly)$#'}]
-    #   ['match', {'pattern': '#^(dark|light|auto)$#'}]
-    #   ['match', {'pattern': '#^(email|phone|email_and_phone)$#'}]
-    #   ['match', {'pattern': '#^(email|phone|email_or_phone|email_and_phone)$#'}]
-    #   ['match', {'pattern': '#^(excluded|specified|home|internal|any)$#'}]
-    #   ['match', {'pattern': '#^(form|chat|callback)$#'}]]
-    #   ['match', {'pattern': '#^(green|orange|blue|red|purple|gray|rose|black|yellow|white)$#'}]
-    #   ['match', {'pattern': '#^(left|right|bottom)$#'}]
-    #   ['match', {'pattern': '#^(left|right|bottom|top)$#'}]
-    #   ['match', {'pattern': '#^(livetex|visitor)$#'}]
-    #   ['match', {'pattern': '#^(man|woman|operator|custom)$#'}]
-    #   ['match', {'pattern': '#^(missed|completed)$#'}]
-    #   ['match', {'pattern': '#^(missed|completed)$#'}]
-    #   ['match', {'pattern': '#^(none|custom)$#'}]
-    #   ['match', {'pattern': '#^(none|default|custom)$#'}]
-    #   ['match', {'pattern': '#^(now|after_current|after_payment)$#'}]
-    #   ['match', {'pattern': '#^(offline|online|busy)$#'}]
-    #   ['match', {'pattern': '/^(online|offline|busy)$/'}]
-    #   ['match', {'pattern': '#^(pixel|percent)$#'}]
-    #   ['match', {'pattern': '#^(positive|negative|undefined)$#'}]
-    #   ['match', {'pattern': '#^(predefined|custom)$#'}]
-    #   ['match', {'pattern': '#^(preset|custom)$#'}]
-    #   ['match', {'pattern': '#^ru_person|ru_legal|ua_person|ua_legal|ua_sp$#'},
-    #       None, "payer_type must be one of 'ru_person', 'ru_legal', 'ua_person', 'ua_legal', 'ua_sp'"]
-    #   ['match', {'pattern': '#^(sip|phone)$#'}]
-    #   ['match', {'pattern': '#^(small|large)$#'}]
-    #   ['match', {'pattern': '#^(small|middle|large)$#'}]
-    #   ['match', {'pattern': '#^(submitted|inprogress|w4lt|w4e|closed)$#'}]
-    #   ['match', {'pattern': '#^(top|right|bottom|left)$#'}]
-    #   ['match', {'pattern': '#^(undefined|incident|request)$#'}]
-    #   ['match', {'pattern': '#^(undefined|low|normal|high|critical)$#'}]
-    #   ['match', {'pattern': '#^(vary|chat|lead)$#'}]
-    #   ['match', {'pattern': '#^(visitor|employee)$#'}]
-    #   ['match', {'pattern': '#^(xwidget|call_from_site)$#'}]
-    #
-    # [+] - MatchValidator
-    #
-    # public function match($value, $params = ['pattern' => '#.*#'])
-    MATCH = 'match'  # любая регулярка
-
-    # WTF?????
-    # Examples:
-    #   ['upload']
-    #
-    # [-]
-    #
-    # public function upload($value)
-    UPLOAD = 'upload'  # в паре с field идентификатор поля в сущности для загрузки содержимого файла
-
-    # Non specified data types
-
-    # Examples:
-    #   ['digit']
-    #   ['digit', {'max': 100, 'min': -15}]
-    #
-    # [+] MinMaxValidator, ImplTypeValidator
-    #
-    # public function digit($value, $params = ['min' => null, 'max' => null])
-    DIGIT = 'digit'  # может быть float или int
-
-    # Examples:
-    #   ['integer']
-    #   ['integer', {'max': 1000}, None, 'Значение должно быть меньше 1000']
-    #   ['integer', {'max': 100}, None, 'Значение должно быть меньше 100']
-    #   ['integer', {'max': 3600, 'min': 5}, None, 'Значение должно быть от 5 до 3600']
-    #
-    # [+] MinMaxValidator, MinMaxValidator
-    #
-    # public function integer($value, $params = ['min' => null, 'max' => null])
-    INTEGER = 'integer'  # только int
-
-    # Examples:
-    #   ['enum', ['acceptance', 'invoice', 'vatinvoice']]
-    #   ['enum', ['chat', 'lead', 'complaint']]
-    #   ['enum', ['employee', 'visitor']]
-    #   ['enum', ['vary', 'chat', 'lead']]
-    #
-    # [+] ImplTypeValidator
-    #
-    # public function enum($value, $allowedValues = [])
-    ENUM = 'enum'  # массив со значениями из enum'а
-
-    # Specified data types
-
-    # Examples:
-    #   ['boolean']
-    #
-    # public function boolean($value, $params = ['strict' => false])
-    BOOLEAN = 'boolean'
-
-    # Examples:
-    #   ['color']
-    COLOR = 'color'
-
-    # Examples:
-    #   ['currency']
-    #
-    # public function currency($value)
-    CURRENCY = 'currency'
-
-    # Examples:
-    #   ['email']
-    #   ['email', {'empty': True}]
-    #
-    # [+] - EmptinessValidator
-    #
-    # public function email($value, $params = ['empty' => false])
-    EMAIL = 'email'
-
-    # Examples:
-    #   ['file', {'empty': True, 'entity': ['callButton.image_offline']}]
-    #   ['file', {'empty': True, 'entity': ['callButton.image_online']}]
-    #   ['file', {'empty': True, 'entity': ['chatButton.image_offline']}]
-    #   ['file', {'empty': True, 'entity': ['chatButton.image_online']}]
-    #   ['file', {'entity': ['employee.photo']}]
-    #   ['file', {'entity': ['payer.acceptance']}]
-    #   ['file', {'entity': ['siteCallSettings.background_custom']}]
-    #   ['file', {'entity': ['siteCallSettings.greeting_custom']}]
-    #   ['file', {'entity': ['siteWidgetSettings.banner_custom']}]
-    #   ['file', {'entity': ['siteWidgetSettings.invitation_photo_custom']}]
-    #
-    # [+] - EmptinessValidator,
-    #
-    # public function file($value, $params)
-    # params: empty, entity
-    FILE = 'file'
-
-    # Examples:
-    #   ['idList']
-    #   ['idList']
-    #   ['idList', {'pattern': '#^(missed|completed)$#', 'type': 'string'}]
-    #   ['idList', {'type': 'integer'}]
-    #   ['idlist', {'type': 'string'}]]
-    #   ['idList', {'type': 'string'}]
-    ID_LIST = 'idList'
-
-    # Examples:
-    #   ['phone']
-    PHONE = 'phone'
-
-    #  Examples:
-    #    ['string']
-    #    ['string']
-    #    ['string', {'length': 100}]
-    #    ['string', {'length': 180}]
-    #    ['string', {'length': 2000}]
-    #    ['string', {'length': 60}]
-    #    [['string'], ['match', {'pattern': u'#^(sip|phone)$#'}]]
-    #
-    # public function string($value, $param = ['length' => 2000])
-    STRING = 'string'
-
-    # public function text($value, $param = ['length' => 10000])
-    TEXT = 'text'
-
-    # Specified only for fields validation
-
-    # Examples:
-    #    ['date']
-    #
-    # public function date($value)
-    DATE = 'date'
-
-    # Examples:
-    #   [['datetime']]
-    #   [['datetime', {'max': '1 month'}]]
-    #   [['datetime', {'max': '30 days'}, None, 'Максимально возможный интервал - 30 дней']]
-    #
-    # public function datetime($value)
-    DATETIME = 'datetime'
-
-    # Example:
-    #   ['time']
-    #
-    # public function time($value)
-    TIME = 'time'
-
-    # Unspecified
-    # NUMERIC = 'numeric' мапиться на digit и integer
-
-    _TYPE_CONSTRAINS = [
-        ARRAY_OF,
-        TYPE_OF,
-        UPLOAD,
-        DIGIT,
-        INTEGER,
-        ENUM,
-        BOOLEAN,
-        COLOR,
-        CURRENCY,
-        EMAIL,
-        FILE,
-        ID_LIST,
-        PHONE,
-        TEXT,
-        DATE,
-        DATETIME,
-        TIME
-    ]
-
-    _VALUE_CONSTRAINS = [
-        ALLOW_EMPTY,
-        NON_EMPTY,
-        REQUIRED,
-        LENGTH,
-        MATCH
-    ]
-
-    DEFAULT = 'string'
-
-    @staticmethod
-    def is_type_constrain(constrain):
-        return constrain in FieldConstrains._TYPE_CONSTRAINS
-
-    @staticmethod
-    def is_value_constrain(constrain):
-        return constrain in FieldConstrains._VALUE_CONSTRAINS
-
-
 class Deserializer(object):
     def __init__(self, path):
         self._path = path
@@ -320,7 +29,8 @@ class Deserializer(object):
             os.listdir(os.path.join(self._path, u'Methods'))
         )
 
-    def _decode_validators(self, fields):
+    @staticmethod
+    def _decode_validators(fields):
         validators = []
         for field in fields:
             if field[0] == FieldConstrains.ALLOW_EMPTY:
@@ -328,22 +38,91 @@ class Deserializer(object):
             if field[0] == FieldConstrains.NON_EMPTY:
                 validators.append(EmptinessValidator(False))
             if field[0] == FieldConstrains.REQUIRED:
-                # TODO
+                validators.append(RequiredFieldValidator.build(field))
+            if field[0] == FieldConstrains.ARRAY_OF:
+                validators.append(GenericTypeValidation.build(field))
+            if field[0] == FieldConstrains.TYPE_OF:
+                validators.append(TypeReferenceValidation.build(field))
+            if field[0] == FieldConstrains.LENGTH:
+                validators.append(LengthValidation.build(field))
+            if field[0] == FieldConstrains.MATCH:
+                validators.append(MatchValidator.build(field))
+            if field[0] == FieldConstrains.DIGIT:
+                validators.append(DigitValidation.build(field))
+            if field[0] == FieldConstrains.INTEGER:
+                validators.append(IntegerValidation.build(field))
+            if field[0] == FieldConstrains.ENUM:
+                validators.append(EnumValidation.build(field))
+            if field[0] == FieldConstrains.FILE:
+                validators.append(FileValidation.build(field))
+            if field[0] in FieldConstrains.PRIMITIVE_DATA_TYPES:
+                validators.append(PrimitiveTypeValidation.build(field))
+            if field[0] == FieldConstrains.ID_LIST:
+                validators.append(IdListValidation.build(field))
+            if field[0] == FieldConstrains.STRING:
+                validators.append(StringValidator.build(field))
+            if field[0] == FieldConstrains.DATETIME:
+                validators.append(DateTimeValidator.build(field))
+            if field[0] == FieldConstrains.BOOLEAN:
+                validators.append(BooleanValidator.build(field))
 
+    @staticmethod
+    def _decode_data_type(validators):
+        for val in validators:
+            if isinstance(val, GenericTypeValidation):
+                return val.type + u'.<' + val.parameter + u'>'
+            elif isinstance(val, TypeReferenceValidation):
+                return val.type.split(u'\\')[-1]
+            elif isinstance(val, DigitValidation):
+                return u'numeric'
+            elif isinstance(val, IntegerValidation):
+                return u'numeric'
+            elif isinstance(val, EnumValidation):
+                return u'string'
+            elif isinstance(val, FileValidation):
+                return u'file'
+            elif isinstance(val, PrimitiveTypeValidation):
+                return val.type_name
+            elif isinstance(val, IdListValidation):
+                return u'idlist'
+            elif isinstance(val, StringValidator):
+                return u'string'
+            elif isinstance(val, DateTimeValidator):
+                return u'datetime'
+            elif isinstance(val, BooleanValidator):
+                return u'boolean'
 
-    def _decode_field(self, name, fields, validators):
-        data_type_name = self._decode_data_type(fields)
-        required = self._decode_required(fields)
-        default = self._decode_default(fields)
+    @staticmethod
+    def _decode_required(validators):
+        required = False
+        for val in validators:
+            if isinstance(val, RequiredFieldValidator):
+                required = val.required
+        return required
 
-        validatedVield = ValidatableField(name, data_type_name, '', required, default)
+    @staticmethod
+    def _decode_default(validators):
+        default = None
+        for val in validators:
+            if isinstance(val, RequiredFieldValidator):
+                default = val.default
+        return default
 
+    @staticmethod
+    def _decode_field(name, fields, validators):
+        field_validators = Deserializer._decode_field(fields)
+
+        data_type_name = Deserializer._decode_data_type(field_validators)
+        required = Deserializer._decode_required(field_validators)
+        default = Deserializer._decode_default(field_validators)
+
+        return ValidatableField(name, data_type_name, '', required, default)
 
     def decode_resource(self, name):
+        resource = Resource(name, u'')
         with open(os.path.join(self._path, u'Methods', name + u'.json')) as f:
             print name
             data = json.load(f)
-            resource = Resource(name, u'')
 
             for method_name in data:
                 print method_name
@@ -364,13 +143,15 @@ class Deserializer(object):
                 resource.add_method(method)
 
                 for field_name in fields:
-                    method.add_field(self._decode_field(
+                    method.add_field(Deserializer._decode_field(
                         field_name,
                         fields[field_name],
                         fields_validation.get(field_name, {})))
 
                 for field_name in private_fields:
-                    method.add_private_field(self._decode_field(
+                    method.add_private_field(Deserializer._decode_field(
                         field_name,
                         private_fields[field_name],
                         fields_validation.get(field_name, {})))
+
+        return resource
