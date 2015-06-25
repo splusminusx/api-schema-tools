@@ -35,62 +35,65 @@ class Deserializer(object):
         for field in fields:
             if field[0] == FieldConstrains.ALLOW_EMPTY:
                 validators.append(EmptinessValidator(True))
-            if field[0] == FieldConstrains.NON_EMPTY:
+            elif field[0] == FieldConstrains.NON_EMPTY:
                 validators.append(EmptinessValidator(False))
-            if field[0] == FieldConstrains.REQUIRED:
+            elif field[0] == FieldConstrains.REQUIRED:
                 validators.append(RequiredFieldValidator.build(field))
-            if field[0] == FieldConstrains.ARRAY_OF:
+            elif field[0] == FieldConstrains.ARRAY_OF:
                 validators.append(GenericTypeValidation.build(field))
-            if field[0] == FieldConstrains.TYPE_OF:
-                validators.append(TypeReferenceValidation.build(field))
-            if field[0] == FieldConstrains.LENGTH:
-                validators.append(LengthValidation.build(field))
-            if field[0] == FieldConstrains.MATCH:
-                validators.append(MatchValidator.build(field))
-            if field[0] == FieldConstrains.DIGIT:
-                validators.append(DigitValidation.build(field))
-            if field[0] == FieldConstrains.INTEGER:
-                validators.append(IntegerValidation.build(field))
-            if field[0] == FieldConstrains.ENUM:
-                validators.append(EnumValidation.build(field))
-            if field[0] == FieldConstrains.FILE:
-                validators.append(FileValidation.build(field))
-            if field[0] in FieldConstrains.PRIMITIVE_DATA_TYPES:
-                validators.append(PrimitiveTypeValidation.build(field))
-            if field[0] == FieldConstrains.ID_LIST:
+            elif field[0] == FieldConstrains.ID_LIST:
                 validators.append(IdListValidation.build(field))
-            if field[0] == FieldConstrains.STRING:
+            elif field[0] == FieldConstrains.TYPE_OF:
+                validators.append(TypeReferenceValidation.build(field))
+            elif field[0] == FieldConstrains.LENGTH:
+                validators.append(LengthValidation.build(field))
+            elif field[0] == FieldConstrains.MATCH:
+                validators.append(MatchValidator.build(field))
+            elif field[0] == FieldConstrains.DIGIT:
+                validators.append(DigitValidation.build(field))
+            elif field[0] == FieldConstrains.INTEGER:
+                validators.append(IntegerValidation.build(field))
+            elif field[0] == FieldConstrains.ENUM:
+                validators.append(EnumValidation.build(field))
+            elif field[0] == FieldConstrains.FILE:
+                validators.append(FileValidation.build(field))
+            elif field[0] in FieldConstrains.PRIMITIVE_DATA_TYPES:
+                validators.append(PrimitiveTypeValidation.build(field))
+            elif field[0] == FieldConstrains.STRING:
                 validators.append(StringValidator.build(field))
-            if field[0] == FieldConstrains.DATETIME:
+            elif field[0] == FieldConstrains.DATETIME:
                 validators.append(DateTimeValidator.build(field))
             if field[0] == FieldConstrains.BOOLEAN:
                 validators.append(BooleanValidator.build(field))
+        return validators
 
     @staticmethod
     def _decode_data_type(validators):
+        data_type_name = u'string'
         for val in validators:
             if isinstance(val, GenericTypeValidation):
-                return val.type + u'.<' + val.parameter + u'>'
-            elif isinstance(val, TypeReferenceValidation):
-                return val.type.split(u'\\')[-1]
-            elif isinstance(val, DigitValidation):
-                return u'numeric'
-            elif isinstance(val, IntegerValidation):
-                return u'numeric'
-            elif isinstance(val, EnumValidation):
-                return u'string'
-            elif isinstance(val, FileValidation):
-                return u'file'
-            elif isinstance(val, PrimitiveTypeValidation):
-                return val.type_name
+                data_type_name = val.type + u'.<' + val.parameter.split(u'\\')[-1] + u'>'
             elif isinstance(val, IdListValidation):
-                return u'idlist'
+                data_type_name = u'idlist'
+            elif isinstance(val, TypeReferenceValidation):
+                data_type_name = val.type.split(u'\\')[-1]
+            elif isinstance(val, DigitValidation):
+                data_type_name = u'numeric'
+            elif isinstance(val, IntegerValidation):
+                data_type_name = u'numeric'
+            elif isinstance(val, EnumValidation):
+                data_type_name = u'string'
+            elif isinstance(val, FileValidation):
+                data_type_name = u'file'
+            elif isinstance(val, PrimitiveTypeValidation):
+                data_type_name = val.type_name
             elif isinstance(val, StringValidator):
-                return u'string'
+                data_type_name = u'string'
             elif isinstance(val, DateTimeValidator):
-                return u'datetime'
+                data_type_name = u'datetime'
             elif isinstance(val, BooleanValidator):
-                return u'boolean'
+                data_type_name = u'boolean'
+        return data_type_name
 
     @staticmethod
     def _decode_required(validators):
@@ -110,22 +113,26 @@ class Deserializer(object):
 
     @staticmethod
     def _decode_field(name, fields, validators):
-        field_validators = Deserializer._decode_field(fields)
+        field_validators = Deserializer._decode_validators(fields)
 
         data_type_name = Deserializer._decode_data_type(field_validators)
         required = Deserializer._decode_required(field_validators)
         default = Deserializer._decode_default(field_validators)
 
-        return ValidatableField(name, data_type_name, '', required, default)
+        field = ValidatableField(name, data_type_name, '', required, default)
+        for val in field_validators:
+            field.add_validator(val)
+
+        return field
 
     def decode_resource(self, name):
         resource = Resource(name, u'')
         with open(os.path.join(self._path, u'Methods', name + u'.json')) as f:
-            print name
+            #print name
             data = json.load(f)
 
             for method_name in data:
-                print method_name
+                #print ' ', method_name
                 method_data = data[method_name]
                 fields = method_data.get(ImplMethodAttributes.FIELDS, {})
                 fields_validation = method_data.get(
@@ -143,15 +150,21 @@ class Deserializer(object):
                 resource.add_method(method)
 
                 for field_name in fields:
-                    method.add_field(Deserializer._decode_field(
+                    field = Deserializer._decode_field(
                         field_name,
                         fields[field_name],
-                        fields_validation.get(field_name, {})))
+                        fields_validation.get(field_name, {}))
+
+                    #print '   +', field.name, field.datatypename, field.required, field.default, len(field.validators)
+                    method.add_field(field)
 
                 for field_name in private_fields:
-                    method.add_private_field(Deserializer._decode_field(
+                    field = Deserializer._decode_field(
                         field_name,
                         private_fields[field_name],
-                        fields_validation.get(field_name, {})))
+                        fields_validation.get(field_name, {}))
+
+                    #print '   -', field.name, field.datatypename, field.required, field.default, len(field.validators)
+                    method.add_private_field(field)
 
         return resource

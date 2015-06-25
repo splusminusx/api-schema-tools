@@ -304,7 +304,7 @@ class FieldConstrains(object):
 
 
 class ImplValidator(object):
-    def __init__(self, comment):
+    def __init__(self, comment=None):
         self._comment = comment
 
     @property
@@ -317,7 +317,7 @@ class ImplValidator(object):
 
 class EmptyImplValidator(ImplValidator):
     def __init__(self, empty, comment):
-        super(EmptyImplValidator).__init__(comment)
+        ImplValidator.__init__(self, comment)
         self._empty = empty
 
     @property
@@ -327,7 +327,7 @@ class EmptyImplValidator(ImplValidator):
 
 class MinMaxValidator(ImplValidator):
     def __init__(self, min, max, comment):
-        super(MinMaxValidator).__init__(comment)
+        ImplValidator.__init__(self, comment)
         self._min = min
         self._max = max
 
