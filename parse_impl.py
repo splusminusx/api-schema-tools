@@ -5,6 +5,7 @@ from models.reg import Registry
 from storage.impl.deserialize import Deserializer
 from storage.schema.deserialize import SchemaDeserializer
 from pprint import pprint
+import json
 
 
 if __name__ == '__main__':
@@ -35,14 +36,17 @@ if __name__ == '__main__':
     spec_fields = {}
     impl_methods = []
     impl_fields = {}
+    methods = {}
     for rn in spec_resource_names.intersection(impl_resource_names):
         spec_resource = resource_reg.get_type(rn)
         for mn in spec_resource.methods:
-            spec_methods.append(rn + '.' + mn)
+            fmn = rn + '.' + mn
+            spec_methods.append(fmn)
 
         impl_resource = impl_reg.get_type(rn)
         for mn in impl_resource.methods:
-            impl_methods.append(rn + '.' + mn)
+            fmn = rn + '.' + mn
+            impl_methods.append(fmn)
 
         for mn in set(spec_resource.methods).intersection(set(impl_resource.methods)):
             spec_method = spec_resource.get_method(mn)
@@ -59,16 +63,91 @@ if __name__ == '__main__':
     pprint(set(impl_methods).difference(set(spec_methods)))
 
     print "\n>>> Unimplemented fields:"
-    pprint(set(spec_fields.keys()).difference(set(impl_fields.keys())))
+    for field in set(spec_fields.keys()).difference(set(impl_fields.keys())):
+        print field.split(u'.')[0] + ',' + field.split(u'.')[1] + u',' + field.split(u'.')[2]
     print "\n>>> Unspecified fields:"
-    pprint(set(impl_fields.keys()).difference(set(spec_fields.keys())))
+    for field in set(impl_fields.keys()).difference(set(spec_fields.keys())):
+        print field.split(u'.')[0] + ',' + field.split(u'.')[1] + u',' + field.split(u'.')[2]
 
     print "\n>>> Incorrect field type:"
     for fn in set(spec_fields.keys()).intersection(set(impl_fields.keys())):
         if spec_fields[fn].datatypename != impl_fields[fn].datatypename:
-            print fn + ' ::', 'spec=' + spec_fields[fn].datatypename, 'impl=' + impl_fields[fn].datatypename
+            print fn + ',' + spec_fields[fn].datatypename + ',' + impl_fields[fn].datatypename
 
     print "\n>>> Incorrect requirement modifier:"
     for fn in set(spec_fields.keys()).intersection(set(impl_fields.keys())):
         if spec_fields[fn].required != impl_fields[fn].required:
-            print fn + ' ::', 'spec=' + str(spec_fields[fn].required), 'impl=' + str(impl_fields[fn].required)
+            print fn + ',' + str(spec_fields[fn].required) + ',' + str(impl_fields[fn].required)
+
+    print "\n>>> Methods:"
+    for rn in spec_resource_names.union(impl_resource_names):
+        if rn in resource_reg.types:
+            spec_resource = resource_reg.get_type(rn)
+            for mn in spec_resource.methods:
+                fmn = rn + '.' + mn
+                if fmn.lower() in methods:
+                    methods[fmn.lower()][u'spec'] = True
+                    methods[fmn.lower()][u'deprecated'] = spec_resource.get_method(mn).deprecated
+                else:
+                    methods[fmn.lower()] = {
+                        u'name': fmn,
+                        u'spec': True,
+                        u'impl': False,
+                        u'used': False,
+                        u'deprecated': spec_resource.get_method(mn).deprecated,
+                        u'private': False
+                    }
+
+        if rn in impl_reg.types:
+            impl_resource = impl_reg.get_type(rn)
+            for mn in impl_resource.methods:
+                fmn = rn + '.' + mn
+                if fmn.lower() in methods:
+                    methods[fmn.lower()][u'impl'] = True
+                    methods[fmn.lower()][u'private'] = impl_resource.get_method(mn).is_private
+                else:
+                    methods[fmn.lower()] = {
+                        u'name': fmn,
+                        u'spec': False,
+                        u'impl': True,
+                        u'used': False,
+                        u'deprecated': False,
+                        u'private': impl_resource.get_method(mn).is_private
+                    }
+
+    methods_usage = []
+    with open('./schema/operation/usage.json') as f:
+        data = json.load(f)
+        methods_usage = []
+        for m in data:
+            methods_usage.append(m)
+
+    for method in methods_usage:
+        if method.lower() in methods:
+            methods[method.lower()][u'used'] = True
+        else:
+            methods[method.lower()] = {
+                u'name': method,
+                u'spec': False,
+                u'impl': False,
+                u'used': True,
+                u'deprecated': False,
+                u'private': False
+            }
+    for full_method_name in methods:
+        method = methods[full_method_name]
+
+        resource = None
+        method_name = None
+        if len(method[u'name'].split(u'.')) > 0:
+            resource = method[u'name'].split(u'.')[0]
+        if len(method[u'name'].split(u'.')) > 1:
+            method_name = method[u'name'].split(u'.')[1]
+
+        print unicode(resource) + u',' +\
+            unicode(method_name) + u',' +\
+            unicode(method[u'spec']) + u',' +\
+            unicode(method[u'impl']) + u',' +\
+            unicode(method[u'used']) + u',' +\
+            unicode(method[u'deprecated']) + u',' +\
+            unicode(method[u'private'])
