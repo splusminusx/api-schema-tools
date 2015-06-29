@@ -1,0 +1,78 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "RegistrationMarketingData", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "utm_term", 
+            "description": "Значение соответствующего GET параметра со страницы регистрации\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "utm_campaign", 
+            "description": "Значение соответствующего GET параметра со страницы регистрации\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "utm_content", 
+            "description": "Значение соответствующего GET параметра со страницы регистрации\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "utm_source", 
+            "description": "Значение соответствующего GET параметра со страницы регистрации\t\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "referer", 
+            "description": "url с которого был совершен переход на страницу регистрации\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "extra_params", 
+            "description": "Все остальные GET параметры со страницы регистрации\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "utm_medium", 
+            "description": "Значение соответствующего GET параметра со страницы регистрации\n"
+        }
+    ], 
+    "description": "Абстрактный тип данных. Используется только в методе Employees.register\n"
+}

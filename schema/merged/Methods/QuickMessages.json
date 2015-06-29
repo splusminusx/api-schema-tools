@@ -1,0 +1,198 @@
+{
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID быстрого сообщения.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "QuickMessage"
+        }, 
+        "description": "Возвращает данные указанного быстрого сообщения.\n\n", 
+        "deprecated": false
+    }, 
+    "list": {
+        "description": "Возвращает список быстрых сообщений.\n\n", 
+        "fields_validation": {
+            "q": {
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "is_global": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "category_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID сообщений;\ncategory_ids – idlist, список ID категорий;\nsite_ids – idlist, список ID сайтов.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значение:\ntext:a – по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "QuickMessage"
+            }
+        }
+    }, 
+    "update": {
+        "fields": {
+            "text": [
+                [
+                    "string", 
+                    {
+                        "length": 2000
+                    }
+                ]
+            ], 
+            "category_id": [
+                [
+                    "integer"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "text": "Текст сообщения.\nМаксимум 2000 символов.\n", 
+            "category_id": "ID категории быстрых сообщений.\nВНИМАНИЕ! В категории с is_global = false нельзя создать сообщение с is_global = true. \n", 
+            "id": "ID быстрого сообщения.\n"
+        }, 
+        "result_type": null, 
+        "description": "Обновляет быстрое сообщение.\n\n", 
+        "deprecated": false
+    }, 
+    "add": {
+        "fields": {
+            "is_global": [
+                [
+                    "required"
+                ], 
+                [
+                    "boolean"
+                ]
+            ], 
+            "text": [
+                [
+                    "required"
+                ], 
+                [
+                    "string", 
+                    {
+                        "length": 2000
+                    }
+                ]
+            ], 
+            "category_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "text": "Текст сообщения.\nМаксимум 2000 символов.\n", 
+            "is_global": "Признак глобальности быстрого сообщения.\nЕсли true, то сообщение видно всем сотрудникам. В противном случае - только сотруднику, создавшему сообщение.\nВНИМАНИЕ! В категории с is_global = false нельзя создать сообщение с is_global = true.\n", 
+            "category_id": "ID категории быстрых сообщений.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "QuickMessage"
+        }, 
+        "description": "Добавляет новое быстрое сообщение.\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID быстрого сообщения.\n"
+        }, 
+        "result_type": null, 
+        "description": "Удаляет указанное быстрое сообщение.\n\n", 
+        "deprecated": false
+    }
+}

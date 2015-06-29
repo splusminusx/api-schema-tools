@@ -1,0 +1,124 @@
+{
+    "list": {
+        "description": "Возвращает список элементов контактных данных.\nВНИМАНИЕ! Метод доступен только при наличии опции «Генератор лидов».\n\n", 
+        "fields_validation": {
+            "q": {
+                "is_auto": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "created_at": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "creator_type": [
+                    [
+                        "enum", 
+                        [
+                            "employee", 
+                            "visitor"
+                        ]
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "source_type": [
+                    [
+                        "enum", 
+                        [
+                            "chat", 
+                            "lead", 
+                            "complaint"
+                        ]
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nsite_ids – idlist, список ID сайтов;\nsource_type – enum, тип источника контактных данных;\ncreator_type – enum, тип создателя контактных данных;\nis_auto;\ncreated_at.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Contact"
+            }
+        }
+    }, 
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID элемента контактных данных.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Contact"
+        }, 
+        "description": "Возвращает данные указанного элемента контактных данных.\nВНИМАНИЕ! Метод доступен только при наличии опции «Генератор лидов».\n\n", 
+        "deprecated": false
+    }
+}

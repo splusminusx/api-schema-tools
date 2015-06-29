@@ -1,0 +1,58 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "ConversationEvent", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "event_text", 
+            "description": "Описание события. Например:\n\"Иван Петрович начал переписку с оператором Егор Климов\"\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "name": "employee", 
+            "description": "Оператор.\nПрисутствует для тех типов событий, для которых это имеет смысл.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата и время события.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "event_type", 
+            "description": "Тип события.\nВозможные значения:\ncobrowse-activation-refuse – посетитель отказался от использования функции \"Виртуальный ассистент\";\ncobrowse-activation-request – оператор послал запрос на активацию функции \"Виртуальный ассистент\";\ncobrowse-activation-timeout - превышен лимит ожидания ответа на активацию модуля \"Виртуальный ассистент\";\ncobrowse-member-close – оператор завершил использование функции \"Виртуальный ассистент\";\ncobrowse-member-refuse – оператор завершил использование функции \"Виртуальный ассистент\" до того, как посетитель ответил на запрос;\ncobrowse-redirect – оператор перенаправил посетителя на другую страницу;\ncobrowse-select – оператор выделил области на странице;\ncobrowse-start – посетитель принял запрос на использование функции \"Виртуальный ассистент\";\ncobrowse-visitor-close – посетитель закрыл активную вкладку или вышел из чата;\nfile-upload-to-storage-start – начата загрузка файла в хранилище;\nfile-get-upload-url – отправитель инициировал процедуру отправки файла;\nfile-download-from-storage-start – начато скачивание файла из хранилища;\nfile-download-from-storage-complete – завершено скачивание файла из хранилища;\nfile-ready-to-download – файл загружен в хранилище и готов к скачиванию;\nvisitor-call-end – посетитель завершил звонок;\nvisitor-call-start – посетитель инициировал звонок;\nvisitor-chat-close – посетитель закрыл чат;\nvisitor-chat-move – выполнена передача чата;\nvisitor-chat-open – посетитель начал переписку с оператором;\nvisitor-chat-reopen – посетитель переоткрыл чат;\nvistor-navigate – посетитель перешел на другую страницу.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "page", 
+            "description": "Адрес страницы.\nПрисутствует для тех типов событий, для которых это имеет смысл.\n"
+        }
+    ], 
+    "description": "Событие, произошедшее в течение обращения посетителя.\n\n"
+}

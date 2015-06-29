@@ -1,0 +1,73 @@
+{
+    "list": {
+        "description": "Возвращает список документов.\n\n", 
+        "fields_validation": {
+            "q": {
+                "doc_type": [
+                    [
+                        "enum", 
+                        [
+                            "acceptance", 
+                            "invoice", 
+                            "vatinvoice"
+                        ]
+                    ]
+                ], 
+                "is_bound": [
+                    [
+                        "boolean"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\ndoc_type – enum, документа.\nis_bound – boolean, признак связанности документа с каким-либо периодом.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию, created_at:a;\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Document"
+            }
+        }
+    }, 
+    "description": ""
+}

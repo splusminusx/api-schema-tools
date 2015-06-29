@@ -1,0 +1,308 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Lead", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "text", 
+            "description": "Текст сообщения.\nМаксимум - 2000 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "page_count", 
+            "description": "Количество страниц, просмотренных посетителем в ходе визита, перед тем, как он отправил лид.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Site"
+            }, 
+            "name": "site", 
+            "description": "Сайт, на котором отправлен лид.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "completed_at", 
+            "description": "Дата пометки «обработано».\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "answer_text", 
+            "description": "Текст ответа сотрудника.\nМаксимум - 2000 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "result", 
+            "description": "Статус обработки лида.\nВозможные значения:\nmissed – еще не обработанный;\ncompleted – обработан.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "type", 
+            "description": "Тип лида.\nВозможные значения:\nform – обычный лид, созданный посетителем через форму лида;\ncallback – лид, созданный посетителем по кнопке «Перезвоните мне» или через X-widget;\nchat – лид, созданный сотрудником из чата.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "duration", 
+            "description": "Время в секундах, прошедшее с момента отправки сообщения посетителем и пометкой обработано (result = completed).\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "visit_count", 
+            "description": "Общее количество визитов посетителя на сайт, включая визит, в котором был отправлен лид.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID лида.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "search_engine", 
+            "description": "Название поискового сервиса.\nСодержит значение, если посетитель открыл форму офлайн сообщения, перейдя на сайт из результатов поиска сервисов типа Yandex или Google.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "city", 
+            "description": "Город, из которого посетитель инициировал обращение.\nОпределяется механизмами геолокации LiveTex.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "name": "created_by", 
+            "description": "Сотрудник, создавший лид.\nnull, если лид создан посетителем.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Department"
+            }, 
+            "name": "department", 
+            "description": "Отдел, в который отправлен лид.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "ext_referer", 
+            "description": "Адрес, с которого посетитель перешел на сайт. \n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "email", 
+            "description": "Адрес электронной почты.\nОдно из полей email или phone должно быть указано.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "name": "assigned_to", 
+            "description": "Сотрудник, за которым закреплен лид. Как правило этот сотрудник является создателем лида.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "phone", 
+            "description": "Номер телефона.\nОдно из полей email или phone должно быть указано.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "name": "completed_by", 
+            "description": "Сотрудник, который поставил отметку «обработано».\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "name", 
+            "description": "Имя посетителя.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "int_referer", 
+            "description": "Адрес страницы, на которой инициирована форма офлайн-сообщения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_locked", 
+            "description": "Признак блокировки лида.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "search_query", 
+            "description": "Строка поискового запроса.\nСодержит значение, если посетитель открыл форму офлайн сообщения, перейдя на сайт из результатов поиска сервисов типа Yandex или Google.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "name": "locked_by", 
+            "description": "Сотрудник, заблокировавший лид.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Conversation"
+            }, 
+            "name": "conversation", 
+            "description": "Обращение, в рамках которого отправлен лид.\nОбращение и лид имеют некоторое количество одноименных атрибутов (country, city, ext_referer и т.д.), которые идентичны по смыслу, но фиксируются в разные моменты времени и, как следствие могут иметь разные значения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "country", 
+            "description": "Страна, из которой посетитель инициировал обращение.\nОпределяется механизмами геолокации LiveTex.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_managed", 
+            "description": "True, если лид входит в число своих лидов сотрудника, вызывающего метод.\nЭто признак доступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "entry_page", 
+            "description": "Страница, с которой посетитель начал визит, в котором был отправлен лид.\n"
+        }
+    ], 
+    "description": "Лид.\n\nКонтроллер: Leads.\n"
+}

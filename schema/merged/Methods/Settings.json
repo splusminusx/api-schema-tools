@@ -1,0 +1,258 @@
+{
+    "showCobrowseSettings": {
+        "fields": {}, 
+        "fields_description": {}, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "CobrowseSettings"
+        }, 
+        "description": "Возвращает настройки функции «Виртуальный ассистент».\nМетод не имеет параметров.\n\n", 
+        "deprecated": false
+    }, 
+    "updateEmployeeRemarkSettings": {
+        "fields": {
+            "is_active": [
+                [
+                    "boolean"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "is_active": "Включение/выключение возможности оценки чатов сотрудниками.\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет настройки функции оценок сотрудника.\n\n", 
+        "deprecated": false
+    }, 
+    "showFileTransferSettings": {
+        "fields": {}, 
+        "fields_description": {}, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "FileTransferSettings"
+        }, 
+        "description": "Возвращает настройки функции «Передача файлов».\nМетод не имеет параметров.\n\n", 
+        "deprecated": false
+    }, 
+    "finishMigrationWizard": {
+        "fields": []
+    }, 
+    "showFeatureStates": {
+        "fields": [], 
+        "fields_description": {}, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "FeatureStates"
+        }, 
+        "description": "Возвращает данные о доступности функциональных возможностей на аккаунте.\nМетод не имеет параметров.\n\n", 
+        "deprecated": false
+    }, 
+    "show": {
+        "fields": {}, 
+        "fields_description": {}, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Settings"
+        }, 
+        "description": "Возвращает глобальные настройки.\nМетод не имеет параметров.\n\n", 
+        "deprecated": false
+    }, 
+    "updateAcceptanceByEmailSettings": {
+        "fields": {
+            "is_active": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "emails": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "is_active": "Включение/выключение отправки актов на электронную почту.\n", 
+            "emails": "Список через запятую адресов электронной почты.\n\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет настройки отправки актов по электронной почте.\n\n", 
+        "deprecated": false
+    }, 
+    "updateCobrowseSettings": {
+        "fields": {
+            "is_active": [
+                [
+                    "boolean"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "is_active": "Включение/выключение функции «Виртуальный ассистент».\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет настройки функции \"Виртуальный ассистент\".\n\n", 
+        "deprecated": false
+    }, 
+    "updateTypingIndicatorSettings": {
+        "fields": {
+            "is_active": [
+                [
+                    "boolean"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "is_active": "Включение/выключение функции «Подглядывание».\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет настройки функции «Подглядывание».\n\n", 
+        "deprecated": false
+    }, 
+    "showAcceptanceByEmailSettings": {
+        "fields": {}, 
+        "fields_description": {}, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "AcceptanceByEmailSettings"
+        }, 
+        "description": "Возвращает настройки отправки актов по электронной почте.\nМетод не имеет параметров.\n\n", 
+        "deprecated": false
+    }, 
+    "finishWelcomeWizard": {
+        "fields": []
+    }, 
+    "showCallSettings": {
+        "fields": {}, 
+        "fields_description": {}, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "CallSettings"
+        }, 
+        "description": "Возвращает настройки звонковой функциональности.\nМетод не имеет параметров.\n\n", 
+        "deprecated": false
+    }, 
+    "updateFileTransferSettings": {
+        "fields": {
+            "is_active": [
+                [
+                    "boolean"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "is_active": "Включение/выключение функции «Передача файлов».\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет настройки функции «Передача файлов».\n\n", 
+        "deprecated": false
+    }, 
+    "showTypingIndicatorSettings": {
+        "fields": {}, 
+        "fields_description": {}, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "TypingIndicatorSettings"
+        }, 
+        "description": "Возвращает настройки функции «Подглядывания».\nМетод не имеет параметров.\n\n", 
+        "deprecated": false
+    }, 
+    "showReportByEmailSettings": {
+        "fields": {}, 
+        "fields_description": {}, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "ReportByEmailSettings"
+        }, 
+        "description": "Возвращает настройки отправки отчетов по email.\nМетод не имеет параметров.\n\n", 
+        "deprecated": false
+    }, 
+    "updateCallSettings": {
+        "fields": {
+            "is_forward": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "is_active": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "forward_sip_host": [
+                [
+                    "string"
+                ]
+            ], 
+            "forward_sip_login": [
+                [
+                    "string"
+                ]
+            ], 
+            "forward_sip_password": [
+                [
+                    "string"
+                ]
+            ], 
+            "forward_type": [
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(sip|phone)$#"
+                    }
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "is_forward": "Включение/выключение переадресации.\n", 
+            "is_active": "Включение/выключение функциональности звонков.\n", 
+            "forward_sip_host": "Имя хоста SIP.\nОбязательно при forward_type=SIP и is_forward=true.\n", 
+            "forward_sip_login": "Логин для подключения по SIP.\nОбязательно при forward_type=SIP и is_forward=true.\n", 
+            "forward_sip_password": "Пароль для подключения по SIP.\nОбязательно при forward_type=SIP и is_forward=true.\n", 
+            "forward_type": "Тип переадресации.\nВозможные значения:\nsip – переадресация на SIP,\nphone – переадресация на телефон.\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет настройки звонковой функциональности.\n\n", 
+        "deprecated": false
+    }, 
+    "updateReportByEmailSettings": {
+        "fields": {
+            "is_active": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "period": [
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(daily|weekly|monthly)$#"
+                    }
+                ]
+            ], 
+            "emails": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "is_active": "Включение/выключение отправки отчетов на email.\n", 
+            "period": "Периодичность.\nВозможные значения:\ndaily – ежедневно;\nweekly – еженедельно;\nmonthly – ежемесячно.\n", 
+            "emails": "Список через запятую адресов электронной почты, на которые следует отправлять отчеты.\nЕсли указана пустая строка, то отчеты отправляться не будут.\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет настройки отправки отчетом по email.\n\n", 
+        "deprecated": false
+    }, 
+    "showEmployeeRemarkSettings": {
+        "fields": {}, 
+        "fields_description": {}, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "EmployeeRemarkSettings"
+        }, 
+        "description": "Возвращает настройки оценок сотрудника.\nМетод не имеет параметров.\n\n", 
+        "deprecated": false
+    }, 
+    "description": ""
+}

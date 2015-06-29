@@ -1,0 +1,219 @@
+{
+    "list": {
+        "description": "Возвращает список звонков.\n\n", 
+        "fields_validation": {
+            "q": {
+                "rem_transfer": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "operator_vote_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "rem_lost_in_queue": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "result": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "#^(missed|completed)$#"
+                        }
+                    ]
+                ], 
+                "duration": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "search_engine": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "answer_time": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "conversation_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "rem_long_answer": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "visitor_vote": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "#^(positive|negative|undefined)$#"
+                        }
+                    ]
+                ], 
+                "ext_referer": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "rem_empty": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "message_count": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "rem_auto": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "keyword": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "int_referer": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "is_incoming": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "message_text": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "visitor_ids": [
+                    [
+                        "idList", 
+                        {
+                            "type": "string"
+                        }
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "is_managed": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "created_at": [
+                    [
+                        "datetime"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID звонков;\nsite_ids – idlist, список ID сайтов;\ndepartment_ids – idlist, список ID отделов;\nemployee_ids – idlist, список ID сотрудников;\nvisitor_ids – idlist, список ID посетителей;\nconversation_ids – idlist, список ID обращений;\nis_incoming;\nresult;\nanswer_time;\nduration;\nrem_long_answer;\nrem_transfer;\nrem_empty;\nrem_auto;\nrem_lost_in_queue;\nvisitor_vote;\noperator_vote_ids – idlist, список ID оценок сотрудника;\nsearch_engine;\next_referer;\nint_referer;\nis_managed;\ncreated_at.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию;\nupdated_at:d;\nduration:a, duration:d;\nanswer_time:a, answer_time:d;\nresult:a, result:d.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Call"
+            }
+        }
+    }, 
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID звонка.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Call"
+        }, 
+        "description": "Возвращает данные указанного звонка.\n\n", 
+        "deprecated": false
+    }
+}

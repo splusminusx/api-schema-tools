@@ -1,0 +1,30 @@
+{
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID обращения.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Conversation"
+        }, 
+        "description": "Возвращает данные указанного обращения.\n\n", 
+        "deprecated": false
+    }
+}

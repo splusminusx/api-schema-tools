@@ -1,0 +1,66 @@
+{
+    "list": {
+        "description": "Возвращает список географических расположений.\n", 
+        "fields_validation": {
+            "q": {
+                "title": [
+                    [
+                        "required"
+                    ], 
+                    [
+                        "string"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\ntitle – string, поиск по текстам полей title в соответствующих стране, региону и городу.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ntitle:a – по умолчанию. Записи сортируются по названию страны, затем по названию региона затем по названию города.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Location"
+            }
+        }
+    }, 
+    "description": ""
+}

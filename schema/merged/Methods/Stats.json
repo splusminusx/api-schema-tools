@@ -1,0 +1,315 @@
+{
+    "monitor": {
+        "fields": {
+            "version": [
+                [
+                    "string"
+                ]
+            ], 
+            "extended": [
+                [
+                    "boolean"
+                ]
+            ]
+        }
+    }, 
+    "contacts": {
+        "fields": {}, 
+        "fields_description": {}, 
+        "result_type": null, 
+        "description": "Возвращает статистику по контактным данным.\nМетод не имеет параметров.\nПеречень доступных статистических данных\n\n", 
+        "deprecated": false
+    }, 
+    "employees": {
+        "description": "Возвращает статистику по сотрудникам.\n\nОсобенности работы метода\nКритерии фильтрации определяют подмножество диалогов (чатов, звонков, лидов). На это подмножество накладываются права доступа текущего пользователя - выделяются свои диалоги (см. раздел «1.2.10. Ролевая модель») - получается целевое множество диалогов.\nЕсли не указан критерий employee_ids, то выборка будет содержать сотрудников (в том числе удаленных), участвовавших в целевом множестве диалогов, а также сотрудников (исключая удаленных), связанных с сайтами и отделами, к которым есть доступ у текущего пользователя вне зависимости от того, какие сайты и отделы указаны в критериях site_ids, department_ids.\nЕсли критерий employee_ids указан, от выборка будет содержать только указанных сотрудников. \nСтатистические данные рассчитываются для каждого сотрудника в выборке по целевому множеству диалогов.\nПеречень доступных статистических данных\n\nПример без поля \"by_date\"\ncurl https://api.livetex.ru/v2/stats/employees \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"total\": 2,\n    \"results\": [\n        {\n            \"id\": 1234567,\n            \"first_name\": \"Денис\",\n            \"last_name\": \"Колесников\",\n            \"online_time_avg\": 14680,\n            \"chats_total\": 12,\n            \"calls_total\": 2,\n            \"leads_total\": 0\n        },\n        {\n            \"id\": 1234595,\n            \"first_name\": \"Ирина\",\n            \"last_name\": \"Попова\",\n            \"online_time_avg\": 21654,\n            \"chats_total\": 15,\n            \"calls_total\": 4,\n            \"leads_total\": 0\n        }\n    ]\n}\nПример c полем \"by_date\"\ncurl \"https://api.livetex.ru/v2/stats/employees?fields=id,first_name,last_name,chats_total,by_date\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"total\": 2,\n    \"results\": [\n        {\n            \"id\": 1234567,\n            \"first_name\": \"Денис\",\n            \"last_name\": \"Колесников\",\n            \"chats_total\": 12,\n            \"by_date\":[\n                {\n                    \"date\": \"2013-10-15\",\n                    \"chats_total\": 7\n                },\n                {\n                    \"date\": \"2013-10-16\",\n                    \"chats_total\": 5\n                }\n            ]\n        },\n        {\n            \"id\": 1234595,\n            \"first_name\": \"Ирина\",\n            \"last_name\": \"Попова\",\n            \"chats_total\": 15,\n            \"by_date\":[\n                {\n                    \"date\": \"2013-10-15\",\n                    \"chats_total\": 8\n                },\n                {\n                    \"date\": \"2013-10-16\",\n                    \"chats_total\": 7\n                }\n            ]\n        }\n    ]\n}\n\n\n", 
+        "fields_validation": {
+            "q": {
+                "date": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "is_online": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "sort": [
+                [
+                    "required", 
+                    {
+                        "default": "last_name:a"
+                    }
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nsite_ids – idlist, список ID сайтов.\ndepartment_ids – idlist, список ID отделов.\nemployee_ids – idlist, список ID сотрудников.\ndate – date, период, за который запрашивается статистика.\nis_online – boolean, признак присутствия оператора в онлайн. Если указано, то метод вернет статистику по операторам с соответствующим текущим статусом.\n", 
+            "fields": "Список возвращаемых полей через запятую.\nВозможные значения приведены в нижеследующей таблице.\nПо умолчанию возвращаются следующие поля:\nid;\nfirst_name;\nlast_name;\nonline_time_avg;\nchats_total;\ncalls_total;\nleads_total.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\nlast_name:a – по умолчанию;\nfirst_name:a;\nonline_time_avg:a, online_time_avg:d;\nchats_total:a, chats_total:d;\ncalls_total:a, calls_total:d;\nleads_total:a, leads_total:d.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }
+        }
+    }, 
+    "sites": {
+        "description": "Возвращает статистику по сайтам.\n\nОсобенности работы метода\nКритерии фильтрации определяют подмножество диалогов (чатов, звонков, лидов). На это подмножество накладываются права доступа текущего пользователя - выделяются свои диалоги (см. раздел «1.2.10. Ролевая модель») - получается целевое множество диалогов.\nЕсли не указан критерий site_ids, то выборка будет содержать сайты (в том числе удаленные), в которые были адресованы диалоги из целевого множества, а также сайты (исключая удаленные), доступные текущему пользователю.\nЕсли критерий site_ids указан, от выборка будет содержать только указанные сайты. \nСтатистические данные рассчитываются для каждого сайта в выборке по целевому множеству диалогов.\nПеречень доступных статистических данных\n\nПример \ncurl https://api.livetex.ru/v2/stats/sites \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"results\": [\n        {\n            \"id\": 1234567,\n            \"url\": \"first.mysyte.ru\",\n            \"online_time_avg\": 21654,\n            \"chats_total\": 12,\n            \"calls_total\": 2,\n            \"leads_total\": 0\n        },\n        {\n            \"id\": 1234568,\n            \"url\": \"second.mysyte.ru\",\n            \"online_time_avg\": 14680,\n            \"chats_total\": 15,\n            \"calls_total\": 4,\n            \"leads_total\": 0\n        }\n    ]\n}\nПример c полем \"by_date\"\ncurl \"https://api.livetex.ru/v2/stats/sites?fields=id,url,chats_total,by_date\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"total\": 2,\n    \"results\": [\n        {\n            \"id\": 1234567,\n            \"url\": \"first.mysyte.ru\",\n            \"chats_total\": 12,\n            \"by_date\":[\n                {\n                    \"date\": \"2013-10-15\",\n                    \"chats_total\": 7\n                },\n                {\n                    \"date\": \"2013-10-16\",\n                    \"chats_total\": 5\n                }\n            ]\n        },\n        {\n            \"id\": 1234568,\n            \"url\": \"second.mysyte.ru\",\n            \"chats_total\": 15,\n            \"by_date\":[\n                {\n                    \"date\": \"2013-10-15\",\n                    \"chats_total\": 8\n                },\n                {\n                    \"date\": \"2013-10-16\",\n                    \"chats_total\": 7\n                }\n            ]\n        }\n    ]\n}\n\nПример c полем by_department\ncurl \"https://api.livetex.ru/v2/stats/sites?fields=id,url,chats_total,by_department\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"total\": 2,\n    \"results\": [\n        {\n            \"id\": 1234567,\n            \"url\": \"first.mysyte.ru\",\n            \"chats_total\": 12,\n            \"by_department\": [\n                {\n                    \"id\": \"123456\",\n                    \"title\": \"Отдел доставки\",\n                    \"chats_total\": 7\n                },\n                {\n                    \"id\": \"123457\",\n                    \"title\": \"Отдел продаж\",\n                    \"chats_total\": 5\n                }\n            ]\n        },\n        {\n            \"id\": 1234568,\n            \"url\": \"second.mysyte.ru\",\n            \"chats_total\": 15,\n            \"by_department\": [\n                {\n                    \"id\": \"123456\",\n                    \"title\": \"Отдел доставки\",\n                    \"chats_total\": 8\n                },\n                {\n                    \"id\": \"123457\",\n                    \"title\": \"Отдел продаж \",\n                    \"chats_total\": 7\n                }\n            ]\n        }\n    ]\n}\n\nПример c полем by_employee\ncurl \"https://api.livetex.ru/v2/stats/sites?fields=id,url,chats_total,by_employee\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"total\": 2,\n    \"results\": [\n        {\n            \"id\": 1234567,\n            \"url\": \"first.mysyte.ru\",\n            \"chats_total\": 12,\n            \"by_employee\": [\n                {\n                    \"id\": \"123456\",\n                    \"first_name\": \"Иван\",\n                    \"last_name\": \"Давыдов\",\n                    \"chats_total\": 7\n                },\n                {\n                    \"id\": \"123457\",\n                    \"first_name\": \"Елена\",\n                    \"last_name\": \"Изосимова\",\n                    \"chats_total\": 5\n                }\n            ]\n        },\n        {\n            \"id\": 1234568,\n            \"url\": \"second.mysyte.ru\",\n            \"chats_total\": 15,\n            \"by_employee\": [\n                {\n                    \"id\": \"123456\",\n                    \"first_name\": \"Иван\",\n                    \"last_name\": \"Давыдов\",\n                    \"chats_total\": 8\n                },\n                {\n                    \"id\": \"123457\",\n                    \"first_name\": \"Елена\",\n                    \"last_name\": \"Изосимова\",\n                    \"chats_total\": 7\n                }\n            ]\n        }\n    ]\n}\n\n\n", 
+        "fields_validation": {
+            "q": {
+                "date": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "sort": [
+                [
+                    "required", 
+                    {
+                        "default": "url:a"
+                    }
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий фильтрации.\nДоступные поля:\nsite_ids – idlist, список ID сайтов.\ndepartment_ids – idlist, список ID отделов.\nemployee_ids – idlist, список ID сотрудников.\ndate – date, период, за который запрашивается статистика.\n", 
+            "fields": "Список возвращаемых полей через запятую.\nВозможные значения приведены в нижеследующей таблице.\nПо умолчанию возвращаются следующие поля:\nid;\nurl;\nonline_time_avg;\nchats_total;\ncalls_total;\nleads_total.\nЕсли указано поле by_department, то принимаются во внимание также указания типа department(field_name), где field_name – имя поля отдела.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\nurl:a – по умолчанию;\nonline_time_avg:a, online_time_avg:d;\nchats_total:a, chats_total:d;\ncalls_total:a, calls_total:d;\nleads_total:a, leads_total:d.\nУказанная сортировка распространяется также на порядок данных в ключах \"by_department\" и \"by_employee\".\nЕсли указано \"url:a\", то для сортировки данных в ключе \"by_department\" можно указать одно из следующих возможных значений:\ndepartment(title):a.\nА в ключе \"by_employee\":\nemployee(last_name):a;\nemployee(first_name):a.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Site"
+            }
+        }
+    }, 
+    "departments": {
+        "description": "Возвращает статистику по отделам.\n\nОсобенности работы метода\nКритерии фильтрации определяют подмножество диалогов (чатов, звонков, лидов). На это подмножество накладываются права доступа текущего пользователя - выделяются свои диалоги (см. раздел «1.2.10. Ролевая модель») - получается целевое множество диалогов.\nЕсли не указан критерий department_ids, то выборка будет содержать отделы (в том числе удаленные), в которые были адресованы диалоги из целевого множества, а также отделы (исключая удаленные), доступные текущему пользователю. Если в целевом множестве есть диалоги без указания отдела, то в выборке будет присутствовать фиктивный отдел, со статистическими данными по таким диалогам.\nЕсли критерий department_ids указан, от выборка будет содержать только указанные отделы. \nСтатистические данные рассчитываются для каждого отдела в выборке по целевому множеству диалогов.\nПеречень доступных статистических данных\n\nПример без поля by_date\ncurl https://api.livetex.ru/v2/stats/departments \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"total\": 2,\n    \"results\": [\n        {\n            \"id\": 1234567,\n            \"title\": \"Отдел продаж\",\n            \"online_time_avg\": 21654,\n            \"chats_total\": 12,\n            \"calls_total\": 2,\n            \"leads_total\": 0\n        },\n        {\n            \"id\": 1234595,\n            \"title\": \"Отдел доставки\",\n            \"online_time_avg\": 14680,\n            \"chats_total\": 15,\n            \"calls_total\": 4,\n            \"leads_total\": 0\n        }\n    ]\n}\nПример c полем by_date\ncurl \"https://api.livetex.ru/v2/stats/departments?fields=department,chats_total,by_date\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"total\": 2,\n    \"results\": [\n        {\n            \"id\": 1234567,\n            \"title\": \"Отдел продаж\",\n            \"chats_total\": 12,\n            \"by_date\":[\n                {\n                    \"date\": \"2013-10-15\",\n                    \"chats_total\": 7\n                },\n                {\n                    \"date\": \"2013-10-16\",\n                    \"chats_total\": 5\n                }\n            ]\n        },\n        {\n            \"id\": 1234595,\n            \"title\": \"Отдел доставки\",\n            \"chats_total\": 15,\n            \"by_date\":[\n                {\n                    \"date\": \"2013-10-15\",\n                    \"chats_total\": 8\n                },\n                {\n                    \"date\": \"2013-10-16\",\n                    \"chats_total\": 7\n                }\n            ]\n        }\n    ]\n}\n\n\n", 
+        "fields_validation": {
+            "q": {
+                "date": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "sort": [
+                [
+                    "required", 
+                    {
+                        "default": "title:a"
+                    }
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий фильтрации.\nДоступные поля:\nsite_ids – idlist, список ID сайтов.\ndepartment_ids – idlist, список ID отделов.\nemployee_ids – idlist, список ID сотрудников.\ndate – date, период, за который запрашивается статистика.\n", 
+            "fields": "Список возвращаемых полей через запятую.\nВозможные значения приведены в нижеследующей таблице.\nПо умолчанию возвращаются следующие поля:\nonline_time_avg;\nchats_total;\ncalls_total;\nleads_total.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ntitle:a – по умолчанию;\nonline_time_avg:a, online_time_avg:d;\nchats_total:a, chats_total:d;\ncalls_total:a, calls_total:d;\nleads_total:a, leads_total:d.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Department"
+            }
+        }
+    }, 
+    "summary": {
+        "description": "Возвращает общую статистику.\nПеречень доступных статистических данных\nОсобенность работы метода\nКритерии фильтрации определяют подмножество диалогов (чатов, звонков, лидов). На это подмножество накладываются права доступа текущего пользователя (только свои диалоги). Соответствующие статистические показатели подсчитываются для результирующего набора диалогов.\nПример без поля by_date\ncurl https://api.livetex.ru/v2/stats/summary \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"results\": {\n        \"online_time_avg\": 14680,\n        \"chats_total\": 28,\n        \"calls_total\": 7,\n        \"leads_total\": 7\n    }\n}\nПример c полем by_date\ncurl https://api.livetex.ru/v2/stats/summary?fields=chats_total,calls_total,by_date \\\n-H \"Authorization: Bearer ACCESS_TOKEN\"\n\n{\n    \"results\": {\n        \"chats_total\": 28,\n        \"calls_total\": 7,\n        \"by_date\":[\n            {\n                \"date\": \"2013-10-15\",\n                \"chats_total\": 12,\n                \"calls_total\": 2\n            },\n            {\n                \"date\": \"2013-10-16\",\n                \"chats_total\": 16,\n                \"calls_total\": 5\n            }\n        ]\n    }\n}\n\nПример c полем employee_remarks_by_remark\ncurl https://api.livetex.ru/v2/stats/summary -G \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n-d \"fields=employee_remarks,employee_remarks_by_remark(id,title)\"\n\n{\n    \"results\": {\n        \"employee_remarks\": 28,\n        \"employee_remarks_by_remark\":[\n            {\n                \"id\": 123456,\n                \"title\": \"Консультация была эффективной\",\n                \"employee_remarks\": 22\n            },\n            {\n                \"id\": 123457,\n                \"title\": \"Консультация была неэффективной\",\n                \"employee_remarks\": 6\n            }\n        ]\n    }\n}\n\n\n", 
+        "fields_validation": {
+            "q": {
+                "date": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nsite_ids – idlist, список ID сайтов.\ndepartment_ids – idlist, список ID отделов.\nemployee_ids – idlist, список ID сотрудников.\ndate – date, период, за который запрашивается статистика.\n", 
+            "fields": "Список возвращаемых полей через запятую.\nВозможные значения приведены в нижеследующей таблице.\nПо умолчанию возвращаются следующие поля:\nonline_time_avg;\nchats_total;\ncalls_total;\nleads_total;\n"
+        }, 
+        "deprecated": false, 
+        "result_type": null
+    }, 
+    "onlineIntervals": {
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_validation": {
+            "q": {
+                "date": [
+                    [
+                        "datetime", 
+                        {
+                            "max": "1 month"
+                        }
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }
+    }, 
+    "siteSummary": {
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_validation": {
+            "q": {
+                "date": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }
+    }, 
+    "description": "Статистические данные различного типа.\n"
+}

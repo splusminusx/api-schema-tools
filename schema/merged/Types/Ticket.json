@@ -1,0 +1,112 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Ticket", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "status", 
+            "description": "Статус тикета.\nВозможные значения:\nsubmitted – новый тикет;\ninprogress – в работе;\nw4lt – ожидает ответа технического специалиста LiveTex;\nw4e – ожидает ответа сотрудника;\nclosed – закрыто.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "text", 
+            "description": "Текст обращения в поддержку.\nМаксимум 2000 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Comment"
+                }
+            }, 
+            "name": "comments", 
+            "description": "Массив комментариев в рамках данного тикета.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "priority", 
+            "description": "Приоритет:\nВозможные значения:\nundefined - не определено;\nlow – низкий;\nnormal – обычный;\nhigh – высокий;\ncritical – критичный.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "name": "employee", 
+            "description": "Сотрудник, инициировавший обращение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "type", 
+            "description": "Тип обращения.\nВозможные значения:\nundefined – не определено;\nincident – инцидент;\nrequest – запрос на обслуживание.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID обращения в поддержку.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "subject", 
+            "description": "Тема обращения в поддержку.\n"
+        }
+    ], 
+    "description": "Обращение в поддержку.\n\n"
+}

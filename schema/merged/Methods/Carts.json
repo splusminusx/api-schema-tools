@@ -1,0 +1,239 @@
+{
+    "description": "", 
+    "addToPeriod": {
+        "fields": {
+            "activation_type": [
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(now|after_current|after_payment)$#"
+                    }
+                ]
+            ], 
+            "period_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "activation_type": "Тип активации.\nВозможные значения:\nnow – активация сразу после покупки (по умолчанию);\nafter_current – активация после завершения текущего периода;\nafter_payment – активация после оплаты.\n", 
+            "period_id": "ID периода.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Cart"
+        }, 
+        "description": "Создает новую корзину в указанном периоде.\n\n", 
+        "deprecated": false
+    }, 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID корзины.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Cart"
+        }, 
+        "description": "Возвращает данные указанной корзины.\n\n", 
+        "deprecated": false
+    }, 
+    "list": {
+        "description": "Возвращает список корзин.\n\n", 
+        "fields_validation": {
+            "q": {
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID корзин.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Cart"
+            }
+        }
+    }, 
+    "update": {
+        "fields": {
+            "activation_type": [
+                [
+                    "required"
+                ], 
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(now|after_current|after_payment)$#"
+                    }
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "activation_type": "Тип активации.\nВозможные значения:\nnow – активация сразу после покупки;\nafter_current – активация после завершения текущего периода;\nafter_payment – активация после оплаты.\n", 
+            "id": "ID корзины.\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет указанную корзину.\n\n\n\n", 
+        "deprecated": false
+    }, 
+    "add": {
+        "fields": {
+            "activation_type": [
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(now|after_current|after_payment)$#"
+                    }
+                ]
+            ], 
+            "is_current_period": [
+                [
+                    "boolean"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "activation_type": "Тип активации.\nВозможные значения:\nnow – активация сразу после покупки (по умолчанию);\nafter_current – активация после завершения текущего периода;\nafter_payment – активация после оплаты.\n", 
+            "is_current_period": "Признак текущего периода.\nЕсли true (по умолчанию), то корзина создается для текущего периода. \nЕсли false, то будет создан новый период.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Cart"
+        }, 
+        "description": "Создает новую корзину.\n\n\n", 
+        "deprecated": false
+    }, 
+    "forceCommit": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "payer_id": [
+                [
+                    "integer"
+                ]
+            ]
+        }
+    }, 
+    "commit": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "payer_id": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID корзины.\n", 
+            "payer_id": "ID плательщика.\nЕсли не указано, то счет будет выписан на активного плательщика.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Order"
+        }, 
+        "description": "Операция покупки позиций указанной корзины.\nМетод создает заказ, выставляет счет на оплату на активного плательщика и удаляет корзину. \n Параметры\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID корзины.\n"
+        }, 
+        "result_type": null, 
+        "description": "Удаляет указанную корзину.\n\n", 
+        "deprecated": false
+    }
+}

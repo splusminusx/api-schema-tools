@@ -1,0 +1,118 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Contact", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "name", 
+            "description": "Имя, которое указал посетитель.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Visitor"
+            }, 
+            "name": "visitor", 
+            "description": "Посетитель, оставивший контактные данные.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата и время извлечения контактных данных.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "creator_type", 
+            "description": "Тип создателя контактных данных.\nВозможные значения:\nemployee – сотрудник,\nvisitor – посетитель.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Site"
+            }, 
+            "name": "site", 
+            "description": "Сайт, на котором получены контактные данные.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "data", 
+            "description": "Значение элемента контактных данных – конкретный адрес электронной почты или номер телефона.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "source_type", 
+            "description": "Тип источника контактных данных.\nВозможные значения:\nchat – чат,\nlead – лид,\ncomplaint – жалоба.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "source_id", 
+            "description": "ID объекта, из которого получены контактные данные.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "type", 
+            "description": "Тип элемента контактных данных.\nВозможные значения:\nemail – адрес электронной почты,\nphone – номер телефона.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID элемента контактных данных.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_auto", 
+            "description": "Признак автоматического извлечения контактных данных.\ntrue - данный извлечены из текста чата/лида/жалобы.\nfalse - данные введены пользователем в соответствующие поля формы.\n"
+        }
+    ], 
+    "description": "Контактные данные.\n\n"
+}

@@ -1,0 +1,248 @@
+{
+    "methods": [
+        {
+            "kind": "Method", 
+            "name": "setContactInfoExist", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID чата.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "Object"
+                    }, 
+                    "name": "contact_info", 
+                    "description": "Объект с информацией о найденных контактных данных.\nМожет содержать ключи:\nemails – массив найденных адресов электронной почты.\nphones – массив найденных номеров телефонов.\nДолжен содержать хотя бы один из этих ключей с непустым массивом.\n"
+                }
+            ], 
+            "description": "Устанавливает признак наличия контактной информации в чате.\nПовторный вызов этого метода для одного и того же чата приводит к пополнению массивов найденных контактных данных.\n\n", 
+            "is_deprecated": false, 
+            "result_type": null, 
+            "permissions": [
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": "Только для чатов, в которых сотрудник является участником."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Только для чатов, в которых сотрудник является участником."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Только для чатов, в которых сотрудник является участником."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Только для чатов, в которых сотрудник является участником."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "Только для чатов, в которых сотрудник является участником."
+                }, 
+                {
+                    "access": "user", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": "Только для чатов, в которых сотрудник является участником."
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "list", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "q", 
+                    "description": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID чатов;\nsite_ids – idlist, список ID сайтов;\ndepartment_ids – idlist, список ID отделов;\nemployee_ids – idlist, список ID сотрудников;\nconversation_ids – idlist, список ID обращений;\nvisitor_ids – idlist, список ID посетителей;\nmessage_text – string, подстрока в тексте сообщения;\nresult;\nmessage_count;\nqueue_time;\nfirst_answer_time;\nduration;\nis_complaint – boolean, наличие жалобы в обращении, которому принадлежит чат;\nemployee_remark_ids – idlist, список оценок операторов, поставленных обращению, которому принадлежит чат;\nrem_long_answer;\nrem_transfer;\nrem_empty;\nrem_auto;\nrem_lost_in_queue;\nvisitor_vote – enum, оценка посетителя;\nis_managed;\ncreated_at.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "offset", 
+                    "description": "По умолчанию – 0.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "limit", 
+                    "description": "По умолчанию – 50.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "sort", 
+                    "description": "Сортировка результатов.\nВозможные значения:\ncreated_at:a;\nupdated_at:a;\nduration:a;\nresult:a.\n"
+                }
+            ], 
+            "description": "Возвращает список чатов.\nПеречень дополнительных полей\n\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Chat"
+                }
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Все чаты, но без messages и events."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Все чаты, но без messages и events."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Все чаты, но без messages и events."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "Все чаты, но без messages и events."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }, 
+        {
+            "kind": "Method", 
+            "name": "show", 
+            "fields": [
+                {
+                    "kind": "field", 
+                    "required": false, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "string"
+                    }, 
+                    "name": "fields", 
+                    "description": "Список через запятую возвращаемых полей.\n"
+                }, 
+                {
+                    "kind": "field", 
+                    "required": true, 
+                    "type": {
+                        "kind": "Reference", 
+                        "name": "numeric"
+                    }, 
+                    "name": "id", 
+                    "description": "ID чата.\n"
+                }
+            ], 
+            "description": "Возвращает данные указанного чата.\n\n", 
+            "is_deprecated": false, 
+            "result_type": {
+                "kind": "Reference", 
+                "name": "Chat"
+            }, 
+            "permissions": [
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin", 
+                    "description": ""
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief", 
+                    "description": "Все чаты, но без messages и events."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "manager", 
+                    "description": "Все чаты, но без messages и events."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "chief_partner", 
+                    "description": "Все чаты, но без messages и events."
+                }, 
+                {
+                    "access": "managed", 
+                    "kind": "Permission", 
+                    "role": "operator", 
+                    "description": "Все чаты, но без messages и events."
+                }, 
+                {
+                    "access": "full", 
+                    "kind": "Permission", 
+                    "role": "admin_partner", 
+                    "description": ""
+                }
+            ]
+        }
+    ], 
+    "kind": "Resource", 
+    "name": "Сhats", 
+    "description": ""
+}

@@ -1,0 +1,239 @@
+{
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID сценария удержания.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "HoldRule"
+        }, 
+        "description": "Возвращает данные указанного сценария удержания.\n\n", 
+        "deprecated": false
+    }, 
+    "list": {
+        "description": "Возвращает список сценариев удержания.\n\n", 
+        "fields_validation": {
+            "q": {
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "title": [
+                    [
+                        "string"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID сценариев удержания;\nsite_ids – idlist, список ID сайтов, на которых используется сценарий;\ntitle.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ntitle:a – по умолчанию, title:d.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "HoldRule"
+            }
+        }
+    }, 
+    "update": {
+        "fields": {
+            "title": [
+                [
+                    "string"
+                ]
+            ], 
+            "transfer_after": [
+                [
+                    "integer", 
+                    {
+                        "max": 3600, 
+                        "min": 5
+                    }, 
+                    null, 
+                    "Значение должно быть от 5 до 3600"
+                ]
+            ], 
+            "is_transfer": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "site_ids": [
+                [
+                    "idList"
+                ]
+            ], 
+            "hold_messages": [
+                [
+                    "arrayOf", 
+                    {
+                        "max": 3, 
+                        "type": "App\\Model\\DB\\Billing\\HoldMessage", 
+                        "min": 1
+                    }
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "title": "Название сценария удержания.\n", 
+            "transfer_after": "Интервал в секундах после последнего сообщения, по истечение которого выполнить перенаправление на другого оператора, если указано is_transfer.\nДолжен быть от 5 до 3600 секунд.\nОбязательно, если is_transfer = true.\nПринимается во внимание, только если hold_messages содержит хотя бы один элемент.\n", 
+            "is_transfer": "Признак перенаправления на другого оператора после последнего сообщения.\nПринимается во внимание, только если hold_messages содержит хотя бы один элемент.\n", 
+            "site_ids": "Список через запятую ID сайтов, на которых должен работать обновляемые сценарий удержания.\nЕсли на указанном сайте уже используется какой-нибудь сценарий удержания, то он будет заменен на обновляемый сценарий.\nЕсли обновляемый сценарий удержания используется на сайтах, не указанных в списке, то значение поля hold_rule этих сайтов устанавливается в null.\nЕсли в качестве значение указана пустая строка, то сценарий удержания будет отвязан от всех сайтов.\n", 
+            "hold_messages": "Массив удерживающих сообщений.\nОт 1 до 3 элементов.\n", 
+            "id": "ID сценария удержания.\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет указанный сценарий удержания.\n\n", 
+        "deprecated": false
+    }, 
+    "add": {
+        "fields": {
+            "is_transfer": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "site_ids": [
+                [
+                    "idList"
+                ]
+            ], 
+            "hold_messages": [
+                [
+                    "required"
+                ], 
+                [
+                    "notEmpty"
+                ], 
+                [
+                    "arrayOf", 
+                    {
+                        "max": 3, 
+                        "type": "App\\Model\\DB\\Billing\\HoldMessage", 
+                        "min": 1
+                    }
+                ]
+            ], 
+            "transfer_after": [
+                [
+                    "integer", 
+                    {
+                        "max": 3600, 
+                        "min": 5
+                    }, 
+                    null, 
+                    "Значение должно быть от 5 до 3600"
+                ]
+            ], 
+            "title": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "is_transfer": "Признак перенаправления на другого оператора после последнего сообщения.\nПринимается во внимание, только если hold_messages содержит хотя бы один элемент.\n", 
+            "site_ids": "Список ID сайтов, к которым следует подключить сценарий удержания.\nЕсли на указанном сайте уже используется какой-нибудь сценарий удержания, то он будет заменен на создаваемый.\n", 
+            "hold_messages": "Массив удерживающих сообщений.\nОт 1 до 3 элементов.\n", 
+            "transfer_after": "Интервал в секундах после последнего сообщения, по истечение которого выполнить перенаправление на другого оператора, если указано is_transfer.\nДолжен быть от 5 до 3600 секунд.\nОбязательно, если is_transfer = true.\nПринимается во внимание, только если hold_messages содержит хотя бы один элемент.\n", 
+            "title": "Название сценария удержания.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "HoldRule"
+        }, 
+        "description": "Создает новый сценарий удержания.\nПример вызова\ncurl \"https://api.livetex.ru/v2/holdrules\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t-d \"title=Одно сообщение и перевод\" \\\n\t-d \"hold_messages[0][text]=Оператор скоро вам ответит\" \\\n\t-d \"hold_messages[0][send_after]=15\" \\\n\t-d \"is_transfer=true\" \\\n\t-d \"transfer_after=15\"\n\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID сценария удержания.\n"
+        }, 
+        "result_type": null, 
+        "description": "Удаляет указанный сценария удержания.\n\n", 
+        "deprecated": false
+    }
+}

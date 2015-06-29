@@ -1,0 +1,18 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "EmployeeRemarkSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Включение/выключение возможности оценки чатов сотрудниками.\n"
+        }
+    ], 
+    "description": "Настройки оценок сотрудников.\n\n"
+}

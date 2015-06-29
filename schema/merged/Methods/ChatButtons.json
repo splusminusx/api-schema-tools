@@ -1,0 +1,310 @@
+{
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID кнопки.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "ChatButton"
+        }, 
+        "description": "Возвращает данные указанной кнопки.\n\n", 
+        "deprecated": false
+    }, 
+    "list": {
+        "description": "Возвращает список кнопок.\n\n", 
+        "fields_validation": {
+            "q": {
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer"
+                ]
+            ], 
+            "sort": [
+                [
+                    "required", 
+                    {
+                        "default": "id:a"
+                    }
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID кнопок;\nsite_ids – idlist, список ID сайтов.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значение:\nid:a – по умолчанию;\nupdated_at:d.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "ChatButton"
+            }
+        }
+    }, 
+    "update": {
+        "fields": {
+            "employee_id": [
+                [
+                    "integer"
+                ]
+            ], 
+            "color": [
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(green|orange|blue|red|purple|gray|rose|black|yellow|white)$#"
+                    }
+                ]
+            ], 
+            "text": [
+                [
+                    "string", 
+                    {
+                        "length": 100
+                    }
+                ]
+            ], 
+            "design_type": [
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(predefined|custom)$#"
+                    }
+                ]
+            ], 
+            "site_id": [
+                [
+                    "integer"
+                ]
+            ], 
+            "image_offline": [
+                [
+                    "file", 
+                    {
+                        "empty": true, 
+                        "entity": [
+                            "chatButton.image_offline"
+                        ]
+                    }
+                ]
+            ], 
+            "image_online": [
+                [
+                    "file", 
+                    {
+                        "empty": true, 
+                        "entity": [
+                            "chatButton.image_online"
+                        ]
+                    }
+                ]
+            ], 
+            "department_id": [
+                [
+                    "integer"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "size": [
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(small|middle|large)$#"
+                    }
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "image_online": "Картинка кнопки, когда есть доступные операторы.\nПринимается во внимание при design_type = custom.\nИзображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.\nМаксимальный размер файла – 2 MB.\n", 
+            "color": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\nПринимается во внимание при design_type = predefined.\n", 
+            "design_type": "Тип дизайна.\nВозможные значения:\npredefined – предустановленный;\ncustom – свой дизайн.\n", 
+            "site_id": "ID сайта.\n", 
+            "image_offline": "Картинка кнопки, когда нет доступных операторов.\nПринимается во внимание при design_type = custom.\nИзображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.\nМаксимальный размер файла – 2 MB.\n", 
+            "employee_id": "ID сотрудника.\n", 
+            "department_id": "ID отдел.\n", 
+            "id": "ID кнопки.\n", 
+            "size": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет указанную кнопку.\n\n", 
+        "deprecated": false
+    }, 
+    "add": {
+        "fields": {
+            "employee_id": [
+                [
+                    "integer"
+                ]
+            ], 
+            "color": [
+                [
+                    "required"
+                ], 
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(green|orange|blue|red|purple|gray|rose|black|yellow|white)$#"
+                    }
+                ]
+            ], 
+            "text": [
+                [
+                    "string", 
+                    {
+                        "length": 100
+                    }
+                ]
+            ], 
+            "design_type": [
+                [
+                    "required"
+                ], 
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(predefined|custom)$#"
+                    }
+                ]
+            ], 
+            "site_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "image_offline": [
+                [
+                    "file", 
+                    {
+                        "empty": true, 
+                        "entity": [
+                            "chatButton.image_offline"
+                        ]
+                    }
+                ]
+            ], 
+            "image_online": [
+                [
+                    "file", 
+                    {
+                        "empty": true, 
+                        "entity": [
+                            "chatButton.image_online"
+                        ]
+                    }
+                ]
+            ], 
+            "size": [
+                [
+                    "required"
+                ], 
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(small|middle|large)$#"
+                    }
+                ]
+            ], 
+            "department_id": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "image_online": "Картинка кнопки, когда есть доступные операторы.\nПринимается во внимание при design_type = custom.\nИзображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.\nМаксимальный размер файла – 2 MB.\n", 
+            "color": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\nПринимается во внимание при design_type = predefined.\n", 
+            "design_type": "Тип дизайна.\nВозможные значения:\npredefined – предустановленный;\ncustom – свой дизайн.\n", 
+            "site_id": "ID сайта.\n", 
+            "image_offline": "Картинка кнопки, когда нет доступных операторов.\nПринимается во внимание при design_type = custom.\nИзображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.\nМаксимальный размер файла – 2 MB.\n", 
+            "employee_id": "ID сотрудника.\n", 
+            "department_id": "ID отдел.\n", 
+            "size": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\nПринимается во внимание при design_type=predefined.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "ChatButton"
+        }, 
+        "description": "Создает новую кнопку.\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID кнопки.\n"
+        }, 
+        "result_type": null, 
+        "description": "Удаляет указанную кнопку.\n\n", 
+        "deprecated": false
+    }
+}

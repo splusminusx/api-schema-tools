@@ -1,0 +1,60 @@
+{
+    "markRead": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID новости.\n"
+        }, 
+        "result_type": null, 
+        "description": "Помечает новость как прочитанную.\n\n", 
+        "deprecated": false
+    }, 
+    "listLatest": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "offset": "По умолчанию – 0.\n"
+        }, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "ConsoleNews"
+            }
+        }, 
+        "description": "Возвращает список последних новостей для Пульта оператора в предопределенном порядке.\n", 
+        "deprecated": false
+    }, 
+    "description": ""
+}

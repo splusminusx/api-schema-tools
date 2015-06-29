@@ -1,0 +1,208 @@
+{
+    "is_deprecated": true, 
+    "kind": "ComplexDataType", 
+    "name": "ChatFormSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "offset_value", 
+            "description": "Значение отступа.\nЦелое число в диапазоне:\nот 0 до 100 для offset_type = percent;\nот 0 до 2000 для offset_type = pixel.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "color", 
+            "description": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\nПоле обязательно для color_type = preset.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "color_type", 
+            "description": "Тип указания цветовой схемы.\nВозможные значения:\npreset – стандартная схема;\ncustom – явное указание цветов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "color"
+            }, 
+            "name": "color_main", 
+            "description": "Основной цвет.\nПоле обязательно для color_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_hidden_offline", 
+            "description": "Скрывать ярлык, если сотрудники офлайн.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "offset_type", 
+            "description": "Тип отступа.\nВозможные значения:\npixel – в пикселах;\npercent – в процентах.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "background_custom", 
+            "description": "Загруженный фон для background_type = custom.\nИзображение в формате JPEG, GIF или PNG с размерами 448x605px.\nПоле обязательно для background_type = custom.\nАктуально только для внешнего окна.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "banner_type", 
+            "description": "Тип баннера.\nВозможные значения:\nnone – без баннера;\ndefault – стандартный баннер;\ncustom – загружаемый баннер.\nАктуально только для внешнего окна.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_custom", 
+            "description": "Признак заказного дизайна ярлыка и окна чата.\nЕсли true, то изменение некоторых настроек может не иметь должного результата, поскольку соответствующий аспект внешнего вида переопределяются заказным дизайном.\nЭто признак доступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "color"
+            }, 
+            "name": "color_background", 
+            "description": "Цвет фона.\nПоле обязательно для color_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "banner_custom", 
+            "description": "Загруженная баннер для banner_type = custom.\nИзображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.\nПоле обязательно для banner_type = custom.\nАктуально только для внешнего окна.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "banner_link", 
+            "description": "Ссылка с баннера.\nПоле обязательно для banner_type = custom.\nАктуально только для внешнего окна.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "logo_type", 
+            "description": "Тип логотипа LiveTex.\nВозможные значения:\nanimated – анимированный;\nstatic – статический.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_label_visible", 
+            "description": "Признак отображения ярлыка.\nПо умолчанию – true.\nЕсли false, ярлык не будет показываться посетителю, даже при наличии доступных операторов.\nЭто признак автоматически устанавливается в true и не может быть изменен, если подключена опция генератора лидов или для сайта включено встроенное окно чата (site.is_embedded_chat == true).\nПризнак is_label_visible связан с полем \"size\". При переключении из false в true поле \"size\" устанавливается в значение по умолчанию.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "position", 
+            "description": "Положение ярлыка.\nВозможные значения:\ntop – сверху;\nright – справа;\nbottom – снизу;\nleft – слева.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "color"
+            }, 
+            "name": "color_text", 
+            "description": "Цвет текста.\nПоле обязательно для color_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "background_typе", 
+            "description": "Тип фона.\nВозможные значения:\nnone – без фона;\ndefault – стандартный фон;\ncustom – загружаемый фон.\nАктуально только для внешнего окна.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "photo_size", 
+            "description": "Размер фотографии сотрудника.\nВозможные значения:\nsmall – маленькая, 60x70 пикселей;\nlarge – большая, 100x116 пикселей.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "size", 
+            "description": "Размер ярлыка.\nВозможные значения:\nsmall – маленький, 24x106 пикселей;\nlarge – большой, 40x178 пикселей (по умолчанию).\n"
+        }
+    ], 
+    "description": "ВНИМАНИЕ! Сущность является устаревшей. Все переехало в WidgetSettings с существенными изменениями.\nНастройки внешнего окна чата.\nЭти настройки управляют внешним видом ярлыка, встроенного и внешнего окна. \n\nПРИМЕЧАНИЯ:\nСервис LiveTex предполагает возможность индивидуального дизайна окна чата для конкретного сайта. В этом случае значение настроек могут не соответствовать действительности и их нельзя изменить ни в личном кабинете, ни с помощью методов Web API.\n"
+}

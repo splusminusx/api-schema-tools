@@ -1,0 +1,6 @@
+{
+    "is_deprecated": false, 
+    "kind": "PrimitiveDataType", 
+    "name": "country", 
+    "description": "Двухбуквенный код страны в соответствии со стандартом ISO 3166-1 alpha-2.\n\n"
+}

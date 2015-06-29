@@ -1,0 +1,30 @@
+{
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID посетителя.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Visitor"
+        }, 
+        "description": "Возвращает данные указанного посетителя.\n\n\n", 
+        "deprecated": false
+    }
+}

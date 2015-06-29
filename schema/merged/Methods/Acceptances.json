@@ -1,0 +1,107 @@
+{
+    "list": {
+        "description": "Возвращает список актов.\n\n", 
+        "fields_validation": {
+            "q": {
+                "is_bound": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "created_at": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "number": [
+                    [
+                        "integer"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID актов;\nis_bound – boolean, признак связанности акта с каким-либо периодом;\ncreated_at.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию, created_at:a.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Acceptance"
+            }
+        }
+    }, 
+    "update": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "file": [
+                [
+                    "file", 
+                    {
+                        "entity": [
+                            "payer.acceptance"
+                        ]
+                    }
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID акта.\n", 
+            "file_signed": "Файл акта, подписанного клиентом.\nДопустимые типы файлов: PDF, TIFF, JPEG, PNG, GIF.\nМаксимальный размер файла – 10 MB.\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет указанный акт.\n\n\n", 
+        "deprecated": false
+    }, 
+    "description": ""
+}

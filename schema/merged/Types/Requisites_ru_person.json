@@ -1,0 +1,108 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Requisites_ru_person", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "first_name", 
+            "description": "Имя.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "last_name", 
+            "description": "Фамилия.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "address_reg", 
+            "description": "Адрес регистрации.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "date"
+            }, 
+            "name": "birthday", 
+            "description": "День рождения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "inn", 
+            "description": "ИНН. Допустимы только цифры. 12 цифр.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "passport_num", 
+            "description": "Номер и серия паспорта.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "payment_type", 
+            "description": "Способ оплаты.\nВозможные значения:\nemoney – электронный платеж;\nwire – банковский перевод.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "patronymic", 
+            "description": "Отчество.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "passport_org", 
+            "description": "Кем выдан паспорт.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "date"
+            }, 
+            "name": "passport_issued", 
+            "description": "Дата выдачи.\n"
+        }
+    ], 
+    "description": "Реквизиты плательщика - физического лица РФ.\n\n"
+}

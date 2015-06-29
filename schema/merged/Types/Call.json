@@ -1,0 +1,336 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Call", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "EmployeeVote"
+            }, 
+            "name": "employee_vote", 
+            "description": "Оценка сотрудника.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Visitor"
+            }, 
+            "name": "visitor", 
+            "description": "Посетитель.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "page_count", 
+            "description": "Количество страниц, просмотренных посетителем в ходе визита, перед тем, как он совершил звонок.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "rem_lost_in_queue", 
+            "description": "Признак \"Потерянный в очереди\".\nВ данный момент всегда false.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Site"
+            }, 
+            "name": "site", 
+            "description": "Сайт.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "result", 
+            "description": "Итог звонка.\nВозможные значения:\nmissed – пропущенный;\ncompleted – состоявшийся.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "duration", 
+            "description": "Продолжительность звонка в секундах, включая answer_time.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "visit_count", 
+            "description": "Общее количество визитов посетителя на сайт, включая визит, в котором был совершен звонок.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID звонка.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Object"
+                }
+            }, 
+            "name": "prechats_chat", 
+            "description": "Пречат поля, видимые в Пульте оператора.\nЭти поля могут быть настроены в Личном кабинете. В этом случае их значение указывает посетитель при старте чата.\nКроме того, пречат поля могут быть программно определены в параметрах chatAttributes методов Client API: .\nЗначение поля – массив объектов, каждый из которых имеет 2 ключа: name и value, содержащие соответственно имя и значение пречат поля.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "answer_time", 
+            "description": "Время в секундах, через которое оператор ответил на ответил на звонок.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Lead"
+            }, 
+            "name": "lead", 
+            "description": "Лид, из которого был сделан звонок.\nИмеет смысл только для исходящих звонков.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "rem_long_answer", 
+            "description": "Признак \"Долгий ответ\".\nВ данный момент всегда false.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "visitor_vote", 
+            "description": "Оценка посетителя.\nВозможные значения:\npositive – положительная оценка;\nnegative – отрицательная оценка;\nundefined – посетитель не поставил оценку.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Department"
+            }, 
+            "name": "department", 
+            "description": "Отдел.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "ext_referer", 
+            "description": "Адрес, с которого посетитель перешел на сайт. \n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Object"
+                }
+            }, 
+            "name": "prechats_hidden", 
+            "description": "Скрытые пречат поля. В Пульте оператора они не отображаются.\nПречат поля этого типа могут быть программно определены в параметрах hiddenAttributes методов Client API: .\nЗначение поля – массив объектов, каждый из которых имеет 2 ключа: name и value, содержащие соответственно имя и значение пречат поля.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "search_engine", 
+            "description": "Название поискового сервиса.\nСодержит значение, если посетитель начал звонок, перейдя на сайт из результатов поиска сервисов типа Yandex или Google.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "rem_empty", 
+            "description": "Признак \"Отсеянный\".\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }, 
+            "name": "employee", 
+            "description": "Сотрудник.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "rem_transfer", 
+            "description": "Признак \"Ручной перевод\".\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "rem_auto", 
+            "description": "Признак \"Автоматический перевод\". \n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "int_referer", 
+            "description": "Адрес страницы, на которой начался диалог.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_incoming", 
+            "description": "Признак входящего звонка.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "search_query", 
+            "description": "Строка поискового запроса.\nСодержит значение, если посетитель начал звонок, перейдя на сайт из результатов поиска сервисов типа Yandex или Google.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "recording", 
+            "description": "URL записи разговора.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Conversation"
+            }, 
+            "name": "conversation", 
+            "description": "Обращение, в рамках которого состоялся звонок.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_managed", 
+            "description": "True, если звонок входит в число своих звонков сотрудника, вызывающего метод.\nЭто признак доступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "callback_url", 
+            "description": "Значение настройки Callback URL на момент начала чата.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "entry_page", 
+            "description": "Страница, с которой посетитель начал визит, в котором было отправлен лид.\n"
+        }
+    ], 
+    "description": "Звонок.\n\nКонтроллер: Сalls.\n"
+}

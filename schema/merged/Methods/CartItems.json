@@ -1,0 +1,84 @@
+{
+    "add": {
+        "fields": {
+            "product_addition": [
+                [
+                    "required"
+                ], 
+                [
+                    "typeOf", 
+                    {
+                        "type": "App\\Model\\Supply\\ProductAddition"
+                    }
+                ]
+            ], 
+            "cart_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "product_addition": "Дополнение продукта.\n", 
+            "cart_id": "ID корзины.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "CartItem"
+        }, 
+        "description": "Добавляет позицию в указанную корзину.\n\n", 
+        "deprecated": false
+    }, 
+    "description": "", 
+    "update": {
+        "fields": {
+            "product_addition": [
+                [
+                    "required"
+                ], 
+                [
+                    "typeOf", 
+                    {
+                        "type": "App\\Model\\Supply\\ProductAddition"
+                    }
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "product_addition": "Дополнение продукта.\n", 
+            "id": "ID позиции корзины.\n"
+        }, 
+        "result_type": null, 
+        "description": "Обновляет указанную позицию корзины.\n\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID позиции корзины.\n"
+        }, 
+        "result_type": null, 
+        "description": "Удаляет указанную позицию корзины.\n\n", 
+        "deprecated": false
+    }
+}

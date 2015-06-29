@@ -1,0 +1,96 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Department", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_deleted", 
+            "description": "Признак удаленного объекта.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "title", 
+            "description": "Название отдела.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Employee"
+                }
+            }, 
+            "name": "employees", 
+            "description": "Список сотрудников отдела.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Site"
+                }
+            }, 
+            "name": "sites", 
+            "description": "Список сайтов, c которыми связан отдел.\nКроме полей сайта возвращается также поле \"alias\" - string, псевдоним отдела на данном сайте.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID отдела.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_managed", 
+            "description": "True, если отдел входит в число своих отделов сотрудника, вызывающего метод.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }
+    ], 
+    "description": "Отдел.\n\n"
+}

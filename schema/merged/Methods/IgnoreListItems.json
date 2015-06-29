@@ -1,0 +1,100 @@
+{
+    "list": {
+        "description": "Возвращает список записей игнор-листа.\n\n", 
+        "fields_validation": {
+            "q": {
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "created_at": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nsite_ids – idlist, список ID сайтов;\nemployee_ids – idlist, список ID сотрудников.\ncreated_at.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значение:\ncreated_at:a – по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "IgnoreListItem"
+            }
+        }
+    }, 
+    "description": "", 
+    "delete": {
+        "fields": {
+            "site_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "visitor_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "visitor_id": "ID посетителя.\n", 
+            "site_id": "ID сайта.\n"
+        }, 
+        "result_type": null, 
+        "description": "Удаляет запись в игнор-листе.\n\n\n", 
+        "deprecated": false
+    }
+}

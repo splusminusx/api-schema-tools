@@ -1,0 +1,110 @@
+{
+    "list": {
+        "description": "Возвращает список жалоб посетителей.\n\n", 
+        "fields_validation": {
+            "q": {
+                "created_at": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID жалоб;\nemployee_ids – idlist, список ID сотрудников;\nsite_ids – idlist, список ID сайтов;\ndepartment_ids – idlist, список ID отделов;\ncreated_at.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Complaint"
+            }
+        }
+    }, 
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID жалобы.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Complaint"
+        }, 
+        "description": "Возвращает данные указанной жалобы.\n\n", 
+        "deprecated": false
+    }
+}

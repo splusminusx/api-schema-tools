@@ -1,0 +1,78 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "SiteCallSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "visitor_callerid_type", 
+            "description": "Выбор номера телефона, отображаемого посетителю при исходящем звонке.\nВозможные значения:\nlivetex – номер LiveTex (по умолчанию);\nemployee – номер, указанный в поле phone_forward_number сотрудника.\ncustom – номер, указанный в настройке visitor_callerid_custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "phone"
+            }, 
+            "name": "visitor_callerid_custom", 
+            "description": "Номер телефона, который будет отображаться посетителю при исходящем звонке при visitor_callerid_type=custom.\nОбязательно, если visitor_callerid_type=custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "greeting_type", 
+            "description": "Типа мелодии приветствия.\nПриветствие проигрывается всем звонящим, перед соединением с оператором. Оператор отвечает только после того как мелодия полностью проиграется.\nВозможные значения:\nnone – без приветствия (по умолчанию);\ncustom – пользовательское приветствие.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "employee_callerid_type", 
+            "description": "Выбор номера телефона, отображаемого оператору при вызове X-widget.\nВозможные значения:\nlivetex – номер LiveTex (по умолчанию);\nvisitor – номер, указанный посетителем при заказе звонка.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "background_type", 
+            "description": "Тип фоновой мелодии.\nФоновая мелодия проигрывается во время ожидания, пока кто-нибудь из операторов не ответит на звонок.\nВозможные значения:\nnone – без фоновой мелодии;\ndefault – стандартная фоновая мелодия  (по умолчанию);\ncustom – пользовательская фоновая мелодия.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "background_custom", 
+            "description": "Пользовательская фоновая мелодия.\nОбязательно, если background_type=custom.\nПоддерживаются форматы MP3, OGG.\nРазмер загружаемого файла должен быть не более 8МB.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "greeting_custom", 
+            "description": "Пользовательское приветствие.\nОбязательно, если greeting_type = custom.\nПоддерживаются форматы MP3, OGG.\nРазмер загружаемого файла должен быть не более 8МB.\n"
+        }
+    ], 
+    "description": "Звонковые настройки сайта.\n\n"
+}

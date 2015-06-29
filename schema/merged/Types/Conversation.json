@@ -1,0 +1,342 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Conversation", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Object"
+            }, 
+            "name": "visitor_variables", 
+            "description": "Объект с переменными посетителя на момент создания обращения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Visitor"
+            }, 
+            "name": "visitor", 
+            "description": "Посетитель.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "page_count", 
+            "description": "Количество страниц, просмотренных посетителем в ходе визита, перед тем, как он начал обращение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Site"
+            }, 
+            "name": "site", 
+            "description": "Сайт, на котором инициировано обращение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Lead"
+                }
+            }, 
+            "name": "leads", 
+            "description": "Список лидов в хронологическом порядке.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "result", 
+            "description": "Результат обращения.\nВозможные значения:\nfailure – не успешное,\nsuccess – успешное.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "duration", 
+            "description": "Общая продолжительность обращения в секундах.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Object"
+            }, 
+            "name": "prechat_fields", 
+            "description": "Объект со значениями пречат-полей.\nВ этом объекте содержаться настраиваемые в Личном кабинете пречат поля, а также видимые оператору и скрытые от него пречат-поля, устанавливаемые с помощью LiveTex Client API.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "visit_count", 
+            "description": "Общее количество визитов посетителя на сайт, включая визит, в котором состоялось обращение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID обращения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "search_engine", 
+            "description": "Название поискового сервиса.\nСодержит значение, если посетитель начал обращение, перейдя на сайт из результатов поиска сервисов типа Yandex или Google.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "city", 
+            "description": "Город, из которого посетитель инициировал обращение.\nОпределяется механизмами геолокации LiveTex.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "lead_count", 
+            "description": "Количество лидов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Department"
+            }, 
+            "name": "department", 
+            "description": "Отдел, которому было адресовано обращение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "ext_referer", 
+            "description": "Адрес, с которого посетитель перешел на сайт. \n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "ConversationEvent"
+                }
+            }, 
+            "name": "events", 
+            "description": "Список событий обращения в хронологическом порядке за все время обращения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "call_count", 
+            "description": "Количество звонков.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Chat"
+                }
+            }, 
+            "name": "chats", 
+            "description": "Список чатов обращения в хронологическом порядке.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "message_count", 
+            "description": "Общее количество текстовых сообщений чатов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Complaint"
+                }
+            }, 
+            "name": "complaints", 
+            "description": "Список жалоб в хронологическом порядке, оставленных посетителем в данном обращении.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "widget_id", 
+            "description": "ID виджета или сценария вовлечения, с которого начался чат.\nСодержит соответствующий ID, за исключением следующих случаев:\nЕсли widget_type = 'invite', то содержит текст приглашения оператора.\nЕсли widget_type = 'api', то - пустая строка.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "widget_type", 
+            "description": "Тип виджета, с которого началось обращение.\nВозможные значения:\nauto - автоприглашение;\napi - вызов метода API;\ninvite - ручное приглашение оператора;\nlabel - ярлык чата;\nsound-label - ярлык звонка;\nbutton - кнопка чата;\nsound-button - звонковая кнопка.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "int_referer", 
+            "description": "Адрес страницы, на которой начался первый диалог обращения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Call"
+                }
+            }, 
+            "name": "calls", 
+            "description": "Список звонков обращения в хронологическом порядке.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "country", 
+            "description": "Страна, из которой посетитель инициировал обращение.\nОпределяется механизмами геолокации LiveTex.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Employee"
+                }
+            }, 
+            "name": "employees", 
+            "description": "Список сотрудников, который приняли участие в обработке обращения в хронологическом порядке их участия.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "chat_count", 
+            "description": "Количество чатов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "search_query", 
+            "description": "Строка поискового запроса.\nСодержит значение, если посетитель начал обращение, перейдя на сайт из результатов поиска сервисов типа Yandex или Google.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "entry_page", 
+            "description": "Страница, с которой посетитель начал визит, в котором было создано обращение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }
+    ], 
+    "description": "Обращение – совокупность диалогов разного типа в рамках одного сеанса консультации посетителя с сотрудниками сайта.\n\nКонтроллер: Conversations\n"
+}

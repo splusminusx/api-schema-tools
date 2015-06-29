@@ -33,37 +33,37 @@
             }, 
             "permissions": [
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "admin", 
                     "description": "Все адресованные лиды."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "chief", 
                     "description": "Все адресованные лиды."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "manager", 
                     "description": "Все адресованные лиды."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "chief_partner", 
                     "description": "Все адресованные лиды."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "operator", 
                     "description": "Все адресованные лиды."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "admin_partner", 
                     "description": "Все адресованные лиды."
@@ -163,37 +163,37 @@
             }, 
             "permissions": [
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "admin", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "chief", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "manager", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "chief_partner", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "operator", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "admin_partner", 
                     "description": "Только для адресованных лидов."
@@ -267,37 +267,37 @@
             }, 
             "permissions": [
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "admin", 
                     "description": "Все адресованные лиды."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "chief", 
                     "description": "Все адресованные лиды."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "manager", 
                     "description": "Все адресованные лиды."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "chief_partner", 
                     "description": "Все адресованные лиды."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "operator", 
                     "description": "Все адресованные лиды."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "admin_partner", 
                     "description": "Все адресованные лиды."
@@ -431,37 +431,37 @@
             }, 
             "permissions": [
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "admin", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "chief", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "manager", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "chief_partner", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "operator", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "admin_partner", 
                     "description": "Только для адресованных лидов."
@@ -498,37 +498,37 @@
             "result_type": null, 
             "permissions": [
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "admin", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "chief", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "manager", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "chief_partner", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "operator", 
                     "description": "Только для адресованных лидов."
                 }, 
                 {
-                    "access": null, 
+                    "access": "routed", 
                     "kind": "Permission", 
                     "role": "admin_partner", 
                     "description": "Только для адресованных лидов."

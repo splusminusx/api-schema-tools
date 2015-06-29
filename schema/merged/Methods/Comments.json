@@ -1,0 +1,143 @@
+{
+    "add": {
+        "fields": {
+            "text": [
+                [
+                    "required"
+                ], 
+                [
+                    "string", 
+                    {
+                        "length": 2000
+                    }
+                ]
+            ], 
+            "is_public_comment": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "ticket_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "text": "Текст комментария.\nМаксимум 2000 символов.\n", 
+            "ticket_id": "ID обращения в поддержку.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Comment"
+        }, 
+        "description": "Добавляет новый комментарий к обращению в поддержку.\n\n", 
+        "deprecated": false
+    }, 
+    "list": {
+        "description": "Возвращает список комментариев к обращению в поддержку.\n\n", 
+        "fields_validation": {
+            "q": {
+                "created_at": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ticket_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID тикетов;\nticket_ids – idlist, список ID тикетов;\nemployee_ids – idlist, список ID сотрудников.\ncreated_at.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Comment"
+            }
+        }
+    }, 
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID комментария к обращению в поддержку.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Comment"
+        }, 
+        "description": "Возвращает данные указанного обращения в поддержку.\n\n", 
+        "deprecated": false
+    }
+}

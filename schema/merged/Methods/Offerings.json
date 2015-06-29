@@ -1,0 +1,123 @@
+{
+    "list": {
+        "description": "Возвращает список активных предложений, доступных текущему клиенту.\n\n", 
+        "fields_validation": {
+            "q": {
+                "is_tariff": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "is_trial": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "price": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "days": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "cart_id": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "resource_type": [
+                    [
+                        "idlist", 
+                        {
+                            "type": "string"
+                        }
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID предложений;\ncart_id – ID корзины, для которых нужно вернуть совместимые предложения;\nis_tariff;\nis_trial;\nresource_type;\nprice;\ndays.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\nid:d - по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Offering"
+            }
+        }
+    }, 
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID предложения.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Offering"
+        }, 
+        "description": "Возвращает данные указанного предложения.\n\n", 
+        "deprecated": false
+    }
+}

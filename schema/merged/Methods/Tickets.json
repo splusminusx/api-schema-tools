@@ -1,0 +1,174 @@
+{
+    "add": {
+        "fields": {
+            "collaborators": [
+                [
+                    "idList"
+                ]
+            ], 
+            "is_public_comment": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "tags": [
+                [
+                    "arrayOf"
+                ]
+            ], 
+            "text": [
+                [
+                    "required"
+                ], 
+                [
+                    "string", 
+                    {
+                        "length": 2000
+                    }
+                ]
+            ], 
+            "is_notify": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "subject": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "text": "Текст обращения в техническую поддержку.\nМаксимум 2000 символов.\n", 
+            "subject": "Тема обращения в техническую поддержку.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Ticket"
+        }, 
+        "description": "Добавляет новый тикет.\n\n\n", 
+        "deprecated": false
+    }, 
+    "list": {
+        "description": "Возвращает список тикетов.\n\n", 
+        "fields_validation": {
+            "q": {
+                "status": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "#^(submitted|inprogress|w4lt|w4e|closed)$#"
+                        }
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "created_at": [
+                    [
+                        "datetime"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "priority": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "#^(undefined|low|normal|high|critical)$#"
+                        }
+                    ]
+                ], 
+                "type": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "#^(undefined|incident|request)$#"
+                        }
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID тикетов;\nemployee_ids – idlist, список ID сотрудников;\ntype;\npriority;\nstatus;\ncreated_at.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию;\ntype:a, type:d;\npriority:a, priority:d;\nstatus:a, status:d.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Ticket"
+            }
+        }
+    }, 
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID обращения в техническую поддержку.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Ticket"
+        }, 
+        "description": "Возвращает данные указанного обращения в техническую поддержку.\n\n", 
+        "deprecated": false
+    }
+}

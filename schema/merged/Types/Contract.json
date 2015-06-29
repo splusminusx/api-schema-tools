@@ -1,0 +1,38 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Contract", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "date"
+            }, 
+            "name": "date", 
+            "description": "Дата договора.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "number", 
+            "description": "Номер договора.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "file", 
+            "description": "Файл договора.\n"
+        }
+    ], 
+    "description": "Договор.\n\n"
+}

@@ -1,0 +1,105 @@
+{
+    "list": {
+        "description": "Возвращает список выставленных счетов.\n\n", 
+        "fields_validation": {
+            "q": {
+                "is_bound": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "is_paid": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "payer_ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID счетов;\npayer_ids – idlist, список ID плательщиков;\nis_bound – boolean, признак связанности счета с каким-либо периодом;\nis_paid – boolean, если указан, то возвращаются счета с соответствующим значением этого признака. \n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию; \npaid_at:d.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Invoice"
+            }
+        }
+    }, 
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID счета\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Invoice"
+        }, 
+        "description": "Возвращает данные указанного счета.\n\n", 
+        "deprecated": false
+    }
+}

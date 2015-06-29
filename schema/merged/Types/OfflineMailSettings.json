@@ -1,0 +1,58 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "OfflineMailSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "signature", 
+            "description": "Подпись.\nМаксимум 60 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "from_name", 
+            "description": "Отправитель.\nМаксимум 60 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Включение/выключение использования внешних почтовых ящиков.\nЕсли функция выключена, то письма будут отправляться через сервера LiveTex c системными значениями отправителя, темы и подписи.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "MailBox"
+            }, 
+            "name": "mailbox", 
+            "description": "Почтовый ящик.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "subject", 
+            "description": "Тема письма.\nМаксимум 60 символов.\n"
+        }
+    ], 
+    "description": "Настройки механизмов отправки нотификаций о приходе новых лидов и отправки ответов посетителям.\n\n"
+}

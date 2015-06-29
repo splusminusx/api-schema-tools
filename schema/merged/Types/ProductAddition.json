@@ -1,0 +1,28 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "ProductAddition", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "offering_id", 
+            "description": "ID базового объекта Offering.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "quantity", 
+            "description": "Количество ресурсов, например, операторов.\n"
+        }
+    ], 
+    "description": "Дополнение к набору продуктов.\nИспользуется в методах CartItems.add и CartItems.update.\n"
+}

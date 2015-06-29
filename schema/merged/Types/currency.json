@@ -1,0 +1,6 @@
+{
+    "is_deprecated": false, 
+    "kind": "PrimitiveDataType", 
+    "name": "currency", 
+    "description": "Строка. Трехбуквенная валюта счета в соответствии со стандартом ISO-4217, например: RUB, UAH.\n\n"
+}

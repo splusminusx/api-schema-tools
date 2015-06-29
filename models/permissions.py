@@ -10,6 +10,15 @@ class Role(object):
     MANAGER = u'manager'
     OPERATOR = u'operator'
 
+    ROLES = [
+        ADMIN,
+        ADMIN_PARTNER,
+        CHIEF,
+        CHIEF_PARTNER,
+        MANAGER,
+        OPERATOR
+    ]
+
     @classmethod
     def get_role(cls, string):
         if string.find(u'Администратор') != -1:
@@ -30,10 +39,11 @@ class Role(object):
 
 
 class Access(object):
-    FULL = 'full'
-    MANAGED = 'managed'
-    NONE = 'none'
-    USER = 'user'
+    FULL = u'full'
+    MANAGED = u'managed'
+    NONE = u'none'
+    ROUTED = u'routed'
+    USER = u'user'
 
     @classmethod
     def get_access(cls, string):
@@ -45,6 +55,8 @@ class Access(object):
             return cls.NONE
         if string.find(u'user') != -1:
             return cls.USER
+        if string.find(u'routed') != -1:
+            return cls.ROUTED
         TypeError('Unknown access type: '+string)
 
 

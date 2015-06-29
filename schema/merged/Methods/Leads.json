@@ -1,0 +1,508 @@
+{
+    "showRouted": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID лида.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Lead"
+        }, 
+        "description": "Возвращает данные указанного лида в контексте маршрутизации.\nМетод работает точно также, как и метод Leads.show, но предоставляет доступ только к лидам, адресованным текущему сотруднику.\n\n", 
+        "deprecated": false
+    }, 
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID лида.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Lead"
+        }, 
+        "description": "Возвращает данные указанного лида.\n\n", 
+        "deprecated": false
+    }, 
+    "lock": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID лида.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Boolean"
+        }, 
+        "description": "Блокирует указанный лид.\nБлокировка устанавливается на ограниченный период времени – 30 минут. По прошествии этого времени блокировка автоматически снимается.\nНельзя заблокировать лид, уже заблокированный другим сотрудником. Повторный вызов метода для лида, заблокированного текущим сотрудником, выполняется успешно. При этом период блокировки пролонгируется еще на 30 минут. \nПример ответа\n{\n    \"results\": true\n}\n\n", 
+        "deprecated": false
+    }, 
+    "listRouted": {
+        "description": "Возвращает список лидов в контексте маршрутизации.\nМетод работает точно также, как и метод Leads.list, но предоставляет доступ только к лидам, адресованным текущему сотруднику.\n\n", 
+        "fields_validation": {
+            "q": {
+                "search_engine": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "created_by_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "creator_type": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "#^(visitor|employee)$#"
+                        }
+                    ]
+                ], 
+                "phone_exists": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "keyword": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "assigned_to_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "entry_page": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "visitor_ids": [
+                    [
+                        "idList", 
+                        {
+                            "type": "string"
+                        }
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "completed_by_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "email_exists": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "result": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "#^(missed|completed)$#"
+                        }
+                    ]
+                ], 
+                "text": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "duration": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ext_referer": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "created_at": [
+                    [
+                        "datetime"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID лидов.\nsite_ids – idlist, список ID сайтов.\ndepartment_ids – idlist, список ID отделов.\ncreated_by_ids – idlist, список ID сотрудников. Поиск по полю created_by.\nassigned_to_ids – idlist, список ID сотрудников. Поиск по полю assigned_to.\ncompleted_by_ids – idlist, список ID сотрудников. Поиск по полю completed_by.\nvisitor_ids – idlist, список ID посетителей;\ntype;\nresult;\nduration;\nemail_exists – boolean, указан ли email;\nphone_exists – boolean, указан ли телефон;\nsearch_engine;\next_referer;\nenter_page;\nint_referer;\ncreated_at,\ntext - string, подстрока в тексте лида.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные поля сортировки:\ncreated_at,\nupdated_at,\nduration,\nresult.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Lead"
+            }
+        }
+    }, 
+    "list": {
+        "description": "Возвращает список лидов.\n\n", 
+        "fields_validation": {
+            "q": {
+                "search_engine": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "created_by_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "phone_exists": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "keyword": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "assigned_to_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ext_referer": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "visitor_ids": [
+                    [
+                        "idList", 
+                        {
+                            "type": "string"
+                        }
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "entry_page": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "is_managed": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "completed_by_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "email_exists": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "result": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "#^(missed|completed)$#"
+                        }
+                    ]
+                ], 
+                "text": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "duration": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "type": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "#^(form|chat|callback)$#"
+                        }
+                    ]
+                ], 
+                "created_at": [
+                    [
+                        "datetime"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID офлайн-сообщений.\nsite_ids – idlist, список ID сайтов.\ndepartment_ids – idlist, список ID отделов.\ncreated_by_ids – idlist, список ID сотрудников. Поиск по полю created_by.\nassigned_to_ids – idlist, список ID сотрудников. Поиск по полю assigned_to.\ncompleted_by_ids – idlist, список ID сотрудников. Поиск по полю completed_by.\nvisitor_ids – idlist, список ID посетителей;\ntype;\nresult;\nduration;\nemail_exists – boolean, указан ли email;\nphone_exists – boolean, указан ли телефон;\nis_managed;\nsearch_engine;\next_referer;\nenter_page;\nint_referer;\ncreated_at,\ntext - string, подстрока в тексте лида.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ncreated_at:a;\nupdated_at:a;\nduration:a;\nresult:a.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Lead"
+            }
+        }
+    }, 
+    "unlock": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID лида.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Boolean"
+        }, 
+        "description": "Снимает блокировку с указанного лида.\nСнять блокировку может только тот сотрудник, который ее поставил. Вызов метода для незаблокированного адресованного лида выполняется успешно.\nБлокировки снимаются автоматически через 30 минут.\nПример ответа\n{\n    \"results\": true\n}\n\n", 
+        "deprecated": false
+    }, 
+    "setCompleted": {
+        "fields": {
+            "answer_text": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "answer_text": "Текст ответа сотрудника.\n", 
+            "id": "ID лида.\n"
+        }, 
+        "result_type": null, 
+        "description": "Устанавливает признак обработанности (result = completed) указанного лида.\nЕсли указанный лид уже обработан, то вызов метода НЕ приведет к изменению его свойств. При этом результат выполнения метода будет такой же, как если бы операция выполнилась успешно.\n\n", 
+        "deprecated": false
+    }, 
+    "add": {
+        "fields": {
+            "name": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "text": [
+                [
+                    "string"
+                ]
+            ], 
+            "site_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "phone": [
+                [
+                    "phone"
+                ]
+            ], 
+            "result": [
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(missed|completed)$#"
+                    }
+                ]
+            ], 
+            "conversation_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "email": [
+                [
+                    "email"
+                ]
+            ], 
+            "department_id": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "name": "Имя посетителя.\n", 
+            "text": "Текст сообщения.\n", 
+            "site_id": "ID сайта.\n", 
+            "phone": "Номер телефона.\nОдно из полей email или phone должно быть указано.\n", 
+            "result": "Статус обработки лида.\nВозможные значения:\nmissed – еще не обработанный;\ncompleted – обработан.\n", 
+            "conversation_id": "ID обращения.\n", 
+            "email": "Адрес электронной почты.\nОдно из полей email или phone должно быть указано.\n", 
+            "department_id": "ID отдела.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Lead"
+        }, 
+        "description": "Добавляет новый лид.\nЛид, созданный с помощью этого получает type = chat.\n\n", 
+        "deprecated": false
+    }
+}

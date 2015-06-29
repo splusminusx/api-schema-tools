@@ -1,0 +1,112 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "DepartmentSiteBinding", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Prechat"
+                }
+            }, 
+            "name": "prechats_chat", 
+            "description": "Массив пречат-полей.\nМаксимум 2 элемента.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_visible", 
+            "description": "Признак видимости отдела в сайте.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Site"
+            }, 
+            "name": "site", 
+            "description": "Сайт.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "alias", 
+            "description": "Имя, под которым отдел будет виден на сайте.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Department"
+            }, 
+            "name": "department", 
+            "description": "Отдел.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "position", 
+            "description": "Порядковый номер отдела на данном сайте.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "callback_url", 
+            "description": "Настройка Callback URL.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID связи.\n"
+        }
+    ], 
+    "description": "Связь отдела и сайта.\n\n"
+}

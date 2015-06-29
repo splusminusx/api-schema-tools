@@ -1,0 +1,18 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "FileTransferSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Включение/выключение функции «Передача файлов».\n"
+        }
+    ], 
+    "description": "Настройки функции «Передача файлов».\n\n"
+}

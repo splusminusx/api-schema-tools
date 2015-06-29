@@ -1,0 +1,165 @@
+{
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID оценки.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "EmployeeRemark"
+        }, 
+        "description": "Возвращает данные указанной оценки сотрудника.\n\n", 
+        "deprecated": false
+    }, 
+    "list": {
+        "description": "Возвращает список оценок сотрудника.\n\n\n", 
+        "fields_validation": {
+            "q": {
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID оценок.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\nposition:a – по умолчанию,\ntext:a, text:d,\ncreated_at:d,\nupdated_at:d.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "EmployeeRemark"
+            }
+        }
+    }, 
+    "update": {
+        "fields": {
+            "text": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "position": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "text": "Текст оценки.\n", 
+            "id": "ID оценки.\n", 
+            "position": "Порядковый номер оценки.\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет данные оценки оператора.\n\n", 
+        "deprecated": false
+    }, 
+    "add": {
+        "fields": {
+            "text": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "position": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "text": "Текст оценки.\n", 
+            "position": "Порядковый номер оценки.\nЕсли не указано, то оценка будет последней.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "EmployeeRemark"
+        }, 
+        "description": "Создает новую запись в списке оценок сотрудника.\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID оценки.\n"
+        }, 
+        "result_type": null, 
+        "description": "Удаляет указанную оценку сотрудника.\n\n", 
+        "deprecated": false
+    }
+}

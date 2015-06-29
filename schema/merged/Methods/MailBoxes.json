@@ -1,0 +1,216 @@
+{
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID почтового ящика.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "MailBox"
+        }, 
+        "description": "Возвращает данные указанного почтового ящика.\n\n", 
+        "deprecated": false
+    }, 
+    "list": {
+        "description": "Возвращает список почтовых ящиков.\n\n", 
+        "fields_validation": {
+            "q": {
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID почтовых ящиков.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значение:\ncreated_at:d – по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "MailBox"
+            }
+        }
+    }, 
+    "update": {
+        "fields": {
+            "username": [
+                [
+                    "string"
+                ]
+            ], 
+            "is_ssl": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "smtp_port": [
+                [
+                    "integer"
+                ]
+            ], 
+            "smtp_server": [
+                [
+                    "string"
+                ]
+            ], 
+            "email": [
+                [
+                    "email"
+                ]
+            ], 
+            "password": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "username": "Логин для подключения к почтовому серверу.\n", 
+            "is_ssl": "Признак использования защищенного соединения.\n", 
+            "smtp_port": "Порт для подключения к почтовому серверу.\nЦелое число в диапазоне от 1 до 65535.\n", 
+            "smtp_server": "Адрес почтового сервера.\n", 
+            "email": "Адрес электронной почты.\n", 
+            "password": "Пароль для подключения к почтовому серверу.\n", 
+            "id": "ID почтового ящика.\n"
+        }, 
+        "result_type": null, 
+        "description": "Обновляет данные указанного почтового ящика.\n\n", 
+        "deprecated": false
+    }, 
+    "add": {
+        "fields": {
+            "username": [
+                [
+                    "string"
+                ]
+            ], 
+            "is_ssl": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "smtp_port": [
+                [
+                    "integer"
+                ]
+            ], 
+            "smtp_server": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "password": [
+                [
+                    "string"
+                ]
+            ], 
+            "email": [
+                [
+                    "required"
+                ], 
+                [
+                    "email"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "username": "Логин для подключения к почтовому серверу.\n", 
+            "is_ssl": "Признак использования защищенного соединения.\nПо умолчанию - false.\n", 
+            "smtp_port": "Порт для подключения к почтовому серверу.\nПо умолчанию - 25.\nЦелое число в диапазоне от 1 до 65535.\n", 
+            "smtp_server": "Адрес почтового сервера.\n", 
+            "password": "Пароль для подключения к почтовому серверу.\n", 
+            "email": "Адрес электронной почты.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "MailBox"
+        }, 
+        "description": "Добавляет новый почтовый ящик.\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID почтового ящика.\n"
+        }, 
+        "result_type": null, 
+        "description": "Удаляет указанный почтовый ящик.\n\n", 
+        "deprecated": false
+    }
+}

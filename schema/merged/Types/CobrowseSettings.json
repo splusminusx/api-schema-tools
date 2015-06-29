@@ -1,0 +1,18 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "CobrowseSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Включение/выключение функции \"Виртуальные ассистент\".\n"
+        }
+    ], 
+    "description": "Настройки функции \"Виртуальные ассистент\".\n\n"
+}

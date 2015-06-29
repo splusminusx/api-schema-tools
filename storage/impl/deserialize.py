@@ -4,6 +4,7 @@ from models.method import ImplMethod
 from models.resource import Resource
 from models.field import ValidatableField
 from models.validator import *
+from models.permissions import Role, Access, Permission
 import json
 import os
 
@@ -22,12 +23,32 @@ class ImplMethodAttributes(object):
 class Deserializer(object):
     def __init__(self, path):
         self._path = path
+        self._permissions = {}
+        with open(self._permissions_path()) as f:
+            self._permissions = json.load(f)
 
     def resources(self):
         return map(
             lambda x: x.replace(u'.json', u''),
             os.listdir(os.path.join(self._path, u'Methods'))
         )
+
+    def _permissions_path(self):
+        return os.path.join(self._path, u'Roles.json')
+
+    def _decode_permissions(self, resource, method):
+        permissions = []
+        for role in Role.ROLES:
+            role_permissions = self._permissions[role][u'permissions']
+            if resource in role_permissions:
+                if (isinstance(role_permissions[resource], list) and
+                        len(role_permissions[resource]) > 0 and
+                        role_permissions[resource][0] == u'*'):
+                    permissions.append(Permission(role, Access.FULL))
+                elif method in role_permissions[resource]:
+                    level = role_permissions[resource][method]['level']
+                    permissions.append(Permission(role, level))
+        return permissions
 
     @staticmethod
     def _decode_validators(fields):
@@ -128,11 +149,9 @@ class Deserializer(object):
     def decode_resource(self, name):
         resource = Resource(name, u'')
         with open(os.path.join(self._path, u'Methods', name + u'.json')) as f:
-            #print name
             data = json.load(f)
 
             for method_name in data:
-                #print ' ', method_name
                 method_data = data[method_name]
                 fields = method_data.get(ImplMethodAttributes.FIELDS, {})
                 fields_validation = method_data.get(
@@ -147,6 +166,9 @@ class Deserializer(object):
                 method.request_limit = method_data.get(ImplMethodAttributes.REQUEST_LIMIT, None)
                 method.request_limit = method_data.get(ImplMethodAttributes.TIME_LIMIT, None)
 
+                for perm in self._decode_permissions(name, method_name):
+                    method.add_permission(perm)
+
                 resource.add_method(method)
 
                 for field_name in fields:
@@ -155,7 +177,6 @@ class Deserializer(object):
                         fields[field_name],
                         fields_validation.get(field_name, {}))
 
-                    #print '   +', field.name, field.datatypename, field.required, field.default, len(field.validators)
                     method.add_field(field)
 
                 for field_name in private_fields:
@@ -164,7 +185,6 @@ class Deserializer(object):
                         private_fields[field_name],
                         fields_validation.get(field_name, {}))
 
-                    #print '   -', field.name, field.datatypename, field.required, field.default, len(field.validators)
                     method.add_private_field(field)
 
         return resource

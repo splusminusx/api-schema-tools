@@ -1,0 +1,38 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "ReportByEmailSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Включение/выключение отправки отчетов на email.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "period", 
+            "description": "Периодичность.\nВозможные значения:\ndaily – ежедневно;\nweekly – еженедельно;\nmonthly – ежемесячно.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "emails", 
+            "description": "Список через запятую адресов электронной почты, на которые следует отправлять отчеты.\nЕсли ни одного адреса не указано, то отчеты отправляться не будут.\n"
+        }
+    ], 
+    "description": "Настройки отправки отчетов на email.\n\n"
+}

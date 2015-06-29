@@ -1,0 +1,38 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "BatchRequest", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "method", 
+            "description": "Название метода. Например: Chats.list.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Object"
+            }, 
+            "name": "parameters", 
+            "description": "Параметры вызова метода: имя – значение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "id", 
+            "description": "Идентификатор вызова.\nДопустимы только латинский буквы и цифры. Первый символ – обязательно буква. Регистр значения не имеет.\nИдентификатор вызова используется в выражениях JSONPath для ссылки на поля результата запроса.\n"
+        }
+    ], 
+    "description": "Пакетный запрос.\n\n"
+}

@@ -1,0 +1,766 @@
+{
+    "me": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Employee"
+        }, 
+        "description": "Возвращает данные сотрудника, от учетной записи которого вызывается метод.\n\n", 
+        "deprecated": false
+    }, 
+    "search": {
+        "fields": {
+            "text": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "text": "Подстрока в имени или фамилии сотрудника.\n"
+        }, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }
+        }, 
+        "description": "Выполняет поиск сотрудника по подстроке в имени или фамилии сотрудника.\nВозвращает первые 20 записей, отсортированные сначала по фамилии, а потом по имени.\n\n", 
+        "deprecated": false
+    }, 
+    "setNewPassword": {
+        "description": "Устанавливает новый пароль.\nМетод не требует аутентификации!\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n", 
+        "fields": {
+            "password": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ], 
+                [
+                    "length", 
+                    {
+                        "min": 6
+                    }
+                ]
+            ], 
+            "hash": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "password": "Новый пароль.\n", 
+            "hash": "Одноразовый ключ, отправленный по email, указанному при вызове метода Employees.resetPassword.\n"
+        }, 
+        "result_type": null, 
+        "deprecated": false, 
+        "no-auth-required": true
+    }, 
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID сотрудника.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Employee"
+        }, 
+        "description": "Возвращает данные указанного сотрудника.\n\n", 
+        "deprecated": false
+    }, 
+    "register": {
+        "description": "Создает новый аккаунт LiveTex.\nПри создании аккаунта автоматически создается учетная запись сотрудника. Ей назначается роль в признаком is_admin = true из числа ролей доступных в аккаунте.\nМетод не требует аутентификации!\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n\n", 
+        "fields": {
+            "first_name": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "site_name": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "partner_data": [
+                [
+                    "typeOf", 
+                    {
+                        "type": "\\App\\Model\\Supply\\RegistrationPartnerData"
+                    }
+                ]
+            ], 
+            "phone": [
+                [
+                    "phone"
+                ]
+            ], 
+            "password": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ], 
+                [
+                    "length", 
+                    {
+                        "min": 6
+                    }
+                ]
+            ], 
+            "marketing_data": [
+                [
+                    "typeOf", 
+                    {
+                        "type": "\\App\\Model\\DB\\Billing\\RegistrationMarketingData"
+                    }
+                ]
+            ], 
+            "email": [
+                [
+                    "required"
+                ], 
+                [
+                    "email"
+                ], 
+                [
+                    "length", 
+                    {
+                        "min": 7
+                    }
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "first_name": "Полное имя.\nЗначение будет записано в поле first_name соответствующей сотрудника.\n", 
+            "referral": "Идентификатор аффилированного партнера.\n", 
+            "site_name": "Адрес сайта, на котором планируется использовать сервис LiveTex.\n", 
+            "partner_data": "Дополнительные поля, связанные с регистрацией, важные для партнерского отдела.\n", 
+            "invite_id": "Идентификатор приглашения.\n", 
+            "phone": "Телефон.\n", 
+            "password": "Пароль.\n", 
+            "marketing_data": "Дополнительные поля, связанные с регистрацией, важные для отдела маркетинга.\n", 
+            "email": "Адрес электронной почты.\n"
+        }, 
+        "result_type": null, 
+        "deprecated": false, 
+        "no-auth-required": true
+    }, 
+    "list": {
+        "description": "Возвращает список сотрудников.\nПример\n{\n    \"total\": 2,\n    \"results\": [\n        {\n            \"id\":10000087,\n            \"first_name\":\"Иван\",\n            \"last_name\":\"Петров\"\n        },\n        {\n            \"id\":10000012,\n            \"first_name\":\"Ольга\",\n            \"last_name\":\"Соколова\"\n        }\n    ]\n}\n\n\n", 
+        "fields_validation": {
+            "q": {
+                "first_name": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "last_name": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "name": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "is_active": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "state": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "/^(online|offline|busy)$/"
+                        }
+                    ]
+                ], 
+                "role": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "email": [
+                    [
+                        "string"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 1000
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 1000"
+                ]
+            ], 
+            "sort": [
+                [
+                    "required", 
+                    {
+                        "default": "last_name:a"
+                    }
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID сотрудников;\ndepartment_ids – idlist, список ID отделов;\nfirst_name;\nlast_name;\nemail;\nrole;\nis_active;\nstate – enum, состояние сотрудника;\nis_managed – boolean, признак своего сотрудника.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\nlast_name:a – по умолчанию, last_name:d;\nfirst_name:a, first_name:d;\nis_active:a, is_active:d;\ncreated_at:a, created_at:d;\nupdated_at:a, updated_at:d.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Employee"
+            }
+        }
+    }, 
+    "update": {
+        "fields": {
+            "last_name": [
+                [
+                    "string"
+                ]
+            ], 
+            "chat_limit": [
+                [
+                    "integer"
+                ]
+            ], 
+            "photo": [
+                [
+                    "file", 
+                    {
+                        "entity": [
+                            "employee.photo"
+                        ]
+                    }
+                ]
+            ], 
+            "role_code": [
+                [
+                    "string"
+                ]
+            ], 
+            "is_call": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "phone_forward_number": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "first_name": [
+                [
+                    "string"
+                ]
+            ], 
+            "password": [
+                [
+                    "string"
+                ]
+            ], 
+            "is_sip_forward": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "managed_department_ids": [
+                [
+                    "idList"
+                ]
+            ], 
+            "is_lead_assigned": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "email": [
+                [
+                    "email"
+                ]
+            ], 
+            "sip_forward_number": [
+                [
+                    "string"
+                ]
+            ], 
+            "is_cobrowse": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "is_active": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "phone": [
+                [
+                    "phone"
+                ]
+            ], 
+            "managed_site_ids": [
+                [
+                    "idList"
+                ]
+            ], 
+            "is_first_steps_passed": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "department_ids": [
+                [
+                    "idList"
+                ]
+            ], 
+            "is_lead_notify": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "is_phone_forward": [
+                [
+                    "boolean"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "last_name": "Фамилия сотрудника.\n", 
+            "chat_limit": "Количество одновременно обрабатываемых чатов.\n0 - отсутствие ограничения.\n", 
+            "photo": "Фотография сотрудника.\nИзображение в формате JPEG, GIF или PNG с размерами не менее 60x70px и не более 2560x2560px.\nМаксимальный размер файла – 5 MB.\n", 
+            "role_code": "Код роли.\n", 
+            "is_call": "Включение/выключение функциональности звонков.\nПринимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.\n", 
+            "phone_forward_number": "Номер для переадресации на телефон.\nОбязательно при is_phone_forward=true.\n", 
+            "id": "ID сотрудника.\n", 
+            "first_name": "Имя сотрудника.\n", 
+            "password": "Новый пароль.\nЕсли не указано или пусто, то старый пароль не меняется.\nМинимальная длина – 6 символов.\n", 
+            "is_sip_forward": "Включение/выключение переадресации на SIP.\n", 
+            "managed_department_ids": "Список, через запятую, ID отделов, входящих в область видимости сотрудника.\nВозможно указание удаленных отделов.\n", 
+            "is_lead_assigned": "Признак закрепления за оператором, созданных им лидов из чатов.\n", 
+            "email": "Адрес электронной почты.\n", 
+            "sip_forward_number": "Номер для переадресации на SIP.\nОбязательно при is_sip_forward=true.\n", 
+            "is_cobrowse": "Включение/выключение функции «Виртуальный ассистент».\nПринимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.\n", 
+            "is_active": "Признак активности учетной записи сотрудника.\n", 
+            "phone": "Телефон сотрудника.\n", 
+            "managed_site_ids": "Список, через запятую, ID сайтов, входящих в область видимости сотрудника.\nВозможно указание удаленных сайтов.\n", 
+            "is_first_steps_passed": "Признак завершения первичного обучения.\n", 
+            "department_ids": "Список, через запятую, ID отделов, в которые входит сотрудник.\n", 
+            "is_lead_notify": "Включение/выключение нотификации на электронную почту о поступлении новых лидов.\n", 
+            "is_phone_forward": "Включение/выключение переадресации на телефон.\n"
+        }, 
+        "result_type": null, 
+        "description": "Изменяет данные указанного сотрудника.\nВНИМАНИЕ!\nПри изменении роли сотрудника (role_code) с роли с is_full_by_default = true на роль с is_full_by_default = false поля managed_sites и managed_departments устанавливаются в пустое значение.\nПри изменении роли сотрудника (role_code) с роли с is_full_by_default = false на роль с is_full_by_default = true в поля managed_sites и managed_departments вносятся все сайты и отделы, включая удаленные.\nМетод имеет дополнительные ограничения на изменение данных других сотрудников. См. комментарии в таблице «Уровень доступа для ролей» ниже по тексту.\n\n", 
+        "deprecated": false
+    }, 
+    "registerAddPromo": {
+        "description": "Добавляет промо-код к только что созданному аккаунту.\nЭтот метод можно вызвать хронологически между Employees.register и Employees.confirm. \nМетод не требует аутентификации!\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n\n", 
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "promo_code": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.\n", 
+            "promo_code": "Промо код.\n"
+        }, 
+        "result_type": null, 
+        "deprecated": false, 
+        "no-auth-required": true
+    }, 
+    "add": {
+        "fields": {
+            "sip_forward_number": [
+                [
+                    "string"
+                ]
+            ], 
+            "first_name": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "last_name": [
+                [
+                    "string"
+                ]
+            ], 
+            "is_cobrowse": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "chat_limit": [
+                [
+                    "required", 
+                    {
+                        "default": 0
+                    }
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "photo": [
+                [
+                    "file", 
+                    {
+                        "entity": [
+                            "employee.photo"
+                        ]
+                    }
+                ]
+            ], 
+            "department_ids": [
+                [
+                    "idList"
+                ]
+            ], 
+            "is_active": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "is_sip_forward": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "is_lead_notify": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "phone": [
+                [
+                    "phone"
+                ]
+            ], 
+            "managed_site_ids": [
+                [
+                    "idList"
+                ]
+            ], 
+            "managed_department_ids": [
+                [
+                    "idList"
+                ]
+            ], 
+            "is_lead_assigned": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "is_call": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "phone_forward_number": [
+                [
+                    "string"
+                ]
+            ], 
+            "password": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "role_code": [
+                [
+                    "string"
+                ]
+            ], 
+            "email": [
+                [
+                    "required"
+                ], 
+                [
+                    "email"
+                ]
+            ], 
+            "is_phone_forward": [
+                [
+                    "boolean"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "sip_forward_number": "Номер для переадресации на SIP.\nОбязательно при is_sip_forward=true.\n", 
+            "first_name": "Имя сотрудника.\n", 
+            "last_name": "Фамилия сотрудника.\n", 
+            "is_cobrowse": "Включение/выключение функции «Виртуальный ассистент».\nПринимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.\nПо умолчанию – true.\n", 
+            "chat_limit": "Количество одновременно обрабатываемых чатов.\nПо умолчанию – 0, что означает отсутствие ограничения.\n", 
+            "photo": "Фотография сотрудника.\nИзображение в формате JPEG, GIF или PNG с размерами не менее 60x70px и не более 2560x2560px.\nМаксимальный размер файла – 5 MB.\n", 
+            "department_ids": "Список, через запятую, ID отделов, в которые входит сотрудник.\n", 
+            "is_active": "Признак активности учетной записи сотрудника.\nПо умолчанию – true.\n", 
+            "is_sip_forward": "Включение/выключение переадресации на SIP.\nПо умолчанию – false.\n", 
+            "is_lead_notify": "Включение/выключение нотификации на электронную почту о поступлении новых лидов.\nПо умолчанию – false.\n", 
+            "phone": "Телефон сотрудника.\n", 
+            "managed_site_ids": "Список, через запятую, ID сайтов, входящих в область видимости сотрудника.\nВозможно указание удаленных сайтов.\n", 
+            "managed_department_ids": "Список, через запятую, ID отделов, входящих в область видимости сотрудника.\nВозможно указание удаленных отделов.\n", 
+            "is_lead_assigned": "Признак закрепления за оператором, созданных им лидов из чатов.\nПо умолчанию – false.\n", 
+            "is_call": "Включение/выключение функциональности звонков.\nПринимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.\nПо умолчанию – false.\n", 
+            "phone_forward_number": "Номер для переадресации на телефон.\nОбязательно при is_phone_forward=true.\n", 
+            "password": "Пароль.\nМинимальная длина – 6 символов.\n", 
+            "role_code": "Код роли. По умолчанию назначается роль, имеющая признак is_default = true.\n", 
+            "email": "Адрес электронной почты.\n", 
+            "is_phone_forward": "Включение/выключение переадресации на телефон.\nПо умолчанию – false.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Employee"
+        }, 
+        "description": "Создает учетную запись сотрудника.\n\n", 
+        "deprecated": false
+    }, 
+    "registerConfirm": {
+        "description": "Активирует новый аккаунт LiveTex и неявно выполняет аутентификацию пользователя.\nМетод не требует аутентификации!\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n\n", 
+        "fields": {
+            "hash": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "hash": "Ключ активации, отправленный по email, указанному при вызове метода Employees.register.\n", 
+            "id": "Идентификатор аккаунта LiveTex (LiveTex ID), который вернул метод Employees.register.\n"
+        }, 
+        "result_type": null, 
+        "deprecated": false, 
+        "no-auth-required": true
+    }, 
+    "batchUpdate": {
+        "fields": {
+            "sip_forward_number": [
+                [
+                    "string"
+                ]
+            ], 
+            "is_cobrowse": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "chat_limit": [
+                [
+                    "integer"
+                ]
+            ], 
+            "is_sip_forward": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "is_active": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "ids": [
+                [
+                    "required"
+                ], 
+                [
+                    "idList"
+                ]
+            ], 
+            "is_lead_notify": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "is_call": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "phone_forward_number": [
+                [
+                    "string"
+                ]
+            ], 
+            "is_phone_forward": [
+                [
+                    "boolean"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "sip_forward_number": "Номер для переадресации на SIP.\nОбязательно при is_sip_forward=true.\n", 
+            "is_cobrowse": "Включение/выключение функции «Виртуальный ассистент».\nПринимается во внимание только, если эта функция включена на глобальном уровне. См. Settings.\n", 
+            "chat_limit": "Количество одновременно обрабатываемых чатов.\n0 - отсутствие ограничения.\n", 
+            "is_sip_forward": "Включение/выключение переадресации на SIP.\n", 
+            "is_active": "Признак активности учетной записи сотрудника.\n", 
+            "ids": "Список, через запятую, ID сотрудников.\n", 
+            "is_lead_notify": "Включение/выключение нотификации на электронную почту о поступлении новых лидов.\n", 
+            "is_call": "Включение/выключение функциональности звонков.\nПринимается во внимание только, если эта функциональность включена на глобальном уровне. См. Settings.\n", 
+            "phone_forward_number": "Номер для переадресации на телефон.\nОбязательно при is_phone_forward=true.\n", 
+            "is_phone_forward": "Включение/выключение переадресации на телефон.\n"
+        }, 
+        "result_type": null, 
+        "description": "Выполняет пакетное изменение данных указанных сотрудников.\nМетод вызывает Employees.update для каждого ID сотрудника и передает указанные параметры.\nПример\ncurl https://api.livetex.ru/v2/employees/batchupdate \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n-d \"ids=123,456,789\" \\\n-d \"is_active=false\"\n\n{\n    \"results\": [\n        {\n            \"id\": \"123\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"456\",\n            \"code\": 200,\n            \"message\": \"\"\n        },\n        {\n            \"id\": \"789\",\n            \"code\": 403,\n            \"message\": \"Forbidden\"\n        }\n    ]\n}\n\nВНИМАНИЕ! При изменении конкретного сотрудника работает уровень доступа метода Employees.update в соответствующих условиях.\n", 
+        "deprecated": false
+    }, 
+    "resetPassword": {
+        "description": "Инициирует процедуру установки нового пароля для указанного адреса электронной почты. Отправляется письмо с уникальной ссылкой на страницу ввода нового пароля.\nМетод не требует аутентификации!\nУровень доступа для этого метода не определен, поскольку он выполняется в анонимном режиме.\n", 
+        "fields": {
+            "email": [
+                [
+                    "required"
+                ], 
+                [
+                    "email"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "email": "Адрес электронной почты сотрудника.\n"
+        }, 
+        "result_type": null, 
+        "deprecated": false, 
+        "no-auth-required": true
+    }, 
+    "delete": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID сотрудника.\n"
+        }, 
+        "result_type": null, 
+        "description": "Удаляет указанного сотрудника.\nВНИМАНИЕ! При удалении сотрудника, удаляются также отделы, в которых он был единственным сотрудником.\n\n", 
+        "deprecated": false
+    }
+}

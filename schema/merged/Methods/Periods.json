@@ -1,0 +1,116 @@
+{
+    "active": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "private": true
+    }, 
+    "list": {
+        "description": "Возвращает список периодов.\n\n", 
+        "fields_validation": {
+            "q": {
+                "period_state": [
+                    [
+                        "idList", 
+                        {
+                            "type": "string"
+                        }
+                    ]
+                ], 
+                "has_order": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID периодов;\nhas_order – boolean, если false, то только периоды с корзинами и без заказов;\nperiod_state. \n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Period"
+            }
+        }
+    }, 
+    "update": {
+        "fields": {
+            "is_autorenewal": [
+                [
+                    "required"
+                ], 
+                [
+                    "boolean"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "is_autorenewal": "Признак автоматического продления.\n", 
+            "id": "ID периода.\n"
+        }, 
+        "result_type": null, 
+        "description": "Обновляет данные указанного периода.\n\n", 
+        "deprecated": false
+    }, 
+    "description": ""
+}

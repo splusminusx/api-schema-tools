@@ -1,0 +1,222 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "InvitationRule", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "page_type", 
+            "description": "Тип страницы.\nВозможные значения:\nspecified – показывать приглашение на странице, соответствующей критериям page_url и page_title.\nhome – показывать приглашение на главной страницы;\ninternal – показывать приглашение на внутренней странице;\nany – показывать приглашение на любой странице.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "page_url", 
+            "description": "Показывать приглашение на странице с указанным адресом.\nАдрес указывается без приставки «http://» или «https://», например:\nwww.mycompany.ru/about/contacts\nЕсли page_type=specified, то одно из двух полей page_url или page_title должно быть указано.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "page_title", 
+            "description": "Показывать приглашение на странице с указанной подстрокой в названии (тег «title»).\nЕсли page_type=specified, то одно из двух полей page_url или page_title должно быть указано.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "page_time", 
+            "description": "Время, проведенное на странице посетителем, после которого ему необходимо показывать приглашение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "site_time", 
+            "description": "Время в секундах, проведенное на сайте посетителем, после которого ему необходимо показывать приглашение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "title", 
+            "description": "Название сценария.\nМаксимум 70 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_once_per_day", 
+            "description": "Показывать приглашение только один раз в сутки.\nTrue – один раз, вне зависимости от значения max_count, false – в соответствии со значением max_count.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "welcome_chat", 
+            "description": "Текст приглашения, если есть доступные операторы.\nМаксимум 300 символов.\nОбязательно для action = chat или vary.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "page_count", 
+            "description": "Количество просмотренных страниц посетителем, при котором ему необходимо показывать приглашение.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Признак активности сценария.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "welcome_lead", 
+            "description": "Текст приглашения, если нет доступных операторов.\nМаксимум 300 символов.\nОбязательно для action = lead или vary.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Generic", 
+                "name": "Array", 
+                "type_parameter": {
+                    "kind": "Reference", 
+                    "name": "Location"
+                }
+            }, 
+            "name": "locations", 
+            "description": "Массив географических расположений.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "max_count", 
+            "description": "Максимальное количество показов конкретному посетителю приглашений по данному сценарию в течение календарных суток.\nСчетчик показов обнуляется по истечению суток с момента последнего показа.\nОтсутствие значения или 0 – ограничения нет.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "confirmation_lead", 
+            "description": "Подтверждающее сообщение, которое показывается посетителю после отправки формы лида.\nМаксимум 180 символов.\nОбязательно для action = lead или vary.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_new_visitor", 
+            "description": "Показывать приглашение только новым посетителям.\nTrue – показывать только новым, false – показывать всем.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "action", 
+            "description": "Действие, которое следует выполнить, если ситуация подпадает под настройки сценария.\nВозможные значения:\nvary – показать приглашение в чат, если есть доступные операторы или форму генератора лидов, если доступных операторов нет.\nchat – показать приглашение в чат, если есть активные операторы. В противном случае ничего не показывать;\nlead – показать форму генератора лида, если нет активных операторов. В противном случае ничего не показывать.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "confirmation_mobile", 
+            "description": "Подтверждающее сообщение для мобильных устройств.\nМаксимум 180 символов.\nОбязательно, если action имеет значение vary или lead.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID сценария.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "welcome_mobile", 
+            "description": "Текст приглашения для мобильных устройств.\nМаксимум 130 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+        }
+    ], 
+    "description": "Сценарий вовлечения.\n\n"
+}

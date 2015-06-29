@@ -1,0 +1,48 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "EmployeeEvent", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "console_type", 
+            "description": "Тип Пульта оператора, в котором произошло событие.\nВозможные значения:\ndesktop – Пульт оператора;\niphone – Мобильный пульт оператора для iOS;\nandroid – Мобильный пульт оператора для Android.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Время события.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "employee_id", 
+            "description": "ID сотрудника.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "event_type", 
+            "description": "Тип события.\nВозможные значения:\nonline - сменил статус на «Онлайн»,\nbusy - сменил статус на «Нет на месте»,\noffline - вышел из программы.\n"
+        }
+    ], 
+    "description": "Событие сотрудника.\n\n"
+}

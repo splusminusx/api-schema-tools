@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from models.reg import Registry
+from models.permissions import Role
 from storage.impl.deserialize import Deserializer
 from storage.schema.deserialize import SchemaDeserializer
 from pprint import pprint
@@ -36,6 +37,7 @@ if __name__ == '__main__':
     spec_fields = {}
     impl_methods = []
     impl_fields = {}
+    permissions = {}
     methods = {}
     for rn in spec_resource_names.intersection(impl_resource_names):
         spec_resource = resource_reg.get_type(rn)
@@ -56,6 +58,10 @@ if __name__ == '__main__':
             impl_method = impl_resource.get_method(mn)
             for fn in impl_method.fields:
                 impl_fields[rn + '.' + mn + '.' + fn] = impl_method.get_field(fn)
+
+            permissions[rn + '.' + mn] = {}
+            permissions[rn + '.' + mn]['spec'] = spec_method.permissions
+            permissions[rn + '.' + mn]['impl'] = impl_method.permissions
 
     print "\n>>> Unimplemented methods:"
     pprint(set(spec_methods).difference(set(impl_methods)))
@@ -151,3 +157,32 @@ if __name__ == '__main__':
             unicode(method[u'used']) + u',' +\
             unicode(method[u'deprecated']) + u',' +\
             unicode(method[u'private'])
+
+    print "\n>>> Permissions:"
+    not_spec = []
+    not_impl = []
+    difference = []
+    for mn in permissions:
+        for role in Role.ROLES:
+            if role not in permissions[mn]['spec']:
+                not_spec.append((mn, role))
+            if role not in permissions[mn]['impl']:
+                not_impl.append((mn, role))
+            if (role in permissions[mn]['spec'] and
+                    role in permissions[mn]['impl']):
+                spec_role = permissions[mn]['spec'][role]
+                impl_role = permissions[mn]['impl'][role]
+                if spec_role.access != impl_role.access:
+                    difference.append((mn, role, spec_role.access, impl_role.access))
+
+    print "\n>>>> Not Specified Permissions:"
+    for (mn, role) in not_spec:
+        print mn + ',' + role
+
+    print "\n>>>> Not Implemented Permissions:"
+    for (mn, role) in not_impl:
+        print mn + ',' + role
+
+    print "\n>>>> Difference in Permissions:"
+    for (mn, role, sa, ia) in difference:
+        print mn + ',' + role + ',' + unicode(sa) + ',' + unicode(ia)

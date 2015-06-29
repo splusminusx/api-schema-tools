@@ -1,0 +1,247 @@
+{
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID связи.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "DepartmentSiteBinding"
+        }, 
+        "description": "Возвращает данные указанной связи отдела и сайта.\n\n", 
+        "deprecated": false
+    }, 
+    "list": {
+        "description": "Возвращает список связей отделов и сайтов.\n\n", 
+        "fields_validation": {
+            "q": {
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 1000
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 1000"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID связей.\ndepartment_ids – idlist, список ID отделов.\nsite_ids – idlist, список ID сайтов.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\nupdated_at:d – по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "DepartmentSiteBinding"
+            }
+        }
+    }, 
+    "update": {
+        "fields": {
+            "prechats_chat": [
+                [
+                    "arrayOf", 
+                    {
+                        "type": "App\\Model\\DB\\Billing\\Prechat"
+                    }
+                ]
+            ], 
+            "is_visible": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "site_id": [
+                [
+                    "integer"
+                ]
+            ], 
+            "alias": [
+                [
+                    "string"
+                ]
+            ], 
+            "position": [
+                [
+                    "integer"
+                ]
+            ], 
+            "callback_url": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "department_id": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "prechats_chat": "Массив пречат-полей.\nМаксимум 2 элемента.\n", 
+            "is_visible": "Признак видимости отдела в сайте.\n", 
+            "site_id": "ID сайта.\n", 
+            "alias": "Псевдоним отдела.\n", 
+            "position": "Порядковый номер отдела на данном сайте.\n", 
+            "callback_url": "Настройка Callback URL.\n", 
+            "id": "ID связи.\n", 
+            "department_id": "ID отдела.\n"
+        }, 
+        "result_type": null, 
+        "description": "Обновляет свойства связи отдела и сайта.\nВозможно существование только одной связи конкретного отдела и конкретного сайта.\nВНИМАНИЕ!\nПри создании связи отдела с сайтом, в котором еще нет отделов, все прямые связи такого сайта с сотрудниками удаляются. \n\n", 
+        "deprecated": false
+    }, 
+    "add": {
+        "fields": {
+            "prechats_chat": [
+                [
+                    "arrayOf", 
+                    {
+                        "type": "App\\Model\\DB\\Billing\\Prechat"
+                    }
+                ]
+            ], 
+            "is_visible": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "site_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "alias": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "position": [
+                [
+                    "integer"
+                ]
+            ], 
+            "callback_url": [
+                [
+                    "string"
+                ]
+            ], 
+            "department_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "prechats_chat": "Массив пречат-полей.\nМаксимум 2 элемента.\n", 
+            "is_visible": "Признак видимости отдела в сайте.\nПо умолчанию – true.\n", 
+            "site_id": "ID сайта.\n", 
+            "alias": "Псевдоним отдела.\n", 
+            "position": "Порядковый номер отдела на данном сайте.\nЕсли не указано, то отдел будет последним по порядку в указанном сайте.\n", 
+            "callback_url": "Настройка Callback URL.\n", 
+            "department_id": "ID отдела.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "DepartmentSiteBinding"
+        }, 
+        "description": "Создает новую связь отдела и сайта.\nВозможно существование только одной связи конкретного отдела и конкретного сайта.\nВНИМАНИЕ!\nПри создании связи отдела с сайтом, в котором еще нет отделов, все прямые связи такого сайта с сотрудниками удаляются.\n\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "id": "ID связи.\n"
+        }, 
+        "result_type": null, 
+        "description": "Удаляет указанную связь отдела и сайта.\nВНИМАНИЕ!\nПри удалении последней связи отдела с сайтами, отдел удаляется.\nЕсли удаляется последняя связь сайта с отделами, сотрудники этого отдела напрямую связываются с сайтом.\n\n", 
+        "deprecated": false
+    }
+}

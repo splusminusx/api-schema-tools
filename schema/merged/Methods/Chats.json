@@ -1,0 +1,242 @@
+{
+    "setContactInfoExist": {
+        "deprecated": false, 
+        "fields_description": {
+            "id": "ID чата.\n", 
+            "contact_info": "Объект с информацией о найденных контактных данных.\nМожет содержать ключи:\nemails – массив найденных адресов электронной почты.\nphones – массив найденных номеров телефонов.\nДолжен содержать хотя бы один из этих ключей с непустым массивом.\n"
+        }, 
+        "description": "Устанавливает признак наличия контактной информации в чате.\nПовторный вызов этого метода для одного и того же чата приводит к пополнению массивов найденных контактных данных.\n\n", 
+        "result_type": null
+    }, 
+    "list": {
+        "description": "Возвращает список чатов.\nПеречень дополнительных полей\n\n\n", 
+        "fields_validation": {
+            "q": {
+                "rem_transfer": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "employee_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "operator_vote_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "rem_lost_in_queue": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "employee_remark_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "result": [
+                    [
+                        "idList", 
+                        {
+                            "pattern": "#^(missed|completed)$#", 
+                            "type": "string"
+                        }
+                    ]
+                ], 
+                "duration": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "site_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "conversation_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "rem_long_answer": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "visitor_vote": [
+                    [
+                        "match", 
+                        {
+                            "pattern": "#^(positive|negative|undefined)$#"
+                        }
+                    ]
+                ], 
+                "first_answer_time": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "rem_empty": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "message_count": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "rem_auto": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "is_complaint": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "keyword": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "message_text": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "visitor_ids": [
+                    [
+                        "idList", 
+                        {
+                            "type": "string"
+                        }
+                    ]
+                ], 
+                "department_ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ], 
+                "is_managed": [
+                    [
+                        "boolean"
+                    ]
+                ], 
+                "created_at": [
+                    [
+                        "datetime"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "sort": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID чатов;\nsite_ids – idlist, список ID сайтов;\ndepartment_ids – idlist, список ID отделов;\nemployee_ids – idlist, список ID сотрудников;\nconversation_ids – idlist, список ID обращений;\nvisitor_ids – idlist, список ID посетителей;\nmessage_text – string, подстрока в тексте сообщения;\nresult;\nmessage_count;\nqueue_time;\nfirst_answer_time;\nduration;\nis_complaint – boolean, наличие жалобы в обращении, которому принадлежит чат;\nemployee_remark_ids – idlist, список оценок операторов, поставленных обращению, которому принадлежит чат;\nrem_long_answer;\nrem_transfer;\nrem_empty;\nrem_auto;\nrem_lost_in_queue;\nvisitor_vote – enum, оценка посетителя;\nis_managed;\ncreated_at.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ncreated_at:a;\nupdated_at:a;\nduration:a;\nresult:a.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Chat"
+            }
+        }
+    }, 
+    "description": "", 
+    "setContactInfo": {
+        "fields": {
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "contact_info": [
+                [
+                    "required"
+                ], 
+                [
+                    "typeOf", 
+                    {
+                        "type": "App\\Model\\DB\\Main\\ContactInfo"
+                    }
+                ]
+            ]
+        }
+    }, 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID чата.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Chat"
+        }, 
+        "description": "Возвращает данные указанного чата.\n\n", 
+        "deprecated": false
+    }
+}

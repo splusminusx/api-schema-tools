@@ -1,0 +1,38 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "HoldMessage", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "text", 
+            "description": "Текст удерживающего сообщения.\nВ тексте можно использовать переменную OPERATOR_NAME. Вместо нее будет подставлено имя конкретного оператора.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "send_after", 
+            "description": "Интервал в секундах, по истечении которого отправлять сообщение.\nДолжен быть от 5 до 3600 секунд.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "text_mobile", 
+            "description": "Текcт удерживающего сообщения для мобильных устройств.\nВ тексте можно использовать переменную OPERATOR_NAME. Вместо нее будет подставлено имя конкретного оператора.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+        }
+    ], 
+    "description": "Удерживающее сообщение.\n\n"
+}

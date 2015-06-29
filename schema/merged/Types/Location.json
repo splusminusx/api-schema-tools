@@ -1,0 +1,38 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Location", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Country"
+            }, 
+            "name": "country", 
+            "description": "Страна.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Region"
+            }, 
+            "name": "region", 
+            "description": "Регион.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "City"
+            }, 
+            "name": "City", 
+            "description": "Город.\n"
+        }
+    ], 
+    "description": "Географическое расположение.\n\n"
+}

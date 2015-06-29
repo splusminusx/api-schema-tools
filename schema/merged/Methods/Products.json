@@ -1,0 +1,110 @@
+{
+    "list": {
+        "description": "Возвращает список продуктов клиента, в том числе и ранее подключенных, если они есть в базе.\n\n", 
+        "fields_validation": {
+            "q": {
+                "order_id": [
+                    [
+                        "integer"
+                    ]
+                ], 
+                "product_state": [
+                    [
+                        "string"
+                    ]
+                ], 
+                "ids": [
+                    [
+                        "idList"
+                    ]
+                ]
+            }
+        }, 
+        "fields": {
+            "sort": [
+                [
+                    "string"
+                ]
+            ], 
+            "license": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "with_children": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "q": [
+                [
+                    "string"
+                ]
+            ], 
+            "limit": [
+                [
+                    "integer", 
+                    {
+                        "max": 100
+                    }, 
+                    null, 
+                    "Значение должно быть меньше 100"
+                ]
+            ], 
+            "offset": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "q": "Критерий поиска.\nДоступные поля:\nids – idlist, список ID продуктов;\nproduct_state – enum, статус продукта.\n", 
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "offset": "По умолчанию – 0.\n", 
+            "limit": "По умолчанию – 50.\n", 
+            "sort": "Сортировка результатов.\nВозможные значения:\ncreated_at:d – по умолчанию.\n"
+        }, 
+        "deprecated": false, 
+        "result_type": {
+            "kind": "Generic", 
+            "name": "Array", 
+            "type_parameter": {
+                "kind": "Reference", 
+                "name": "Product"
+            }
+        }
+    }, 
+    "description": "", 
+    "show": {
+        "fields": {
+            "fields": [
+                [
+                    "string"
+                ]
+            ], 
+            "id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID продукта.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "Product"
+        }, 
+        "description": "Возвращает данные указанного продукта клиента.\n\n", 
+        "deprecated": false
+    }
+}

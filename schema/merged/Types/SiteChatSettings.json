@@ -1,0 +1,58 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "SiteChatSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "offline_confirmation", 
+            "description": "Текст подтверждения в режиме офлайн. Отображается после успешной отправки запроса.\nМаксимум 180 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "offline_welcome", 
+            "description": "Текст приветствия в режиме офлайн.\nМаксимум 180 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "offline_contacts_required", 
+            "description": "Обязательность полей при offline_contacts=email_and_phone.\nВозможные значения:\nemail – e-mail;\nphone – телефон;\nemail_and_phone – email и телефон.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "online_welcome", 
+            "description": "Текст приветствия в режиме онлайн.\nМаксимум 180 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "offline_contacts", 
+            "description": "Запрашиваемые контактные данные в офлайн-режиме.\nВозможные значения:\nemail -  запрашивается только email;\nphone – запрашивается только телефон;\nemail_or_phone – запрашивается телефон или email;\nemail_and_phone – запрашивается телефон и email.\n"
+        }
+    ], 
+    "description": "Настройки продукта «Чат» уровня сайта.\n\n"
+}

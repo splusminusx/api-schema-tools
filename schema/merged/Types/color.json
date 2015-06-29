@@ -1,0 +1,6 @@
+{
+    "is_deprecated": false, 
+    "kind": "PrimitiveDataType", 
+    "name": "color", 
+    "description": "Строка. Шестнадцатеричное представление цвета в формате RGB. Максимум 6 символов из набора [0-9,A-F] без учета регистра.\n"
+}

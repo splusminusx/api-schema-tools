@@ -1,0 +1,208 @@
+{
+    "is_deprecated": true, 
+    "kind": "ComplexDataType", 
+    "name": "LeadFormSettings", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_department", 
+            "description": "Включение/выключение выбора отдела в форме лида.\nПри создании сайта устанавливается в false.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "photo_custom", 
+            "description": "Загруженная картинка приветствия для photo_type=custom.\nИзображение в формате JPEG, GIF или PNG с размерами 70x70px.\nПоле обязательно для photo_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "confirmation", 
+            "description": "Текст подтверждения по умолчанию. Максимум 180 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "color", 
+            "description": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "color_type", 
+            "description": "Тип указания цветовой схемы.\nВозможные значения:\npreset – стандартная схема;\ncustom – явное указание цветов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "welcome", 
+            "description": "Текст приветствия по умолчанию. Максимум 180 символов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "color"
+            }, 
+            "name": "color_main", 
+            "description": "Основной цвет.\nПоле обязательно для color_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "banner_custom", 
+            "description": "Загруженный баннер для banner_type = custom.\nИзображение в формате JPEG, GIF или PNG с шириной от 1 до 448 px и высотой 82 px.\nПоле обязательно для banner_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "updated_at", 
+            "description": "Дата последнего обновления.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "banner_type", 
+            "description": "Тип баннера.\nВозможные значения:\nnone – без баннера;\ndefault – стандартный баннер;\ncustom – загружаемый баннер.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_custom", 
+            "description": "Признак заказного дизайна формы генератора лидов.\nЕсли true, то изменение некоторых настроек может не иметь должного результата, поскольку соответствующий аспект внешнего вида переопределяются заказным дизайном.\nЭто признак доступен только для чтения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "color"
+            }, 
+            "name": "color_background", 
+            "description": "Цвет фона.\nПоле обязательно для color_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "label", 
+            "description": "Надпись на ярлыке.\nВозможные значения:\nquestion – «Задать вопрос»;\naction – «Внимание! Акция»;\ngift – «Внимание! Подарок»;\nhelp – «Обратитесь за помощью»;\nbest – «Посоветуем лучшее»;\nwaiting – «Ждем Ваших вопросов»;\nchoice – «Поможем с выбором»;\nconsulting – «Получить консультацию».\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "banner_link", 
+            "description": "Ссылка, по которой будет направлен посетитель по клику на баннере.\nПоле обязательно для banner_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "color"
+            }, 
+            "name": "color_text", 
+            "description": "Цвет текста.\nПоле обязательно для color_type = custom.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "lead_type", 
+            "description": "Запрашиваемые контактные данные.\nemail -  запрашивается только email;\nphone – запрашивается только телефон;\nemail_or_phone – запрашивается телефон или email;\nemail_and_phone – запрашивается телефон и email.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "photo_type", 
+            "description": "Тип картинки приветствия.\nВозможные значения:\nnone – без картинки;\ndefault – стандартное фото;\ncustom – загруженное фото.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "confirmation_mobile", 
+            "description": "Текст подтверждения по умолчанию, который отобразится в мобильном браузере. Максимум 180 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "required_fields", 
+            "description": "Обязательность полей при lead_type=email_and_phone.\nВозможные значения:\nemail – e-mail;\nphone – телефон;\nemail_and_phone – email и телефон.\nПоле обязательно при lead_type=email_and_phone.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "welcome_mobile", 
+            "description": "Текст приветствия по умолчанию, который отобразиться в мобильном браузере. Максимум 180 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+        }
+    ], 
+    "description": "ВНИМАНИЕ! Сущность является устаревшей. Все переехало в WidgetSettings, SiteChatSettings с существенными изменениями.\nНастройки формы генератора лидов.\n\n"
+}

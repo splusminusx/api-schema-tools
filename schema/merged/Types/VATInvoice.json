@@ -1,0 +1,88 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "VATInvoice", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "comment", 
+            "description": "Текст счета (перечисление всех заказанных услуг).\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "file"
+            }, 
+            "name": "file", 
+            "description": "Файл счета-фактуры в формате PDF.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Payer"
+            }, 
+            "name": "payer", 
+            "description": "Плательщик.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "datetime"
+            }, 
+            "name": "created_at", 
+            "description": "Дата создания.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "number", 
+            "description": "Номер счета-фактуры.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "amount", 
+            "description": "Общая сумма.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Invoice"
+            }, 
+            "name": "invoice", 
+            "description": "Счет. \n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "Внутренний ID счета.\n"
+        }
+    ], 
+    "description": "Счет-фактура.\n\n"
+}

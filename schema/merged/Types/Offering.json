@@ -1,0 +1,148 @@
+{
+    "is_deprecated": false, 
+    "kind": "ComplexDataType", 
+    "name": "Offering", 
+    "fields": [
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "quantity_min", 
+            "description": "Минимальное количество ресурсов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_tariff", 
+            "description": "Признак тарифа.\nЕсли false, то это опция.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "description", 
+            "description": "Краткое описание предложения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "string"
+            }, 
+            "name": "title", 
+            "description": "Название.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "quantity_max", 
+            "description": "Максимальное количество ресурсов.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "price", 
+            "description": "Цена.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_active", 
+            "description": "Признак активного предложения.\nПредполагается, что метод list возвращает только is_active = true, а вот метод show может вернуть данные и по тарифам, которые is_active = false. Тогда это поле даст понять, что тариф неактивен.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "days", 
+            "description": "Количество дней в продукте.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "boolean"
+            }, 
+            "name": "is_autorenewable", 
+            "description": "Признак, определяющий возможность автоматической пролонгации тарифа.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "discount", 
+            "description": "Скидка в процентах.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Boolean"
+            }, 
+            "name": "is_trial", 
+            "description": "Признак тестового тарифа/опции.\nТестовые тарифы не могут быть подключены повторно.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "Offering"
+            }, 
+            "name": "next_offering", 
+            "description": "Для старых тарифов – тариф, на который автоматически произойдет переключение по завершении срока действия.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": true, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "id", 
+            "description": "ID предложения.\n"
+        }, 
+        {
+            "kind": "field", 
+            "required": false, 
+            "type": {
+                "kind": "Reference", 
+                "name": "numeric"
+            }, 
+            "name": "resource_type", 
+            "description": "Тип предложения.\nВозможные значения:\nchat – чат;\nhttps – SSL;\ncalls – переадресация;\nextend_license – расширение лицензии;\nlead – генератор лидов;\ncobrowse – кобрауз.\n"
+        }
+    ], 
+    "description": "Доступные предложения - продукты (тарифы или опции), предлагаемые компанией LiveTex.\n\n"
+}
