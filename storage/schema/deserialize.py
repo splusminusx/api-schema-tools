@@ -12,7 +12,7 @@ class SchemaDeserializer(object):
         self._path = path
 
     def decode_type(self, type_name):
-        with open(os.path.join(self._path, u'types', type_name + u'.json')) as f:
+        with open(os.path.join(self._path, u'Types', type_name + u'.json')) as f:
             data = json.load(f)
             if data[u'kind'] == u'ComplexDataType':
                 return self._decode_complex_data_type(data)
@@ -46,7 +46,7 @@ class SchemaDeserializer(object):
                 return data[u'name'] + u'.<' + cls._decode_type_string(data[u'type_parameter']) + u'>'
 
     def decode_resource(self, type_name):
-        with open(os.path.join(self._path, u'resources', type_name + u'.json')) as f:
+        with open(os.path.join(self._path, u'Resources', type_name + u'.json')) as f:
             data = json.load(f)
             if data[u'kind'] == u'Resource':
                 res = Resource(data[u'name'], data[u'description'])
@@ -57,13 +57,13 @@ class SchemaDeserializer(object):
     def types(self):
         return map(
             lambda x: x.replace(u'.json', u''),
-            os.listdir(os.path.join(self._path, u'types'))
+            os.listdir(os.path.join(self._path, u'Types'))
         )
 
     def resources(self):
         return map(
             lambda x: x.replace(u'.json', u''),
-            os.listdir(os.path.join(self._path, u'resources'))
+            os.listdir(os.path.join(self._path, u'Resources'))
         )
 
     @classmethod

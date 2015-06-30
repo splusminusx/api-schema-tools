@@ -1,12 +1,60 @@
 {
-    "description": "", 
-    "show": {
+    "add": {
         "fields": {
-            "fields": [
+            "username": [
                 [
                     "string"
                 ]
             ], 
+            "is_ssl": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "smtp_port": [
+                [
+                    "integer"
+                ]
+            ], 
+            "smtp_server": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "password": [
+                [
+                    "string"
+                ]
+            ], 
+            "email": [
+                [
+                    "required"
+                ], 
+                [
+                    "email"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "username": "Логин для подключения к почтовому серверу.\n", 
+            "is_ssl": "Признак использования защищенного соединения.\nПо умолчанию - false.\n", 
+            "smtp_port": "Порт для подключения к почтовому серверу.\nПо умолчанию - 25.\nЦелое число в диапазоне от 1 до 65535.\n", 
+            "smtp_server": "Адрес почтового сервера.\n", 
+            "password": "Пароль для подключения к почтовому серверу.\n", 
+            "email": "Адрес электронной почты.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "MailBox"
+        }, 
+        "description": "Добавляет новый почтовый ящик.\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
             "id": [
                 [
                     "required"
@@ -17,14 +65,10 @@
             ]
         }, 
         "fields_description": {
-            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID почтового ящика.\n"
         }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "MailBox"
-        }, 
-        "description": "Возвращает данные указанного почтового ящика.\n\n", 
+        "result_type": null, 
+        "description": "Удаляет указанный почтовый ящик.\n\n", 
         "deprecated": false
     }, 
     "list": {
@@ -141,62 +185,13 @@
         "description": "Обновляет данные указанного почтового ящика.\n\n", 
         "deprecated": false
     }, 
-    "add": {
+    "show": {
         "fields": {
-            "username": [
+            "fields": [
                 [
                     "string"
                 ]
             ], 
-            "is_ssl": [
-                [
-                    "boolean"
-                ]
-            ], 
-            "smtp_port": [
-                [
-                    "integer"
-                ]
-            ], 
-            "smtp_server": [
-                [
-                    "required"
-                ], 
-                [
-                    "string"
-                ]
-            ], 
-            "password": [
-                [
-                    "string"
-                ]
-            ], 
-            "email": [
-                [
-                    "required"
-                ], 
-                [
-                    "email"
-                ]
-            ]
-        }, 
-        "fields_description": {
-            "username": "Логин для подключения к почтовому серверу.\n", 
-            "is_ssl": "Признак использования защищенного соединения.\nПо умолчанию - false.\n", 
-            "smtp_port": "Порт для подключения к почтовому серверу.\nПо умолчанию - 25.\nЦелое число в диапазоне от 1 до 65535.\n", 
-            "smtp_server": "Адрес почтового сервера.\n", 
-            "password": "Пароль для подключения к почтовому серверу.\n", 
-            "email": "Адрес электронной почты.\n"
-        }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "MailBox"
-        }, 
-        "description": "Добавляет новый почтовый ящик.\n\n", 
-        "deprecated": false
-    }, 
-    "delete": {
-        "fields": {
             "id": [
                 [
                     "required"
@@ -207,10 +202,14 @@
             ]
         }, 
         "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID почтового ящика.\n"
         }, 
-        "result_type": null, 
-        "description": "Удаляет указанный почтовый ящик.\n\n", 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "MailBox"
+        }, 
+        "description": "Возвращает данные указанного почтового ящика.\n\n", 
         "deprecated": false
     }
 }

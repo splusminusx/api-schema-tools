@@ -1,12 +1,48 @@
 {
-    "description": "", 
-    "show": {
+    "add": {
         "fields": {
-            "fields": [
+            "is_global": [
                 [
-                    "string"
+                    "required"
+                ], 
+                [
+                    "boolean"
                 ]
             ], 
+            "text": [
+                [
+                    "required"
+                ], 
+                [
+                    "string", 
+                    {
+                        "length": 2000
+                    }
+                ]
+            ], 
+            "category_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "text": "Текст сообщения.\nМаксимум 2000 символов.\n", 
+            "is_global": "Признак глобальности быстрого сообщения.\nЕсли true, то сообщение видно всем сотрудникам. В противном случае - только сотруднику, создавшему сообщение.\nВНИМАНИЕ! В категории с is_global = false нельзя создать сообщение с is_global = true.\n", 
+            "category_id": "ID категории быстрых сообщений.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "QuickMessage"
+        }, 
+        "description": "Добавляет новое быстрое сообщение.\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
             "id": [
                 [
                     "required"
@@ -17,14 +53,10 @@
             ]
         }, 
         "fields_description": {
-            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID быстрого сообщения.\n"
         }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "QuickMessage"
-        }, 
-        "description": "Возвращает данные указанного быстрого сообщения.\n\n", 
+        "result_type": null, 
+        "description": "Удаляет указанное быстрое сообщение.\n\n", 
         "deprecated": false
     }, 
     "list": {
@@ -135,50 +167,13 @@
         "description": "Обновляет быстрое сообщение.\n\n", 
         "deprecated": false
     }, 
-    "add": {
+    "show": {
         "fields": {
-            "is_global": [
+            "fields": [
                 [
-                    "required"
-                ], 
-                [
-                    "boolean"
+                    "string"
                 ]
             ], 
-            "text": [
-                [
-                    "required"
-                ], 
-                [
-                    "string", 
-                    {
-                        "length": 2000
-                    }
-                ]
-            ], 
-            "category_id": [
-                [
-                    "required"
-                ], 
-                [
-                    "integer"
-                ]
-            ]
-        }, 
-        "fields_description": {
-            "text": "Текст сообщения.\nМаксимум 2000 символов.\n", 
-            "is_global": "Признак глобальности быстрого сообщения.\nЕсли true, то сообщение видно всем сотрудникам. В противном случае - только сотруднику, создавшему сообщение.\nВНИМАНИЕ! В категории с is_global = false нельзя создать сообщение с is_global = true.\n", 
-            "category_id": "ID категории быстрых сообщений.\n"
-        }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "QuickMessage"
-        }, 
-        "description": "Добавляет новое быстрое сообщение.\n\n", 
-        "deprecated": false
-    }, 
-    "delete": {
-        "fields": {
             "id": [
                 [
                     "required"
@@ -189,10 +184,14 @@
             ]
         }, 
         "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID быстрого сообщения.\n"
         }, 
-        "result_type": null, 
-        "description": "Удаляет указанное быстрое сообщение.\n\n", 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "QuickMessage"
+        }, 
+        "description": "Возвращает данные указанного быстрого сообщения.\n\n", 
         "deprecated": false
     }
 }

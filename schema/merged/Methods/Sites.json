@@ -785,7 +785,6 @@
         "description": "ВНИМАНИЕ! Метод является устаревшим и не рекомендуется к использованию. Все перенесено в updateWidgetSettings.\nИзменяет настройки окна чата сайта.\n\n", 
         "result_type": null
     }, 
-    "description": "", 
     "update": {
         "fields": {
             "prechats_chat": [

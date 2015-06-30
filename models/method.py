@@ -35,6 +35,7 @@ class ImplMethod(Method):
         self._is_private = False
         self._request_limit = None
         self._time_limit = None
+        self._query_fields = {}
 
     @property
     def is_private(self):
@@ -81,3 +82,18 @@ class ImplMethod(Method):
 
     def get_private_field(self, field_name):
         return self._private_fields[field_name]
+
+    def private_fields(self):
+        return self._private_fields
+
+    def add_query_field(self, name, field):
+        if name in self._query_fields:
+            self._query_fields[name].append(field)
+        else:
+            self._query_fields[name] = [field]
+
+    def get_query_fields(self, name):
+        return self._query_fields.get(name, [])
+
+    def get_query_names(self):
+        return self._query_fields.keys()

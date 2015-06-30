@@ -188,7 +188,6 @@
             }
         }
     }, 
-    "description": "", 
     "setContactInfo": {
         "fields": {
             "id": [

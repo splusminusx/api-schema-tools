@@ -1,12 +1,43 @@
 {
-    "description": "", 
-    "show": {
+    "add": {
         "fields": {
-            "fields": [
+            "is_global": [
+                [
+                    "required"
+                ], 
+                [
+                    "boolean"
+                ]
+            ], 
+            "site_id": [
+                [
+                    "integer"
+                ]
+            ], 
+            "title": [
+                [
+                    "required"
+                ], 
                 [
                     "string"
                 ]
-            ], 
+            ]
+        }, 
+        "fields_description": {
+            "color": "Цвет.\nВозможные значения:\ngreen – зеленый;\norange – оранжевый;\nblue – синий;\nred – красный;\npurple – фиолетовый;\ngray – серый;\nrose – розовый;\nblack – черный;\nyellow – желтый;\nwhite – белый.\nПо умолчанию новой категории назначается следующий по порядку цвет относительно хронологически последней созданной категории в сайте.\n", 
+            "is_global": "Признак глобальности категории.\nЕсли false, то значение site_id игнорируется, поскольку персональные категории сотрудников не связаны с сайтами.\n", 
+            "site_id": "ID сайт.\nДолжен быть указан, если is_global = true.\n", 
+            "title": "Название категории.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "QuickMessageCategory"
+        }, 
+        "description": "Добавляет новую категорию быстрых сообщений.\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
             "id": [
                 [
                     "required"
@@ -17,14 +48,10 @@
             ]
         }, 
         "fields_description": {
-            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID категории быстрых сообщений.\n"
         }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "QuickMessageCategory"
-        }, 
-        "description": "Возвращает данные указанной категории быстрых сообщений.\n\n", 
+        "result_type": null, 
+        "description": "Удаляет указанную категорию быстрых сообщений.\n\n", 
         "deprecated": false
     }, 
     "list": {
@@ -128,45 +155,13 @@
         "description": "Обновляет категорию быстрых сообщений.\n\n", 
         "deprecated": false
     }, 
-    "add": {
+    "show": {
         "fields": {
-            "is_global": [
-                [
-                    "required"
-                ], 
-                [
-                    "boolean"
-                ]
-            ], 
-            "site_id": [
-                [
-                    "integer"
-                ]
-            ], 
-            "title": [
-                [
-                    "required"
-                ], 
+            "fields": [
                 [
                     "string"
                 ]
-            ]
-        }, 
-        "fields_description": {
-            "color": "Цвет.\nВозможные значения:\ngreen – зеленый;\norange – оранжевый;\nblue – синий;\nred – красный;\npurple – фиолетовый;\ngray – серый;\nrose – розовый;\nblack – черный;\nyellow – желтый;\nwhite – белый.\nПо умолчанию новой категории назначается следующий по порядку цвет относительно хронологически последней созданной категории в сайте.\n", 
-            "is_global": "Признак глобальности категории.\nЕсли false, то значение site_id игнорируется, поскольку персональные категории сотрудников не связаны с сайтами.\n", 
-            "site_id": "ID сайт.\nДолжен быть указан, если is_global = true.\n", 
-            "title": "Название категории.\n"
-        }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "QuickMessageCategory"
-        }, 
-        "description": "Добавляет новую категорию быстрых сообщений.\n\n", 
-        "deprecated": false
-    }, 
-    "delete": {
-        "fields": {
+            ], 
             "id": [
                 [
                     "required"
@@ -177,10 +172,14 @@
             ]
         }, 
         "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID категории быстрых сообщений.\n"
         }, 
-        "result_type": null, 
-        "description": "Удаляет указанную категорию быстрых сообщений.\n\n", 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "QuickMessageCategory"
+        }, 
+        "description": "Возвращает данные указанной категории быстрых сообщений.\n\n", 
         "deprecated": false
     }
 }

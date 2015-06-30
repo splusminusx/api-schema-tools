@@ -17,9 +17,17 @@ class PrimitiveDataType(object):
     def description(self):
         return self._description
 
+    @description.setter
+    def description(self, value):
+        self._description = value
+
     @property
     def deprecated(self):
         return self._deprecated
+
+    @deprecated.setter
+    def deprecated(self, value):
+        self._deprecated = value
 
 
 class ComplexDataType(PrimitiveDataType):

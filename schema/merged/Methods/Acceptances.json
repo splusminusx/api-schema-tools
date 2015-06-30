@@ -102,6 +102,5 @@
         "result_type": null, 
         "description": "Изменяет указанный акт.\n\n\n", 
         "deprecated": false
-    }, 
-    "description": ""
+    }
 }

@@ -1,12 +1,106 @@
 {
-    "description": "", 
-    "show": {
+    "add": {
         "fields": {
-            "fields": [
+            "employee_id": [
                 [
-                    "string"
+                    "integer"
                 ]
             ], 
+            "color": [
+                [
+                    "required"
+                ], 
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(green|orange|blue|red|purple|gray|rose|black|yellow|white)$#"
+                    }
+                ]
+            ], 
+            "text": [
+                [
+                    "string", 
+                    {
+                        "length": 100
+                    }
+                ]
+            ], 
+            "design_type": [
+                [
+                    "required"
+                ], 
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(predefined|custom)$#"
+                    }
+                ]
+            ], 
+            "site_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "image_offline": [
+                [
+                    "file", 
+                    {
+                        "empty": true, 
+                        "entity": [
+                            "callButton.image_offline"
+                        ]
+                    }
+                ]
+            ], 
+            "image_online": [
+                [
+                    "file", 
+                    {
+                        "empty": true, 
+                        "entity": [
+                            "callButton.image_online"
+                        ]
+                    }
+                ]
+            ], 
+            "size": [
+                [
+                    "required"
+                ], 
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(small|middle|large)$#"
+                    }
+                ]
+            ], 
+            "department_id": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "image_online": "Картинка кнопки, когда есть доступные операторы.\nПринимается во внимание при design_type = custom.\nИзображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.\nМаксимальный размер файла – 2 MB.\n", 
+            "color": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\nПринимается во внимание при design_type = predefined.\n", 
+            "design_type": "Тип дизайна.\nВозможные значения:\npredefined – предустановленный;\ncustom – свой дизайн.\n", 
+            "site_id": "ID сайта\n", 
+            "image_offline": "Картинка кнопки, когда нет доступных операторов.\nПринимается во внимание при design_type = custom.\nИзображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.\nМаксимальный размер файла – 2 MB.\n", 
+            "department_id": "ID отдел.\n", 
+            "size": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle  – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\nПринимается во внимание при design_type = predefined.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "CallButton"
+        }, 
+        "description": "Создает новую кнопку.\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
             "id": [
                 [
                     "required"
@@ -17,14 +111,10 @@
             ]
         }, 
         "fields_description": {
-            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID кнопки.\n"
         }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "CallButton"
-        }, 
-        "description": "Возвращает данные указанной кнопки.\n\n", 
+        "result_type": null, 
+        "description": "Удаляет указанную кнопку.\n\n", 
         "deprecated": false
     }, 
     "list": {
@@ -187,108 +277,13 @@
         "description": "Изменяет указанную кнопку.\n\n", 
         "deprecated": false
     }, 
-    "add": {
+    "show": {
         "fields": {
-            "employee_id": [
+            "fields": [
                 [
-                    "integer"
+                    "string"
                 ]
             ], 
-            "color": [
-                [
-                    "required"
-                ], 
-                [
-                    "match", 
-                    {
-                        "pattern": "#^(green|orange|blue|red|purple|gray|rose|black|yellow|white)$#"
-                    }
-                ]
-            ], 
-            "text": [
-                [
-                    "string", 
-                    {
-                        "length": 100
-                    }
-                ]
-            ], 
-            "design_type": [
-                [
-                    "required"
-                ], 
-                [
-                    "match", 
-                    {
-                        "pattern": "#^(predefined|custom)$#"
-                    }
-                ]
-            ], 
-            "site_id": [
-                [
-                    "required"
-                ], 
-                [
-                    "integer"
-                ]
-            ], 
-            "image_offline": [
-                [
-                    "file", 
-                    {
-                        "empty": true, 
-                        "entity": [
-                            "callButton.image_offline"
-                        ]
-                    }
-                ]
-            ], 
-            "image_online": [
-                [
-                    "file", 
-                    {
-                        "empty": true, 
-                        "entity": [
-                            "callButton.image_online"
-                        ]
-                    }
-                ]
-            ], 
-            "size": [
-                [
-                    "required"
-                ], 
-                [
-                    "match", 
-                    {
-                        "pattern": "#^(small|middle|large)$#"
-                    }
-                ]
-            ], 
-            "department_id": [
-                [
-                    "integer"
-                ]
-            ]
-        }, 
-        "fields_description": {
-            "image_online": "Картинка кнопки, когда есть доступные операторы.\nПринимается во внимание при design_type = custom.\nИзображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.\nМаксимальный размер файла – 2 MB.\n", 
-            "color": "Цветовая схема.\nВозможные значения:\ngreen – зеленая;\norange – оранжевая;\nblue – синяя;\nred – красная;\npurple – фиолетовая;\ngray – серая;\nrose – розовая;\nblack – черная;\nyellow – желтая;\nwhite – белая.\nПринимается во внимание при design_type = predefined.\n", 
-            "design_type": "Тип дизайна.\nВозможные значения:\npredefined – предустановленный;\ncustom – свой дизайн.\n", 
-            "site_id": "ID сайта\n", 
-            "image_offline": "Картинка кнопки, когда нет доступных операторов.\nПринимается во внимание при design_type = custom.\nИзображение в формате JPEG, GIF или PNG с длинной стороной не более 500 пикселей.\nМаксимальный размер файла – 2 MB.\n", 
-            "department_id": "ID отдел.\n", 
-            "size": "Размер кнопки.\nВозможные значения:\nsmall – маленький, 146x50 пикселей;\nmiddle  – средний,  193x69 пикселей;\nlarge – большой, 223x100 пикселей.\nПринимается во внимание при design_type = predefined.\n"
-        }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "CallButton"
-        }, 
-        "description": "Создает новую кнопку.\n\n", 
-        "deprecated": false
-    }, 
-    "delete": {
-        "fields": {
             "id": [
                 [
                     "required"
@@ -299,10 +294,14 @@
             ]
         }, 
         "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID кнопки.\n"
         }, 
-        "result_type": null, 
-        "description": "Удаляет указанную кнопку.\n\n", 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "CallButton"
+        }, 
+        "description": "Возвращает данные указанной кнопки.\n\n", 
         "deprecated": false
     }
 }

@@ -76,7 +76,6 @@
         "deprecated": false, 
         "no-auth-required": true
     }, 
-    "description": "", 
     "show": {
         "fields": {
             "fields": [

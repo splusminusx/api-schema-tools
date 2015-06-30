@@ -1,12 +1,175 @@
 {
-    "description": "", 
-    "show": {
+    "add": {
         "fields": {
-            "fields": [
+            "page_type": [
+                [
+                    "required"
+                ], 
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(excluded|specified|home|internal|any)$#"
+                    }
+                ]
+            ], 
+            "site_bindings": [
+                [
+                    "arrayOf", 
+                    {
+                        "type": "App\\Model\\DB\\Billing\\InvitationRuleSiteBinding"
+                    }
+                ]
+            ], 
+            "page_title": [
                 [
                     "string"
                 ]
             ], 
+            "page_time": [
+                [
+                    "integer"
+                ]
+            ], 
+            "site_time": [
+                [
+                    "integer"
+                ]
+            ], 
+            "title": [
+                [
+                    "required"
+                ], 
+                [
+                    "string"
+                ]
+            ], 
+            "is_once_per_day": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "welcome_chat": [
+                [
+                    "string"
+                ], 
+                [
+                    "length", 
+                    {
+                        "max": 300
+                    }
+                ]
+            ], 
+            "is_locations_exclude": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "page_count": [
+                [
+                    "integer"
+                ]
+            ], 
+            "is_active": [
+                [
+                    "required"
+                ], 
+                [
+                    "boolean"
+                ]
+            ], 
+            "welcome_lead": [
+                [
+                    "string"
+                ], 
+                [
+                    "length", 
+                    {
+                        "max": 300
+                    }
+                ]
+            ], 
+            "locations": [
+                [
+                    "arrayOf", 
+                    {
+                        "type": "App\\Model\\DB\\Locations\\Location", 
+                        "empty": true
+                    }
+                ]
+            ], 
+            "confirmation_lead": [
+                [
+                    "string", 
+                    {
+                        "length": 180
+                    }
+                ]
+            ], 
+            "is_new_visitor": [
+                [
+                    "required"
+                ], 
+                [
+                    "boolean"
+                ]
+            ], 
+            "action": [
+                [
+                    "required"
+                ], 
+                [
+                    "match", 
+                    {
+                        "pattern": "#^(vary|chat|lead)$#"
+                    }
+                ]
+            ], 
+            "max_count": [
+                [
+                    "integer"
+                ]
+            ], 
+            "is_page_url_exclude": [
+                [
+                    "boolean"
+                ]
+            ], 
+            "page_url": [
+                [
+                    "string"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "page_count": "Количество просмотренных страниц посетителем, при котором ему необходимо показывать приглашение.\n", 
+            "page_title": "Показывать приглашение на странице с указанной подстрокой в названии (тег «title»).\nЕсли page_type=specified, то одно из двух полей page_url или page_title должно быть указано.\n", 
+            "page_time": "Время, проведенное на странице посетителем, после которого ему необходимо показывать приглашение.\n", 
+            "site_time": "Время в секундах, проведенное на сайте посетителем, после которого ему необходимо показывать приглашение.\n", 
+            "title": "Название сценария.\n", 
+            "is_once_per_day": "Показывать приглашение только один раз в сутки.\nTrue – один раз, вне зависимости от значения max_count, false – в соответствии со значением max_count.\n", 
+            "welcome_chat": "Текст приглашения, если есть доступные операторы.\nМаксимум 300 символов.\nОбязательно для action = chat или vary.\n", 
+            "site_bindings": "Массив связей сценария вовлечения с сайтами.\nСостав полей объектов в массиве точно такой же, как и состав параметров метода  InvitationRuleSiteBinding.add, за исключением поля invitation_rule_id. В данном контексте оно игнорируется.\n", 
+            "is_active": "Признак активности сценария.\n", 
+            "welcome_lead": "Текст приглашения, если нет доступных операторов.\nМаксимум 300 символов.\nОбязательно для action = lead или vary.\n", 
+            "locations": "Массив географических расположений.\n", 
+            "page_url": "Показывать приглашение на странице с указанным адресом.\nАдрес указывается без приставки «http://» или «https://», например:\nwww.mycompany.ru/about/contacts\nЕсли page_type=specified, то одно из двух полей page_url или page_title должно быть указано.\n", 
+            "max_count": "Максимальное количество показов конкретному посетителю приглашений по данному сценарию в течение календарных суток.\nСчетчик показов обнуляется по истечению суток с момента последнего показа.\nОтсутствие значения или 0 – ограничения нет.\n", 
+            "page_type": "Тип страницы.\nВозможные значения:\nspecified – показывать приглашение на странице, соответствующей критериям page_url и page_title.\nhome – показывать приглашение на главной страницы;\ninternal – показывать приглашение на внутренней странице;\nany – показывать приглашение на любой странице.\n", 
+            "is_new_visitor": "Показывать приглашение только новым посетителям.\nTrue – показывать только новым, false – показывать всем.\n", 
+            "action": "Действие, которое следует выполнить, если ситуация подпадает под настройки сценария.\nВозможные значения:\nvary – показать приглашение в чат, если есть доступные операторы или форму генератора лидов, если доступных операторов нет.\nchat – показать приглашение в чат, если есть активные операторы. В противном случае ничего не показывать;\nlead – показать форму генератора лида, если нет активных операторов. В противном случае ничего не показывать.\n", 
+            "confirmation_lead": "Подтверждающее сообщение, которое показывается посетителю после отправки формы лида.\nМаксимум 180 символов.\nОбязательно для action = lead или vary.\n", 
+            "confirmation_mobile": "Подтверждающее сообщение для мобильных устройств.\nОбязательно для action имеет значение vary или lead.\nВНИМАНИЕ! В данный момент это поле не используется.\n", 
+            "welcome_mobile": "Текст приглашения для мобильных устройств.\nМаксимум 130 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "InvitationRule"
+        }, 
+        "description": "Добавляет новый сценарий вовлечения.\nПример вызова\ncurl \"https://api.livetex.ru/v2/invitationrules\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t-d \"title=Первое посещение из России\" \\\n\t-d \"action=chat\" \\\n\t-d \"welcome=Могу ли я вам чем-то помочь?\" \\\n\t-d \"is_active=true\" \\\n\t-d \"is_new_visitor=true\" \\\n\t-d \"locations[0][country][id]=123\" \\\n\t-d \"locations[0][city][id]=3245\" \\\n\t-d \"site_bindings[0][site_id]=6789\" \\\n\t-d \"site_bindings[0][department_id]=65432\"\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
             "id": [
                 [
                     "required"
@@ -17,14 +180,10 @@
             ]
         }, 
         "fields_description": {
-            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID сценария вовлечения.\n"
         }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "InvitationRule"
-        }, 
-        "description": "Возвращает данные указанного сценария вовлечения.\n\n", 
+        "result_type": null, 
+        "description": "Удаляет указанный сценария вовлечения.\n\n", 
         "deprecated": false
     }, 
     "list": {
@@ -277,177 +436,13 @@
         "description": "Изменяет указанный сценарий вовлечения.\nПример вызова\ncurl \"https://api.livetex.ru/v2/invitationrules/12345\" \\\n\t-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t–X PATCH \\\n\t-d \"title=Первое посещение из России\" \\\n\t-d \"locations[0][country][id]=123\" \\\n\t-d \"locations[0][city][id]=3245\" \\\n\t-d \"site_bindings[0][site_id]=6789\" \\\n\t-d \"site_bindings[0][department_id]=65432\"\n\t-d \"site_bindings[1][site_id]=6785\"\n\n\n\n", 
         "deprecated": false
     }, 
-    "add": {
+    "show": {
         "fields": {
-            "page_type": [
-                [
-                    "required"
-                ], 
-                [
-                    "match", 
-                    {
-                        "pattern": "#^(excluded|specified|home|internal|any)$#"
-                    }
-                ]
-            ], 
-            "site_bindings": [
-                [
-                    "arrayOf", 
-                    {
-                        "type": "App\\Model\\DB\\Billing\\InvitationRuleSiteBinding"
-                    }
-                ]
-            ], 
-            "page_title": [
+            "fields": [
                 [
                     "string"
                 ]
             ], 
-            "page_time": [
-                [
-                    "integer"
-                ]
-            ], 
-            "site_time": [
-                [
-                    "integer"
-                ]
-            ], 
-            "title": [
-                [
-                    "required"
-                ], 
-                [
-                    "string"
-                ]
-            ], 
-            "is_once_per_day": [
-                [
-                    "boolean"
-                ]
-            ], 
-            "welcome_chat": [
-                [
-                    "string"
-                ], 
-                [
-                    "length", 
-                    {
-                        "max": 300
-                    }
-                ]
-            ], 
-            "is_locations_exclude": [
-                [
-                    "boolean"
-                ]
-            ], 
-            "page_count": [
-                [
-                    "integer"
-                ]
-            ], 
-            "is_active": [
-                [
-                    "required"
-                ], 
-                [
-                    "boolean"
-                ]
-            ], 
-            "welcome_lead": [
-                [
-                    "string"
-                ], 
-                [
-                    "length", 
-                    {
-                        "max": 300
-                    }
-                ]
-            ], 
-            "locations": [
-                [
-                    "arrayOf", 
-                    {
-                        "type": "App\\Model\\DB\\Locations\\Location", 
-                        "empty": true
-                    }
-                ]
-            ], 
-            "confirmation_lead": [
-                [
-                    "string", 
-                    {
-                        "length": 180
-                    }
-                ]
-            ], 
-            "is_new_visitor": [
-                [
-                    "required"
-                ], 
-                [
-                    "boolean"
-                ]
-            ], 
-            "action": [
-                [
-                    "required"
-                ], 
-                [
-                    "match", 
-                    {
-                        "pattern": "#^(vary|chat|lead)$#"
-                    }
-                ]
-            ], 
-            "max_count": [
-                [
-                    "integer"
-                ]
-            ], 
-            "is_page_url_exclude": [
-                [
-                    "boolean"
-                ]
-            ], 
-            "page_url": [
-                [
-                    "string"
-                ]
-            ]
-        }, 
-        "fields_description": {
-            "page_count": "Количество просмотренных страниц посетителем, при котором ему необходимо показывать приглашение.\n", 
-            "page_title": "Показывать приглашение на странице с указанной подстрокой в названии (тег «title»).\nЕсли page_type=specified, то одно из двух полей page_url или page_title должно быть указано.\n", 
-            "page_time": "Время, проведенное на странице посетителем, после которого ему необходимо показывать приглашение.\n", 
-            "site_time": "Время в секундах, проведенное на сайте посетителем, после которого ему необходимо показывать приглашение.\n", 
-            "title": "Название сценария.\n", 
-            "is_once_per_day": "Показывать приглашение только один раз в сутки.\nTrue – один раз, вне зависимости от значения max_count, false – в соответствии со значением max_count.\n", 
-            "welcome_chat": "Текст приглашения, если есть доступные операторы.\nМаксимум 300 символов.\nОбязательно для action = chat или vary.\n", 
-            "site_bindings": "Массив связей сценария вовлечения с сайтами.\nСостав полей объектов в массиве точно такой же, как и состав параметров метода  InvitationRuleSiteBinding.add, за исключением поля invitation_rule_id. В данном контексте оно игнорируется.\n", 
-            "is_active": "Признак активности сценария.\n", 
-            "welcome_lead": "Текст приглашения, если нет доступных операторов.\nМаксимум 300 символов.\nОбязательно для action = lead или vary.\n", 
-            "locations": "Массив географических расположений.\n", 
-            "page_url": "Показывать приглашение на странице с указанным адресом.\nАдрес указывается без приставки «http://» или «https://», например:\nwww.mycompany.ru/about/contacts\nЕсли page_type=specified, то одно из двух полей page_url или page_title должно быть указано.\n", 
-            "max_count": "Максимальное количество показов конкретному посетителю приглашений по данному сценарию в течение календарных суток.\nСчетчик показов обнуляется по истечению суток с момента последнего показа.\nОтсутствие значения или 0 – ограничения нет.\n", 
-            "page_type": "Тип страницы.\nВозможные значения:\nspecified – показывать приглашение на странице, соответствующей критериям page_url и page_title.\nhome – показывать приглашение на главной страницы;\ninternal – показывать приглашение на внутренней странице;\nany – показывать приглашение на любой странице.\n", 
-            "is_new_visitor": "Показывать приглашение только новым посетителям.\nTrue – показывать только новым, false – показывать всем.\n", 
-            "action": "Действие, которое следует выполнить, если ситуация подпадает под настройки сценария.\nВозможные значения:\nvary – показать приглашение в чат, если есть доступные операторы или форму генератора лидов, если доступных операторов нет.\nchat – показать приглашение в чат, если есть активные операторы. В противном случае ничего не показывать;\nlead – показать форму генератора лида, если нет активных операторов. В противном случае ничего не показывать.\n", 
-            "confirmation_lead": "Подтверждающее сообщение, которое показывается посетителю после отправки формы лида.\nМаксимум 180 символов.\nОбязательно для action = lead или vary.\n", 
-            "confirmation_mobile": "Подтверждающее сообщение для мобильных устройств.\nОбязательно для action имеет значение vary или lead.\nВНИМАНИЕ! В данный момент это поле не используется.\n", 
-            "welcome_mobile": "Текст приглашения для мобильных устройств.\nМаксимум 130 символов.\nВНИМАНИЕ! В данный момент это поле не используется.\n"
-        }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "InvitationRule"
-        }, 
-        "description": "Добавляет новый сценарий вовлечения.\nПример вызова\ncurl \"https://api.livetex.ru/v2/invitationrules\" \\\n-H \"Authorization: Bearer ACCESS_TOKEN\" \\\n\t-d \"title=Первое посещение из России\" \\\n\t-d \"action=chat\" \\\n\t-d \"welcome=Могу ли я вам чем-то помочь?\" \\\n\t-d \"is_active=true\" \\\n\t-d \"is_new_visitor=true\" \\\n\t-d \"locations[0][country][id]=123\" \\\n\t-d \"locations[0][city][id]=3245\" \\\n\t-d \"site_bindings[0][site_id]=6789\" \\\n\t-d \"site_bindings[0][department_id]=65432\"\n\n", 
-        "deprecated": false
-    }, 
-    "delete": {
-        "fields": {
             "id": [
                 [
                     "required"
@@ -458,10 +453,14 @@
             ]
         }, 
         "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID сценария вовлечения.\n"
         }, 
-        "result_type": null, 
-        "description": "Удаляет указанный сценария вовлечения.\n\n", 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "InvitationRule"
+        }, 
+        "description": "Возвращает данные указанного сценария вовлечения.\n\n", 
         "deprecated": false
     }
 }

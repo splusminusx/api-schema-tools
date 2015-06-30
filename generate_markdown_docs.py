@@ -34,7 +34,7 @@ if __name__ == '__main__':
         f.write(u'\n### Примитивные типы данных\n')
         for primitive_type in primitive_types:
             serializer.serialize(primitive_type)
-            f.write(u'- [' + primitive_type.name + u'](/types/' + primitive_type.name + u')')
+            f.write(u'- [' + primitive_type.name + u'](/Types/' + primitive_type.name + u')')
             if primitive_type.deprecated:
                 f.write(u' - WARNING: DEPRECATED\n')
             else:
@@ -42,7 +42,7 @@ if __name__ == '__main__':
         f.write(u'\n### Комплексные типы данных\n')
         for complex_type in complex_types:
             serializer.serialize(complex_type)
-            f.write(u'- [' + complex_type.name + u'](/types/' + complex_type.name + u')')
+            f.write(u'- [' + complex_type.name + u'](/Types/' + complex_type.name + u')')
             if complex_type.deprecated:
                 f.write(u' - WARNING: DEPRECATED\n')
             else:
@@ -50,4 +50,4 @@ if __name__ == '__main__':
         f.write(u'\n## Ресурсы\n')
         for resource in resources:
             serializer.serialize(resource)
-            f.write(u'- [' + resource.name + u'](/resources/' + resource.name + u')\n')
+            f.write(u'- [' + resource.name + u'](/Resources/' + resource.name + u')\n')

@@ -12,9 +12,9 @@ class SchemaSerializer(object):
 
     def get_path(self, obj):
         if isinstance(obj, ComplexDataType) or isinstance(obj, PrimitiveDataType):
-            return os.path.join(self._path, 'types', obj.name + '.json')
+            return os.path.join(self._path, u'Types', obj.name + '.json')
         if isinstance(obj, Resource):
-            return os.path.join(self._path, 'resources', obj.name + '.json')
+            return os.path.join(self._path, u'Resources', obj.name + '.json')
 
     def serialize(self, obj):
         with io.open(self.get_path(obj), 'w', encoding='utf-8') as f:

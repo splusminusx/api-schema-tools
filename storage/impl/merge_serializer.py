@@ -19,7 +19,6 @@ class MergeSerializer(object):
     def _serialize_resource(self, resource):
         with open(os.path.join(self._src_path, u'Methods', resource.name + u'.json')) as input:
             data = json.load(input)
-            data[ImplResourceAttributes.DESCRIPTION] = resource.description
 
             for method_name in resource.methods:
                 method = resource.get_method(method_name)

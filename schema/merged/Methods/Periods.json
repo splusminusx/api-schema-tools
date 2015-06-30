@@ -111,6 +111,5 @@
         "result_type": null, 
         "description": "Обновляет данные указанного периода.\n\n", 
         "deprecated": false
-    }, 
-    "description": ""
+    }
 }

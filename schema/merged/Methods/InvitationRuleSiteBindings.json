@@ -1,12 +1,48 @@
 {
-    "description": "", 
-    "show": {
+    "add": {
         "fields": {
-            "fields": [
+            "invitation_rule_id": [
                 [
-                    "string"
+                    "required"
+                ], 
+                [
+                    "integer"
                 ]
             ], 
+            "employee_id": [
+                [
+                    "integer"
+                ]
+            ], 
+            "site_id": [
+                [
+                    "required"
+                ], 
+                [
+                    "integer"
+                ]
+            ], 
+            "department_id": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "invitation_rule_id": "Сценарий вовлечения.\n", 
+            "employee_id": "ID сотрудника, на которого будет назначен чат или лид.\n", 
+            "site_id": "Сайт.\n", 
+            "department_id": "ID отдела, на который будет адресовано приглашение.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "InvitationRuleSiteBinding"
+        }, 
+        "description": "Добавляет новую связь сценария вовлечения и сайта.\nВозможно существование только одной связи конкретного сайта и конкретного сценария вовлечения.\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
             "id": [
                 [
                     "required"
@@ -17,14 +53,10 @@
             ]
         }, 
         "fields_description": {
-            "fields": "Список через запятую возвращаемых полей.\n", 
-            "id": "ID связи сценария вовлечения и сайта.\n"
+            "id": "ID связи.\n"
         }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "InvitationRuleSiteBinding"
-        }, 
-        "description": "Возвращает данные указанной связи сценария вовлечения и сайта.\n\n", 
+        "result_type": null, 
+        "description": "Удаляет указанную связь сценария вовлечения и сайта.\n\n", 
         "deprecated": false
     }, 
     "list": {
@@ -139,50 +171,13 @@
         "description": "Изменяет указанную связь сценария вовлечения и сайта.\nВозможно существование только одной связи конкретного сайта и конкретного сценария вовлечения.\n\n", 
         "deprecated": false
     }, 
-    "add": {
+    "show": {
         "fields": {
-            "invitation_rule_id": [
+            "fields": [
                 [
-                    "required"
-                ], 
-                [
-                    "integer"
+                    "string"
                 ]
             ], 
-            "employee_id": [
-                [
-                    "integer"
-                ]
-            ], 
-            "site_id": [
-                [
-                    "required"
-                ], 
-                [
-                    "integer"
-                ]
-            ], 
-            "department_id": [
-                [
-                    "integer"
-                ]
-            ]
-        }, 
-        "fields_description": {
-            "invitation_rule_id": "Сценарий вовлечения.\n", 
-            "employee_id": "ID сотрудника, на которого будет назначен чат или лид.\n", 
-            "site_id": "Сайт.\n", 
-            "department_id": "ID отдела, на который будет адресовано приглашение.\n"
-        }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "InvitationRuleSiteBinding"
-        }, 
-        "description": "Добавляет новую связь сценария вовлечения и сайта.\nВозможно существование только одной связи конкретного сайта и конкретного сценария вовлечения.\n\n", 
-        "deprecated": false
-    }, 
-    "delete": {
-        "fields": {
             "id": [
                 [
                     "required"
@@ -193,10 +188,14 @@
             ]
         }, 
         "fields_description": {
-            "id": "ID связи.\n"
+            "fields": "Список через запятую возвращаемых полей.\n", 
+            "id": "ID связи сценария вовлечения и сайта.\n"
         }, 
-        "result_type": null, 
-        "description": "Удаляет указанную связь сценария вовлечения и сайта.\n\n", 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "InvitationRuleSiteBinding"
+        }, 
+        "description": "Возвращает данные указанной связи сценария вовлечения и сайта.\n\n", 
         "deprecated": false
     }
 }

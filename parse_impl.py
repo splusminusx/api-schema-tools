@@ -28,9 +28,9 @@ if __name__ == '__main__':
 
     spec_resource_names = set(resource_reg.types.keys())
     impl_resource_names = set(impl_reg.types.keys())
-    print "\n>>> Unimplemented resources:"
+    print "\n>>> Unimplemented Resources:"
     pprint(spec_resource_names.difference(impl_resource_names))
-    print "\n>>> Unspecified resources:"
+    print "\n>>> Unspecified Resources:"
     pprint(impl_resource_names.difference(spec_resource_names))
 
     spec_methods = []

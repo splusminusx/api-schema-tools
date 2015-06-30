@@ -1,12 +1,33 @@
 {
-    "description": "", 
-    "show": {
+    "add": {
         "fields": {
-            "fields": [
+            "text": [
+                [
+                    "required"
+                ], 
                 [
                     "string"
                 ]
             ], 
+            "position": [
+                [
+                    "integer"
+                ]
+            ]
+        }, 
+        "fields_description": {
+            "text": "Текст оценки.\n", 
+            "position": "Порядковый номер оценки.\nЕсли не указано, то оценка будет последней.\n"
+        }, 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "EmployeeRemark"
+        }, 
+        "description": "Создает новую запись в списке оценок сотрудника.\n\n", 
+        "deprecated": false
+    }, 
+    "delete": {
+        "fields": {
             "id": [
                 [
                     "required"
@@ -17,14 +38,10 @@
             ]
         }, 
         "fields_description": {
-            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID оценки.\n"
         }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "EmployeeRemark"
-        }, 
-        "description": "Возвращает данные указанной оценки сотрудника.\n\n", 
+        "result_type": null, 
+        "description": "Удаляет указанную оценку сотрудника.\n\n", 
         "deprecated": false
     }, 
     "list": {
@@ -117,35 +134,13 @@
         "description": "Изменяет данные оценки оператора.\n\n", 
         "deprecated": false
     }, 
-    "add": {
+    "show": {
         "fields": {
-            "text": [
-                [
-                    "required"
-                ], 
+            "fields": [
                 [
                     "string"
                 ]
             ], 
-            "position": [
-                [
-                    "integer"
-                ]
-            ]
-        }, 
-        "fields_description": {
-            "text": "Текст оценки.\n", 
-            "position": "Порядковый номер оценки.\nЕсли не указано, то оценка будет последней.\n"
-        }, 
-        "result_type": {
-            "kind": "Reference", 
-            "name": "EmployeeRemark"
-        }, 
-        "description": "Создает новую запись в списке оценок сотрудника.\n\n", 
-        "deprecated": false
-    }, 
-    "delete": {
-        "fields": {
             "id": [
                 [
                     "required"
@@ -156,10 +151,14 @@
             ]
         }, 
         "fields_description": {
+            "fields": "Список через запятую возвращаемых полей.\n", 
             "id": "ID оценки.\n"
         }, 
-        "result_type": null, 
-        "description": "Удаляет указанную оценку сотрудника.\n\n", 
+        "result_type": {
+            "kind": "Reference", 
+            "name": "EmployeeRemark"
+        }, 
+        "description": "Возвращает данные указанной оценки сотрудника.\n\n", 
         "deprecated": false
     }
 }

@@ -1,0 +1,3798 @@
+{
+    "admin": {
+        "code": "admin",
+        "weight": 100,
+        "title": "Администратор",
+        "description": "",
+        "is_default" : false,
+        "is_full_by_default" : true,
+        "permissions": {
+            "VATInvoices": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Acceptances": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "details": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Browser": ["*"],
+            "CssApi": {
+                "widgets": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },            
+            "Calls": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "ChatButtons": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "CallButtons": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Chats": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "setContactInfoExists": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "Cities": ["*"],
+            "Comments": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Complaints": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "ConsoleNews" : ["*"],
+            "Contacts": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Conversations": {
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Countries": ["*"],
+            "Departments": ["*"],
+            "DepartmentSiteBindings": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Documents": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChatMessages": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChats": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeEvents": ["*"],
+            "EmployeeOnlineIntervals": {
+                "listByEmployee": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "listByDepartment": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "listBySite": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Employees": ["*"],
+            "EmployeeRemarks": ["*"],
+            "HoldRules": ["*"],
+            "IgnoreListItems": ["*"],
+            "InvitationRules": ["*"],
+            "InvitationRuleSiteBindings": ["*"],
+            "Invoices": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Leads": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "listRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "setCompleted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "lock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "unlock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Locations": ["*"],
+            "MailBoxes": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Oauth2": ["*"],
+            "Storage": ["*"],
+            "Offerings": ["*"],
+            "Orders":["*"],
+            "Payers": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "transferBalance": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Payments": ["*"],
+            "Periods" : ["*"],
+            "Carts" : ["*"],
+            "CartItems" : ["*"],
+            "Products": ["*"],
+            "QuickMessageCategories": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "QuickMessages": ["*"],
+            "Redis": ["*"],
+            "Regions": ["*"],
+            "Roles": ["*"],
+            "Settings": {
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showAcceptanceByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateAcceptanceByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showCobrowseSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateCobrowseSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showConsoleSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateConsoleSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showEmployeeRemarkSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateEmployeeRemarkSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showFileTransferSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateFileTransferSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSMTPSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSMTPSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showReportByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateReportByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showTypingIndicatorSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateTypingIndicatorSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showFeatureStates": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishWelcomeWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishMigrationWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "SettingsApi": {
+                "site": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Sites": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "batchUpdate": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "unbindAllDepartments": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showCallLabelSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateCallLabelSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showChatFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateChatFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showLeadFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateLeadFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showOfflineFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateOfflineFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showOfflineMailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateOfflineMailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSiteCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSiteCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showChatWelcomeSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateChatWelcomeSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSiteChatSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSiteChatSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSiteXWidgetSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSiteXWidgetSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "batchUpdateSiteXWidgetSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSiteWidgetSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSiteWidgetSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Stats": ["*"],
+            "Tickets": ["*"],
+            "Upload": ["*"],
+            "Visitors": ["*"],
+            "ForwardingSettings": ["*"]
+        }
+    },
+    "admin_partner": {
+        "code": "admin_partner",
+        "weight": 100,
+        "title": "Администратор по партнерской программе",
+        "description": "",
+        "is_default" : false,
+        "is_full_by_default" : true,
+        "permissions": {
+            "VATInvoices": {
+                "list": {
+                    "level": "none"
+                }
+            },
+            "Acceptances": {
+                "list": {
+                    "level": "none"
+                },
+                "details": {
+                    "level": "none"
+                },
+                "update": {
+                    "level": "none"
+                }
+            },
+            "Browser": ["*"],
+            "CssApi": {
+                "widgets": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },            
+            "Calls": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "ChatButtons": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "CallButtons": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Chats": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "setContactInfoExists": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "Cities": ["*"],
+            "Comments": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Complaints": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "ConsoleNews": ["*"],
+            "Contacts": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Conversations": {
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Countries": ["*"],
+            "Departments": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "DepartmentSiteBindings": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChatMessages": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChats": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeEvents": ["*"],
+            "EmployeeOnlineIntervals": {
+                "listByEmployee": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "listByDepartment": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "listBySite": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Employees": ["*"],
+            "EmployeeRemarks": ["*"],
+            "HoldRules": ["*"],
+            "IgnoreListItems": ["*"],
+            "InvitationRules": ["*"],
+            "InvitationRuleSiteBindings": ["*"],
+            "Invoices": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Leads": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "listRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "setCompleted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "lock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "unlock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Locations": ["*"],
+            "MailBoxes": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Oauth2": ["*"],
+            "Storage": ["*"],
+            "Offerings": [ ],
+            "Payers": [ ],
+            "Payments": [ ],
+            "Periods" : {
+                "active": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Carts" : [ ],
+            "CartItems" : [ ],
+            "Products": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "QuickMessageCategories": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "QuickMessages": ["*"],
+            "Redis": ["*"],
+            "Regions": ["*"],
+            "Roles": ["*"],
+            "Settings": {
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showAcceptanceByEmailSettings": {
+                    "level": "none"
+                },
+                "updateAcceptanceByEmailSettings": {
+                    "level": "none"
+                },
+                "showCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showCobrowseSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateCobrowseSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showConsoleSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateConsoleSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showEmployeeRemarkSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateEmployeeRemarkSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showFileTransferSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateFileTransferSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSMTPSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSMTPSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showReportByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateReportByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showTypingIndicatorSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateTypingIndicatorSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showFeatureStates": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishWelcomeWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishMigrationWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "SettingsApi": {
+                "site": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Sites": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "batchUpdate": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "unbindAllDepartments": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showCallLabelSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateCallLabelSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showChatFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateChatFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showLeadFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateLeadFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showOfflineFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateOfflineFormSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showOfflineMailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateOfflineMailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSiteCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSiteCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showChatWelcomeSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateChatWelcomeSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSiteChatSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSiteChatSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSiteXWidgetSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSiteXWidgetSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "batchUpdateSiteXWidgetSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSiteWidgetSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSiteWidgetSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Stats": ["*"],
+            "Tickets": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Upload": ["*"],
+            "Visitors": ["*"],
+            "ForwardingSettings": ["*"]
+        }
+    },
+    "chief": {
+        "code": "chief",
+        "weight": 50,
+        "title": "Управляющий",
+        "description": "",
+        "is_default" : false,
+        "is_full_by_default" : true,
+        "permissions": {
+            "VATInvoices": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Acceptances": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "details": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Browser": ["*"],
+            "CssApi": {
+                "widgets": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },            
+            "Calls": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "ChatButtons": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "CallButtons": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Chats": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "setContactInfoExists": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "Cities": ["*"],
+            "Comments": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Complaints": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "ConsoleNews" : ["*"],
+            "Contacts": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Conversations": {
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Countries": ["*"],
+            "Departments": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "DepartmentSiteBindings": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Documents": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChatMessages": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChats": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeEvents": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeOnlineIntervals": {
+                "listByEmployee": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "listByDepartment": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "listBySite": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Employees": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "me": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "search": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "batchUpdate": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeRemarks": ["*"],
+            "HoldRules": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "IgnoreListItems": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "InvitationRules": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "InvitationRuleSiteBindings": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Invoices": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Leads": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "listRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "setCompleted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "lock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "unlock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Locations": ["*"],
+            "MailBoxes": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Oauth2": ["*"],
+            "Storage": ["*"],
+            "Offerings": ["*"],
+            "Payers": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "transferBalance": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Payments": ["*"],
+            "Periods" : ["*"],
+            "Carts" : ["*"],
+            "CartItems" : ["*"],
+            "Products": ["*"],
+            "QuickMessageCategories": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "QuickMessages": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Redis": ["*"],
+            "Regions": ["*"],
+            "Roles": ["*"],
+            "Settings": {
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showAcceptanceByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateAcceptanceByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showCobrowseSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateCobrowseSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showConsoleSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateConsoleSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showEmployeeRemarkSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateEmployeeRemarkSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showFileTransferSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateFileTransferSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSMTPSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSMTPSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showReportByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateReportByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showTypingIndicatorSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateTypingIndicatorSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showFeatureStates": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishWelcomeWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishMigrationWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "SettingsApi": {
+                "site": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Sites": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "batchUpdate": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "unbindAllDepartments": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showCallLabelSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateCallLabelSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showChatFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateChatFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showLeadFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateLeadFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showOfflineFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateOfflineFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showOfflineMailSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateOfflineMailSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteCallSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteCallSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showChatWelcomeSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateChatWelcomeSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteChatSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteChatSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteXWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteXWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "batchUpdateSiteXWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Stats": {
+                "summary": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "contacts": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "employees": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "departments": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "sites": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Tickets": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Upload": ["*"],
+            "Visitors": ["*"],
+            "ForwardingSettings": ["*"]
+        }
+    },
+    "chief_partner": {
+        "code": "chief_partner",
+        "weight": 50,
+        "title": "Управляющий по партнерской программе",
+        "description": "",
+        "is_default" : false,
+        "is_full_by_default" : true,
+        "permissions": {
+            "VATInvoices": {
+                "list": {
+                    "level": "none"
+                }
+            },
+            "Acceptances": {
+                "list": {
+                    "level": "none"
+                },
+                "details": {
+                    "level": "none"
+                },
+                "update": {
+                    "level": "none"
+                }
+            },
+            "Browser": ["*"],
+            "CssApi": {
+                "widgets": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },            
+            "Calls": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "ChatButtons": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "CallButtons": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Chats": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "setContactInfoExists": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "Cities": ["*"],
+            "Comments": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Complaints": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "ConsoleNews" : ["*"],
+            "Contacts": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Conversations": {
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Countries": ["*"],
+            "Departments": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "DepartmentSiteBindings": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChatMessages": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChats": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeEvents": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeOnlineIntervals": {
+                "listByEmployee": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "listByDepartment": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "listBySite": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Employees": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "me": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "search": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "batchUpdate": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+
+            },
+            "EmployeeRemarks": ["*"],
+            "HoldRules": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "IgnoreListItems": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "InvitationRules": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "InvitationRuleSiteBindings": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Invoices": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Leads": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "listRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "setCompleted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "lock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "unlock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Locations": ["*"],
+            "MailBoxes": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Oauth2": ["*"],
+            "Storage": ["*"],
+            "Offerings": [ ],
+            "Payers": [ ],
+            "Payments": [ ],
+            "Periods" : {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Carts" : [ ],
+            "CartItems" : [ ],
+            "Products": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "QuickMessageCategories": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "QuickMessages": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Redis": ["*"],
+            "Regions": ["*"],
+            "Roles": ["*"],
+            "Settings": {
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showAcceptanceByEmailSettings": {
+                    "level": "none"
+                },
+                "updateAcceptanceByEmailSettings": {
+                    "level": "none"
+                },
+                "showCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateCallSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showCobrowseSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateCobrowseSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showConsoleSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateConsoleSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showEmployeeRemarkSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateEmployeeRemarkSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showFileTransferSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateFileTransferSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showSMTPSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateSMTPSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showReportByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateReportByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showTypingIndicatorSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateTypingIndicatorSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showFeatureStates": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishWelcomeWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishMigrationWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "SettingsApi": {
+                "site": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Sites": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "batchUpdate": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "unbindAllDepartments": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showCallLabelSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateCallLabelSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showChatFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateChatFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showLeadFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateLeadFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showOfflineFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateOfflineFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showOfflineMailSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateOfflineMailSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteCallSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteCallSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showChatWelcomeSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateChatWelcomeSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteChatSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteChatSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteXWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteXWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "batchUpdateSiteXWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Stats": {
+                "summary": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "contacts": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "employees": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "departments": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "sites": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Tickets": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Upload": ["*"],
+            "Visitors": ["*"],
+            "ForwardingSettings": ["*"]
+        }
+    },
+    "manager": {
+        "code": "manager",
+        "weight": 20,
+        "title": "Руководитель операторов",
+        "description": "",
+        "is_default" : false,
+        "is_full_by_default" : true,
+        "permissions": {
+            "Browser": ["*"],
+            "CssApi": {
+                "widgets": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },            
+            "Calls": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "ChatButtons": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "CallButtons": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Chats": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "setContactInfoExists": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "Cities": ["*"],
+            "Comments": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Complaints": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "ConsoleNews" : ["*"],
+            "Contacts": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Conversations": {
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Countries": ["*"],
+            "Departments": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "DepartmentSiteBindings": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChatMessages": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChats": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeEvents": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeOnlineIntervals": {
+                "listByEmployee": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "listByDepartment": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "listBySite": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Employees": {
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": [
+                        "email",
+                        "password",
+                        "first_name",
+                        "last_name",
+                        "photo",
+                        "is_cobrowse",
+                        "is_call",
+                        "is_sip_forward",
+                        "sip_forward_number",
+                        "is_phone_forward",
+                        "phone_forward_number",
+                        "chat_limit",
+                        "is_lead_assigned",
+                        "is_lead_notify",
+                        "is_active",
+                        "department_ids",
+                        "phone",
+                        "role_code"
+                    ]
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": [
+                        "is_lead_notify",
+                        "chat_limit",
+                        "is_lead_assigned",
+                        "phone_forward_number",
+                        "sip_forward_number",
+                        "is_cobrowse",
+                        "email",
+                        "password",
+                        "first_name",
+                        "last_name",
+                        "photo",
+                        "is_active",
+                        "phone"
+                    ]
+                },
+                "delete": {
+                    "level": "none"
+                },
+                "me": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "batchUpdate": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+
+            },
+            "EmployeeRemarks": ["*"],
+            "HoldRules": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "IgnoreListItems": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "InvitationRules": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "InvitationRuleSiteBindings": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Invoices": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Leads": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "listRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "setCompleted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "lock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "unlock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Locations": ["*"],
+            "MailBoxes": {
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Oauth2": ["*"],
+            "Storage": ["*"],
+            "Offerings": [ ],
+            "Payers": [ ],
+            "Payments": [ ],
+            "Periods" : {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Carts" : [ ],
+            "CartItems" : [ ],
+            "Products": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "QuickMessageCategories": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "QuickMessages": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Redis": ["*"],
+            "Regions": ["*"],
+            "Roles": ["*"],
+            "Settings": {
+                "show": {
+                    "level": "none"
+                },
+                "showAcceptanceByEmailSettings": {
+                    "level": "none"
+                },
+                "updateAcceptanceByEmailSettings": {
+                    "level": "none"
+                },
+                "showCallSettings": {
+                    "level": "none"
+                },
+                "updateCallSettings": {
+                    "level": "none"
+                },
+                "showCobrowseSettings": {
+                    "level": "none"
+                },
+                "updateCobrowseSettings": {
+                    "level": "none"
+                },
+                "showConsoleSettings": {
+                    "level": "none"
+                },
+                "updateConsoleSettings": {
+                    "level": "none"
+                },
+                "showEmployeeRemarkSettings": {
+                    "level": "none"
+                },
+                "updateEmployeeRemarkSettings": {
+                    "level": "none"
+                },
+                "showFileTransferSettings": {
+                    "level": "none"
+                },
+                "updateFileTransferSettings": {
+                    "level": "none"
+                },
+                "showSMTPSettings": {
+                    "level": "none"
+                },
+                "updateSMTPSettings": {
+                    "level": "none"
+                },
+                "showReportByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "updateReportByEmailSettings": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "showTypingIndicatorSettings": {
+                    "level": "none"
+                },
+                "updateTypingIndicatorSettings": {
+                    "level": "none"
+                },
+                "showFeatureStates": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishWelcomeWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishMigrationWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "SettingsApi": {
+                "site": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Sites": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "none"
+                },
+                "batchUpdate": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "none"
+                },
+                "unbindAllDepartments": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showCallLabelSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateCallLabelSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showChatFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateChatFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showLeadFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateLeadFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showOfflineFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateOfflineFormSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showOfflineMailSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateOfflineMailSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteCallSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteCallSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showChatWelcomeSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateChatWelcomeSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteChatSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteChatSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteXWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteXWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "batchUpdateSiteXWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "showSiteWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "updateSiteWidgetSettings": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Stats": {
+                "summary": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "contacts": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "employees": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "departments": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "sites": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Tickets": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Upload": ["*"],
+            "Visitors": ["*"],
+            "ForwardingSettings": ["*"]
+        }
+    },
+    "operator": {
+        "code": "operator",
+        "weight": 10,
+        "title": "Оператор",
+        "description": "",
+        "is_default" : true,
+        "is_full_by_default" : false,
+        "permissions": {
+            "Browser": ["*"],
+            "CssApi": {
+                "widgets": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },            
+            "Calls": {
+                "list": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "ChatButtons": {
+                "list": {
+                    "level": "none"
+                },
+                "show": {
+                    "level": "none"
+                },
+                "add": {
+                    "level": "none"
+                },
+                "update": {
+                    "level": "none"
+                },
+                "delete": {
+                    "level": "none"
+                }
+            },
+            "CallButtons": {
+                "list": {
+                    "level": "none"
+                },
+                "show": {
+                    "level": "none"
+                },
+                "add": {
+                    "level": "none"
+                },
+                "update": {
+                    "level": "none"
+                },
+                "delete": {
+                    "level": "none"
+                }
+            },
+            "Chats": {
+                "list": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "setContactInfoExists": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "Cities": ["*"],
+            "Comments": {
+                "list": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Complaints": {
+                "list": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "none",
+                    "allowed_fields": "all"
+                }
+            },
+            "ConsoleNews" : ["*"],
+            "Contacts": {
+                "list": {
+                    "level": "none"
+                },
+                "show": {
+                    "level": "none"
+                }
+            },
+            "Conversations": {
+                "show": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Countries": ["*"],
+            "Departments": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "none"
+                },
+                "update": {
+                    "level": "none"
+                },
+                "delete": {
+                    "level": "none"
+                }
+            },
+            "DepartmentSiteBindings": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "none"
+                },
+                "update": {
+                    "level": "none"
+                },
+                "delete": {
+                    "level": "none"
+                }
+            },
+            "EmployeeChatMessages": {
+                "list": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeChats": {
+                "list": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeEvents": {
+                "list": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeOnlineIntervals": {
+                "listByEmployee": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "listByDepartment": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "listBySite": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "EmployeeRemarks": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "none"
+                },
+                "update": {
+                    "level": "none"
+                },
+                "delete": {
+                    "level": "none"
+                }
+            },
+            "Employees": {
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "none"
+                },
+                "update": {
+                    "level": "user",
+                    "allowed_fields": [
+                        "email",
+                        "first_name",
+                        "last_name",
+                        "password",
+                        "photo",
+                        "phone"
+                    ]
+                },
+                "delete": {
+                    "level": "none"
+                },
+                "me": {
+                    "level": "managed",
+                    "allowed_fields": ["*"]
+                },
+                "batchUpdate": {
+                    "level": "managed",
+                    "allowed_fields": "all"
+                }
+            },
+            "HoldRules": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "none",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "none",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "none",
+                    "allowed_fields": "all"
+                }
+            },
+            "IgnoreListItems": {
+                "list": {
+                    "level": "none"
+                },
+                "delete": {
+                    "level": "none"
+                }
+            },
+            "InvitationRules": {
+                "list": {
+                    "level": "none"
+                },
+                "show": {
+                    "level": "none"
+                },
+                "add": {
+                    "level": "none"
+                },
+                "update": {
+                    "level": "none"
+                },
+                "delete": {
+                    "level": "none"
+                }
+            },
+            "Invoices": [ ],
+            "Leads": {
+                "list": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "listRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "showRouted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "setCompleted": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "lock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                },
+                "unlock": {
+                    "level": "routed",
+                    "allowed_fields": "all"
+                }
+            },
+            "Locations": [ ],
+            "MailBoxes": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Oauth2": ["*"],
+            "Storage": ["*"],
+            "Offerings": [ ],
+            "Payers": [ ],
+            "Payments": [ ],
+            "Periods" : [ ],
+            "Carts" : [ ],
+            "CartItems" : [ ],
+            "Products": [ ],
+            "QuickMessageCategories": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "QuickMessages": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "update": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "delete": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "Redis": ["*"],
+            "Regions": ["*"],
+            "Roles": ["*"],
+            "Settings": {
+                "show": {
+                    "level": "none"
+                },
+                "showAcceptanceByEmailSettings": {
+                    "level": "none"
+                },
+                "updateAcceptanceByEmailSettings": {
+                    "level": "none"
+                },
+                "showCallSettings": {
+                    "level": "none"
+                },
+                "updateCallSettings": {
+                    "level": "none"
+                },
+                "showCobrowseSettings": {
+                    "level": "none"
+                },
+                "updateCobrowseSettings": {
+                    "level": "none"
+                },
+                "showConsoleSettings": {
+                    "level": "none"
+                },
+                "updateConsoleSettings": {
+                    "level": "none"
+                },
+                "showEmployeeRemarkSettings": {
+                    "level": "none"
+                },
+                "updateEmployeeRemarkSettings": {
+                    "level": "none"
+                },
+                "showFileTransferSettings": {
+                    "level": "none"
+                },
+                "updateFileTransferSettings": {
+                    "level": "none"
+                },
+                "showSMTPSettings": {
+                    "level": "none"
+                },
+                "updateSMTPSettings": {
+                    "level": "none"
+                },
+                "showReportByEmailSettings": {
+                    "level": "none"
+                },
+                "updateReportByEmailSettings": {
+                    "level": "none"
+                },
+                "showTypingIndicatorSettings": {
+                    "level": "none"
+                },
+                "updateTypingIndicatorSettings": {
+                    "level": "none"
+                }                ,
+                "showFeatureStates": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishWelcomeWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "finishMigrationWizard": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "SettingsApi": {
+                "site": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Sites": {
+                "list": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                },
+                "batchUpdate": {
+                    "level": "none"
+                },
+                "update": {
+                    "level": "none"
+                }
+            },
+            "Stats": {
+                "summary": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "contacts": {
+                    "level": "none"
+                },
+                "employees": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "departments": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "sites": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                }
+            },
+            "Tickets": {
+                "list": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "show": {
+                    "level": "user",
+                    "allowed_fields": "all"
+                },
+                "add": {
+                    "level": "full",
+                    "allowed_fields": "all"
+                }
+            },
+            "Upload": ["*"],
+            "Visitors": ["*"]
+        }
+    }
+}

@@ -3,8 +3,8 @@
 *.docx#
 *.pyc
 site
-docs/types/*.md
-docs/resources/*.md
+docs/Types/*.md
+docs/Resources/*
 docs/index.md
 .idea
 

@@ -5,6 +5,8 @@ from models.resource import Resource
 from models.field import ValidatableField
 from models.validator import *
 from models.permissions import Role, Access, Permission
+from storage.impl.attrs import ImplResourceAttributes
+from storage.schema import deserialize
 import json
 import os
 
@@ -133,14 +135,14 @@ class Deserializer(object):
         return default
 
     @staticmethod
-    def _decode_field(name, fields, validators):
+    def _decode_field(name, fields, description):
         field_validators = Deserializer._decode_validators(fields)
 
         data_type_name = Deserializer._decode_data_type(field_validators)
         required = Deserializer._decode_required(field_validators)
         default = Deserializer._decode_default(field_validators)
 
-        field = ValidatableField(name, data_type_name, '', required, default)
+        field = ValidatableField(name, data_type_name, description, required, default)
         for val in field_validators:
             field.add_validator(val)
 
@@ -158,6 +160,7 @@ class Deserializer(object):
                     ImplMethodAttributes.FIELDS_VALIDATION, {})
                 private_fields = method_data.get(
                     ImplMethodAttributes.PRIVATE_FIELDS, {})
+                fields_descriptions = method_data.get(ImplResourceAttributes.FIELD_DESCRIPTION, {})
 
                 method = ImplMethod(method_name)
                 method.frequency = method_data.get(ImplMethodAttributes.FREQUENCY, None)
@@ -165,6 +168,10 @@ class Deserializer(object):
                 method.is_private = method_data.get(ImplMethodAttributes.PRIVATE, False)
                 method.request_limit = method_data.get(ImplMethodAttributes.REQUEST_LIMIT, None)
                 method.request_limit = method_data.get(ImplMethodAttributes.TIME_LIMIT, None)
+                method.result_type_name = deserialize.SchemaDeserializer._decode_type_string(
+                    method_data.get(ImplResourceAttributes.RESULT_TYPE, None))
+                method.deprecated = method_data.get(ImplResourceAttributes.DEPRECATED, False)
+                method.description = method_data.get(ImplResourceAttributes.DESCRIPTION, '')
 
                 for perm in self._decode_permissions(name, method_name):
                     method.add_permission(perm)
@@ -175,7 +182,7 @@ class Deserializer(object):
                     field = Deserializer._decode_field(
                         field_name,
                         fields[field_name],
-                        fields_validation.get(field_name, {}))
+                        fields_descriptions.get(field_name, ''))
 
                     method.add_field(field)
 
@@ -183,8 +190,18 @@ class Deserializer(object):
                     field = Deserializer._decode_field(
                         field_name,
                         private_fields[field_name],
-                        fields_validation.get(field_name, {}))
+                        fields_descriptions.get(field_name, ''))
 
                     method.add_private_field(field)
+
+                for query_name in fields_validation:
+                    query_data = fields_validation[query_name]
+                    for field_name in query_data:
+                        field = Deserializer._decode_field(
+                            field_name,
+                            query_data[field_name],
+                            '')
+
+                        method.add_query_field(query_name, field)
 
         return resource

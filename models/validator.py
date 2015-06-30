@@ -123,7 +123,7 @@ class FieldConstrains(object):
     # public function upload($value)
     UPLOAD = 'upload'  # в паре с field идентификатор поля в сущности для загрузки содержимого файла
 
-    # Non specified data types
+    # Non specified data Types
 
     # Examples:
     #   ['digit']
@@ -156,7 +156,7 @@ class FieldConstrains(object):
     # public function enum($value, $allowedValues = [])
     ENUM = 'enum'  # массив со значениями из enum'а
 
-    # Specified data types
+    # Specified data Types
 
     # Examples:
     #   ['boolean']
@@ -613,7 +613,7 @@ class EnumValidation(ImplValidator):
 
     @staticmethod
     def build(data):
-        if data[0] == FieldConstrains.INTEGER:
+        if data[0] == FieldConstrains.ENUM:
             alternatives = []
             if len(data) > 1:
                 alternatives = data[1]

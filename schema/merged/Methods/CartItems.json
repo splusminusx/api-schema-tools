@@ -32,7 +32,6 @@
         "description": "Добавляет позицию в указанную корзину.\n\n", 
         "deprecated": false
     }, 
-    "description": "", 
     "update": {
         "fields": {
             "product_addition": [
