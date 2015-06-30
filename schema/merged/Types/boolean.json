@@ -2,5 +2,5 @@
     "is_deprecated": false, 
     "kind": "PrimitiveDataType", 
     "name": "boolean", 
-    "description": "Признак.\nДопустимые значения: yes, no, 1, 0, true, false.\n"
+    "description": "Признак.\nДопустимые значения: *yes*, *no*, *1*, *0*, *true*, *false*.\n"
 }

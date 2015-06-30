@@ -441,8 +441,6 @@ class GenericTypeValidation(EmptyImplValidator, MinMaxValidator, TypeReferenceVa
             params[u'max'] = self.max
         if self.empty is not None:
             params[u'empty'] = self.empty
-        if self.empty is not None:
-            params[u'empty'] = self.empty
 
         if len(params) > 0:
             result.append(params)
@@ -527,7 +525,7 @@ class MatchValidator(ImplValidator):
             pattern = None
             comment = None
             if len(data) > 1:
-                pattern = data[1]
+                pattern = data[1].get(u'pattern', u'')
             if len(data) > 3:
                 comment = data[3]
             return MatchValidator(pattern, comment)

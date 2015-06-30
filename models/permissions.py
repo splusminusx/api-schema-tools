@@ -65,6 +65,8 @@ class Permission(object):
         self._role = role
         self._access = access
         self._description = description
+        self._fields = []
+        self._is_allow_all_fields = False
 
     @property
     def role(self):
@@ -77,3 +79,19 @@ class Permission(object):
     @property
     def description(self):
         return self._description
+
+    def add_field(self, field):
+        self._fields.append(field)
+
+    @property
+    def fields(self):
+        return self._fields
+
+    @property
+    def is_allow_all_fields(self):
+        return self._is_allow_all_fields
+
+    @is_allow_all_fields.setter
+    def is_allow_all_fields(self, value):
+        self._is_allow_all_fields = value
+

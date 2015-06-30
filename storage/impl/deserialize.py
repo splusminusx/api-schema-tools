@@ -46,10 +46,19 @@ class Deserializer(object):
                 if (isinstance(role_permissions[resource], list) and
                         len(role_permissions[resource]) > 0 and
                         role_permissions[resource][0] == u'*'):
-                    permissions.append(Permission(role, Access.FULL))
+                    perm = Permission(role, Access.FULL)
+                    perm.is_allow_all_fields = True
+                    permissions.append(perm)
                 elif method in role_permissions[resource]:
                     level = role_permissions[resource][method]['level']
-                    permissions.append(Permission(role, level))
+                    perm = Permission(role, level)
+                    allowed_fields = role_permissions[resource][method].get('level', [])
+                    if allowed_fields == u'all':
+                        perm.is_allow_all_fields = True
+                    if isinstance(allowed_fields, list):
+                        for field in allowed_fields:
+                            perm.add_field(field)
+                    permissions.append(perm)
         return permissions
 
     @staticmethod

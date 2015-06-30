@@ -3,6 +3,7 @@
 
 from models.data_types import ComplexDataType, PrimitiveDataType
 from models.resource import Resource
+from models.validator import *
 import io
 import os
 
@@ -21,11 +22,11 @@ class MarkdownSerializer(object):
     RESULT_HEADING = u'\n### Результат\n'
     FIELDS_HEADING = u'\n### Поля\n'
     FIELDS_TABLE_HEADING = u'\n| Имя поля | Необходимость | Тип данных | Комментарий |\n|---|---|---|---|\n'
-    PERMISSIONS_TABLE_HEADING = u'\n| Имя роли | доступ | Комментарий |\n|---|---|---|\n'
+    PERMISSIONS_TABLE_HEADING = u'\n| Имя роли | Доступ |  Доступные<br/>Поля | Комментарий |\n|---|---|---|---|\n'
 
     @staticmethod
     def escape_description(description):
-        return description.replace(u'\n', '<br/>').replace(u'|', u'\|')
+        return description.replace(u'\n', u'<br/>').replace(u'|', u'&#124;')
 
     def get_path(self, obj):
         if isinstance(obj, ComplexDataType) or isinstance(obj, PrimitiveDataType):
@@ -104,7 +105,7 @@ class MarkdownSerializer(object):
                 method = obj.methods[method_name]
                 if method.deprecated:
                     f.write(self.DEPRECATION_WARNING)
-                f.write(u'\n## ' + method.name)
+                f.write(u'\n## *' + method.name + u'*')
                 if method.deprecated:
                     f.write(self.DEPRECATION_WARNING)
                 else:
@@ -142,14 +143,17 @@ class MarkdownSerializer(object):
 
 class MarkdownImplSerializer(object):
     METHODS_HEADING = u'## Методы\n'
-    METHOD_DESCRIPTION = u'\n## Описание методы:\n'
-    METHOD_RESULT = u'\n## Результат:\n'
-    METHOD_IMPLEMENTATION = u'\n## Параметры реализации:\n' + \
+    METHOD_DESCRIPTION = u'\n## Описание метода\n'
+    METHOD_RESULT = u'\n## Результат\n'
+    METHOD_IMPLEMENTATION = u'\n## Параметры реализации\n' + \
                             u'| Атрибут | Значение |\n|---|---|\n'
-    PUBLIC_FIELDS_HEADING = u'\n## Публичные поля:\n'
-    PRIVATE_FIELDS_HEADING = u'\n## Приватные поля:\n'
+    PUBLIC_FIELDS_HEADING = u'\n## Публичные поля\n'
+    PRIVATE_FIELDS_HEADING = u'\n## Приватные поля\n'
     QUERY_FIELD = u'\n## Поля выборки:\n'
     PERMISSIONS_HEADING = u'\n## Доступы к методу\n'
+    FIELDS_TABLE_HEADING = u'\n| Имя<br/>поля | Необход. | Значение по<br/>умолчанию ' +\
+                           u'| Тип<br/>данных | Валидация | Комментарий |\n|---|---|---|---|---|---|\n'
+    PERMISSIONS_TABLE_HEADING = u'\n| Имя роли | Доступ |  Доступные<br/>Поля | Комментарий |\n|---|---|---|---|\n'
 
     def __init__(self, repo_path, doc_path):
         self._repo_path = repo_path
@@ -160,6 +164,75 @@ class MarkdownImplSerializer(object):
     def _get_method_link(resource, method):
         resource_path = os.path.join(u'/Resources', resource.name)
         return u'[' + method.name + u'](' + os.path.join(resource_path, method.name) + u')'
+
+    @staticmethod
+    def _serialize_min_max_validator(validator, result):
+        if validator.min is not None:
+            result += u'- Min: ' + unicode(validator.min) + u'</br>'
+        if validator.max is not None:
+            result += u'- Max: ' + unicode(validator.max) + u'</br>'
+        return result
+
+    @staticmethod
+    def _serialize_emptiness_validator(validator, result):
+        if validator.empty:
+            result += u'- Allow Empty</br>'
+        else:
+            result += u'- Not Empty</br>'
+        return result
+
+    @staticmethod
+    def _serialize_allowed_fields(perm):
+        result = u''
+        if perm.is_allow_all_fields:
+            return u'Все поля'
+        else:
+            for field in perm.fields:
+                result += field + u'\n'
+        return result
+
+    def _serialize_validators(self, validators):
+        result = ''
+        for validator in validators:
+            if isinstance(validator, EmptinessValidator):
+                result = self._serialize_emptiness_validator(validator, result)
+            if isinstance(validator, GenericTypeValidation):
+                result = self._serialize_emptiness_validator(validator, result)
+                result = self._serialize_min_max_validator(validator, result)
+            if isinstance(validator, LengthValidation):
+                result = self._serialize_min_max_validator(validator, result)
+            if isinstance(validator, MatchValidator):
+                if validator.pattern is not None:
+                    result += u'- RegEx: ' + unicode(
+                        self._serializer.escape_description(validator.pattern)) + u'</br>'
+            if isinstance(validator, DigitValidation):
+                result = self._serialize_min_max_validator(validator, result)
+            if isinstance(validator, DigitValidation):
+                result = self._serialize_min_max_validator(validator, result)
+            if isinstance(validator, EnumValidation):
+                if validator.alternatives is not None:
+                    result += u'- Enum: ' + unicode(validator.alternatives) + u'</br>'
+            if isinstance(validator, PrimitiveTypeValidation):
+                result = self._serialize_emptiness_validator(validator, result)
+            if isinstance(validator, FileValidation):
+                result = self._serialize_emptiness_validator(validator, result)
+                if validator.field is not None:
+                    result += u'- File filed: ' + unicode(validator.field) + u'</br>'
+            if isinstance(validator, IdListValidation):
+                if validator.pattern is not None:
+                    result += u'- RegEx: ' + unicode(
+                        self._serializer.escape_description(validator.pattern)) + u'</br>'
+                if validator.type is not None:
+                    result += u'- Type: ' + unicode(validator.type) + u'</br>'
+            if isinstance(validator, StringValidator):
+                if validator.length is not None:
+                    result += u'- Length: ' + unicode(validator.length) + u'</br>'
+            if isinstance(validator, DateTimeValidator):
+                result = self._serialize_min_max_validator(validator, result)
+            if isinstance(validator, BooleanValidator):
+                if validator.strict is not None:
+                    result += u' - Strict: ' + unicode(validator.strict) + u'</br>'
+        return result
 
     def _serialize_resource(self, resource):
         resource_path = self._serializer.get_full_path(resource)
@@ -195,46 +268,53 @@ class MarkdownImplSerializer(object):
             f.write(u'|*Ограничение на количество запросов*|' + unicode(method.request_limit) + u'|\n')
             f.write(u'|*Ограничение по времени*|' + unicode(method.time_limit) + u'|\n')
             f.write(self.PUBLIC_FIELDS_HEADING)
-            f.write(MarkdownSerializer.FIELDS_TABLE_HEADING)
+            f.write(self.FIELDS_TABLE_HEADING)
             for field_name in method.fields:
                 field = method.get_field(field_name)
                 f.write(
                     u'|*' + field.name +
                     u'*|' + unicode(field.required) +
+                    u'|' + unicode(field.default) +
                     u'|' + MarkdownSerializer.get_data_type_link(field.datatypename) +
+                    u'|' + self._serialize_validators(field.validators) +
                     u'|' + MarkdownSerializer.escape_description(field.description) +
                     u'|\n'
                 )
             f.write(self.PRIVATE_FIELDS_HEADING)
-            f.write(MarkdownSerializer.FIELDS_TABLE_HEADING)
+            f.write(self.FIELDS_TABLE_HEADING)
             for field_name in method.private_fields():
                 field = method.get_private_field(field_name)
                 f.write(
                     u'|*' + field.name +
                     u'*|' + unicode(field.required) +
+                    u'|' + unicode(field.default) +
                     u'|' + MarkdownSerializer.get_data_type_link(field.datatypename) +
+                    u'|' + self._serialize_validators(field.validators) +
                     u'|' + MarkdownSerializer.escape_description(field.description) +
                     u'|\n'
                 )
             f.write(self.QUERY_FIELD)
             for query_name in method.get_query_names():
                 f.write(u'### Запрос: ' + query_name)
-                f.write(MarkdownSerializer.FIELDS_TABLE_HEADING)
+                f.write(self.FIELDS_TABLE_HEADING)
                 for field in method.get_query_fields(query_name):
                     f.write(
                         u'|*' + field.name +
                         u'*|' + unicode(field.required) +
+                        u'|' + unicode(field.default) +
                         u'|' + MarkdownSerializer.get_data_type_link(field.datatypename) +
+                        u'|' + self._serialize_validators(field.validators) +
                         u'|' + MarkdownSerializer.escape_description(field.description) +
                         u'|\n'
                     )
             f.write(self.PERMISSIONS_HEADING)
-            f.write(MarkdownSerializer.PERMISSIONS_TABLE_HEADING)
+            f.write(self.PERMISSIONS_TABLE_HEADING)
             for perm_name in method.permissions:
                 perm = method.permissions[perm_name]
                 f.write(
                     u'|*' + unicode(perm.role) +
                     u'*|' + unicode(perm.access) +
+                    u'|' + unicode(MarkdownSerializer.escape_description(self._serialize_allowed_fields(perm))) +
                     u'|' + unicode(MarkdownSerializer.escape_description(unicode(perm.description))) +
                     u'|\n'
                 )
