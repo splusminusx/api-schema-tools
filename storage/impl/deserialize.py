@@ -52,7 +52,7 @@ class Deserializer(object):
                 elif method in role_permissions[resource]:
                     level = role_permissions[resource][method]['level']
                     perm = Permission(role, level)
-                    allowed_fields = role_permissions[resource][method].get('level', [])
+                    allowed_fields = role_permissions[resource][method].get('allowed_fields', [])
                     if allowed_fields == u'all':
                         perm.is_allow_all_fields = True
                     if isinstance(allowed_fields, list):
